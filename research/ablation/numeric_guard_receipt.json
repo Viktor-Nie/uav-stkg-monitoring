@@ -1,0 +1,8 @@
+{
+  "original_catalog_rows": 24,
+  "original_rows_admitted": 24,
+  "original_bound_value_maps_unchanged": true,
+  "catalog_sha256": "aa7846deb46e6882b9e48323213cc1b14e01a81d0d619b0872eae1f70fdd649f",
+  "grammar": "Explicit scalar quantities assigned by declared role cues; unit conversion only among supported equivalent dimensions; approximations/ranges/unknown units/role ambiguity refused.",
+  "physical_calibration_claimed": false
+}

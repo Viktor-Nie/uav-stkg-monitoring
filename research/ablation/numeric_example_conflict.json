@@ -1,0 +1,25 @@
+{
+  "original_text": "速度不得超过 10 m/s",
+  "candidate": {
+    "scope": "in_scope",
+    "signal_id": "speed_3d_mps",
+    "template_id": "invariant_upper",
+    "parameter_roles": [
+      "upper_bound"
+    ],
+    "formula_structure": "G[0,T](speed_3d_mps <= upper_bound)"
+  },
+  "bindings": [
+    {
+      "role": "upper_bound",
+      "unit": "m/s",
+      "value": 6.62613257694774
+    }
+  ],
+  "admissible_pairs": [
+    [
+      "speed_3d_mps",
+      "invariant_upper"
+    ]
+  ]
+}

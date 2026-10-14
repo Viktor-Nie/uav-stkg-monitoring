@@ -1,0 +1,32 @@
+{
+  "source": "docs\\\u6700\u7ec8\u8bba\u6587\\latex_kbs_v6\\run_v4_ablation.py",
+  "source_sha256": "97f418b8d354c3a36cc97a361b18df8c48fc3de50d6413e2794b1cdc056cb2ce",
+  "functions": {
+    "properties": {
+      "start": 106,
+      "end": 110
+    },
+    "single_target": {
+      "start": 152,
+      "end": 158
+    },
+    "parameterized_formula_skeleton": {
+      "start": 161,
+      "end": 171
+    },
+    "canonical_formula_serialization": {
+      "start": 174,
+      "end": 177
+    },
+    "validate_variant": {
+      "start": 180,
+      "end": 327
+    },
+    "validate_flat_binding_export": {
+      "start": 330,
+      "end": 385
+    }
+  },
+  "function_source_text_exactly_preserved": true,
+  "support": "CONTEXT_FIELDS and expected_roles are copied from frozen v2 definitions"
+}

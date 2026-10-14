@@ -1,0 +1,83 @@
+{
+  "node_labels": [
+    {
+      "label": "FormulaParameter",
+      "count": 17
+    },
+    {
+      "label": "NumericTolerance",
+      "count": 5
+    },
+    {
+      "label": "ParameterBinding",
+      "count": 84
+    },
+    {
+      "label": "Requirement",
+      "count": 24
+    },
+    {
+      "label": "RuntimeMonitor",
+      "count": 2
+    },
+    {
+      "label": "RuntimeParameter",
+      "count": 2
+    },
+    {
+      "label": "STLFormula",
+      "count": 24
+    },
+    {
+      "label": "STLTemplate",
+      "count": 2
+    },
+    {
+      "label": "Signal",
+      "count": 5
+    },
+    {
+      "label": "Threshold",
+      "count": 10
+    }
+  ],
+  "relation_types": [
+    {
+      "relation": "APPLIES_TO_SIGNAL",
+      "count": 84
+    },
+    {
+      "relation": "BINDS_PARAMETER",
+      "count": 84
+    },
+    {
+      "relation": "EXECUTED_BY",
+      "count": 24
+    },
+    {
+      "relation": "FORMALIZED_AS",
+      "count": 24
+    },
+    {
+      "relation": "HAS_PARAMETER_BINDING",
+      "count": 84
+    },
+    {
+      "relation": "IMPLEMENTED_BY",
+      "count": 2
+    },
+    {
+      "relation": "READS_SIGNAL",
+      "count": 24
+    },
+    {
+      "relation": "USES_TEMPLATE",
+      "count": 24
+    }
+  ],
+  "isolated_nodes": [
+    {
+      "id": "parameter:height_p95_train"
+    }
+  ]
+}

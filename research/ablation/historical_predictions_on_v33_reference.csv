@@ -1,0 +1,191 @@
+source_item_id,condition,repetition,reference_scope,predicted_scope,signal_id,template_id,roles,formula_structure,tuple_correct,formula_correct,signal_correct,template_correct,role_correct,graph_accepted,graph_reason,failed_call
+ARDUPILOT_ALTITUDE_REF_01,historical_direct_formula,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_ACTION_01,historical_direct_formula,0,out_of_scope,in_scope,"battery_minor_fault,response_return_home,response_land",event_implies_eventually_disjunctive_response,response_deadline,"G( battery_minor_fault -> F_[0,response_deadline](response_return_home OR response_land) )",False,False,False,False,False,False,unknown_signal;unknown_template;unlinked_signal_template;parameter_role_mismatch;formula_field_mismatch,False
+ARDUPILOT_BATT_CAPACITY_01,historical_direct_formula,0,out_of_scope,in_scope,"battery_remaining_capacity,battery_capacity_threshold,battery_failsafe_triggered",threshold_breach_implies_eventually_response,response_deadline,"G( battery_remaining_capacity < battery_capacity_threshold -> F_[0,response_deadline](battery_failsafe_triggered) )",False,False,False,False,False,False,unknown_signal;unknown_template;unlinked_signal_template;parameter_role_mismatch;formula_field_mismatch,False
+ARDUPILOT_BATT_VOLT_01,historical_direct_formula,0,out_of_scope,in_scope,"battery_voltage,battery_voltage_threshold,battery_failsafe_triggered",sustained_threshold_breach_implies_response,configured_duration;response_deadline,"G( G_[0,configured_duration](battery_voltage < battery_voltage_threshold) -> F_[0,response_deadline](battery_failsafe_triggered) )",False,False,False,False,False,False,unknown_signal;unknown_template;unlinked_signal_template;parameter_role_mismatch;formula_field_mismatch,False
+ARDUPILOT_FENCE_ALT_MAX_01,historical_direct_formula,0,in_scope,in_scope,"fence_enabled,flight_altitude,configured_max_altitude",conditional_always_upper_bound,,G( fence_enabled -> flight_altitude <= configured_max_altitude ),False,False,False,False,False,False,unknown_signal;unknown_template;unlinked_signal_template;formula_field_mismatch,False
+ARDUPILOT_FENCE_ALT_MIN_01,historical_direct_formula,0,out_of_scope,in_scope,"fence_enabled,flight_altitude,configured_min_altitude",conditional_always_lower_bound,,G( fence_enabled -> flight_altitude >= configured_min_altitude ),False,False,False,False,True,False,unknown_signal;unknown_template;unlinked_signal_template;formula_field_mismatch,False
+ARDUPILOT_GCS_TIMEOUT_01,historical_direct_formula,0,out_of_scope,in_scope,"mavlink_heartbeat_present,ground_station_failsafe_triggered",absence_for_duration_implies_response,configured_timeout;response_deadline,"G( G_[0,configured_timeout](NOT mavlink_heartbeat_present) -> F_[0,response_deadline](ground_station_failsafe_triggered) )",False,False,False,False,False,False,unknown_signal;unknown_template;unlinked_signal_template;parameter_role_mismatch;formula_field_mismatch,False
+ECFR_107_ALT_01,historical_direct_formula,0,in_scope,in_scope,agl_altitude,always_upper_bound_constant,max_agl_altitude=400_ft,G( agl_altitude <= 400_ft ),False,False,False,False,False,False,unknown_signal;unknown_template;unlinked_signal_template;parameter_role_mismatch;formula_field_mismatch,False
+ECFR_107_SPEED_01,historical_direct_formula,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_VISUAL_01,historical_direct_formula,0,out_of_scope,in_scope,visual_contact_maintained,always_boolean_condition,,G( visual_contact_maintained ),False,False,False,False,True,False,unknown_signal;unknown_template;unlinked_signal_template;formula_field_mismatch,False
+ECFR_107_YIELD_01,historical_direct_formula,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_ALT_01,historical_direct_formula,0,in_scope,in_scope,"flight_altitude,mission_altitude_upper_limit",always_upper_bound_parameter,,G( flight_altitude <= mission_altitude_upper_limit ),False,False,False,False,False,False,unknown_signal;unknown_template;unlinked_signal_template;formula_field_mismatch,False
+ICAROUS_SEPARATION_01,historical_direct_formula,0,out_of_scope,in_scope,"horizontal_separation,vertical_separation,required_horizontal_separation,required_vertical_separation",always_disjunctive_separation_minimum,,G( horizontal_separation >= required_horizontal_separation OR vertical_separation >= required_vertical_separation ),False,False,False,False,True,False,unknown_signal;unknown_template;unlinked_signal_template;formula_field_mismatch,False
+PX4_FAILURE_PITCH_01,historical_direct_formula,0,out_of_scope,in_scope,"pitch_angle,allowed_max_pitch_angle,fault_detection_triggered",sustained_absolute_threshold_breach_implies_response,response_deadline;specified_duration,"G( G_[0,specified_duration](abs(pitch_angle) > allowed_max_pitch_angle) -> F_[0,response_deadline](fault_detection_triggered) )",False,False,False,False,False,False,unknown_signal;unknown_template;unlinked_signal_template;parameter_role_mismatch;formula_field_mismatch,False
+PX4_FAILURE_ROLL_01,historical_direct_formula,0,out_of_scope,in_scope,"roll_angle,allowed_max_roll_angle,fault_detection_triggered",sustained_absolute_threshold_breach_implies_response,response_deadline;specified_duration,"G( G_[0,specified_duration](abs(roll_angle) > allowed_max_roll_angle) -> F_[0,response_deadline](fault_detection_triggered) )",False,False,False,False,False,False,unknown_signal;unknown_template;unlinked_signal_template;parameter_role_mismatch;formula_field_mismatch,False
+PX4_GEOFENCE_ALT_01,historical_direct_formula,0,in_scope,in_scope,"flight_altitude,geofence_max_altitude",always_upper_bound_parameter,,G( flight_altitude <= geofence_max_altitude ),False,False,False,False,False,False,unknown_signal;unknown_template;unlinked_signal_template;formula_field_mismatch,False
+PX4_LINK_LOSS_01,historical_direct_formula,0,out_of_scope,in_scope,"ground_station_link_available,failsafe_response_triggered",absence_for_duration_implies_response,configured_timeout;response_deadline,"G( G_[0,configured_timeout](NOT ground_station_link_available) -> F_[0,response_deadline](failsafe_response_triggered) )",False,False,False,False,False,False,unknown_signal;unknown_template;unlinked_signal_template;parameter_role_mismatch;formula_field_mismatch,False
+UKCAA_HEIGHT_01,historical_direct_formula,0,in_scope,in_scope,altitude_above_nearest_surface_point,always_upper_bound_constant,max_height=120_m,G( altitude_above_nearest_surface_point <= 120_m ),False,False,False,False,False,False,unknown_signal;unknown_template;unlinked_signal_template;parameter_role_mismatch;formula_field_mismatch,False
+UKCAA_PEOPLE_01,historical_direct_formula,0,out_of_scope,in_scope,distance_to_person,always_lower_bound_constant,min_person_distance=50_m,G( distance_to_person >= 50_m ),False,False,False,False,False,False,unknown_signal;unknown_template;unlinked_signal_template;parameter_role_mismatch;formula_field_mismatch,False
+ARDUPILOT_ALTITUDE_REF_01,historical_direct_formula_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_ACTION_01,historical_direct_formula_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_CAPACITY_01,historical_direct_formula_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_VOLT_01,historical_direct_formula_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MAX_01,historical_direct_formula_plus_gate,0,in_scope,out_of_scope,,,,,False,False,False,False,False,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MIN_01,historical_direct_formula_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_GCS_TIMEOUT_01,historical_direct_formula_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_ALT_01,historical_direct_formula_plus_gate,0,in_scope,out_of_scope,,,,,False,False,False,False,False,False,model_refusal,False
+ECFR_107_SPEED_01,historical_direct_formula_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_VISUAL_01,historical_direct_formula_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_YIELD_01,historical_direct_formula_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_ALT_01,historical_direct_formula_plus_gate,0,in_scope,out_of_scope,,,,,False,False,False,False,False,False,model_refusal,False
+ICAROUS_SEPARATION_01,historical_direct_formula_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_PITCH_01,historical_direct_formula_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_ROLL_01,historical_direct_formula_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_GEOFENCE_ALT_01,historical_direct_formula_plus_gate,0,in_scope,out_of_scope,,,,,False,False,False,False,False,False,model_refusal,False
+PX4_LINK_LOSS_01,historical_direct_formula_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+UKCAA_HEIGHT_01,historical_direct_formula_plus_gate,0,in_scope,out_of_scope,,,,,False,False,False,False,False,False,model_refusal,False
+UKCAA_PEOPLE_01,historical_direct_formula_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_ALTITUDE_REF_01,historical_full_typed,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_ACTION_01,historical_full_typed,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_CAPACITY_01,historical_full_typed,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_VOLT_01,historical_full_typed,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MAX_01,historical_full_typed,0,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ARDUPILOT_FENCE_ALT_MIN_01,historical_full_typed,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_GCS_TIMEOUT_01,historical_full_typed,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_ALT_01,historical_full_typed,0,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ECFR_107_SPEED_01,historical_full_typed,0,out_of_scope,in_scope,speed_3d_mps,invariant_upper,upper_bound,"G[0,T](speed_3d_mps <= upper_bound)",False,False,False,False,False,True,accepted,False
+ECFR_107_VISUAL_01,historical_full_typed,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_YIELD_01,historical_full_typed,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_ALT_01,historical_full_typed,0,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ICAROUS_SEPARATION_01,historical_full_typed,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_PITCH_01,historical_full_typed,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_ROLL_01,historical_full_typed,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_GEOFENCE_ALT_01,historical_full_typed,0,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+PX4_LINK_LOSS_01,historical_full_typed,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+UKCAA_HEIGHT_01,historical_full_typed,0,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+UKCAA_PEOPLE_01,historical_full_typed,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_ALTITUDE_REF_01,historical_full_typed_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_ACTION_01,historical_full_typed_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_CAPACITY_01,historical_full_typed_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_VOLT_01,historical_full_typed_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MAX_01,historical_full_typed_plus_gate,0,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ARDUPILOT_FENCE_ALT_MIN_01,historical_full_typed_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_GCS_TIMEOUT_01,historical_full_typed_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_ALT_01,historical_full_typed_plus_gate,0,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ECFR_107_SPEED_01,historical_full_typed_plus_gate,0,out_of_scope,in_scope,speed_3d_mps,invariant_upper,upper_bound,"G[0,T](speed_3d_mps <= upper_bound)",False,False,False,False,False,True,accepted,False
+ECFR_107_VISUAL_01,historical_full_typed_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_YIELD_01,historical_full_typed_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_ALT_01,historical_full_typed_plus_gate,0,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ICAROUS_SEPARATION_01,historical_full_typed_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_PITCH_01,historical_full_typed_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_ROLL_01,historical_full_typed_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_GEOFENCE_ALT_01,historical_full_typed_plus_gate,0,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+PX4_LINK_LOSS_01,historical_full_typed_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+UKCAA_HEIGHT_01,historical_full_typed_plus_gate,0,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+UKCAA_PEOPLE_01,historical_full_typed_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_ALTITUDE_REF_01,historical_no_graph_catalog,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_ACTION_01,historical_no_graph_catalog,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_CAPACITY_01,historical_no_graph_catalog,0,out_of_scope,in_scope,battery_remaining_capacity,threshold_eventually_response,capacity_threshold;response_deadline,"G((battery_remaining_capacity < capacity_threshold) -> F[0,response_deadline](battery_failsafe_triggered))",False,False,False,False,False,False,unknown_signal;unknown_template;unlinked_signal_template;parameter_role_mismatch;formula_field_mismatch,False
+ARDUPILOT_BATT_VOLT_01,historical_no_graph_catalog,0,out_of_scope,in_scope,battery_voltage,sustained_threshold_response,duration;response_deadline;voltage_threshold,"G((G[0,duration](battery_voltage < voltage_threshold)) -> F[0,response_deadline](battery_failsafe_triggered))",False,False,False,False,False,False,unknown_signal;unknown_template;unlinked_signal_template;parameter_role_mismatch;formula_field_mismatch,False
+ARDUPILOT_FENCE_ALT_MAX_01,historical_no_graph_catalog,0,in_scope,in_scope,flight_altitude,always_upper_bound_when_enabled,max_altitude,G(geofence_enabled -> (flight_altitude <= max_altitude)),False,False,False,False,False,False,unknown_signal;unknown_template;unlinked_signal_template;parameter_role_mismatch;formula_field_mismatch,False
+ARDUPILOT_FENCE_ALT_MIN_01,historical_no_graph_catalog,0,out_of_scope,in_scope,flight_altitude,always_lower_bound_when_enabled,min_altitude,G(geofence_enabled -> (flight_altitude >= min_altitude)),False,False,False,False,False,False,unknown_signal;unknown_template;unlinked_signal_template;parameter_role_mismatch;formula_field_mismatch,False
+ARDUPILOT_GCS_TIMEOUT_01,historical_no_graph_catalog,0,out_of_scope,in_scope,mavlink_heartbeat_present,absence_duration_response,response_deadline;timeout,"G((G[0,timeout](!mavlink_heartbeat_present)) -> F[0,response_deadline](gcs_failsafe_triggered))",False,False,False,False,False,False,unknown_signal;unknown_template;unlinked_signal_template;parameter_role_mismatch;formula_field_mismatch,False
+ECFR_107_ALT_01,historical_no_graph_catalog,0,in_scope,in_scope,agl_altitude,always_upper_bound,max_altitude_400_ft,G(agl_altitude <= max_altitude_400_ft),False,False,False,False,False,False,unknown_signal;unknown_template;unlinked_signal_template;parameter_role_mismatch;formula_field_mismatch,False
+ECFR_107_SPEED_01,historical_no_graph_catalog,0,out_of_scope,in_scope,ground_speed,always_upper_bound,max_ground_speed,G(ground_speed <= max_ground_speed),False,False,False,False,False,False,unknown_signal;unknown_template;unlinked_signal_template;parameter_role_mismatch;formula_field_mismatch,False
+ECFR_107_VISUAL_01,historical_no_graph_catalog,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_YIELD_01,historical_no_graph_catalog,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_ALT_01,historical_no_graph_catalog,0,in_scope,in_scope,flight_altitude,always_upper_bound,mission_altitude_upper_bound,G(flight_altitude <= mission_altitude_upper_bound),False,False,False,False,False,False,unknown_signal;unknown_template;unlinked_signal_template;parameter_role_mismatch;formula_field_mismatch,False
+ICAROUS_SEPARATION_01,historical_no_graph_catalog,0,out_of_scope,in_scope,aircraft_separation,always_disjunctive_lower_bound,min_horizontal_separation;min_vertical_separation,G((horizontal_separation >= min_horizontal_separation) | (vertical_separation >= min_vertical_separation)),False,False,False,False,False,False,unknown_signal;unknown_template;unlinked_signal_template;parameter_role_mismatch;formula_field_mismatch,False
+PX4_FAILURE_PITCH_01,historical_no_graph_catalog,0,out_of_scope,in_scope,pitch_angle,sustained_absolute_upper_bound_response,duration;max_pitch_angle;response_deadline,"G((G[0,duration](abs(pitch_angle) > max_pitch_angle)) -> F[0,response_deadline](failure_detected))",False,False,False,False,False,False,unknown_signal;unknown_template;unlinked_signal_template;parameter_role_mismatch;formula_field_mismatch,False
+PX4_FAILURE_ROLL_01,historical_no_graph_catalog,0,out_of_scope,in_scope,roll_angle,sustained_absolute_upper_bound_response,duration;max_roll_angle;response_deadline,"G((G[0,duration](abs(roll_angle) > max_roll_angle)) -> F[0,response_deadline](failure_detected))",False,False,False,False,False,False,unknown_signal;unknown_template;unlinked_signal_template;parameter_role_mismatch;formula_field_mismatch,False
+PX4_GEOFENCE_ALT_01,historical_no_graph_catalog,0,in_scope,in_scope,flight_altitude,always_upper_bound,geofence_max_altitude,G(flight_altitude <= geofence_max_altitude),False,False,False,False,False,False,unknown_signal;unknown_template;unlinked_signal_template;parameter_role_mismatch;formula_field_mismatch,False
+PX4_LINK_LOSS_01,historical_no_graph_catalog,0,out_of_scope,in_scope,gcs_link_present,absence_duration_response,response_deadline;timeout,"G((G[0,timeout](!gcs_link_present)) -> F[0,response_deadline](failsafe_response_triggered))",False,False,False,False,False,False,unknown_signal;unknown_template;unlinked_signal_template;parameter_role_mismatch;formula_field_mismatch,False
+UKCAA_HEIGHT_01,historical_no_graph_catalog,0,in_scope,in_scope,height_above_nearest_surface,always_upper_bound,max_height_120_m,G(height_above_nearest_surface <= max_height_120_m),False,False,False,False,False,False,unknown_signal;unknown_template;unlinked_signal_template;parameter_role_mismatch;formula_field_mismatch,False
+UKCAA_PEOPLE_01,historical_no_graph_catalog,0,out_of_scope,in_scope,distance_to_people,always_lower_bound,min_distance_50_m,G(distance_to_people >= min_distance_50_m),False,False,False,False,False,False,unknown_signal;unknown_template;unlinked_signal_template;parameter_role_mismatch;formula_field_mismatch,False
+ARDUPILOT_ALTITUDE_REF_01,historical_no_graph_catalog_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_ACTION_01,historical_no_graph_catalog_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_CAPACITY_01,historical_no_graph_catalog_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_VOLT_01,historical_no_graph_catalog_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MAX_01,historical_no_graph_catalog_plus_gate,0,in_scope,out_of_scope,,,,,False,False,False,False,False,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MIN_01,historical_no_graph_catalog_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_GCS_TIMEOUT_01,historical_no_graph_catalog_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_ALT_01,historical_no_graph_catalog_plus_gate,0,in_scope,out_of_scope,,,,,False,False,False,False,False,False,model_refusal,False
+ECFR_107_SPEED_01,historical_no_graph_catalog_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_VISUAL_01,historical_no_graph_catalog_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_YIELD_01,historical_no_graph_catalog_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_ALT_01,historical_no_graph_catalog_plus_gate,0,in_scope,out_of_scope,,,,,False,False,False,False,False,False,model_refusal,False
+ICAROUS_SEPARATION_01,historical_no_graph_catalog_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_PITCH_01,historical_no_graph_catalog_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_ROLL_01,historical_no_graph_catalog_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_GEOFENCE_ALT_01,historical_no_graph_catalog_plus_gate,0,in_scope,out_of_scope,,,,,False,False,False,False,False,False,model_refusal,False
+PX4_LINK_LOSS_01,historical_no_graph_catalog_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+UKCAA_HEIGHT_01,historical_no_graph_catalog_plus_gate,0,in_scope,out_of_scope,,,,,False,False,False,False,False,False,model_refusal,False
+UKCAA_PEOPLE_01,historical_no_graph_catalog_plus_gate,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_ACTION_01,historical_development_only_retrieval,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_CAPACITY_01,historical_development_only_retrieval,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_VOLT_01,historical_development_only_retrieval,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_ALTITUDE_REF_01,historical_development_only_retrieval,0,out_of_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",False,False,False,False,False,True,accepted,False
+ARDUPILOT_FENCE_ALT_MAX_01,historical_development_only_retrieval,0,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ARDUPILOT_FENCE_ALT_MIN_01,historical_development_only_retrieval,0,out_of_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",False,False,False,False,False,True,accepted,False
+ARDUPILOT_GCS_TIMEOUT_01,historical_development_only_retrieval,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_ALT_01,historical_development_only_retrieval,0,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ECFR_107_SPEED_01,historical_development_only_retrieval,0,out_of_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",False,False,False,False,False,True,accepted,False
+ECFR_107_VISUAL_01,historical_development_only_retrieval,0,out_of_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",False,False,False,False,False,True,accepted,False
+ECFR_107_YIELD_01,historical_development_only_retrieval,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_ALT_01,historical_development_only_retrieval,0,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ICAROUS_SEPARATION_01,historical_development_only_retrieval,0,out_of_scope,in_scope,speed_3d_mps,invariant_upper,upper_bound,"G[0,T](speed_3d_mps <= upper_bound)",False,False,False,False,False,True,accepted,False
+PX4_FAILURE_PITCH_01,historical_development_only_retrieval,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_ROLL_01,historical_development_only_retrieval,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_GEOFENCE_ALT_01,historical_development_only_retrieval,0,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+PX4_LINK_LOSS_01,historical_development_only_retrieval,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+UKCAA_HEIGHT_01,historical_development_only_retrieval,0,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+UKCAA_PEOPLE_01,historical_development_only_retrieval,0,out_of_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",False,False,False,False,False,True,accepted,False
+ARDUPILOT_BATT_ACTION_01,historical_frozen_embedding_retrieval,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_CAPACITY_01,historical_frozen_embedding_retrieval,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_VOLT_01,historical_frozen_embedding_retrieval,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_ALTITUDE_REF_01,historical_frozen_embedding_retrieval,0,out_of_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",False,False,False,False,False,True,accepted,False
+ARDUPILOT_FENCE_ALT_MAX_01,historical_frozen_embedding_retrieval,0,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ARDUPILOT_FENCE_ALT_MIN_01,historical_frozen_embedding_retrieval,0,out_of_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",False,False,False,False,False,True,accepted,False
+ARDUPILOT_GCS_TIMEOUT_01,historical_frozen_embedding_retrieval,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_ALT_01,historical_frozen_embedding_retrieval,0,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ECFR_107_SPEED_01,historical_frozen_embedding_retrieval,0,out_of_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",False,False,False,False,False,True,accepted,False
+ECFR_107_VISUAL_01,historical_frozen_embedding_retrieval,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_YIELD_01,historical_frozen_embedding_retrieval,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_ALT_01,historical_frozen_embedding_retrieval,0,in_scope,out_of_scope,,,,,False,False,False,False,False,False,model_refusal,False
+ICAROUS_SEPARATION_01,historical_frozen_embedding_retrieval,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_PITCH_01,historical_frozen_embedding_retrieval,0,out_of_scope,in_scope,speed_3d_mps,invariant_upper,upper_bound,"G[0,T](speed_3d_mps <= upper_bound)",False,False,False,False,False,True,accepted,False
+PX4_FAILURE_ROLL_01,historical_frozen_embedding_retrieval,0,out_of_scope,in_scope,speed_3d_mps,invariant_upper,upper_bound,"G[0,T](speed_3d_mps <= upper_bound)",False,False,False,False,False,True,accepted,False
+PX4_GEOFENCE_ALT_01,historical_frozen_embedding_retrieval,0,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+PX4_LINK_LOSS_01,historical_frozen_embedding_retrieval,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+UKCAA_HEIGHT_01,historical_frozen_embedding_retrieval,0,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+UKCAA_PEOPLE_01,historical_frozen_embedding_retrieval,0,out_of_scope,in_scope,speed_3d_mps,invariant_upper,upper_bound,"G[0,T](speed_3d_mps <= upper_bound)",False,False,False,False,False,True,accepted,False
+ARDUPILOT_BATT_ACTION_01,historical_graph_constrained,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_CAPACITY_01,historical_graph_constrained,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_VOLT_01,historical_graph_constrained,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_ALTITUDE_REF_01,historical_graph_constrained,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MAX_01,historical_graph_constrained,0,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ARDUPILOT_FENCE_ALT_MIN_01,historical_graph_constrained,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_GCS_TIMEOUT_01,historical_graph_constrained,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_ALT_01,historical_graph_constrained,0,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ECFR_107_SPEED_01,historical_graph_constrained,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_VISUAL_01,historical_graph_constrained,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_YIELD_01,historical_graph_constrained,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_ALT_01,historical_graph_constrained,0,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ICAROUS_SEPARATION_01,historical_graph_constrained,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_PITCH_01,historical_graph_constrained,0,out_of_scope,in_scope,abs_pitch_rad,invariant_upper,upper_bound,"G[0,T](abs_pitch_rad <= upper_bound)",False,False,False,False,False,True,accepted,False
+PX4_FAILURE_ROLL_01,historical_graph_constrained,0,out_of_scope,in_scope,abs_roll_rad,invariant_upper,upper_bound,"G[0,T](abs_roll_rad <= upper_bound)",False,False,False,False,False,True,accepted,False
+PX4_GEOFENCE_ALT_01,historical_graph_constrained,0,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+PX4_LINK_LOSS_01,historical_graph_constrained,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+UKCAA_HEIGHT_01,historical_graph_constrained,0,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+UKCAA_PEOPLE_01,historical_graph_constrained,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_ACTION_01,historical_keyword_template,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_CAPACITY_01,historical_keyword_template,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_VOLT_01,historical_keyword_template,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_ALTITUDE_REF_01,historical_keyword_template,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MAX_01,historical_keyword_template,0,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ARDUPILOT_FENCE_ALT_MIN_01,historical_keyword_template,0,out_of_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",False,False,False,False,False,True,accepted,False
+ARDUPILOT_GCS_TIMEOUT_01,historical_keyword_template,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_ALT_01,historical_keyword_template,0,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ECFR_107_SPEED_01,historical_keyword_template,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_VISUAL_01,historical_keyword_template,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_YIELD_01,historical_keyword_template,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_ALT_01,historical_keyword_template,0,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ICAROUS_SEPARATION_01,historical_keyword_template,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_PITCH_01,historical_keyword_template,0,out_of_scope,in_scope,abs_pitch_rad,invariant_upper,upper_bound,"G[0,T](abs_pitch_rad <= upper_bound)",False,False,False,False,False,True,accepted,False
+PX4_FAILURE_ROLL_01,historical_keyword_template,0,out_of_scope,in_scope,abs_roll_rad,invariant_upper,upper_bound,"G[0,T](abs_roll_rad <= upper_bound)",False,False,False,False,False,True,accepted,False
+PX4_GEOFENCE_ALT_01,historical_keyword_template,0,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+PX4_LINK_LOSS_01,historical_keyword_template,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+UKCAA_HEIGHT_01,historical_keyword_template,0,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+UKCAA_PEOPLE_01,historical_keyword_template,0,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False

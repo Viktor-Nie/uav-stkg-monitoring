@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "verified_at_utc": "2026-10-13T12:23:20.473355+00:00",
+  "verification_read_only": true,
+  "database": {
+    "container": "kbs-v33-stkg",
+    "snapshot": "kbs_v33_frozen_stkg_20261013",
+    "image": "neo4j@sha256:09c2b7ce2f7a9b7c230669d7a50c0c8fcd548d1891e701cf11685e7afdebbaf4"
+  },
+  "roundtrip": {
+    "nodes_compared": 158,
+    "relationships_compared": 350,
+    "all_source_labels_properties_and_endpoints_equal": true,
+    "comparison": "logical IDs, exact names, label sets, original JSON and flattened typed property maps; Neo4j internal IDs excluded; snapshot wrapper metadata and separately verified derived display captions excluded",
+    "display_metadata": "_display_caption is deterministic from logical ID, role and rounded value/unit; source precision is unchanged"
+  },
+  "queries": {
+    "n06_query_nodes": 15,
+    "n06_query_relationships": 20,
+    "n06_binding_rows": 5,
+    "full_query_nodes": 158,
+    "full_query_relationships": 350,
+    "isolated_nodes": [
+      {
+        "id": "parameter:height_p95_train"
+      }
+    ],
+    "database_components": [
+      {
+        "name": "Neo4j Kernel",
+        "versions": [
+          "2026.02.3"
+        ],
+        "edition": "community"
+      },
+      {
+        "name": "Cypher",
+        "versions": [
+          "5",
+          "25"
+        ],
+        "edition": ""
+      }
+    ]
+  },
+  "allowed_display_metadata": {
+    "node_keys": [
+      "_display_caption"
+    ],
+    "snapshot_metadata": [
+      "STKGSnapshot label",
+      "_snapshot_id node and edge property"
+    ],
+    "derivation_exactly_checked_for_all_nodes": true,
+    "alias_mapping_file": "native_display_caption_mapping.json",
+    "alias_mapping_sha256": "74cb251935676562b02d2b3cbb86936d4956f732bf9bccf249d7c4cd11a966e6",
+    "source_values_changed": false
+  },
+  "input_sha256": {
+    "docs\\最终论文\\latex_kbs_v6\\results\\v4_enriched_graph_nodes.csv": "78b7d4348a49e0f3ccd94c24b6e5221d43e4a21e5000bae2b811e8b962f4845c",
+    "specification\\v2\\results\\traceability_graph\\relationships.csv": "cb263a607ddbf21e6d99e663f25c4014a71656232333a0ddc431b6a66b887f73",
+    "specification\\v2\\results\\traceability_graph\\formula_parameter_bindings.csv": "e34304d8b7dcf434308ab97a6d0d27e96684ed6bc0e995154d490a9c3408de45"
+  },
+  "native_figures_sha256": {
+    "fig04_neo4j_n06.png": "fb5599160dc3f8f5f09471f919778cc339946fc6ba8195d692b4070bf4747a5d",
+    "fig04_neo4j_n06.pdf": "289959a578be07f230dcefe92b657758140a3cd2d9f6c6303e8e8fea31528de1",
+    "fig_neo4j_full.png": "0d7dcfddbd20b0e3841baab2741d2aff3645c3610af1f9f84f5d021993a8edd2",
+    "fig_neo4j_full.pdf": "bd14e2a8187b803cd3ec04660ca207f833293d08b432feca94834e587c8a823e"
+  },
+  "scope": "Actual Neo4j storage/query/visualization and identity roundtrip, not a migration of the CSV monitor or database performance evaluation.",
+  "physical_applicability_verified": false
+}

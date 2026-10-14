@@ -1,0 +1,104 @@
+{
+  "status": "optional_metadata_only_no_download_or_redistribution",
+  "scope": "The standalone default reproduces constructed monitor suites only. Four real-source replay regressions were separately executed locally.",
+  "acquisition_steps": [
+    "Obtain original archives from the upstream source, preserving its exact version and license.",
+    "Use the declared source-specific adapter; do not substitute filled/aligned data or mix observation profiles.",
+    "Compare each resulting frozen derived CSV against the provided SHA-256 before claiming the historical replay.",
+    "Compare graph-bound outcomes and every event against the retained ledger; a hash mismatch is an adapter/version discrepancy, not permission to overwrite the baseline."
+  ],
+  "sources": [
+    {
+      "source": "RflyMAD",
+      "upstream_url": "https://rfly-openha.github.io/documents/4_resources/dataset.html",
+      "license_note_not_new_clearance": "source-specific noncommercial conditions; redistribution not re-authorized",
+      "included_in_public_candidate": false,
+      "historical_derived_files": [
+        {
+          "historical_workspace_relative_path": "specification/v2/results/multi_real_motor_replay/406_1_observable_trace.csv",
+          "sha256": "f52a9e669d4a966da61d686748e6cbdcb8f923dbd0f06bc57ab5cd2e3f3752ca",
+          "bytes": 112701,
+          "role": "derived_signal_observations"
+        },
+        {
+          "historical_workspace_relative_path": "specification/v2/results/multi_real_motor_replay/406_2_observable_trace.csv",
+          "sha256": "3666a2136ff68b582fdbc80000558d10d6b74eec904385f57b6936ece9f553bc",
+          "bytes": 113500,
+          "role": "derived_signal_observations"
+        },
+        {
+          "historical_workspace_relative_path": "specification/v2/results/multi_real_motor_replay/407_1_observable_trace.csv",
+          "sha256": "2ba3c472bf865c47ae68b3d1aebdf22696d6732bf386c3f37ee6cc222381b2fe",
+          "bytes": 116918,
+          "role": "derived_signal_observations"
+        },
+        {
+          "historical_workspace_relative_path": "specification/v2/results/multi_real_motor_replay/canonical_formula_monitor_events.csv",
+          "sha256": "9534b1b620189af772088e18a0cf1c4fc2ab8096f60d492f8e2999b2ea9bf20d",
+          "bytes": 231995,
+          "role": "expected_historical_event_ledger"
+        }
+      ]
+    },
+    {
+      "source": "FlightReview",
+      "upstream_url": "https://review.px4.io/plot_app?log=0000c079-6820-409a-95da-e86358b6c20f",
+      "license_note_not_new_clearance": "per-log redistribution terms unresolved",
+      "included_in_public_candidate": false,
+      "historical_derived_files": [
+        {
+          "historical_workspace_relative_path": "specification/v2/results/external_flight_review_event_time_signal_observations.csv",
+          "sha256": "14b9b73f10b7e155aab059878ca1502a87391cb1eb2872d43420dfc40505ad44",
+          "bytes": 961517,
+          "role": "derived_signal_observations"
+        },
+        {
+          "historical_workspace_relative_path": "specification/v2/results/traceability_graph/external_flight_review_event_time_graph_bound_events.csv",
+          "sha256": "ff8c24b11c891c93d2edc2c860a0870b13fb71c636227fa2f09031bc182c6ee7",
+          "bytes": 30818,
+          "role": "expected_historical_event_ledger"
+        }
+      ]
+    },
+    {
+      "source": "IDF_DS",
+      "upstream_url": "https://doi.org/10.1038/s41597-026-06716-3",
+      "license_note_not_new_clearance": "retained metadata reports CC BY 4.0; verify exact source archive/version",
+      "included_in_public_candidate": false,
+      "historical_derived_files": [
+        {
+          "historical_workspace_relative_path": "specification/v2/results/idf_ds_lap120_event_time/native_signal_observations.csv",
+          "sha256": "631319f9519ab9cbab7e9318c2675c0e084e94c5bd148bbfec504b1de8be5add",
+          "bytes": 3728354,
+          "role": "derived_signal_observations"
+        },
+        {
+          "historical_workspace_relative_path": "specification/v2/results/idf_ds_lap120_event_time/graph_bound_monitor_events.csv",
+          "sha256": "13956fed4fa28ad30048852a508601259761d83c8599b6ddb78413b49e9a6427",
+          "bytes": 8958937,
+          "role": "expected_historical_event_ledger"
+        }
+      ]
+    },
+    {
+      "source": "INSANE",
+      "upstream_url": "https://www.aau.at/en/smart-systems-technologies/control-of-networked-systems/datasets/insane-dataset/",
+      "license_note_not_new_clearance": "source page wording BSD-2-Clause with no commercial use; verify complete terms",
+      "included_in_public_candidate": false,
+      "historical_derived_files": [
+        {
+          "historical_workspace_relative_path": "specification/v2/results/insane_indoor1_px4_imu_event_time/native_signal_observations.csv",
+          "sha256": "744d1f09b8a8f167e3f09835210738b50d39a0e0bb6567d14cbe809d4bb4e616",
+          "bytes": 8520737,
+          "role": "derived_signal_observations"
+        },
+        {
+          "historical_workspace_relative_path": "specification/v2/results/insane_indoor1_px4_imu_event_time/graph_bound_monitor_events.csv",
+          "sha256": "6b165ee10c41c89e35edae8777c5ea0295349a67e9f5ca0a2584c079fc1381a3",
+          "bytes": 3336,
+          "role": "expected_historical_event_ledger"
+        }
+      ]
+    }
+  ]
+}

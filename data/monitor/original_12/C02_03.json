@@ -1,0 +1,64 @@
+{
+  "candidate_trace_id": "C02_03",
+  "coordinate_frame": "magnitude_three_dimensional_ground_relative_velocity",
+  "formal_task_selected": false,
+  "independent_expected_verdict": null,
+  "independently_verified": false,
+  "input_origin": "AI_assisted_candidate_construction",
+  "mapping": "identity",
+  "maximum_observation_gap_seconds": 0.5,
+  "monitor_executed": false,
+  "record_type": "authored_candidate_input_not_research_outcome",
+  "review_status": "unreviewed",
+  "samples": [
+    {
+      "synthetic_speed_mps": 4.0,
+      "time_seconds": 0.0
+    },
+    {
+      "synthetic_speed_mps": 6.7,
+      "time_seconds": 0.4
+    },
+    {
+      "synthetic_speed_mps": 5.7,
+      "time_seconds": 0.8
+    },
+    {
+      "synthetic_speed_mps": 7.0,
+      "time_seconds": 1.2
+    },
+    {
+      "synthetic_speed_mps": 6.6,
+      "time_seconds": 1.6
+    },
+    {
+      "synthetic_speed_mps": 7.1,
+      "time_seconds": 2.0
+    },
+    {
+      "synthetic_speed_mps": 6.5,
+      "time_seconds": 2.2
+    },
+    {
+      "synthetic_speed_mps": 7.0,
+      "time_seconds": 2.6
+    },
+    {
+      "synthetic_speed_mps": 6.8,
+      "time_seconds": 3.0
+    },
+    {
+      "synthetic_speed_mps": 6.9,
+      "time_seconds": 3.4
+    },
+    {
+      "synthetic_speed_mps": 7.2,
+      "time_seconds": 3.8
+    }
+  ],
+  "schema": "e5_controlled_task_review_inputs_v1",
+  "signal_id": "synthetic_speed_mps",
+  "task_id": "C02",
+  "time_unit": "s",
+  "unit": "m/s"
+}

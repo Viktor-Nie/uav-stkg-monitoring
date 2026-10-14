@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "properties": {
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "scope": {
+            "type": "string",
+            "enum": [
+              "in_scope",
+              "out_of_scope"
+            ]
+          },
+          "signal_id": {
+            "type": "string"
+          },
+          "template_id": {
+            "type": "string"
+          },
+          "parameter_roles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "formula_structure": {
+            "type": "string"
+          },
+          "refusal_reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "scope",
+          "signal_id",
+          "template_id",
+          "parameter_roles",
+          "formula_structure",
+          "refusal_reason"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "records"
+  ],
+  "additionalProperties": false
+}

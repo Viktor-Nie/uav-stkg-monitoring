@@ -1,0 +1,69 @@
+{
+  "release_status": "versioned_research_artifacts",
+  "annotation_status": "Frozen submitted tables; independent human workflow is not authenticated by file hashes.",
+  "llm_status": "Historical predictions and new controlled runs are separate. Model identity, prompt, schema and structured outputs are retained; no claim of AI-free research is made.",
+  "upstream_data": "Original flight archives and full third-party document snapshots are obtained from their original sources, not redistributed in this release.",
+  "default_execution": "Offline validation and rescoring from frozen inputs; no model call, training or download.",
+  "source_file_copies": [
+    {
+      "release_path": "data/graph/nodes.csv",
+      "sha256": "78b7d4348a49e0f3ccd94c24b6e5221d43e4a21e5000bae2b811e8b962f4845c"
+    },
+    {
+      "release_path": "data/graph/relationships.csv",
+      "sha256": "cb263a607ddbf21e6d99e663f25c4014a71656232333a0ddc431b6a66b887f73"
+    },
+    {
+      "release_path": "data/graph/bindings.csv",
+      "sha256": "e34304d8b7dcf434308ab97a6d0d27e96684ed6bc0e995154d490a9c3408de45"
+    },
+    {
+      "release_path": "data/structural_ablation/details.csv",
+      "sha256": "2782d839cd12be40722535293f99f4f35b79434702286e7dbf30bf8908b6889f"
+    },
+    {
+      "release_path": "data/structural_ablation/summary.csv",
+      "sha256": "f148b335f712426cc2a53884a4f48f8408be07d10849d1393174f431402260dd"
+    },
+    {
+      "release_path": "data/structural_ablation/by_type.csv",
+      "sha256": "b303e8ca156e524182b9551304ca2cd4b4f550c5c85ea2259003ee8d0db1030f"
+    },
+    {
+      "release_path": "data/structural_ablation/binding_ambiguity.csv",
+      "sha256": "74b21db6d5d7639f474419568371d7f9eb0600d783e7ed7eaf3c427044b91224"
+    },
+    {
+      "release_path": "data/language/historical_source_registry.csv",
+      "sha256": "8ea7088676f0770763e966c3ef65945a5fae139c7b0a620ce352a6b7e6383cb6"
+    },
+    {
+      "release_path": "data/graph/internal_requirement_pairs.csv",
+      "sha256": "da1d0ff0d0aff036f1f5d8b31366aa09d8068ca40c5b0584d0a5ffd75bd7a925"
+    },
+    {
+      "release_path": "data/language/english_expected_summary.csv",
+      "sha256": "fab424160ed805c361d585dc06c9f0f74bb0889ce5a3e2f2ec1ad05b24fd7dad"
+    },
+    {
+      "release_path": "data/language/english_expected_families.csv",
+      "sha256": "c412e5e39691abb7626e2f32eccaf12b10bdc2e953be763fe78913c9aa3a8b7f"
+    },
+    {
+      "release_path": "data/language/chinese_historical_metrics.csv",
+      "sha256": "c4ecc6b8f50fcae8afa702c93360d25c146680fb7d52c1c711b5e3cc9cd1a463"
+    }
+  ],
+  "default_reproduction": "offline frozen graph + English scoring + language ablation/plots + constructed monitor suites + graph extension",
+  "public_url": "https://github.com/Viktor-Nie/uav-stkg-monitoring",
+  "publication_status": "research_artifact_version_v33",
+  "license_status": "not_assigned",
+  "v33_reviewed_reference": {
+    "items": 19,
+    "in_scope": 5,
+    "out_of_scope": 14,
+    "independent_human_authentication": "not established"
+  },
+  "original_flight_data_redistributed": false,
+  "version": "v33"
+}

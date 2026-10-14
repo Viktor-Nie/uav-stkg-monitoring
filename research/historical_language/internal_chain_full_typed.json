@@ -1,0 +1,413 @@
+{
+  "call_id": "internal_chain_full_typed",
+  "request_sha256": "523fad19c82e26e883f76739e0a4fc02de985afb942bdc9edcdccf669032fc59",
+  "system_prompt_sha256": "d3df5a1b849443d67cf3854d26afae19d54a6dcdcf042fd4a046d77348aa5eea",
+  "request_payload": {
+    "instruction": "For every Chinese UAV requirement, decide whether it belongs to this deliberately narrow STL fragment. If it does, return a candidate signal, temporal template, parameter-role list, and parameterized STL structure. If it does not, set scope to out_of_scope and leave signal_id, template_id, parameter_roles, and formula_structure empty. Never invent numerical values. Return one JSON array only, preserving every id exactly once. Each object must contain id, scope, signal_id, template_id, parameter_roles, formula_structure, and refusal_reason.\nThe admissible signal catalog is exactly: speed_3d_mps, height_m, abs_roll_rad, abs_pitch_rad, ang_rate_norm_rps.\nThe admissible templates are exactly:\n1) invariant_upper with roles [upper_bound] and canonical structure G[0,T](SIGNAL <= upper_bound)\n2) bounded_response with roles [trigger_upper,recovery_upper,deadline_seconds] and canonical structure G[0,T]((SIGNAL > trigger_upper) -> F[0,deadline_seconds](SIGNAL <= recovery_upper))\nUse scope=in_scope only if one signal and one template fit exactly. Use only catalog identifiers and canonical structures.",
+    "records": [
+      {
+        "id": "N01",
+        "text": "飞行期间三维速度不得超过速度监测上界"
+      },
+      {
+        "id": "N02",
+        "text": "无人机在任务过程中高度不能高于高度监测上界"
+      },
+      {
+        "id": "N03",
+        "text": "飞行时横滚绝对值不应大于横滚监测上界"
+      },
+      {
+        "id": "N04",
+        "text": "飞行时俯仰绝对值不应超过俯仰监测上界"
+      },
+      {
+        "id": "N05",
+        "text": "飞行期间角速度范数必须不超过角速度监测上界"
+      },
+      {
+        "id": "N06",
+        "text": "当三维速度超过速度监测上界时应在规定恢复时限内回到速度参考范围"
+      },
+      {
+        "id": "N07",
+        "text": "当横滚绝对值超过监测上界时无人机应在规定恢复时限内回到横滚参考范围"
+      },
+      {
+        "id": "N08",
+        "text": "当俯仰绝对值超过监测上界时无人机应在规定恢复时限内回到俯仰参考范围"
+      },
+      {
+        "id": "N09",
+        "text": "当角速度范数超过监测上界时应在规定恢复时限内回落到角速度参考范围"
+      },
+      {
+        "id": "N10",
+        "text": "整个飞行轨迹中速度要保持低于速度监测上界"
+      },
+      {
+        "id": "N11",
+        "text": "无人机的相对高度在飞行中不可超过高度监测上界"
+      },
+      {
+        "id": "N12",
+        "text": "如果速度越过速度监测上界那么需要在规定恢复时限内降回参考范围"
+      },
+      {
+        "id": "N13",
+        "text": "出现过大的横滚后应在规定恢复时限内回到横滚参考范围"
+      },
+      {
+        "id": "N14",
+        "text": "出现过大的俯仰后应在规定恢复时限内回到俯仰参考范围"
+      },
+      {
+        "id": "N15",
+        "text": "无人机全程的角速度大小不应高于角速度监测上界"
+      },
+      {
+        "id": "N16",
+        "text": "飞行过程的姿态横滚幅值必须小于等于横滚监测上界"
+      },
+      {
+        "id": "N17",
+        "text": "当姿态角速度过大时需在规定恢复时限内回复到正常参考范围"
+      },
+      {
+        "id": "N18",
+        "text": "飞行时姿态俯仰幅值应始终不超过俯仰监测上界"
+      },
+      {
+        "id": "T01",
+        "text": "无人机飞行过程中三维速度不能超过速度监测上界"
+      },
+      {
+        "id": "T02",
+        "text": "任务执行期间高度始终不应高于高度监测上界"
+      },
+      {
+        "id": "T03",
+        "text": "速度出现超限后需要在规定恢复时限内回到速度参考范围"
+      },
+      {
+        "id": "T04",
+        "text": "横滚幅度过大时应在规定恢复时限内回到横滚参考范围"
+      },
+      {
+        "id": "T05",
+        "text": "如果俯仰角超过监测上界则应在规定恢复时限内回到俯仰参考范围"
+      },
+      {
+        "id": "T06",
+        "text": "当角速度超过监测上界无人机必须在规定恢复时限内回落到角速度参考范围"
+      }
+    ],
+    "output_rule": "Return only a JSON object with one key named records whose value is the required array. Preserve every id exactly once. Do not use tools, files, IDs, or source names as label shortcuts."
+  },
+  "requested_model": "gpt-5.5",
+  "api_version": "Codex CLI 0.145.0",
+  "temperature": "not_exposed_by_cli",
+  "reasoning_effort": "low",
+  "record_count": 24,
+  "started_utc": "2026-09-14T14:13:17.274705Z",
+  "elapsed_seconds": 150.69524969998747,
+  "usage": {
+    "input_tokens": 15889,
+    "cached_input_tokens": 1408,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1768,
+    "reasoning_output_tokens": 150
+  },
+  "serving_snapshot": "not independently returned; historical response_model label was assigned by the runner",
+  "structured_output": [
+    {
+      "id": "N01",
+      "scope": "in_scope",
+      "signal_id": "speed_3d_mps",
+      "template_id": "invariant_upper",
+      "parameter_roles": [
+        "upper_bound"
+      ],
+      "formula_structure": "G[0,T](speed_3d_mps <= upper_bound)",
+      "refusal_reason": ""
+    },
+    {
+      "id": "N02",
+      "scope": "in_scope",
+      "signal_id": "height_m",
+      "template_id": "invariant_upper",
+      "parameter_roles": [
+        "upper_bound"
+      ],
+      "formula_structure": "G[0,T](height_m <= upper_bound)",
+      "refusal_reason": ""
+    },
+    {
+      "id": "N03",
+      "scope": "in_scope",
+      "signal_id": "abs_roll_rad",
+      "template_id": "invariant_upper",
+      "parameter_roles": [
+        "upper_bound"
+      ],
+      "formula_structure": "G[0,T](abs_roll_rad <= upper_bound)",
+      "refusal_reason": ""
+    },
+    {
+      "id": "N04",
+      "scope": "in_scope",
+      "signal_id": "abs_pitch_rad",
+      "template_id": "invariant_upper",
+      "parameter_roles": [
+        "upper_bound"
+      ],
+      "formula_structure": "G[0,T](abs_pitch_rad <= upper_bound)",
+      "refusal_reason": ""
+    },
+    {
+      "id": "N05",
+      "scope": "in_scope",
+      "signal_id": "ang_rate_norm_rps",
+      "template_id": "invariant_upper",
+      "parameter_roles": [
+        "upper_bound"
+      ],
+      "formula_structure": "G[0,T](ang_rate_norm_rps <= upper_bound)",
+      "refusal_reason": ""
+    },
+    {
+      "id": "N06",
+      "scope": "in_scope",
+      "signal_id": "speed_3d_mps",
+      "template_id": "bounded_response",
+      "parameter_roles": [
+        "trigger_upper",
+        "recovery_upper",
+        "deadline_seconds"
+      ],
+      "formula_structure": "G[0,T]((speed_3d_mps > trigger_upper) -> F[0,deadline_seconds](speed_3d_mps <= recovery_upper))",
+      "refusal_reason": ""
+    },
+    {
+      "id": "N07",
+      "scope": "in_scope",
+      "signal_id": "abs_roll_rad",
+      "template_id": "bounded_response",
+      "parameter_roles": [
+        "trigger_upper",
+        "recovery_upper",
+        "deadline_seconds"
+      ],
+      "formula_structure": "G[0,T]((abs_roll_rad > trigger_upper) -> F[0,deadline_seconds](abs_roll_rad <= recovery_upper))",
+      "refusal_reason": ""
+    },
+    {
+      "id": "N08",
+      "scope": "in_scope",
+      "signal_id": "abs_pitch_rad",
+      "template_id": "bounded_response",
+      "parameter_roles": [
+        "trigger_upper",
+        "recovery_upper",
+        "deadline_seconds"
+      ],
+      "formula_structure": "G[0,T]((abs_pitch_rad > trigger_upper) -> F[0,deadline_seconds](abs_pitch_rad <= recovery_upper))",
+      "refusal_reason": ""
+    },
+    {
+      "id": "N09",
+      "scope": "in_scope",
+      "signal_id": "ang_rate_norm_rps",
+      "template_id": "bounded_response",
+      "parameter_roles": [
+        "trigger_upper",
+        "recovery_upper",
+        "deadline_seconds"
+      ],
+      "formula_structure": "G[0,T]((ang_rate_norm_rps > trigger_upper) -> F[0,deadline_seconds](ang_rate_norm_rps <= recovery_upper))",
+      "refusal_reason": ""
+    },
+    {
+      "id": "N10",
+      "scope": "in_scope",
+      "signal_id": "speed_3d_mps",
+      "template_id": "invariant_upper",
+      "parameter_roles": [
+        "upper_bound"
+      ],
+      "formula_structure": "G[0,T](speed_3d_mps <= upper_bound)",
+      "refusal_reason": ""
+    },
+    {
+      "id": "N11",
+      "scope": "in_scope",
+      "signal_id": "height_m",
+      "template_id": "invariant_upper",
+      "parameter_roles": [
+        "upper_bound"
+      ],
+      "formula_structure": "G[0,T](height_m <= upper_bound)",
+      "refusal_reason": ""
+    },
+    {
+      "id": "N12",
+      "scope": "in_scope",
+      "signal_id": "speed_3d_mps",
+      "template_id": "bounded_response",
+      "parameter_roles": [
+        "trigger_upper",
+        "recovery_upper",
+        "deadline_seconds"
+      ],
+      "formula_structure": "G[0,T]((speed_3d_mps > trigger_upper) -> F[0,deadline_seconds](speed_3d_mps <= recovery_upper))",
+      "refusal_reason": ""
+    },
+    {
+      "id": "N13",
+      "scope": "in_scope",
+      "signal_id": "abs_roll_rad",
+      "template_id": "bounded_response",
+      "parameter_roles": [
+        "trigger_upper",
+        "recovery_upper",
+        "deadline_seconds"
+      ],
+      "formula_structure": "G[0,T]((abs_roll_rad > trigger_upper) -> F[0,deadline_seconds](abs_roll_rad <= recovery_upper))",
+      "refusal_reason": ""
+    },
+    {
+      "id": "N14",
+      "scope": "in_scope",
+      "signal_id": "abs_pitch_rad",
+      "template_id": "bounded_response",
+      "parameter_roles": [
+        "trigger_upper",
+        "recovery_upper",
+        "deadline_seconds"
+      ],
+      "formula_structure": "G[0,T]((abs_pitch_rad > trigger_upper) -> F[0,deadline_seconds](abs_pitch_rad <= recovery_upper))",
+      "refusal_reason": ""
+    },
+    {
+      "id": "N15",
+      "scope": "in_scope",
+      "signal_id": "ang_rate_norm_rps",
+      "template_id": "invariant_upper",
+      "parameter_roles": [
+        "upper_bound"
+      ],
+      "formula_structure": "G[0,T](ang_rate_norm_rps <= upper_bound)",
+      "refusal_reason": ""
+    },
+    {
+      "id": "N16",
+      "scope": "in_scope",
+      "signal_id": "abs_roll_rad",
+      "template_id": "invariant_upper",
+      "parameter_roles": [
+        "upper_bound"
+      ],
+      "formula_structure": "G[0,T](abs_roll_rad <= upper_bound)",
+      "refusal_reason": ""
+    },
+    {
+      "id": "N17",
+      "scope": "in_scope",
+      "signal_id": "ang_rate_norm_rps",
+      "template_id": "bounded_response",
+      "parameter_roles": [
+        "trigger_upper",
+        "recovery_upper",
+        "deadline_seconds"
+      ],
+      "formula_structure": "G[0,T]((ang_rate_norm_rps > trigger_upper) -> F[0,deadline_seconds](ang_rate_norm_rps <= recovery_upper))",
+      "refusal_reason": ""
+    },
+    {
+      "id": "N18",
+      "scope": "in_scope",
+      "signal_id": "abs_pitch_rad",
+      "template_id": "invariant_upper",
+      "parameter_roles": [
+        "upper_bound"
+      ],
+      "formula_structure": "G[0,T](abs_pitch_rad <= upper_bound)",
+      "refusal_reason": ""
+    },
+    {
+      "id": "T01",
+      "scope": "in_scope",
+      "signal_id": "speed_3d_mps",
+      "template_id": "invariant_upper",
+      "parameter_roles": [
+        "upper_bound"
+      ],
+      "formula_structure": "G[0,T](speed_3d_mps <= upper_bound)",
+      "refusal_reason": ""
+    },
+    {
+      "id": "T02",
+      "scope": "in_scope",
+      "signal_id": "height_m",
+      "template_id": "invariant_upper",
+      "parameter_roles": [
+        "upper_bound"
+      ],
+      "formula_structure": "G[0,T](height_m <= upper_bound)",
+      "refusal_reason": ""
+    },
+    {
+      "id": "T03",
+      "scope": "in_scope",
+      "signal_id": "speed_3d_mps",
+      "template_id": "bounded_response",
+      "parameter_roles": [
+        "trigger_upper",
+        "recovery_upper",
+        "deadline_seconds"
+      ],
+      "formula_structure": "G[0,T]((speed_3d_mps > trigger_upper) -> F[0,deadline_seconds](speed_3d_mps <= recovery_upper))",
+      "refusal_reason": ""
+    },
+    {
+      "id": "T04",
+      "scope": "in_scope",
+      "signal_id": "abs_roll_rad",
+      "template_id": "bounded_response",
+      "parameter_roles": [
+        "trigger_upper",
+        "recovery_upper",
+        "deadline_seconds"
+      ],
+      "formula_structure": "G[0,T]((abs_roll_rad > trigger_upper) -> F[0,deadline_seconds](abs_roll_rad <= recovery_upper))",
+      "refusal_reason": ""
+    },
+    {
+      "id": "T05",
+      "scope": "in_scope",
+      "signal_id": "abs_pitch_rad",
+      "template_id": "bounded_response",
+      "parameter_roles": [
+        "trigger_upper",
+        "recovery_upper",
+        "deadline_seconds"
+      ],
+      "formula_structure": "G[0,T]((abs_pitch_rad > trigger_upper) -> F[0,deadline_seconds](abs_pitch_rad <= recovery_upper))",
+      "refusal_reason": ""
+    },
+    {
+      "id": "T06",
+      "scope": "in_scope",
+      "signal_id": "ang_rate_norm_rps",
+      "template_id": "bounded_response",
+      "parameter_roles": [
+        "trigger_upper",
+        "recovery_upper",
+        "deadline_seconds"
+      ],
+      "formula_structure": "G[0,T]((ang_rate_norm_rps > trigger_upper) -> F[0,deadline_seconds](ang_rate_norm_rps <= recovery_upper))",
+      "refusal_reason": ""
+    }
+  ],
+  "backend_retry_count": "not part of the experimental item denominator; original diagnostics remain in the sealed local record"
+}

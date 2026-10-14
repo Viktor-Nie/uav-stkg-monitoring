@@ -1,0 +1,1 @@
+MATCH (a:STKGSnapshot {_snapshot_id:'kbs_v33_frozen_stkg_20261013'}) OPTIONAL MATCH (a)-[r {_snapshot_id:'kbs_v33_frozen_stkg_20261013'}]->(b:STKGSnapshot {_snapshot_id:'kbs_v33_frozen_stkg_20261013'}) RETURN a,r,b;

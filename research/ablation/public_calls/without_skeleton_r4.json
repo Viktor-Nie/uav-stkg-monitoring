@@ -1,0 +1,297 @@
+{
+  "receipt": {
+    "call_id": "without_skeleton_r4",
+    "requested_model": "gpt-5.5",
+    "serving_model": "not_returned_by_cli",
+    "cli_version": "0.145.0",
+    "reasoning_effort": "low",
+    "temperature": "not_exposed",
+    "request_sha256": "a81875c0f0f613817ec5c5efaea36e76f9cac42399d4b6bd9b51b27a1abd4454",
+    "started_utc": "2026-10-13T10:36:05.628367+00:00",
+    "model_process_invocations": 1,
+    "backend_request_count": "not_observable",
+    "status": "completed",
+    "workdir_policy": "fresh_empty_temporary_directory_outside_project",
+    "exit_code": 0,
+    "unexpected_tool_events": 0,
+    "usage": [
+      {
+        "input_tokens": 10655,
+        "cached_input_tokens": 8704,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1080,
+        "reasoning_output_tokens": 186
+      }
+    ],
+    "elapsed_seconds": 15.465870299998642,
+    "finished_utc": "2026-10-13T10:36:21.102291+00:00"
+  },
+  "request": {
+    "instruction": "For each supplied Chinese requirement, decide whether it fits a deliberately narrow nonnumerical UAV STL fragment: an upper-bound invariant of one recorded scalar signal, or a triggered response that recovers below a bound within a deadline. Detection after a sustained exceedance is not a bounded recovery requirement. Reject requirements needing other quantities, actions, lower-bound operators, or unsupported temporal patterns. Do not invent numerical values. Do not use tools or files. Use only the legal vocabulary below, identically supplied in every condition. Infer from the sentence whether and how a template applies; the vocabulary by itself does not assign a template to a sentence. For an out-of-scope record, signal_id, template_id, formula_structure and parameter_roles must be empty. Return one records array preserving every supplied anonymous ID exactly once.\nLegal signal identifiers: speed_3d_mps, height_m, abs_roll_rad, abs_pitch_rad, ang_rate_norm_rps.\nLegal template identifiers: invariant_upper, bounded_response.\nGlobal legal role names: upper_bound, trigger_upper, recovery_upper, deadline_seconds.\nLegal syntax tokens include G, F, [0,T], <=, >, ->, parentheses, SIGNAL, and the listed role names. Numerical parameter values and source labels are not requested.\nReturn fields id, scope (in_scope or out_of_scope), signal_id, template_id, parameter_roles, formula_structure, refusal_reason.\nTemplate-to-role relations: invariant_upper requires exactly [upper_bound]. bounded_response requires exactly [trigger_upper,recovery_upper,deadline_seconds].",
+    "records": [
+      {
+        "id": "Q001",
+        "text": "无人机与人员的距离不得小于 50 米"
+      },
+      {
+        "id": "Q002",
+        "text": "若横滚角绝对值超过允许最大值并持续达到指定时长，则触发故障检测"
+      },
+      {
+        "id": "Q003",
+        "text": "电池电压低于配置阈值并持续配置时长后，触发电池失效保护"
+      },
+      {
+        "id": "Q004",
+        "text": "启用围栏后，飞行高度不得低于配置的最低高度值"
+      },
+      {
+        "id": "Q005",
+        "text": "若俯仰角绝对值超过允许最大值并持续达到指定时长，则触发故障检测"
+      },
+      {
+        "id": "Q006",
+        "text": "小型无人机地速通常不超过规定的最大值"
+      },
+      {
+        "id": "Q007",
+        "text": "无人机飞行高度始终不超过地理围栏配置的最大高度值"
+      },
+      {
+        "id": "Q008",
+        "text": "失去地面站数据链路并超过配置时限后，无人机应触发失效保护响应"
+      },
+      {
+        "id": "Q009",
+        "text": "电池出现次要故障时，无人机应执行返航或降落等响应动作"
+      },
+      {
+        "id": "Q010",
+        "text": "电池剩余容量低于配置阈值时，无人机应触发电池失效保护"
+      },
+      {
+        "id": "Q011",
+        "text": "飞行员必须始终保持对无人机的目视接触"
+      },
+      {
+        "id": "Q012",
+        "text": "启用围栏后，飞行高度始终不超过配置的最大高度值"
+      },
+      {
+        "id": "Q013",
+        "text": "该条目为高度参考系（ASL/AGL）的语义说明，非运行约束"
+      },
+      {
+        "id": "Q014",
+        "text": "无人机必须给其他航空器让路"
+      },
+      {
+        "id": "Q015",
+        "text": "自主飞行的高度始终不超过任务指定的高度上限"
+      },
+      {
+        "id": "Q016",
+        "text": "无人机飞行高度始终不超过地面以上 400 英尺（约 122 米）"
+      },
+      {
+        "id": "Q017",
+        "text": "无人机飞行高度始终不超过距最近地表点 120 米（400 英尺）"
+      },
+      {
+        "id": "Q018",
+        "text": "丢失 MAVLink 心跳达到配置时限后，触发地面站失效保护"
+      },
+      {
+        "id": "Q019",
+        "text": "飞行中应与入侵飞行器保持规定的水平或垂直间隔"
+      }
+    ]
+  },
+  "output": {
+    "records": [
+      {
+        "id": "Q001",
+        "scope": "out_of_scope",
+        "signal_id": "",
+        "template_id": "",
+        "formula_structure": "",
+        "refusal_reason": "Requires a distance lower-bound constraint on a quantity outside the legal signal identifiers.",
+        "parameter_roles": []
+      },
+      {
+        "id": "Q002",
+        "scope": "out_of_scope",
+        "signal_id": "",
+        "template_id": "",
+        "formula_structure": "",
+        "refusal_reason": "Describes fault detection after a sustained exceedance, not an upper-bound invariant or bounded recovery response.",
+        "parameter_roles": []
+      },
+      {
+        "id": "Q003",
+        "scope": "out_of_scope",
+        "signal_id": "",
+        "template_id": "",
+        "formula_structure": "",
+        "refusal_reason": "Requires battery voltage lower-threshold logic and a protection action, outside the legal signals and templates.",
+        "parameter_roles": []
+      },
+      {
+        "id": "Q004",
+        "scope": "out_of_scope",
+        "signal_id": "",
+        "template_id": "",
+        "formula_structure": "",
+        "refusal_reason": "Requires a height lower-bound constraint, which is outside the supported upper-bound fragment.",
+        "parameter_roles": []
+      },
+      {
+        "id": "Q005",
+        "scope": "out_of_scope",
+        "signal_id": "",
+        "template_id": "",
+        "formula_structure": "",
+        "refusal_reason": "Describes fault detection after a sustained exceedance, not an upper-bound invariant or bounded recovery response.",
+        "parameter_roles": []
+      },
+      {
+        "id": "Q006",
+        "scope": "in_scope",
+        "signal_id": "speed_3d_mps",
+        "template_id": "invariant_upper",
+        "formula_structure": "G(SIGNAL <= upper_bound)",
+        "refusal_reason": "",
+        "parameter_roles": [
+          "upper_bound"
+        ]
+      },
+      {
+        "id": "Q007",
+        "scope": "in_scope",
+        "signal_id": "height_m",
+        "template_id": "invariant_upper",
+        "formula_structure": "G(SIGNAL <= upper_bound)",
+        "refusal_reason": "",
+        "parameter_roles": [
+          "upper_bound"
+        ]
+      },
+      {
+        "id": "Q008",
+        "scope": "out_of_scope",
+        "signal_id": "",
+        "template_id": "",
+        "formula_structure": "",
+        "refusal_reason": "Requires loss-of-link timing and a failsafe action, not recovery of a legal scalar signal below a bound.",
+        "parameter_roles": []
+      },
+      {
+        "id": "Q009",
+        "scope": "out_of_scope",
+        "signal_id": "",
+        "template_id": "",
+        "formula_structure": "",
+        "refusal_reason": "Requires battery fault state and response actions, outside the legal signals and supported temporal templates.",
+        "parameter_roles": []
+      },
+      {
+        "id": "Q010",
+        "scope": "out_of_scope",
+        "signal_id": "",
+        "template_id": "",
+        "formula_structure": "",
+        "refusal_reason": "Requires battery capacity lower-threshold logic and a protection action, outside the legal signals and templates.",
+        "parameter_roles": []
+      },
+      {
+        "id": "Q011",
+        "scope": "out_of_scope",
+        "signal_id": "",
+        "template_id": "",
+        "formula_structure": "",
+        "refusal_reason": "Requires visual contact with the aircraft, not a constraint over one legal recorded scalar signal.",
+        "parameter_roles": []
+      },
+      {
+        "id": "Q012",
+        "scope": "in_scope",
+        "signal_id": "height_m",
+        "template_id": "invariant_upper",
+        "formula_structure": "G(SIGNAL <= upper_bound)",
+        "refusal_reason": "",
+        "parameter_roles": [
+          "upper_bound"
+        ]
+      },
+      {
+        "id": "Q013",
+        "scope": "out_of_scope",
+        "signal_id": "",
+        "template_id": "",
+        "formula_structure": "",
+        "refusal_reason": "Semantic explanation of a height reference frame, not an operational temporal constraint.",
+        "parameter_roles": []
+      },
+      {
+        "id": "Q014",
+        "scope": "out_of_scope",
+        "signal_id": "",
+        "template_id": "",
+        "formula_structure": "",
+        "refusal_reason": "Requires right-of-way behavior toward other aircraft, not a supported scalar-signal upper-bound pattern.",
+        "parameter_roles": []
+      },
+      {
+        "id": "Q015",
+        "scope": "in_scope",
+        "signal_id": "height_m",
+        "template_id": "invariant_upper",
+        "formula_structure": "G(SIGNAL <= upper_bound)",
+        "refusal_reason": "",
+        "parameter_roles": [
+          "upper_bound"
+        ]
+      },
+      {
+        "id": "Q016",
+        "scope": "in_scope",
+        "signal_id": "height_m",
+        "template_id": "invariant_upper",
+        "formula_structure": "G(SIGNAL <= upper_bound)",
+        "refusal_reason": "",
+        "parameter_roles": [
+          "upper_bound"
+        ]
+      },
+      {
+        "id": "Q017",
+        "scope": "in_scope",
+        "signal_id": "height_m",
+        "template_id": "invariant_upper",
+        "formula_structure": "G(SIGNAL <= upper_bound)",
+        "refusal_reason": "",
+        "parameter_roles": [
+          "upper_bound"
+        ]
+      },
+      {
+        "id": "Q018",
+        "scope": "out_of_scope",
+        "signal_id": "",
+        "template_id": "",
+        "formula_structure": "",
+        "refusal_reason": "Requires heartbeat-loss timing and triggering a failsafe, not a legal scalar-signal invariant or bounded recovery.",
+        "parameter_roles": []
+      },
+      {
+        "id": "Q019",
+        "scope": "out_of_scope",
+        "signal_id": "",
+        "template_id": "",
+        "formula_structure": "",
+        "refusal_reason": "Requires horizontal or vertical separation from an intruder aircraft, involving unsupported quantities and lower-bound separation logic.",
+        "parameter_roles": []
+      }
+    ]
+  }
+}

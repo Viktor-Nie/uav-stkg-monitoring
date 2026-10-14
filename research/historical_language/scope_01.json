@@ -1,0 +1,1964 @@
+{
+  "call_id": "scope_01",
+  "request_sha256": "b4ac5dcf4f743aa17a9f7455c7686c815bf36a884061714986f9edc626cb53c8",
+  "system_prompt_sha256": "9f0da3923a8d881f81a815c4cff400dcf256dce8fc1bffbcaf755242941420d7",
+  "request_payload": {
+    "instruction": "You are a conservative requirements-screening component for a UAV formalization study.\nClassify each supplied sentence using only the sentence text and these operational definitions:\n- in_scope: it states a concrete UAV operational condition, limit, trigger, or response that can be made machine-checkable using recorded telemetry and/or named configuration parameters.\n- conditional: it could become machine-checkable, but the sentence is incomplete, optional, context-dependent, or needs an observable, applicability condition, or referenced definition to be clarified.\n- out_of_scope: it is navigation, explanation, advice, a heading/list introduction, or otherwise does not state a checkable operational requirement.\nDo not infer labels from IDs or source names. Return one JSON array only, preserving every id exactly once. Each object must contain id, scope, and a short reason_code. scope must be exactly in_scope, conditional, or out_of_scope.",
+    "records": [
+      {
+        "id": "SRC02_001",
+        "text": "The most important failsafe settings are configured in the QGroundControl Safety Setup page."
+      },
+      {
+        "id": "SRC02_002",
+        "text": "Others must be configured via parameters ."
+      },
+      {
+        "id": "SRC02_003",
+        "text": "This includes many of the most important failsafe settings (battery, RC loss etc.) and the settings for the triggered actions Return and Land ."
+      },
+      {
+        "id": "SRC02_004",
+        "text": "Failsafe Actions ​ When a failsafe is triggered, the default behavior (for most failsafes) is to enter Hold for COM_FAIL_ACT_T seconds before performing an associated failsafe action."
+      },
+      {
+        "id": "SRC02_005",
+        "text": "This gives the user time to notice what is happening and override the failsafe if needed."
+      },
+      {
+        "id": "SRC02_006",
+        "text": "In most cases this can be done by using RC or a GCS to switch modes (note that during the failsafe-hold, moving the RC sticks does not trigger an override)."
+      },
+      {
+        "id": "SRC02_007",
+        "text": "The list below shows the set of all failsafe actions, ordered in increasing severity."
+      },
+      {
+        "id": "SRC02_008",
+        "text": "Note that different types of failsafe may not support all of these actions."
+      },
+      {
+        "id": "SRC02_009",
+        "text": "Return behaviour can be set in the Return Home Settings (below)."
+      },
+      {
+        "id": "SRC02_010",
+        "text": "Flight termination Turns off all controllers and sets all PWM outputs to their failsafe values (e.g."
+      },
+      {
+        "id": "SRC02_011",
+        "text": "The failsafe outputs can be used to deploy a parachute, landing gear or perform another operation."
+      },
+      {
+        "id": "SRC02_012",
+        "text": "TIP The exact behavior when different failsafes are triggered can be tested with the Failsafe State Machine Simulation ."
+      },
+      {
+        "id": "SRC02_013",
+        "text": "Return Mode Settings ​ Return is a common failsafe action that engages Return mode to return the vehicle to the home position."
+      },
+      {
+        "id": "SRC02_014",
+        "text": "TIP If you want to change the configuration you should carefully read the Return mode documentation for your vehicle type to understand the options."
+      },
+      {
+        "id": "SRC02_015",
+        "text": "Land Mode Settings ​ Land at the current position is a common failsafe action (in particular for multicopters), that engages Land Mode ."
+      },
+      {
+        "id": "SRC02_016",
+        "text": "TIP If you want to change the configuration you should carefully read the Land mode documentation for your vehicle type to understand the options."
+      },
+      {
+        "id": "SRC02_017",
+        "text": "Battery Failsafes ​ Battery level failsafe ​ The low battery failsafe is triggered when the battery capacity drops below battery failafe level values."
+      },
+      {
+        "id": "SRC02_018",
+        "text": "You can configure both the levels and the failsafe actions at each level in QGroundControl."
+      },
+      {
+        "id": "SRC02_019",
+        "text": "The most common configuration is to set the values and action as above (with Warn > Failsafe > Emergency ), and to set the Failsafe Action to warn at \"warn level\", trigger Return mode at \"Failsafe level\", and land immediately at \"Emergency level\"."
+      },
+      {
+        "id": "SRC02_020",
+        "text": "The settings and underlying parameters are shown below."
+      },
+      {
+        "id": "SRC02_021",
+        "text": "Setting Parameter Description Failsafe Action COM_LOW_BAT_ACT Warn, Return, or Land based when capacity drops below the trigger levels."
+      },
+      {
+        "id": "SRC02_022",
+        "text": "Battery Failsafe Level BAT_CRIT_THR Percentage capacity for Return action (or other actions if a single action selected)."
+      },
+      {
+        "id": "SRC02_023",
+        "text": "Flight Time Failsafes ​ There are several other \"battery related\" failsafe mechanisms that may be configured using parameters: The \"remaining flight time for safe return\" failsafe ( COM_FLTT_LOW_ACT ) is engaged when PX4 estimates that the vehicle has just enough battery remaining for a return mode landing."
+      },
+      {
+        "id": "SRC02_024",
+        "text": "You can configure this to ignore the failsafe, warn, or engage Return mode."
+      },
+      {
+        "id": "SRC02_025",
+        "text": "The \"maximum flight time failsafe\" ( COM_FLT_TIME_MAX ) allows you to set a maximum flight time after takeoff, at which the vehicle will automatically enter return mode (it will also \"warn\" at 90% of this time)."
+      },
+      {
+        "id": "SRC02_026",
+        "text": "The \"minimum battery\" for arming parameter ( COM_ARM_BAT_MIN ) prevents arming in the first place if the battery level is below the specified value."
+      },
+      {
+        "id": "SRC02_027",
+        "text": "Maximum flight time failsafe level COM_FLT_TIME_MAX Maximum allowed flight time before Return mode will be engaged, in seconds."
+      },
+      {
+        "id": "SRC02_028",
+        "text": "Manual Control Loss Failsafe ​ The manual control loss failsafe may be triggered if the connection to the RC transmitter or joystick is lost, and there is no fallback."
+      },
+      {
+        "id": "SRC02_029",
+        "text": "The QGCroundControl Safety UI allows you to set the failsafe action and RC Loss timeout ."
+      },
+      {
+        "id": "SRC02_030",
+        "text": "Users that want to disable the RC loss failsafe in specific automatic modes (mission, hold, offboard) can do so using the parameter COM_RCL_EXCEPT ."
+      },
+      {
+        "id": "SRC02_031",
+        "text": "Additional (and underlying) parameter settings are shown below."
+      },
+      {
+        "id": "SRC02_032",
+        "text": "This must be kept short because the vehicle will continue to fly using the old manual control setpoint until the timeout triggers."
+      },
+      {
+        "id": "SRC02_033",
+        "text": "COM_FAIL_ACT_T Failsafe Reaction Delay Delay in seconds between failsafe condition being triggered ( COM_RC_LOSS_T ) and failsafe action (RTL, Land, Hold)."
+      },
+      {
+        "id": "SRC02_034",
+        "text": "This might be set longer for long-range flights so that intermittent connection loss doesn't immediately invoke the failsafe."
+      },
+      {
+        "id": "SRC02_035",
+        "text": "It can be to zero so that the failsafe triggers immediately."
+      },
+      {
+        "id": "SRC02_036",
+        "text": "NAV_RCL_ACT Failsafe Action Disabled, Loiter, Return, Land, Disarm, Terminate."
+      },
+      {
+        "id": "SRC02_037",
+        "text": "Data Link Loss Failsafe ​ The Data Link Loss failsafe is triggered if a telemetry link (connection to ground station) is lost."
+      },
+      {
+        "id": "SRC02_038",
+        "text": "Setting Parameter Description Data Link Loss Timeout COM_DL_LOSS_T Amount of time after losing the data connection before the failsafe will trigger."
+      },
+      {
+        "id": "SRC02_039",
+        "text": "Failsafe Action NAV_DLL_ACT Disabled, Hold mode, Return mode, Land mode, Disarm, Terminate."
+      },
+      {
+        "id": "SRC02_040",
+        "text": "Setting Parameter Description Mode exceptions for DLL failsafe COM_DLL_EXCEPT Set modes where DL loss will not trigger a failsafe."
+      },
+      {
+        "id": "SRC02_041",
+        "text": "Geofence Failsafe ​ The Geofence Failsafe is triggered when the drone breaches a \"virtual\" perimeter."
+      },
+      {
+        "id": "SRC02_042",
+        "text": "If the vehicle moves outside the radius or above the altitude the specified Failsafe Action will trigger."
+      },
+      {
+        "id": "SRC02_043",
+        "text": "The settings and underlying geofence parameters are shown below."
+      },
+      {
+        "id": "SRC02_044",
+        "text": "Position (GNSS) Loss Failsafe ​ The Position Loss Failsafe is triggered if the quality of the PX4 global position estimate falls below acceptable levels (this might be caused by GPS loss) while in a mode that requires an acceptable position estimate."
+      },
+      {
+        "id": "SRC02_045",
+        "text": "The relevant parameters for all vehicles shown below."
+      },
+      {
+        "id": "SRC02_046",
+        "text": "Offboard Loss Failsafe ​ The Offboard Loss Failsafe is triggered if the offboard link is lost while under Offboard control ."
+      },
+      {
+        "id": "SRC02_047",
+        "text": "Different failsafe behaviour can be specified based on whether or not there is also an RC connection available."
+      },
+      {
+        "id": "SRC02_048",
+        "text": "The relevant parameters are shown below: Parameter Description COM_OF_LOSS_T Delay after loss of offboard connection before the failsafe is triggered."
+      },
+      {
+        "id": "SRC02_049",
+        "text": "COM_OBL_RC_ACT Failsafe action if RC is available: Position mode, Altitude mode, Manual mode, Return mode, Land mode, Hold mode."
+      },
+      {
+        "id": "SRC02_050",
+        "text": "Traffic Avoidance Failsafe ​ The Traffic Avoidance Failsafe allows PX4 to respond to transponder data (e.g."
+      },
+      {
+        "id": "SRC02_051",
+        "text": "The relevant parameters are shown below: Parameter Description NAV_TRAFF_AVOID Set the failsafe action: Disabled, Warn, Return mode, Land mode."
+      },
+      {
+        "id": "SRC02_052",
+        "text": "Quad-chute Failsafe ​ Failsafe for when a VTOL vehicle can no longer fly in fixed-wing mode, perhaps due to the failure of a pusher motor, airspeed sensor, or control surface."
+      },
+      {
+        "id": "SRC02_053",
+        "text": "If the failsafe is triggered, the vehicle will immediately switch to multicopter mode and execute the action defined in parameter COM_QC_ACT ."
+      },
+      {
+        "id": "SRC02_054",
+        "text": "The parameters that control when the quad-chute will trigger are listed in the table below."
+      },
+      {
+        "id": "SRC02_055",
+        "text": "VT_FW_QC_HMAX Maximum quad-chute height, below which the quad-chute failsafe cannot trigger."
+      },
+      {
+        "id": "SRC02_056",
+        "text": "In altitude controlled modes, such as Hold mode , Position mode , Altitude mode , or Mission mode , a vehicle should track its current \"commanded\" altitude setpoint."
+      },
+      {
+        "id": "SRC02_057",
+        "text": "The quad chute failsafe is triggered if the vehicle falls too far below the commanded setpoint (by the amount defined in this parameter)."
+      },
+      {
+        "id": "SRC02_058",
+        "text": "Note that the quad-chute is only triggered if the vehicle continuously loses altitude below the commanded setpoint; it is not triggered if the commanded altitude setpoint increases faster than the vehicle can follow."
+      },
+      {
+        "id": "SRC02_059",
+        "text": "The quad-chute is triggered if the vehicle falls this far below its initial altitude before completing the transition."
+      },
+      {
+        "id": "SRC02_060",
+        "text": "VT_FW_MIN_ALT Minimum altitude above Home for fixed-wing flight."
+      },
+      {
+        "id": "SRC02_061",
+        "text": "When the altitude drops below this value in fixed-wing flight the vehicle a quad-chute is triggered."
+      },
+      {
+        "id": "SRC02_062",
+        "text": "High Wind Failsafe ​ The high wind failsafe can trigger a warning and/or other mode change when the wind speed exceeds the warning and maximum wind-speed threshhold values."
+      },
+      {
+        "id": "SRC02_063",
+        "text": "The relevant parameters are listed in the table below."
+      },
+      {
+        "id": "SRC02_064",
+        "text": "Parameter Description COM_WIND_MAX Wind speed threshold that triggers failsafe action, in m/s ( COM_WIND_MAX_ACT )."
+      },
+      {
+        "id": "SRC02_065",
+        "text": "COM_WIND_MAX_ACT High wind failsafe action (following COM_WIND_MAX trigger)."
+      },
+      {
+        "id": "SRC02_066",
+        "text": "COM_WIND_WARN Wind speed threshold that triggers periodic failsafe warning."
+      },
+      {
+        "id": "SRC02_067",
+        "text": "The relevant parameters are shown below: Parameter Description CBRK_FLIGHTTERM Flight termination circuit breaker."
+      },
+      {
+        "id": "SRC02_068",
+        "text": "FD_FAIL_P Maximum allowed pitch (in degrees)."
+      },
+      {
+        "id": "SRC02_069",
+        "text": "FD_FAIL_R Maximum allowed roll (in degrees)."
+      },
+      {
+        "id": "SRC02_070",
+        "text": "The external trigger system must be connected to flight controller port AUX5 (or MAIN5 on boards that do not have AUX ports), and is configured using the parameters below."
+      },
+      {
+        "id": "SRC02_071",
+        "text": "INFO External ATS is required by ASTM F3322-18 ."
+      },
+      {
+        "id": "SRC02_072",
+        "text": "Parameter Description FD_EXT_ATS_EN Enable PWM input on AUX5 or MAIN5 (depending on board) for engaging failsafe from an external automatic trigger system (ATS)."
+      },
+      {
+        "id": "SRC02_073",
+        "text": "FD_EXT_ATS_TRIG The PWM threshold from external automatic trigger system for engaging failsafe."
+      },
+      {
+        "id": "SRC02_074",
+        "text": "By default the motors will restart if the switch is reverted within 5 seconds, after which the vehicle will automatically disarm, and you will need to arm it again in order to start the motors."
+      },
+      {
+        "id": "SRC02_075",
+        "text": "INFO There is also a Kill Gesture , which cannot be reverted."
+      },
+      {
+        "id": "SRC02_076",
+        "text": "The action cannot be reverted without a reboot (this differs from a Kill Switch , where the operation can be reverted within the time period defined by COM_KILL_DISARM )."
+      },
+      {
+        "id": "SRC02_077",
+        "text": "The relevant parameters are shown below: Parameter Description COM_DISARM_LAND Timeout for auto-disarm after landing."
+      },
+      {
+        "id": "SRC02_078",
+        "text": "COM_ARM_BAT_MIN Minimum battery level for arming."
+      },
+      {
+        "id": "SRC02_079",
+        "text": "Further Information ​ QGroundControl User Guide > Safety Setup Edit on GitHub Pager Previous page Safety Next page Failsafe Simulation"
+      },
+      {
+        "id": "SRC03_001",
+        "text": "Some vehicles can also have maximum and/or minimum altitude limits."
+      },
+      {
+        "id": "SRC03_002",
+        "text": "This enables any fences that are setup, except the ALT_MIN fence, which must be enabled by using any fence enable means (GCS message, AUTOENABLE in plane, RC switch) Set FENCE_ACTION = to whatever you wish for a breach action."
+      },
+      {
+        "id": "SRC03_003",
+        "text": "Set FENCE_OPTIONS Set bit 1 to prevent mode changes after a fence breach until the vehicle returns within the fence boundary (Plane only, Copter/Rover do not allow mode changes while in breach)."
+      },
+      {
+        "id": "SRC03_004",
+        "text": "Set FENCE_ALT_MAX = to the altitude limit you want (in meters)."
+      },
+      {
+        "id": "SRC03_005",
+        "text": "Set FENCE_MARGIN = to the distance from the fence horizontal boundary the vehicle must maintain in order to prevent a breach."
+      },
+      {
+        "id": "SRC03_006",
+        "text": "Set the FENCE_ALT_MIN as a minimum altitude breach boundary."
+      },
+      {
+        "id": "SRC03_007",
+        "text": "Set FENCE_ALT_MAX_TP and FENCE_ALT_MIN_TP to select the altitude reference frame used by the maximum and minimum altitude fences, respectively."
+      },
+      {
+        "id": "SRC03_008",
+        "text": "See Altitude Fence Reference Frames below."
+      },
+      {
+        "id": "SRC03_009",
+        "text": "The POLYGON fences must also have been loaded via a fence list from a ground control station in order to be active."
+      },
+      {
+        "id": "SRC03_010",
+        "text": "See below for detailed setup of Cylindrical Fence and Inclusion and Exclusion Fences ."
+      },
+      {
+        "id": "SRC03_011",
+        "text": "Altitude Fence Reference Frames ¶ The maximum and minimum altitude fences ( FENCE_ALT_MAX and FENCE_ALT_MIN ) are altitudes above home by default."
+      },
+      {
+        "id": "SRC03_012",
+        "text": "The altitude reference frame for each can be selected with FENCE_ALT_MAX_TP and FENCE_ALT_MIN_TP , respectively: 0: above mean sea level (AMSL) 1: above home (the default, and the behaviour of previous releases) 2: above the EKF origin 3: above terrain These parameters are unavailable in Rover."
+      },
+      {
+        "id": "SRC03_013",
+        "text": "Note Using the above terrain frame (3) requires a terrain database (see Terrain Following ) and will prevent arming until terrain data is available."
+      },
+      {
+        "id": "SRC03_014",
+        "text": "If the vehicle cannot determine its altitude in the selected frame while flying, the corresponding fence is treated as breached."
+      },
+      {
+        "id": "SRC03_015",
+        "text": "In other modes, it will execute the FENCE_ACTION below if the altitude or boundary is reached."
+      },
+      {
+        "id": "SRC03_016",
+        "text": "Note if the Minimum Altitude fence is enabled by the switch while on the ground and disarmed, a pre-arm failure will occur preventing arming."
+      },
+      {
+        "id": "SRC03_017",
+        "text": "Automatic Altitude Breach Avoidance ¶ For landing modes (NAV_LAND,QLAND,LAND,etc.) in Copter and Plane, the FENCE_ALT_MIN limit is automatically disabled."
+      },
+      {
+        "id": "SRC03_018",
+        "text": "In the future the Mission Planner, APM Planner, and other GCS applications should get support for announcing geo-fence status during the flight."
+      },
+      {
+        "id": "SRC04_001",
+        "text": "The Ground Station Control (GCS) failsafe controls how Copter will behave if contact with the GCS is lost."
+      },
+      {
+        "id": "SRC04_002",
+        "text": "The GCS failsafe monitors the time since the last MAVLink heartbeat from the GCS."
+      },
+      {
+        "id": "SRC04_003",
+        "text": "If no heartbeat is received FS_GCS_TIMEOUT seconds (Default is 5 seconds), the GCS failsafe event will trigger based on your parameter settings."
+      },
+      {
+        "id": "SRC04_004",
+        "text": "Note that if no GCS is ever connected, the GCS failsafe will remain inactive regardless of parameter settings."
+      },
+      {
+        "id": "SRC04_005",
+        "text": "It can also be configured to bypass the failsafe in an Auto Mode mission, bypass the failsafe in pilot controlled modes, or to continue landing if already in a landing phase."
+      },
+      {
+        "id": "SRC04_006",
+        "text": "If the copter is disarmed, no failsafe will take place."
+      },
+      {
+        "id": "SRC04_007",
+        "text": "If the copter is armed in Stabilize or Acro modes, and the throttle input is at minimum, the copter will immediately disarm."
+      },
+      {
+        "id": "SRC04_008",
+        "text": "Otherwise, the copter will take the actions as configured in the parameters described below."
+      },
+      {
+        "id": "SRC04_009",
+        "text": "GCS reconnects and MAVLink heartbeat is restored) the copter will remain in its failsafe mode."
+      },
+      {
+        "id": "SRC04_010",
+        "text": "It will not automatically return to the flight mode that was active before the failsafe was triggered."
+      },
+      {
+        "id": "SRC04_011",
+        "text": "This means that if, for example, the vehicle was in Loiter when the failsafe occurred and the flight mode was automatically changed to RTL, even after the GCS reconnects, the vehicle would remain in RTL."
+      },
+      {
+        "id": "SRC04_012",
+        "text": "Setting the failsafe ¶ In Mission Planner’s full parameter list or full parameter tree, set the FS_GCS_ENABLE parameter to: Disabled (Value 0) will disable the GCS failsafe entirely."
+      },
+      {
+        "id": "SRC04_013",
+        "text": "Enabled Continue with Mission in Auto Mode (this value has no effect in 4.0 and later with FS_OPTION parameter replacing function, see below ) (Value 2) will ignore the failsafe in an Auto Mode mission."
+      },
+      {
+        "id": "SRC04_014",
+        "text": "Setting this value in Copter 4.0 and later version will automatically be converted and set to Value 1 (Always RTL) and the FS_OPTIONS bitmask will be modified to include bit (1) for “Continue auto mode mission on GCS failsafe”."
+      },
+      {
+        "id": "SRC04_015",
+        "text": "Any invalid value (Such as accidentally enter 99 as a parameter value) will will behave the same as Enabled Always RTL The FS_OPTIONS parameter (Copter 4.0 and later) is a bitmask parameter to select one or more options that modify the standard actions of the radio, GCS, and battery failsafe."
+      },
+      {
+        "id": "SRC04_016",
+        "text": "Note Only bitmask bits 1, 3, 4 & 5 affect actions taken during GCS failsafe."
+      },
+      {
+        "id": "SRC04_017",
+        "text": "This parameter also works in conjunction with the battery and radio failsafe, so ensure you are taking all options into account when setting this parameter."
+      },
+      {
+        "id": "SRC04_018",
+        "text": "Note All Failsafe Parameters can be observed or set from the Advanced Parameter List in Mission Planner."
+      },
+      {
+        "id": "SRC05_001",
+        "text": "Definitions of Altitude (ALT) ¶ In the above diagram, various types of “altitude” are shown: ASL: Altitude above (mean) Sea Level - the altitude of the vehicle expressed as distance above the mean sea level of the world."
+      },
+      {
+        "id": "SRC05_002",
+        "text": "AGL: Altitude above Ground Level: the altitude of the vehicle above whatever is directly below it."
+      },
+      {
+        "id": "SRC05_003",
+        "text": "Relative: Relative altitude above HOME/ORIGIN position’s altitude."
+      },
+      {
+        "id": "SRC05_004",
+        "text": "Terrain ALT: The height above sea level (asl) of a terrain position."
+      },
+      {
+        "id": "SRC05_005",
+        "text": "Either from pilot input (eg ALTHOLD) or from navigation controller (eg AUTO) Estimated and Target ALT ¶ The above simplified diagram shows how altitude control is implemented in ArduPilot."
+      },
+      {
+        "id": "SRC05_006",
+        "text": "In the altitude controller, the Target ALT can also be modified by either Terrain Data from the GCS or SD card if TERRAIN_ENABLE is enabled, and/or RangeFinder altitude readings of distance above ground, if enabled and within the range of the rangefinder."
+      },
+      {
+        "id": "SRC05_007",
+        "text": "Target ALT Modification using RangeFinder (RF) ¶ Copter ¶ If a downward facing RangeFinder is enabled and within range, then the Target ALT will be modified to use the RF’s altitude measurements in Copter and in VTOL modes of Plane."
+      },
+      {
+        "id": "SRC05_008",
+        "text": "Now you descend using the throttle stick to 10m and are now within the RF’s range."
+      },
+      {
+        "id": "SRC05_009",
+        "text": "This is normally only used when the only altitude sensor available is a RF, since they have very limited range and more subject to environmental impacts to accuracy."
+      },
+      {
+        "id": "SRC05_010",
+        "text": "Plane ¶ In Plane, when using fixed wing modes, RangeFinder use, when within range and enabled by the RNGFND_LANDING parameter, is limited to: Adjusting glide slope during Automatic Landings , during the approach and pre-flare phases of the landing."
+      },
+      {
+        "id": "SRC05_011",
+        "text": "Determining altitude when LGR_DEPLOY_ALT , or LGR_RETRACT_ALT is reached, if a downward facing RF is active and within range."
+      },
+      {
+        "id": "SRC06_001",
+        "text": "If you have comments or suggestions on how to improve the www.ecfr.gov website or have questions about using www.ecfr.gov, please choose the 'Website Feedback' button below."
+      },
+      {
+        "id": "SRC06_002",
+        "text": "Website Feedback If you would like to comment on the current content, please use the 'Content Feedback' button below for instructions on contacting the issuing agency Content Feedback If you have questions for the Agency that issued the current document please contact the agency directly."
+      },
+      {
+        "id": "SRC06_003",
+        "text": "Use the navigation links in the gray bar above to view the table of contents that this content belongs to."
+      },
+      {
+        "id": "SRC06_004",
+        "text": "The official, published CFR, is updated annually and available below under \"Published Edition\"."
+      },
+      {
+        "id": "SRC06_005",
+        "text": "As a result, it may not include the most recent changes applied to the CFR."
+      },
+      {
+        "id": "SRC06_006",
+        "text": "A remote pilot in command and the person manipulating the flight controls of the small unmanned aircraft system must comply with all of the following operating limitations when operating a small unmanned aircraft system: ( a ) The groundspeed of the small unmanned aircraft may not exceed 87 knots (100 miles per hour)."
+      },
+      {
+        "id": "SRC06_007",
+        "text": "( b ) The altitude of the small unmanned aircraft cannot be higher than 400 feet above ground level, unless the small unmanned aircraft: ( 1 ) Is flown within a 400-foot radius of a structure; and ( 2 ) Does not fly higher than 400 feet above the structure's immediate uppermost limit."
+      },
+      {
+        "id": "SRC06_008",
+        "text": "( c ) The minimum flight visibility, as observed from the location of the control station must be no less than 3 statute miles."
+      },
+      {
+        "id": "SRC06_009",
+        "text": "( d ) The minimum distance of the small unmanned aircraft from clouds must be no less than: ( 1 ) 500 feet below the cloud; and ( 2 ) 2,000 feet horizontally from the cloud."
+      },
+      {
+        "id": "SRC07_001",
+        "text": "Note This failsafe requires the vehicle have a working Power Module ."
+      },
+      {
+        "id": "SRC07_002",
+        "text": "The discussion below applies to those optional batteries also."
+      },
+      {
+        "id": "SRC07_003",
+        "text": "Each can trigger a failsafe and each can have different actions and setup values."
+      },
+      {
+        "id": "SRC07_004",
+        "text": "When the failsafe will trigger ¶ If enabled and set-up correctly the battery failsafe will trigger if the main battery’s voltage drops below the voltage held in the BATT_LOW_VOLT parameter (or FS_BATT_VOLTAGE in older versions) for more than 10 seconds."
+      },
+      {
+        "id": "SRC07_005",
+        "text": "remaining capacity falls below the BATT_LOW_MAH parameter (or FS_BATT_MAH in older versions) 20% of the battery’s full capacity is a good choice (i.e."
+      },
+      {
+        "id": "SRC07_006",
+        "text": "This is a dangerous option that should not be used in most cases 6 : Auto DO_LAND_START or RTL - the vehicle will jump to the nearest “DO_LAND_START” mission item or RTL if no “DO_LAND_START” mission item has been programmed (see Using DO_LAND_START )."
+      },
+      {
+        "id": "SRC07_007",
+        "text": "The battery failsafe will not trigger again unless the two-layer failsafe is setup (see below) The FS_OPTIONS parameter (Copter 4.0 and later) is a bitmask parameter to select one or more options that modify the standard actions of the radio, GCS, and battery failsafe."
+      },
+      {
+        "id": "SRC07_008",
+        "text": "Note Only bitmask bit 3 & 5 affects actions taken during Battery failsafe."
+      },
+      {
+        "id": "SRC07_009",
+        "text": "This parameter also works in conjunction with the GCS and radio failsafe, so ensure you are taking all options into account when setting this parameter."
+      },
+      {
+        "id": "SRC07_010",
+        "text": "Note Even if the failsafe action is set to “None” (i.e."
+      },
+      {
+        "id": "SRC07_011",
+        "text": "To completely disable the battery failsafe set BATT_LOW_VOLT and BATT_LOW_MAH to zero."
+      },
+      {
+        "id": "SRC07_012",
+        "text": "Note Once the battery failsafe has triggered, it cannot be reset until the autopilot is rebooted."
+      },
+      {
+        "id": "SRC07_013",
+        "text": "Setting up using Mission Planner ¶ On the INITIAL SETUP | Mandatory Hardware | Failsafe page: If the Battery section parameters are greyed out follow instructions to setup the Power Module Set the “Low Battery” threshold voltage (i.e."
+      },
+      {
+        "id": "SRC07_014",
+        "text": "10.5 volts) Set the “Reserved MAH” or leave as “0” if the failsafe should never trigger based on estimated current consumed."
+      },
+      {
+        "id": "SRC07_015",
+        "text": "Select the desired behavior (Land, RTL, SmartRTL, etc) from the drop-down list Two-Layer failsafe ¶ ArduPilot includes a two-layer battery failsafe."
+      },
+      {
+        "id": "SRC07_016",
+        "text": "This allows setting up a follow-up action if the battery voltage or remaining capacity falls below an even lower threshold."
+      },
+      {
+        "id": "SRC08_001",
+        "text": "This page explains this failsafe’s setup and testing."
+      },
+      {
+        "id": "SRC08_002",
+        "text": "Note the “Radio failsafe” was previously called “Throttle failsafe” because of the way in which some receivers use the throttle channel to signal the loss of contact."
+      },
+      {
+        "id": "SRC08_003",
+        "text": "When the failsafe will trigger ¶ If enabled and set-up correctly the radio failsafe will trigger if any of these conditions occur for more than RC_FS_TIMEOUT seconds (default = 1 sec): The pilot turns off the RC transmitter."
+      },
+      {
+        "id": "SRC08_004",
+        "text": "The radio failsafe will also trigger if the pilot forces the throttle channel below FS_THR_VALUE from the transmitter."
+      },
+      {
+        "id": "SRC08_005",
+        "text": "What will happen ¶ When a radio failsafe is triggered, the copter can be configured via parameters to do nothing, land immediately, RTL, or SmartRTL."
+      },
+      {
+        "id": "SRC08_006",
+        "text": "It can also be configured to bypass the failsafe in an Auto Mode mission, or to continue landing if already in a landing phase."
+      },
+      {
+        "id": "SRC08_007",
+        "text": "If the copter is armed in Stabilize or Acro modes, and the throttle input is at minimum, and the vehicle is not in AirMode then the copter will immediately disarm."
+      },
+      {
+        "id": "SRC08_008",
+        "text": "transmitter and receiver regain contact) the copter will remain in its failsafe mode."
+      },
+      {
+        "id": "SRC08_009",
+        "text": "This means that if, for example, the vehicle was in Loiter when the failsafe occurred and the flight mode was automatically changed to RTL, even after the transmitter and receiver regained contact, the vehicle would remain in RTL."
+      },
+      {
+        "id": "SRC08_010",
+        "text": "Instead the receiver must be set-up to signal to the autopilot it has lost contact and there are two ways that it can do this (the method depends upon the receiver)."
+      },
+      {
+        "id": "SRC08_011",
+        "text": "Receiver configuration for low-throttle method ¶ The “Low-Throttle” method pulls the throttle channel (normally channel 3) to a value below the bottom of its normal range (normally below 1000us)."
+      },
+      {
+        "id": "SRC08_012",
+        "text": "Below is the setup method for a Futaba T7C Transmitter with R617FS or TFR4-B receiver which uses the “low throttle” method."
+      },
+      {
+        "id": "SRC08_013",
+        "text": "Many receivers allow for the failsafe positions to be set either by simply pressing a button on the receiver, or directly from the transmitter."
+      },
+      {
+        "id": "SRC08_014",
+        "text": "In this case, the transmitter is temporarily adjusted to output a throttle signal below the normal low idle position (if low idle is 1000us, then 990uS would be sent) setting this as the failsafe value for the receiver, then adjusting low stick back to normal idle position."
+      },
+      {
+        "id": "SRC08_015",
+        "text": "This below throttle idle value is then set for FS_THR_VALUE , as discussed below."
+      },
+      {
+        "id": "SRC08_016",
+        "text": "Below is the setup method for a FlySky 9 channel transmitter with FrSky D4R-II receiver which uses the “No Signal” method."
+      },
+      {
+        "id": "SRC08_017",
+        "text": "Parameter Configuration ¶ The FS_THR_ENABLE parameter can be set in the Mission Planner full parameter list or full parameter tree, or can also be set using the Mission Planner failsafe options dropdown in the Initial Setup >> Mandatory Hardware >> Failsafe menu."
+      },
+      {
+        "id": "SRC08_018",
+        "text": "Disabled (Value 0) will disable the radio failsafe entirely."
+      },
+      {
+        "id": "SRC08_019",
+        "text": "Enabled Continue with Mission in Auto Mode (this value has no effect in 4.0 and later with FS_OPTIONS parameter replacing function, see below) (Value 2) will ignore the failsafe in an Auto Mode mission."
+      },
+      {
+        "id": "SRC08_020",
+        "text": "Setting this value in Copter 4.0 and later version will automatically be converted and set to (Value 1) and the FS_OPTIONS will be modified to include bit (0) in the bitmask for “Continue if in auto mode on Radio Failsafe”."
+      },
+      {
+        "id": "SRC08_021",
+        "text": "Any invalid value (Such as accidentally enter 99 as a parameter value) will will behave the same as Enabled Always LAND The FS_THR_VALUE parameter can be set in the Mission Planner full parameter list or full parameter tree, or can also be set using the Mission Planner FS PWM value in the Initial Setup >> Mandatory Hardware >> Failsafe menu."
+      },
+      {
+        "id": "SRC08_022",
+        "text": "Note Only bitmask bits 0, 2, 3 & 5 affect actions taken during radio failsafe."
+      },
+      {
+        "id": "SRC08_023",
+        "text": "This parameter also works in conjunction with the battery and GCS failsafe, so ensure you are taking all options into account when setting this parameter."
+      },
+      {
+        "id": "SRC08_024",
+        "text": "Below is a screenshot of the Mission Planner Initial Setup >> Mandatory Hardware >> Failsafe menu."
+      },
+      {
+        "id": "SRC08_025",
+        "text": "Testing ¶ You can check your failsafe by performing the following tests with the autopilot connected to the Mission Planner either via a USB cable or telemetry link."
+      },
+      {
+        "id": "SRC08_026",
+        "text": "You can complete these tests without plugging in your LiPo battery but if you do connect a battery you should first remove the propellers."
+      },
+      {
+        "id": "SRC08_027",
+        "text": "Test #1 : if using the “Low-Throttle” method, ensure the throttle channel drops with loss of radio contact Ensure your RC transmitter is on and connected with the throttle all the way down and flight mode set to Stabilize The throttle (channel 3) PWM value should be approximately as in first illustration below."
+      },
+      {
+        "id": "SRC08_028",
+        "text": "The motors should disarm immediately (red led will start flashing, DISARMED will be displayed in the Mission Planner’s Flight Data screen)."
+      },
+      {
+        "id": "SRC08_029",
+        "text": "Test #3 : ensuring flight mode changes to RTL or LAND when throttle is above zero Switch to stabilize mode, arm your motors and raise your throttle to the mid point."
+      },
+      {
+        "id": "SRC08_030",
+        "text": "The Flight Mode should switch to RTL if you have a GPS lock or LAND if you do not have a GPS lock (the flight mode and GPS lock status are visible in the Mission Planner’s flight data screen)."
+      },
+      {
+        "id": "SRC08_031",
+        "text": "Test #4 : retaking control after the failsafe has cleared continuing on from test #3, turn your transmitter back on while the flight mode is still in RTL or LAND and armed, change the flight mode switch to another position and then back to stabilize mode."
+      },
+      {
+        "id": "SRC08_032",
+        "text": "Ensure that the flight mode displayed on the Failsafe page is updating appropriately."
+      },
+      {
+        "id": "SRC08_033",
+        "text": "Test #5 (optional) : removing power from the receiver Switch to stabilize mode, arm your motors and keep your throttle above zero."
+      },
+      {
+        "id": "SRC08_034",
+        "text": "Carefully disconnect the power wires connecting the receiver to the autopilot The Flight Mode should switch to RTL or LAND as described in Test #3 Warning Unplug the autopilot so that it is powered down before reattaching the receiver’s power Using the receiver to set the flight mode ( DO NOT USE!"
+      },
+      {
+        "id": "SRC08_035",
+        "text": ") ¶ Instead of setting up the receiver and autopilot as described above (i.e."
+      },
+      {
+        "id": "SRC08_036",
+        "text": "Since the autopilot has no way of knowing that an RC failsafe has occurred, undesired behavior can occur such as overriding other failsafes like low battery or GCS failsafes with mode changes."
+      },
+      {
+        "id": "SRC09_001",
+        "text": "Fly below 120m (400ft) Flying below the legal height limit of 120m (400ft) will reduce the risk of coming across other aircraft, which normally fly higher than this."
+      },
+      {
+        "id": "SRC09_002",
+        "text": "Always look and listen out for other aircraft that may be flying below 120m (400ft), such as air ambulances, police helicopters, and low-flying military aircraft."
+      },
+      {
+        "id": "SRC09_003",
+        "text": "Flying where there are hills, mountains or cliffs Your drone or model aircraft must never be more than 120m (400ft) from the closest point of the earth’s surface."
+      },
+      {
+        "id": "SRC09_004",
+        "text": "You must keep a minimum horizontal distance of 50m between your drone or model aircraft and people."
+      },
+      {
+        "id": "SRC09_005",
+        "text": "This creates a no fly zone around people that goes all the way up to the legal height limit."
+      },
+      {
+        "id": "SRC09_006",
+        "text": "You must not fly over people in this no fly zone, even if you fly higher than 50m."
+      },
+      {
+        "id": "SRC09_007",
+        "text": "There are some exceptions to this rule, described in the sections below."
+      },
+      {
+        "id": "SRC09_008",
+        "text": "People involved in what you’re doing The rule on minimum distances is different for people involved in what you’re doing."
+      },
+      {
+        "id": "SRC09_009",
+        "text": "Remember, you must never put anyone in danger."
+      },
+      {
+        "id": "SRC09_010",
+        "text": "Drones and model aircraft below 250g, or UK0, UK1, C0 or C1 class The rules on minimum distances to people are different for drones and model aircraft below 250g, or UK0, UK1, C0 or C1 class."
+      },
+      {
+        "id": "SRC09_011",
+        "text": "You can fly a drone or model aircraft that’s below 250g, or UK0, UK1 or C0 class closer to uninvolved people than 50m and you can fly over them."
+      },
+      {
+        "id": "SRC09_012",
+        "text": "Remember, you must never put people in danger."
+      },
+      {
+        "id": "SRC09_013",
+        "text": "Always keep a safe distance Sometimes, you’ll need to increase the 50m minimum distance from people to make sure that your flight remains safe."
+      },
+      {
+        "id": "SRC09_014",
+        "text": "Follow these general rules: If you fly higher than 50m, you should keep the same distance horizontally."
+      },
+      {
+        "id": "SRC09_015",
+        "text": "For example if it’s very windy, you should fly further away from people."
+      },
+      {
+        "id": "SRC09_016",
+        "text": "Never fly over people who are crowded together A crowd is any group of people who cannot move away quickly because of the number of other people around them."
+      },
+      {
+        "id": "SRC09_017",
+        "text": "Keep at least 150m away from residential, recreational, commercial and industrial areas 150m is the minimum distance."
+      },
+      {
+        "id": "SRC09_018",
+        "text": "If an individual building is at least 50m away from other buildings, it’s not treated as a residential, recreational, commercial or industrial area, but you must not fly within 50m of it."
+      },
+      {
+        "id": "SRC09_019",
+        "text": "Small drones and model aircraft below 250g, or UK0, UK1, C0 or C1 class You can fly drones and model aircraft that are below 250g, or UK0, UK1 or C0 class in residential, recreational, commercial and industrial areas."
+      },
+      {
+        "id": "SRC09_020",
+        "text": "Some smaller airfields do not have an FRZ, but you still must not fly on or near these airfields where you could pose a danger to the safety of aircraft."
+      },
+      {
+        "id": "SRC09_021",
+        "text": "Details of airspace restrictions in your drone's inbuilt software may not always be up to date."
+      },
+      {
+        "id": "SRC09_022",
+        "text": "You must check a correct and up-to-date source before flying."
+      },
+      {
+        "id": "SRC09_023",
+        "text": "Smaller airfields may not appear on the map or in drone apps, so you must always look out for light aircraft, equipment or facilities that suggest there could be an airfield nearby."
+      },
+      {
+        "id": "SRC09_024",
+        "text": "Remember, you must always keep your geo-awareness system up to date."
+      },
+      {
+        "id": "SRC09_025",
+        "text": "Emergency incidents You must keep out of the way and not fly in any way that could hamper the emergency services when they’re responding to an emergency incident."
+      },
+      {
+        "id": "SRC09_026",
+        "text": "If you’re out flying at or near to an emergency incident when it happens, you must safely and immediately stop flying unless the emergency services give you permission to continue."
+      },
+      {
+        "id": "SRC09_027",
+        "text": "You must: follow any temporary restrictions that are put in place take particular care not to hinder any aerial support to the emergency services respect and protect the privacy of anyone involved in the emergency Examples of emergency incidents include road traffic accidents, fires, floods, rescues, and similar events."
+      },
+      {
+        "id": "SRC09_028",
+        "text": "Useful places to check for restrictions and hazards Signs Check for signs that say you cannot fly drones or model aircraft."
+      }
+    ],
+    "output_rule": "Return only a JSON object with one key named records whose value is the required array. Preserve every id exactly once. Do not use tools, files, IDs, or source names as label shortcuts."
+  },
+  "requested_model": "gpt-5.5",
+  "api_version": "Codex CLI 0.145.0",
+  "temperature": "not_exposed_by_cli",
+  "reasoning_effort": "low",
+  "record_count": 215,
+  "started_utc": "2026-09-14T14:02:53.779544Z",
+  "elapsed_seconds": 194.68259519996354,
+  "usage": {
+    "input_tokens": 23609,
+    "cached_input_tokens": 1408,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 4373,
+    "reasoning_output_tokens": 23
+  },
+  "serving_snapshot": "not independently returned; historical response_model label was assigned by the runner",
+  "structured_output": [
+    {
+      "id": "SRC02_001",
+      "scope": "out_of_scope",
+      "reason_code": "setup_page_info"
+    },
+    {
+      "id": "SRC02_002",
+      "scope": "out_of_scope",
+      "reason_code": "configuration_note_incomplete"
+    },
+    {
+      "id": "SRC02_003",
+      "scope": "out_of_scope",
+      "reason_code": "descriptive_list"
+    },
+    {
+      "id": "SRC02_004",
+      "scope": "in_scope",
+      "reason_code": "failsafe_delay_then_action"
+    },
+    {
+      "id": "SRC02_005",
+      "scope": "out_of_scope",
+      "reason_code": "explanation_purpose"
+    },
+    {
+      "id": "SRC02_006",
+      "scope": "conditional",
+      "reason_code": "override_method_context_dependent"
+    },
+    {
+      "id": "SRC02_007",
+      "scope": "out_of_scope",
+      "reason_code": "list_introduction"
+    },
+    {
+      "id": "SRC02_008",
+      "scope": "out_of_scope",
+      "reason_code": "support_note"
+    },
+    {
+      "id": "SRC02_009",
+      "scope": "out_of_scope",
+      "reason_code": "configuration_location"
+    },
+    {
+      "id": "SRC02_010",
+      "scope": "in_scope",
+      "reason_code": "termination_pwm_response"
+    },
+    {
+      "id": "SRC02_011",
+      "scope": "conditional",
+      "reason_code": "optional_output_use"
+    },
+    {
+      "id": "SRC02_012",
+      "scope": "out_of_scope",
+      "reason_code": "testing_tip"
+    },
+    {
+      "id": "SRC02_013",
+      "scope": "conditional",
+      "reason_code": "mode_behavior_needs_definition"
+    },
+    {
+      "id": "SRC02_014",
+      "scope": "out_of_scope",
+      "reason_code": "advice"
+    },
+    {
+      "id": "SRC02_015",
+      "scope": "conditional",
+      "reason_code": "mode_behavior_needs_definition"
+    },
+    {
+      "id": "SRC02_016",
+      "scope": "out_of_scope",
+      "reason_code": "advice"
+    },
+    {
+      "id": "SRC02_017",
+      "scope": "in_scope",
+      "reason_code": "battery_threshold_trigger"
+    },
+    {
+      "id": "SRC02_018",
+      "scope": "out_of_scope",
+      "reason_code": "configuration_capability"
+    },
+    {
+      "id": "SRC02_019",
+      "scope": "conditional",
+      "reason_code": "recommended_configuration_optional"
+    },
+    {
+      "id": "SRC02_020",
+      "scope": "out_of_scope",
+      "reason_code": "table_intro"
+    },
+    {
+      "id": "SRC02_021",
+      "scope": "in_scope",
+      "reason_code": "battery_level_action_parameter"
+    },
+    {
+      "id": "SRC02_022",
+      "scope": "conditional",
+      "reason_code": "parameter_definition_only"
+    },
+    {
+      "id": "SRC02_023",
+      "scope": "in_scope",
+      "reason_code": "remaining_flight_time_trigger"
+    },
+    {
+      "id": "SRC02_024",
+      "scope": "conditional",
+      "reason_code": "configurable_action_options"
+    },
+    {
+      "id": "SRC02_025",
+      "scope": "in_scope",
+      "reason_code": "max_flight_time_return_trigger"
+    },
+    {
+      "id": "SRC02_026",
+      "scope": "in_scope",
+      "reason_code": "arming_battery_min_limit"
+    },
+    {
+      "id": "SRC02_027",
+      "scope": "in_scope",
+      "reason_code": "max_time_return_limit"
+    },
+    {
+      "id": "SRC02_028",
+      "scope": "conditional",
+      "reason_code": "trigger_needs_fallback_definition"
+    },
+    {
+      "id": "SRC02_029",
+      "scope": "out_of_scope",
+      "reason_code": "ui_configuration_capability"
+    },
+    {
+      "id": "SRC02_030",
+      "scope": "conditional",
+      "reason_code": "optional_mode_exception_config"
+    },
+    {
+      "id": "SRC02_031",
+      "scope": "out_of_scope",
+      "reason_code": "table_intro"
+    },
+    {
+      "id": "SRC02_032",
+      "scope": "conditional",
+      "reason_code": "advice_needs_timeout_context"
+    },
+    {
+      "id": "SRC02_033",
+      "scope": "in_scope",
+      "reason_code": "failsafe_delay_parameter"
+    },
+    {
+      "id": "SRC02_034",
+      "scope": "out_of_scope",
+      "reason_code": "configuration_advice"
+    },
+    {
+      "id": "SRC02_035",
+      "scope": "conditional",
+      "reason_code": "parameter_setting_incomplete"
+    },
+    {
+      "id": "SRC02_036",
+      "scope": "conditional",
+      "reason_code": "action_options_only"
+    },
+    {
+      "id": "SRC02_037",
+      "scope": "in_scope",
+      "reason_code": "telemetry_link_loss_trigger"
+    },
+    {
+      "id": "SRC02_038",
+      "scope": "in_scope",
+      "reason_code": "datalink_timeout_trigger"
+    },
+    {
+      "id": "SRC02_039",
+      "scope": "conditional",
+      "reason_code": "action_options_only"
+    },
+    {
+      "id": "SRC02_040",
+      "scope": "conditional",
+      "reason_code": "mode_exception_parameter"
+    },
+    {
+      "id": "SRC02_041",
+      "scope": "in_scope",
+      "reason_code": "geofence_breach_trigger"
+    },
+    {
+      "id": "SRC02_042",
+      "scope": "in_scope",
+      "reason_code": "geofence_alt_radius_trigger"
+    },
+    {
+      "id": "SRC02_043",
+      "scope": "out_of_scope",
+      "reason_code": "table_intro"
+    },
+    {
+      "id": "SRC02_044",
+      "scope": "conditional",
+      "reason_code": "position_quality_threshold_undefined"
+    },
+    {
+      "id": "SRC02_045",
+      "scope": "out_of_scope",
+      "reason_code": "table_intro"
+    },
+    {
+      "id": "SRC02_046",
+      "scope": "in_scope",
+      "reason_code": "offboard_link_loss_trigger"
+    },
+    {
+      "id": "SRC02_047",
+      "scope": "conditional",
+      "reason_code": "behavior_depends_on_rc_availability"
+    },
+    {
+      "id": "SRC02_048",
+      "scope": "in_scope",
+      "reason_code": "offboard_loss_delay_trigger"
+    },
+    {
+      "id": "SRC02_049",
+      "scope": "conditional",
+      "reason_code": "rc_available_action_options"
+    },
+    {
+      "id": "SRC02_050",
+      "scope": "conditional",
+      "reason_code": "incomplete_traffic_response"
+    },
+    {
+      "id": "SRC02_051",
+      "scope": "conditional",
+      "reason_code": "traffic_action_options_only"
+    },
+    {
+      "id": "SRC02_052",
+      "scope": "conditional",
+      "reason_code": "failure_condition_examples_unclear"
+    },
+    {
+      "id": "SRC02_053",
+      "scope": "in_scope",
+      "reason_code": "quadchute_trigger_response"
+    },
+    {
+      "id": "SRC02_054",
+      "scope": "out_of_scope",
+      "reason_code": "table_intro"
+    },
+    {
+      "id": "SRC02_055",
+      "scope": "in_scope",
+      "reason_code": "quadchute_height_limit"
+    },
+    {
+      "id": "SRC02_056",
+      "scope": "in_scope",
+      "reason_code": "altitude_setpoint_tracking"
+    },
+    {
+      "id": "SRC02_057",
+      "scope": "in_scope",
+      "reason_code": "altitude_error_trigger"
+    },
+    {
+      "id": "SRC02_058",
+      "scope": "conditional",
+      "reason_code": "continuous_loss_condition_needs_definition"
+    },
+    {
+      "id": "SRC02_059",
+      "scope": "in_scope",
+      "reason_code": "transition_altitude_drop_trigger"
+    },
+    {
+      "id": "SRC02_060",
+      "scope": "conditional",
+      "reason_code": "parameter_definition_only"
+    },
+    {
+      "id": "SRC02_061",
+      "scope": "in_scope",
+      "reason_code": "fixedwing_min_alt_trigger"
+    },
+    {
+      "id": "SRC02_062",
+      "scope": "in_scope",
+      "reason_code": "wind_threshold_trigger"
+    },
+    {
+      "id": "SRC02_063",
+      "scope": "out_of_scope",
+      "reason_code": "table_intro"
+    },
+    {
+      "id": "SRC02_064",
+      "scope": "in_scope",
+      "reason_code": "wind_max_action_threshold"
+    },
+    {
+      "id": "SRC02_065",
+      "scope": "conditional",
+      "reason_code": "action_parameter_only"
+    },
+    {
+      "id": "SRC02_066",
+      "scope": "in_scope",
+      "reason_code": "wind_warning_threshold"
+    },
+    {
+      "id": "SRC02_067",
+      "scope": "conditional",
+      "reason_code": "circuit_breaker_parameter_only"
+    },
+    {
+      "id": "SRC02_068",
+      "scope": "in_scope",
+      "reason_code": "pitch_limit_parameter"
+    },
+    {
+      "id": "SRC02_069",
+      "scope": "in_scope",
+      "reason_code": "roll_limit_parameter"
+    },
+    {
+      "id": "SRC02_070",
+      "scope": "conditional",
+      "reason_code": "hardware_connection_requirement"
+    },
+    {
+      "id": "SRC02_071",
+      "scope": "out_of_scope",
+      "reason_code": "regulatory_info_note"
+    },
+    {
+      "id": "SRC02_072",
+      "scope": "conditional",
+      "reason_code": "enable_external_trigger_input"
+    },
+    {
+      "id": "SRC02_073",
+      "scope": "in_scope",
+      "reason_code": "external_pwm_trigger_threshold"
+    },
+    {
+      "id": "SRC02_074",
+      "scope": "in_scope",
+      "reason_code": "kill_switch_restart_disarm_timing"
+    },
+    {
+      "id": "SRC02_075",
+      "scope": "out_of_scope",
+      "reason_code": "informational_note"
+    },
+    {
+      "id": "SRC02_076",
+      "scope": "in_scope",
+      "reason_code": "irreversible_until_reboot_response"
+    },
+    {
+      "id": "SRC02_077",
+      "scope": "in_scope",
+      "reason_code": "landed_auto_disarm_timeout"
+    },
+    {
+      "id": "SRC02_078",
+      "scope": "in_scope",
+      "reason_code": "minimum_battery_arming_limit"
+    },
+    {
+      "id": "SRC02_079",
+      "scope": "out_of_scope",
+      "reason_code": "navigation_links"
+    },
+    {
+      "id": "SRC03_001",
+      "scope": "conditional",
+      "reason_code": "possible_limits_unspecified"
+    },
+    {
+      "id": "SRC03_002",
+      "scope": "conditional",
+      "reason_code": "setup_instruction_needs_values"
+    },
+    {
+      "id": "SRC03_003",
+      "scope": "in_scope",
+      "reason_code": "fence_breach_mode_change_block"
+    },
+    {
+      "id": "SRC03_004",
+      "scope": "conditional",
+      "reason_code": "set_limit_value_needed"
+    },
+    {
+      "id": "SRC03_005",
+      "scope": "conditional",
+      "reason_code": "set_margin_value_needed"
+    },
+    {
+      "id": "SRC03_006",
+      "scope": "conditional",
+      "reason_code": "set_min_boundary_value_needed"
+    },
+    {
+      "id": "SRC03_007",
+      "scope": "conditional",
+      "reason_code": "reference_frame_config_needed"
+    },
+    {
+      "id": "SRC03_008",
+      "scope": "out_of_scope",
+      "reason_code": "cross_reference"
+    },
+    {
+      "id": "SRC03_009",
+      "scope": "conditional",
+      "reason_code": "activation_requires_loaded_fence_list"
+    },
+    {
+      "id": "SRC03_010",
+      "scope": "out_of_scope",
+      "reason_code": "cross_reference"
+    },
+    {
+      "id": "SRC03_011",
+      "scope": "conditional",
+      "reason_code": "default_reference_definition"
+    },
+    {
+      "id": "SRC03_012",
+      "scope": "conditional",
+      "reason_code": "reference_frame_options"
+    },
+    {
+      "id": "SRC03_013",
+      "scope": "conditional",
+      "reason_code": "terrain_data_arming_dependency"
+    },
+    {
+      "id": "SRC03_014",
+      "scope": "in_scope",
+      "reason_code": "altitude_unknown_treated_breach"
+    },
+    {
+      "id": "SRC03_015",
+      "scope": "in_scope",
+      "reason_code": "fence_reached_action_trigger"
+    },
+    {
+      "id": "SRC03_016",
+      "scope": "in_scope",
+      "reason_code": "prearm_failure_min_fence_ground"
+    },
+    {
+      "id": "SRC03_017",
+      "scope": "in_scope",
+      "reason_code": "landing_modes_disable_min_fence"
+    },
+    {
+      "id": "SRC03_018",
+      "scope": "out_of_scope",
+      "reason_code": "future_expectation"
+    },
+    {
+      "id": "SRC04_001",
+      "scope": "out_of_scope",
+      "reason_code": "descriptive_overview"
+    },
+    {
+      "id": "SRC04_002",
+      "scope": "in_scope",
+      "reason_code": "heartbeat_monitor_condition"
+    },
+    {
+      "id": "SRC04_003",
+      "scope": "in_scope",
+      "reason_code": "heartbeat_timeout_trigger"
+    },
+    {
+      "id": "SRC04_004",
+      "scope": "in_scope",
+      "reason_code": "inactive_without_prior_gcs"
+    },
+    {
+      "id": "SRC04_005",
+      "scope": "conditional",
+      "reason_code": "configurable_bypass_options"
+    },
+    {
+      "id": "SRC04_006",
+      "scope": "in_scope",
+      "reason_code": "disarmed_no_failsafe"
+    },
+    {
+      "id": "SRC04_007",
+      "scope": "in_scope",
+      "reason_code": "armed_mode_min_throttle_disarm"
+    },
+    {
+      "id": "SRC04_008",
+      "scope": "conditional",
+      "reason_code": "parameter_dependent_action"
+    },
+    {
+      "id": "SRC04_009",
+      "scope": "in_scope",
+      "reason_code": "reconnect_remain_failsafe_mode"
+    },
+    {
+      "id": "SRC04_010",
+      "scope": "in_scope",
+      "reason_code": "no_auto_restore_mode"
+    },
+    {
+      "id": "SRC04_011",
+      "scope": "in_scope",
+      "reason_code": "example_reconnect_remain_rtl"
+    },
+    {
+      "id": "SRC04_012",
+      "scope": "in_scope",
+      "reason_code": "disable_parameter_behavior"
+    },
+    {
+      "id": "SRC04_013",
+      "scope": "in_scope",
+      "reason_code": "auto_mission_ignore_failsafe"
+    },
+    {
+      "id": "SRC04_014",
+      "scope": "in_scope",
+      "reason_code": "version_parameter_conversion"
+    },
+    {
+      "id": "SRC04_015",
+      "scope": "in_scope",
+      "reason_code": "invalid_value_behavior"
+    },
+    {
+      "id": "SRC04_016",
+      "scope": "conditional",
+      "reason_code": "bitmask_applicability_note"
+    },
+    {
+      "id": "SRC04_017",
+      "scope": "out_of_scope",
+      "reason_code": "configuration_caution"
+    },
+    {
+      "id": "SRC04_018",
+      "scope": "out_of_scope",
+      "reason_code": "tool_location_note"
+    },
+    {
+      "id": "SRC05_001",
+      "scope": "out_of_scope",
+      "reason_code": "definition"
+    },
+    {
+      "id": "SRC05_002",
+      "scope": "out_of_scope",
+      "reason_code": "definition"
+    },
+    {
+      "id": "SRC05_003",
+      "scope": "out_of_scope",
+      "reason_code": "definition"
+    },
+    {
+      "id": "SRC05_004",
+      "scope": "out_of_scope",
+      "reason_code": "definition"
+    },
+    {
+      "id": "SRC05_005",
+      "scope": "out_of_scope",
+      "reason_code": "explanation_fragment"
+    },
+    {
+      "id": "SRC05_006",
+      "scope": "conditional",
+      "reason_code": "target_alt_modified_by_enabled_sources"
+    },
+    {
+      "id": "SRC05_007",
+      "scope": "in_scope",
+      "reason_code": "rangefinder_target_alt_use_condition"
+    },
+    {
+      "id": "SRC05_008",
+      "scope": "out_of_scope",
+      "reason_code": "example_fragment"
+    },
+    {
+      "id": "SRC05_009",
+      "scope": "out_of_scope",
+      "reason_code": "usage_explanation"
+    },
+    {
+      "id": "SRC05_010",
+      "scope": "conditional",
+      "reason_code": "rangefinder_use_limited_conditions"
+    },
+    {
+      "id": "SRC05_011",
+      "scope": "conditional",
+      "reason_code": "landing_gear_altitude_trigger_context"
+    },
+    {
+      "id": "SRC06_001",
+      "scope": "out_of_scope",
+      "reason_code": "website_feedback_instruction"
+    },
+    {
+      "id": "SRC06_002",
+      "scope": "out_of_scope",
+      "reason_code": "website_feedback_instruction"
+    },
+    {
+      "id": "SRC06_003",
+      "scope": "out_of_scope",
+      "reason_code": "navigation_instruction"
+    },
+    {
+      "id": "SRC06_004",
+      "scope": "out_of_scope",
+      "reason_code": "publication_info"
+    },
+    {
+      "id": "SRC06_005",
+      "scope": "out_of_scope",
+      "reason_code": "publication_info"
+    },
+    {
+      "id": "SRC06_006",
+      "scope": "in_scope",
+      "reason_code": "groundspeed_limit"
+    },
+    {
+      "id": "SRC06_007",
+      "scope": "in_scope",
+      "reason_code": "agl_altitude_limit_with_structure_exception"
+    },
+    {
+      "id": "SRC06_008",
+      "scope": "in_scope",
+      "reason_code": "visibility_minimum"
+    },
+    {
+      "id": "SRC06_009",
+      "scope": "in_scope",
+      "reason_code": "cloud_clearance_minima"
+    },
+    {
+      "id": "SRC07_001",
+      "scope": "conditional",
+      "reason_code": "requires_power_module_applicability"
+    },
+    {
+      "id": "SRC07_002",
+      "scope": "out_of_scope",
+      "reason_code": "context_note"
+    },
+    {
+      "id": "SRC07_003",
+      "scope": "conditional",
+      "reason_code": "multiple_battery_configurable_actions"
+    },
+    {
+      "id": "SRC07_004",
+      "scope": "in_scope",
+      "reason_code": "battery_voltage_duration_trigger"
+    },
+    {
+      "id": "SRC07_005",
+      "scope": "conditional",
+      "reason_code": "capacity_threshold_fragment"
+    },
+    {
+      "id": "SRC07_006",
+      "scope": "conditional",
+      "reason_code": "action_option_context_dependent"
+    },
+    {
+      "id": "SRC07_007",
+      "scope": "conditional",
+      "reason_code": "reset_behavior_exception_unspecified"
+    },
+    {
+      "id": "SRC07_008",
+      "scope": "conditional",
+      "reason_code": "bitmask_applicability_note"
+    },
+    {
+      "id": "SRC07_009",
+      "scope": "out_of_scope",
+      "reason_code": "configuration_caution"
+    },
+    {
+      "id": "SRC07_010",
+      "scope": "conditional",
+      "reason_code": "incomplete_note"
+    },
+    {
+      "id": "SRC07_011",
+      "scope": "in_scope",
+      "reason_code": "disable_battery_failsafe_thresholds_zero"
+    },
+    {
+      "id": "SRC07_012",
+      "scope": "in_scope",
+      "reason_code": "failsafe_reset_requires_reboot"
+    },
+    {
+      "id": "SRC07_013",
+      "scope": "out_of_scope",
+      "reason_code": "setup_instruction_fragment"
+    },
+    {
+      "id": "SRC07_014",
+      "scope": "conditional",
+      "reason_code": "reserved_mah_setting_option"
+    },
+    {
+      "id": "SRC07_015",
+      "scope": "out_of_scope",
+      "reason_code": "setup_instruction_heading"
+    },
+    {
+      "id": "SRC07_016",
+      "scope": "conditional",
+      "reason_code": "followup_threshold_unspecified"
+    },
+    {
+      "id": "SRC08_001",
+      "scope": "out_of_scope",
+      "reason_code": "page_description"
+    },
+    {
+      "id": "SRC08_002",
+      "scope": "out_of_scope",
+      "reason_code": "terminology_note"
+    },
+    {
+      "id": "SRC08_003",
+      "scope": "in_scope",
+      "reason_code": "radio_loss_timeout_trigger"
+    },
+    {
+      "id": "SRC08_004",
+      "scope": "in_scope",
+      "reason_code": "throttle_pwm_below_trigger"
+    },
+    {
+      "id": "SRC08_005",
+      "scope": "conditional",
+      "reason_code": "configurable_action_options"
+    },
+    {
+      "id": "SRC08_006",
+      "scope": "conditional",
+      "reason_code": "configurable_bypass_options"
+    },
+    {
+      "id": "SRC08_007",
+      "scope": "in_scope",
+      "reason_code": "armed_mode_min_throttle_disarm"
+    },
+    {
+      "id": "SRC08_008",
+      "scope": "in_scope",
+      "reason_code": "reconnect_remain_failsafe_mode"
+    },
+    {
+      "id": "SRC08_009",
+      "scope": "in_scope",
+      "reason_code": "example_reconnect_remain_rtl_land"
+    },
+    {
+      "id": "SRC08_010",
+      "scope": "out_of_scope",
+      "reason_code": "receiver_setup_explanation"
+    },
+    {
+      "id": "SRC08_011",
+      "scope": "conditional",
+      "reason_code": "receiver_signal_method_description"
+    },
+    {
+      "id": "SRC08_012",
+      "scope": "out_of_scope",
+      "reason_code": "setup_example_intro"
+    },
+    {
+      "id": "SRC08_013",
+      "scope": "out_of_scope",
+      "reason_code": "receiver_capability_note"
+    },
+    {
+      "id": "SRC08_014",
+      "scope": "conditional",
+      "reason_code": "setup_example_signal_value"
+    },
+    {
+      "id": "SRC08_015",
+      "scope": "conditional",
+      "reason_code": "parameter_assignment_reference"
+    },
+    {
+      "id": "SRC08_016",
+      "scope": "out_of_scope",
+      "reason_code": "setup_example_intro"
+    },
+    {
+      "id": "SRC08_017",
+      "scope": "out_of_scope",
+      "reason_code": "configuration_location"
+    },
+    {
+      "id": "SRC08_018",
+      "scope": "in_scope",
+      "reason_code": "disable_radio_failsafe_behavior"
+    },
+    {
+      "id": "SRC08_019",
+      "scope": "in_scope",
+      "reason_code": "auto_mission_ignore_radio_failsafe"
+    },
+    {
+      "id": "SRC08_020",
+      "scope": "in_scope",
+      "reason_code": "version_parameter_conversion"
+    },
+    {
+      "id": "SRC08_021",
+      "scope": "in_scope",
+      "reason_code": "invalid_value_behavior"
+    },
+    {
+      "id": "SRC08_022",
+      "scope": "conditional",
+      "reason_code": "bitmask_applicability_note"
+    },
+    {
+      "id": "SRC08_023",
+      "scope": "out_of_scope",
+      "reason_code": "configuration_caution"
+    },
+    {
+      "id": "SRC08_024",
+      "scope": "out_of_scope",
+      "reason_code": "screenshot_intro"
+    },
+    {
+      "id": "SRC08_025",
+      "scope": "out_of_scope",
+      "reason_code": "testing_instruction_intro"
+    },
+    {
+      "id": "SRC08_026",
+      "scope": "out_of_scope",
+      "reason_code": "testing_safety_advice"
+    },
+    {
+      "id": "SRC08_027",
+      "scope": "conditional",
+      "reason_code": "test_procedure_expected_pwm"
+    },
+    {
+      "id": "SRC08_028",
+      "scope": "conditional",
+      "reason_code": "test_expected_result_context"
+    },
+    {
+      "id": "SRC08_029",
+      "scope": "out_of_scope",
+      "reason_code": "test_step_instruction"
+    },
+    {
+      "id": "SRC08_030",
+      "scope": "conditional",
+      "reason_code": "test_expected_mode_depends_gps"
+    },
+    {
+      "id": "SRC08_031",
+      "scope": "out_of_scope",
+      "reason_code": "test_step_instruction"
+    },
+    {
+      "id": "SRC08_032",
+      "scope": "out_of_scope",
+      "reason_code": "test_check_instruction"
+    },
+    {
+      "id": "SRC08_033",
+      "scope": "out_of_scope",
+      "reason_code": "test_step_instruction"
+    },
+    {
+      "id": "SRC08_034",
+      "scope": "conditional",
+      "reason_code": "test_expected_mode_fragment"
+    },
+    {
+      "id": "SRC08_035",
+      "scope": "out_of_scope",
+      "reason_code": "fragment"
+    },
+    {
+      "id": "SRC08_036",
+      "scope": "conditional",
+      "reason_code": "risk_explanation_possible_behavior"
+    },
+    {
+      "id": "SRC09_001",
+      "scope": "in_scope",
+      "reason_code": "altitude_limit"
+    },
+    {
+      "id": "SRC09_002",
+      "scope": "out_of_scope",
+      "reason_code": "advice_observe_aircraft"
+    },
+    {
+      "id": "SRC09_003",
+      "scope": "in_scope",
+      "reason_code": "surface_distance_altitude_limit"
+    },
+    {
+      "id": "SRC09_004",
+      "scope": "in_scope",
+      "reason_code": "people_horizontal_distance_limit"
+    },
+    {
+      "id": "SRC09_005",
+      "scope": "conditional",
+      "reason_code": "derived_no_fly_zone_definition"
+    },
+    {
+      "id": "SRC09_006",
+      "scope": "in_scope",
+      "reason_code": "no_fly_over_people_zone"
+    },
+    {
+      "id": "SRC09_007",
+      "scope": "out_of_scope",
+      "reason_code": "exception_intro"
+    },
+    {
+      "id": "SRC09_008",
+      "scope": "out_of_scope",
+      "reason_code": "section_intro"
+    },
+    {
+      "id": "SRC09_009",
+      "scope": "conditional",
+      "reason_code": "danger_standard_not_observable"
+    },
+    {
+      "id": "SRC09_010",
+      "scope": "out_of_scope",
+      "reason_code": "section_intro"
+    },
+    {
+      "id": "SRC09_011",
+      "scope": "conditional",
+      "reason_code": "class_weight_exception_rule"
+    },
+    {
+      "id": "SRC09_012",
+      "scope": "conditional",
+      "reason_code": "danger_standard_not_observable"
+    },
+    {
+      "id": "SRC09_013",
+      "scope": "conditional",
+      "reason_code": "safe_distance_context_dependent"
+    },
+    {
+      "id": "SRC09_014",
+      "scope": "conditional",
+      "reason_code": "recommended_distance_rule"
+    },
+    {
+      "id": "SRC09_015",
+      "scope": "out_of_scope",
+      "reason_code": "example_advice"
+    },
+    {
+      "id": "SRC09_016",
+      "scope": "conditional",
+      "reason_code": "crowd_definition_needed"
+    },
+    {
+      "id": "SRC09_017",
+      "scope": "in_scope",
+      "reason_code": "area_distance_limit"
+    },
+    {
+      "id": "SRC09_018",
+      "scope": "in_scope",
+      "reason_code": "isolated_building_distance_limit"
+    },
+    {
+      "id": "SRC09_019",
+      "scope": "conditional",
+      "reason_code": "class_weight_area_exception"
+    },
+    {
+      "id": "SRC09_020",
+      "scope": "conditional",
+      "reason_code": "danger_near_airfield_context"
+    },
+    {
+      "id": "SRC09_021",
+      "scope": "out_of_scope",
+      "reason_code": "software_currency_warning"
+    },
+    {
+      "id": "SRC09_022",
+      "scope": "out_of_scope",
+      "reason_code": "preflight_advice"
+    },
+    {
+      "id": "SRC09_023",
+      "scope": "out_of_scope",
+      "reason_code": "visual_check_advice"
+    },
+    {
+      "id": "SRC09_024",
+      "scope": "out_of_scope",
+      "reason_code": "maintenance_advice"
+    },
+    {
+      "id": "SRC09_025",
+      "scope": "conditional",
+      "reason_code": "emergency_hamper_standard_context"
+    },
+    {
+      "id": "SRC09_026",
+      "scope": "in_scope",
+      "reason_code": "emergency_incident_stop_unless_permission"
+    },
+    {
+      "id": "SRC09_027",
+      "scope": "conditional",
+      "reason_code": "temporary_restrictions_context_dependent"
+    },
+    {
+      "id": "SRC09_028",
+      "scope": "out_of_scope",
+      "reason_code": "restriction_check_intro"
+    }
+  ],
+  "backend_retry_count": "not part of the experimental item denominator; original diagnostics remain in the sealed local record"
+}

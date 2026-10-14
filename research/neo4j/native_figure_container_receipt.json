@@ -1,0 +1,28 @@
+[
+  {
+    "png": "fig04_neo4j_n06.png",
+    "png_sha256": "00cee6ed13e7abf6d2d30e336d581e77e93a7be92d609403966b817b3ffaa188",
+    "pdf": "fig04_neo4j_n06.pdf",
+    "pdf_sha256": "3aade31382b48adb11b78d1cd2be38a5395da5a75bb2b47060b09a76ea97605c",
+    "width_px": 4872,
+    "height_px": 4527,
+    "embedded_rgba_pixels_exactly_equal": true,
+    "cropped": false,
+    "resampled": false,
+    "redrawn": false,
+    "source": "Neo4j Browser native Download as PNG toDataURL; captured unchanged due cancelled CLI download"
+  },
+  {
+    "png": "fig_neo4j_full.png",
+    "png_sha256": "0d7dcfddbd20b0e3841baab2741d2aff3645c3610af1f9f84f5d021993a8edd2",
+    "pdf": "fig_neo4j_full.pdf",
+    "pdf_sha256": "d15d6018824829b2a64dc0e7136792a68cba54ca6030e6099fef76a0e1b41bc3",
+    "width_px": 2780,
+    "height_px": 1820,
+    "embedded_rgba_pixels_exactly_equal": true,
+    "cropped": false,
+    "resampled": false,
+    "redrawn": false,
+    "source": "Neo4j Browser native Download as PNG toDataURL; captured unchanged due cancelled CLI download"
+  }
+]

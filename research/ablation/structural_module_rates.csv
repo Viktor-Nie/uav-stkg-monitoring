@@ -1,0 +1,7 @@
+module,accepted_targeted_mutants,targeted_mutants,escape_rate
+topology_and_cardinality,38,50,0.76
+exact_binding_identity,168,168,1.0
+semantic_typing_and_policy,70,70,1.0
+monitor_compatibility_and_profiles,26,26,1.0
+provenance_context,16,16,1.0
+formula_signal_alignment,24,24,1.0

@@ -1,0 +1,10 @@
+{
+  "constructed_candidates": 29,
+  "unique_source_texts": 19,
+  "positive_controls": 5,
+  "invalid_semantic_candidates": 24,
+  "positive_controls_admitted": 5,
+  "semantically_invalid_admitted": 24,
+  "gate_has_no_reference_label_input": true,
+  "interpretation": "A well-formed catalog-consistent descriptor is not a semantic certificate. These manually constructed adversarial candidates are not model-generated independent samples."
+}

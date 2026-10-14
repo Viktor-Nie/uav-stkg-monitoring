@@ -1,0 +1,5 @@
+condition,independent_contexts,unique_items,item_opportunities,completed_calls,scope_macro_f1_mean,tuple_exact_mean,formula_exact_mean,raw_false_acceptance_count,graph_admitted_false_count,graph_admitted_count,failed_item_count
+full,5,19,95,5,0.9872053872053872,0.9894736842105264,0.9894736842105264,1,1,26,0
+without_role_mapping,5,19,95,5,0.9744107744107744,0.9789473684210526,0.9789473684210526,2,2,27,0
+without_skeleton,5,19,95,5,0.9744107744107744,0.9789473684210526,0.7157894736842105,2,0,0,0
+without_both,5,19,95,5,0.9872053872053872,0.9894736842105264,0.7263157894736842,1,0,0,0

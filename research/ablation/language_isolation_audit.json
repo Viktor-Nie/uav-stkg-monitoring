@@ -1,0 +1,48 @@
+{
+  "planned_calls": 20,
+  "completed": 20,
+  "distinct_cli_thread_count": 20,
+  "thread_ids_not_in_public_bundle": true,
+  "model_record_opportunities": 380,
+  "all_input_orders_equal": true,
+  "anonymous_IDs_only": true,
+  "all_request_hashes_verified": true,
+  "unexpected_tool_events": 0,
+  "same_shared_output_schema_sha256": "4ff3e4f412c71cc01066952978bd7e8112a774f4aaf4ee22fbee30bf26c65987",
+  "disabled_capabilities": [
+    "shell_tool",
+    "code_mode_host",
+    "browser_use",
+    "computer_use",
+    "in_app_browser",
+    "apps",
+    "plugins",
+    "multi_agent",
+    "goals",
+    "memories",
+    "workspace_dependencies",
+    "hooks",
+    "skill_search",
+    "auth_elicitation",
+    "image_generation",
+    "tool_suggest"
+  ],
+  "mcp_configuration": "empty table",
+  "web_search": "disabled",
+  "cwd_policy": "separate empty temporary directory per invocation",
+  "availability_attempts": [
+    {
+      "status": "model_or_transport_failed",
+      "requested_model": "gpt-6.1-sol"
+    },
+    {
+      "status": "model_or_transport_failed",
+      "requested_model": "gpt-6.1-sol"
+    },
+    {
+      "status": "completed",
+      "requested_model": "gpt-5.5"
+    }
+  ],
+  "model_snapshot": "requested gpt-5.5; exact serving snapshot not returned"
+}

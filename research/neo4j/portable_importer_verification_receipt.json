@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "snapshot": "kbs_v33_frozen_stkg_20261013",
+  "import": {
+    "before": [
+      158,
+      350
+    ],
+    "first_import": [
+      158,
+      350
+    ],
+    "second_import": [
+      158,
+      350
+    ],
+    "idempotent": true
+  },
+  "roundtrip": {
+    "nodes_compared": 158,
+    "relationships_compared": 350,
+    "all_source_labels_properties_and_endpoints_equal": true,
+    "comparison": "logical IDs, exact names, label sets, original JSON and flattened typed property maps; Neo4j internal IDs excluded; snapshot wrapper metadata and separately verified derived display captions excluded",
+    "display_metadata": "_display_caption is deterministic from logical ID, role and rounded value/unit; source precision is unchanged"
+  },
+  "queries": {
+    "n06_query_nodes": 15,
+    "n06_query_relationships": 20,
+    "n06_binding_rows": 5,
+    "full_query_nodes": 158,
+    "full_query_relationships": 350,
+    "isolated_nodes": [
+      {
+        "id": "parameter:height_p95_train"
+      }
+    ],
+    "database_components": [
+      {
+        "name": "Neo4j Kernel",
+        "versions": [
+          "2026.02.3"
+        ],
+        "edition": "community"
+      },
+      {
+        "name": "Cypher",
+        "versions": [
+          "5",
+          "25"
+        ],
+        "edition": ""
+      }
+    ]
+  },
+  "input_sha256": {
+    "data/graph/nodes.csv": "78b7d4348a49e0f3ccd94c24b6e5221d43e4a21e5000bae2b811e8b962f4845c",
+    "data/graph/relationships.csv": "cb263a607ddbf21e6d99e663f25c4014a71656232333a0ddc431b6a66b887f73"
+  },
+  "credential_saved": false,
+  "physical_applicability_verified": false,
+  "backend_migrated": false
+}

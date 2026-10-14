@@ -1,0 +1,6 @@
+historical_identifier,provided_artifact,status,upstream
+specification/data/nl_stl_pairs.csv,data/graph/internal_requirement_pairs.csv,frozen internal records supplied,
+specification/results/research_monitor_thresholds.csv,data/provenance/research_monitor_thresholds.csv,frozen derived research thresholds supplied; original HIL inputs not redistributed,https://rfly-openha.github.io/documents/4_resources/dataset.html
+specification/run_all.py:build_monitor_specs,src/uav_stkg/monitor/sampled_monitor.py,execution constructors supplied; historical prototype defaults are frozen in graph parameters,
+docs/重构工作台/01_采样数据STL语义与监测契约.md,src/uav_stkg/monitor/README.md,"historical local note not redistributed; current contracts, code and manuscript equations supplied",
+analysis/results/15_rflymad_real_minimal_frozen_eval and 17_rflymad_real_motor_extension,data/monitor/optional_real_replay_sources.json,metadata and derived-input hashes supplied; source archives and historical ledgers not redistributed,https://rfly-openha.github.io/documents/4_resources/dataset.html

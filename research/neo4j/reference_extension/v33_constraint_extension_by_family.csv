@@ -1,0 +1,13 @@
+﻿family,variants,historical_rejected,extended_rejected,accepted_when_assigned_extension_disabled
+binding_owner_property,84,84,84,0
+duplicate_requirement_mapping,24,24,24,0
+isolated_parameter_binding,84,0,84,84
+known_conflict_coordinate_frame,84,0,84,84
+known_conflict_firmware_context,84,0,84,84
+known_conflict_flight_mode_context,84,0,84,84
+known_conflict_vehicle_context,84,0,84,84
+numeric_boolean_type,16,8,16,8
+required_property_type,7,1,7,6
+shared_parameter_binding,84,84,84,0
+wrong_endpoint_source_type,8,8,8,0
+wrong_endpoint_target_type,8,8,8,0

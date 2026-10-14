@@ -1,0 +1,4008 @@
+{
+  "schema": "e5_discrete_computational_protocol_v1",
+  "title": "E5 离散规则监测计算实验",
+  "frozen_utc": "2026-10-06T14:06:58.921266+00:00",
+  "frozen_before_execution": true,
+  "research_goal": "验证既定离散观测规则的计算一致性、有限前缀判定和边界/变形稳健性。",
+  "rules": {
+    "C01": {
+      "kind": "invariant",
+      "upper": "6.4",
+      "recovery": null,
+      "deadline": null,
+      "value_epsilon": "0",
+      "dwell": "0",
+      "formula": "G(synthetic_speed_mps <= 6.4)"
+    },
+    "C02": {
+      "kind": "invariant",
+      "upper": "7.2",
+      "recovery": null,
+      "deadline": null,
+      "value_epsilon": "0",
+      "dwell": "0",
+      "formula": "G(synthetic_speed_mps <= 7.2)"
+    },
+    "C03": {
+      "kind": "response",
+      "upper": "9.1",
+      "recovery": "5.3",
+      "deadline": "1.8",
+      "value_epsilon": "0",
+      "dwell": "0",
+      "formula": "G((synthetic_speed_mps > 9.1) -> F[0,1.8](synthetic_speed_mps <= 5.3))"
+    },
+    "C04": {
+      "kind": "response",
+      "upper": "8.6",
+      "recovery": "4.7",
+      "deadline": "2.2",
+      "value_epsilon": "0",
+      "dwell": "0",
+      "formula": "G((synthetic_speed_mps > 8.6) -> F[0,2.2](synthetic_speed_mps <= 4.7))"
+    }
+  },
+  "contract": {
+    "maximum_observation_gap_seconds": "0.5",
+    "timestamp_epsilon_seconds": "0.000000001",
+    "minimum_samples": 2
+  },
+  "reference_method": "Independent Decimal enumeration: per trigger search all supplied future observations; never import the FIFO implementation as oracle.",
+  "primary_comparison": "Compare verdict, violation indices, trigger indices, recovered/expired/pending obligation IDs for every case and each eligible prefix.",
+  "expected_properties": [
+    "strict trigger >",
+    "upper and recovery <= include equality",
+    "closed deadline plus explicitly declared timestamp epsilon",
+    "one obligation per above-threshold observation",
+    "observed expiry dominates unresolved future",
+    "no interpolation or unobserved future",
+    "time translations and joint value/threshold translations preserve Decimal results",
+    "neutral resampling is checked only with preserved trigger/recovery endpoints",
+    "accepted future continuations cannot change already consumed transition events"
+  ],
+  "failure_policy": "Persist disagreements and input-rejection differences; do not rewrite expected semantics or production monitor to force pass.",
+  "exact_vs_operational_timing": "Additionally evaluate epsilon=0 to reveal the declared 1e-9 operational tolerance widening a strict mathematical deadline.",
+  "original_trace_count": 12,
+  "source_sha256": {
+    "analysis/results/32_ai_preliminary_reviews_20261006/e5_px4_ai/proposed_references_AI.json": "7294f81e841671ef24964dbc78d9146e95b70dc5643c7acce759caeaee9035bc",
+    "docs/最终论文/latex_kbs_v6/experiments/e5_controlled_task_review_v3/review_inputs/common_contract_DRAFT.json": "6e0be9f6c5cb0b17d4e916dd1b0c80c12d5b6be26a0a389d8ed3252e21b0f8f0",
+    "specification/v2/sampled_monitor.py": "24b35ae63793f0bb848a7dbffa8ab8ddbca5f8b4c747322bf619c6f622298eef",
+    "specification/v2/sampled_data_contract.py": "4081619d8b3bdf6295ab09bdd0db2831ed0a996c02dd872e0b36dbde46c4d981",
+    "analysis/results/32_ai_preliminary_reviews_20261006/e5_px4_ai/trace_checks_detail_AI.json": "d3f482bf8bf5c264ab4a3d9c990dd60506ce9cfe02bf1e04f680aa4d459b45e0",
+    "analysis/results/32_ai_preliminary_reviews_20261006/root_e5_math_review/root_math_review_summary.json": "fe60db5fc8508aef75df6bd5f7c38b4c7ff6c07c6f1f6b6d9121a620e9d6921c",
+    "analysis/results/33_computational_research_20261006/e5_computational/build_and_check.py": "0a0e64432562c58f41509ca9002e1225de7a29ab44ffc2e6d35c99ad99c51d00",
+    "docs/最终论文/latex_kbs_v6/experiments/e5_controlled_task_review_v3/review_inputs/C01/source.md": "5046736c0497300c13c347c2eb9bc6a4638e8aac9e6d4521b2417d3be6e9c122",
+    "docs/最终论文/latex_kbs_v6/experiments/e5_controlled_task_review_v3/review_inputs/C02/source.md": "27b27a9299240a683d36df8c1a14fa5338fa2fd63876164d63c2a8e6e70174aa",
+    "docs/最终论文/latex_kbs_v6/experiments/e5_controlled_task_review_v3/review_inputs/C03/source.md": "4e6ffa599aee07ff78f10bb5918e886daeaf651e7080579f96df7c5a3b1a5813",
+    "docs/最终论文/latex_kbs_v6/experiments/e5_controlled_task_review_v3/review_inputs/C04/source.md": "ebc010a476f4e287e753059379d7a6b885eac711a7ef9eafc1dfc5e317138394",
+    "docs/最终论文/latex_kbs_v6/experiments/e5_controlled_task_review_v3/review_inputs/C01/trace_candidates/C01_01.json": "007b542fdd364189e3493c51c966c0e60f3ae6cb7f959007c14a85ee4530819e",
+    "docs/最终论文/latex_kbs_v6/experiments/e5_controlled_task_review_v3/review_inputs/C01/trace_candidates/C01_02.json": "0cff605c27b785c67d8c46e210eed945346dde4b4a5900b4b9925e938318a2ee",
+    "docs/最终论文/latex_kbs_v6/experiments/e5_controlled_task_review_v3/review_inputs/C01/trace_candidates/C01_03.json": "025fff4ad8d4e1412d4fd9bad116ed6029be0e18c55ab068e6b272e3c6d2f7c7",
+    "docs/最终论文/latex_kbs_v6/experiments/e5_controlled_task_review_v3/review_inputs/C02/trace_candidates/C02_01.json": "ae27b89f727bd7e5a5b33c6be6d64ef5a657768d8996a1bbafc434421f4e32fe",
+    "docs/最终论文/latex_kbs_v6/experiments/e5_controlled_task_review_v3/review_inputs/C02/trace_candidates/C02_02.json": "27b516058a0f7e4e76cfc32defd888992f063c6bf75b3fcb29cc521b47a3d9f2",
+    "docs/最终论文/latex_kbs_v6/experiments/e5_controlled_task_review_v3/review_inputs/C02/trace_candidates/C02_03.json": "54b3c0dfda40602281acdbe286e535ead76886c93ba93740c5210c7a14412791",
+    "docs/最终论文/latex_kbs_v6/experiments/e5_controlled_task_review_v3/review_inputs/C03/trace_candidates/C03_01.json": "8f84f1ed34e683f1985552602ef46a00dafd07dc7453ee09c22418f652d482b2",
+    "docs/最终论文/latex_kbs_v6/experiments/e5_controlled_task_review_v3/review_inputs/C03/trace_candidates/C03_02.json": "640976eee841ead4cdad8ad4e90f648ef3e71bcc63b37df037781a93e50d26ec",
+    "docs/最终论文/latex_kbs_v6/experiments/e5_controlled_task_review_v3/review_inputs/C03/trace_candidates/C03_03.json": "53fbfa63750791c559394985a5ac418638ea6003a397a73d9043ecfc77a554ed",
+    "docs/最终论文/latex_kbs_v6/experiments/e5_controlled_task_review_v3/review_inputs/C04/trace_candidates/C04_01.json": "2ef70470fd6b218f2a44f96f842e9384be42f898ed0b08d7c0e51a36ee40d7a9",
+    "docs/最终论文/latex_kbs_v6/experiments/e5_controlled_task_review_v3/review_inputs/C04/trace_candidates/C04_02.json": "45980e5d6b9b3d5be3f739c968bcb9ecc1515a7ed1afdb3be0c4ccc6f120528d",
+    "docs/最终论文/latex_kbs_v6/experiments/e5_controlled_task_review_v3/review_inputs/C04/trace_candidates/C04_03.json": "5e7b1f42d86778c58ca57e2c3bc74d34d52ab1d5e3bd1f8a98caa4ebff36489f"
+  },
+  "case_count": 102,
+  "cases": [
+    {
+      "case_id": "C01_01",
+      "task_id": "C01",
+      "category": "original_authored_candidate",
+      "samples": [
+        {
+          "time_seconds": "0.0",
+          "synthetic_speed_mps": "3.2"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "4.9"
+        },
+        {
+          "time_seconds": "0.8",
+          "synthetic_speed_mps": "6.4"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "5.9"
+        },
+        {
+          "time_seconds": "1.6",
+          "synthetic_speed_mps": "6.1"
+        },
+        {
+          "time_seconds": "2.0",
+          "synthetic_speed_mps": "5.8"
+        },
+        {
+          "time_seconds": "2.2",
+          "synthetic_speed_mps": "6.0"
+        },
+        {
+          "time_seconds": "2.6",
+          "synthetic_speed_mps": "5.7"
+        },
+        {
+          "time_seconds": "3.0",
+          "synthetic_speed_mps": "6.2"
+        },
+        {
+          "time_seconds": "3.4",
+          "synthetic_speed_mps": "6.3"
+        },
+        {
+          "time_seconds": "3.8",
+          "synthetic_speed_mps": "6.0"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "rule_override": null,
+      "note": "Original bytes retained; this is authored synthetic input, not a real flight or human outcome.",
+      "input_provenance": "AI_assisted_candidate_construction",
+      "original_path": "docs/最终论文/latex_kbs_v6/experiments/e5_controlled_task_review_v3/review_inputs/C01/trace_candidates/C01_01.json",
+      "original_sha256": "007b542fdd364189e3493c51c966c0e60f3ae6cb7f959007c14a85ee4530819e"
+    },
+    {
+      "case_id": "C01_02",
+      "task_id": "C01",
+      "category": "original_authored_candidate",
+      "samples": [
+        {
+          "time_seconds": "0.0",
+          "synthetic_speed_mps": "3.2"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "4.9"
+        },
+        {
+          "time_seconds": "0.8",
+          "synthetic_speed_mps": "6.4"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "5.9"
+        },
+        {
+          "time_seconds": "1.6",
+          "synthetic_speed_mps": "6.6"
+        },
+        {
+          "time_seconds": "2.0",
+          "synthetic_speed_mps": "5.8"
+        },
+        {
+          "time_seconds": "2.2",
+          "synthetic_speed_mps": "6.0"
+        },
+        {
+          "time_seconds": "2.6",
+          "synthetic_speed_mps": "5.7"
+        },
+        {
+          "time_seconds": "3.0",
+          "synthetic_speed_mps": "6.2"
+        },
+        {
+          "time_seconds": "3.4",
+          "synthetic_speed_mps": "6.3"
+        },
+        {
+          "time_seconds": "3.8",
+          "synthetic_speed_mps": "6.0"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "rule_override": null,
+      "note": "Original bytes retained; this is authored synthetic input, not a real flight or human outcome.",
+      "input_provenance": "AI_assisted_candidate_construction",
+      "original_path": "docs/最终论文/latex_kbs_v6/experiments/e5_controlled_task_review_v3/review_inputs/C01/trace_candidates/C01_02.json",
+      "original_sha256": "0cff605c27b785c67d8c46e210eed945346dde4b4a5900b4b9925e938318a2ee"
+    },
+    {
+      "case_id": "C01_03",
+      "task_id": "C01",
+      "category": "original_authored_candidate",
+      "samples": [
+        {
+          "time_seconds": "0.0",
+          "synthetic_speed_mps": "3.2"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "4.9"
+        },
+        {
+          "time_seconds": "0.8",
+          "synthetic_speed_mps": "6.3"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "5.9"
+        },
+        {
+          "time_seconds": "1.6",
+          "synthetic_speed_mps": "6.1"
+        },
+        {
+          "time_seconds": "2.0",
+          "synthetic_speed_mps": "5.8"
+        },
+        {
+          "time_seconds": "2.2",
+          "synthetic_speed_mps": "6.0"
+        },
+        {
+          "time_seconds": "2.6",
+          "synthetic_speed_mps": "5.7"
+        },
+        {
+          "time_seconds": "3.0",
+          "synthetic_speed_mps": "6.2"
+        },
+        {
+          "time_seconds": "3.4",
+          "synthetic_speed_mps": "6.3"
+        },
+        {
+          "time_seconds": "3.8",
+          "synthetic_speed_mps": "6.4"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "rule_override": null,
+      "note": "Original bytes retained; this is authored synthetic input, not a real flight or human outcome.",
+      "input_provenance": "AI_assisted_candidate_construction",
+      "original_path": "docs/最终论文/latex_kbs_v6/experiments/e5_controlled_task_review_v3/review_inputs/C01/trace_candidates/C01_03.json",
+      "original_sha256": "025fff4ad8d4e1412d4fd9bad116ed6029be0e18c55ab068e6b272e3c6d2f7c7"
+    },
+    {
+      "case_id": "C02_01",
+      "task_id": "C02",
+      "category": "original_authored_candidate",
+      "samples": [
+        {
+          "time_seconds": "0.0",
+          "synthetic_speed_mps": "4.0"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "6.7"
+        },
+        {
+          "time_seconds": "0.8",
+          "synthetic_speed_mps": "5.7"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "7.0"
+        },
+        {
+          "time_seconds": "1.6",
+          "synthetic_speed_mps": "6.6"
+        },
+        {
+          "time_seconds": "2.0",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "2.2",
+          "synthetic_speed_mps": "6.5"
+        },
+        {
+          "time_seconds": "2.6",
+          "synthetic_speed_mps": "7.1"
+        },
+        {
+          "time_seconds": "3.0",
+          "synthetic_speed_mps": "6.8"
+        },
+        {
+          "time_seconds": "3.4",
+          "synthetic_speed_mps": "7.0"
+        },
+        {
+          "time_seconds": "3.8",
+          "synthetic_speed_mps": "6.9"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "rule_override": null,
+      "note": "Original bytes retained; this is authored synthetic input, not a real flight or human outcome.",
+      "input_provenance": "AI_assisted_candidate_construction",
+      "original_path": "docs/最终论文/latex_kbs_v6/experiments/e5_controlled_task_review_v3/review_inputs/C02/trace_candidates/C02_01.json",
+      "original_sha256": "ae27b89f727bd7e5a5b33c6be6d64ef5a657768d8996a1bbafc434421f4e32fe"
+    },
+    {
+      "case_id": "C02_02",
+      "task_id": "C02",
+      "category": "original_authored_candidate",
+      "samples": [
+        {
+          "time_seconds": "0.0",
+          "synthetic_speed_mps": "4.0"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "6.7"
+        },
+        {
+          "time_seconds": "0.8",
+          "synthetic_speed_mps": "5.7"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "7.0"
+        },
+        {
+          "time_seconds": "1.6",
+          "synthetic_speed_mps": "7.4"
+        },
+        {
+          "time_seconds": "2.0",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "2.2",
+          "synthetic_speed_mps": "6.5"
+        },
+        {
+          "time_seconds": "2.6",
+          "synthetic_speed_mps": "7.1"
+        },
+        {
+          "time_seconds": "3.0",
+          "synthetic_speed_mps": "6.8"
+        },
+        {
+          "time_seconds": "3.4",
+          "synthetic_speed_mps": "7.0"
+        },
+        {
+          "time_seconds": "3.8",
+          "synthetic_speed_mps": "6.9"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "rule_override": null,
+      "note": "Original bytes retained; this is authored synthetic input, not a real flight or human outcome.",
+      "input_provenance": "AI_assisted_candidate_construction",
+      "original_path": "docs/最终论文/latex_kbs_v6/experiments/e5_controlled_task_review_v3/review_inputs/C02/trace_candidates/C02_02.json",
+      "original_sha256": "27b516058a0f7e4e76cfc32defd888992f063c6bf75b3fcb29cc521b47a3d9f2"
+    },
+    {
+      "case_id": "C02_03",
+      "task_id": "C02",
+      "category": "original_authored_candidate",
+      "samples": [
+        {
+          "time_seconds": "0.0",
+          "synthetic_speed_mps": "4.0"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "6.7"
+        },
+        {
+          "time_seconds": "0.8",
+          "synthetic_speed_mps": "5.7"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "7.0"
+        },
+        {
+          "time_seconds": "1.6",
+          "synthetic_speed_mps": "6.6"
+        },
+        {
+          "time_seconds": "2.0",
+          "synthetic_speed_mps": "7.1"
+        },
+        {
+          "time_seconds": "2.2",
+          "synthetic_speed_mps": "6.5"
+        },
+        {
+          "time_seconds": "2.6",
+          "synthetic_speed_mps": "7.0"
+        },
+        {
+          "time_seconds": "3.0",
+          "synthetic_speed_mps": "6.8"
+        },
+        {
+          "time_seconds": "3.4",
+          "synthetic_speed_mps": "6.9"
+        },
+        {
+          "time_seconds": "3.8",
+          "synthetic_speed_mps": "7.2"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "rule_override": null,
+      "note": "Original bytes retained; this is authored synthetic input, not a real flight or human outcome.",
+      "input_provenance": "AI_assisted_candidate_construction",
+      "original_path": "docs/最终论文/latex_kbs_v6/experiments/e5_controlled_task_review_v3/review_inputs/C02/trace_candidates/C02_03.json",
+      "original_sha256": "54b3c0dfda40602281acdbe286e535ead76886c93ba93740c5210c7a14412791"
+    },
+    {
+      "case_id": "C03_01",
+      "task_id": "C03",
+      "category": "original_authored_candidate",
+      "samples": [
+        {
+          "time_seconds": "0.0",
+          "synthetic_speed_mps": "5.0"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "9.4"
+        },
+        {
+          "time_seconds": "0.8",
+          "synthetic_speed_mps": "9.7"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "8.3"
+        },
+        {
+          "time_seconds": "1.6",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "2.0",
+          "synthetic_speed_mps": "5.3"
+        },
+        {
+          "time_seconds": "2.2",
+          "synthetic_speed_mps": "5.1"
+        },
+        {
+          "time_seconds": "2.6",
+          "synthetic_speed_mps": "5.0"
+        },
+        {
+          "time_seconds": "3.0",
+          "synthetic_speed_mps": "5.2"
+        },
+        {
+          "time_seconds": "3.4",
+          "synthetic_speed_mps": "5.0"
+        },
+        {
+          "time_seconds": "3.8",
+          "synthetic_speed_mps": "5.1"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "rule_override": null,
+      "note": "Original bytes retained; this is authored synthetic input, not a real flight or human outcome.",
+      "input_provenance": "AI_assisted_candidate_construction",
+      "original_path": "docs/最终论文/latex_kbs_v6/experiments/e5_controlled_task_review_v3/review_inputs/C03/trace_candidates/C03_01.json",
+      "original_sha256": "8f84f1ed34e683f1985552602ef46a00dafd07dc7453ee09c22418f652d482b2"
+    },
+    {
+      "case_id": "C03_02",
+      "task_id": "C03",
+      "category": "original_authored_candidate",
+      "samples": [
+        {
+          "time_seconds": "0.0",
+          "synthetic_speed_mps": "5.0"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "9.4"
+        },
+        {
+          "time_seconds": "0.8",
+          "synthetic_speed_mps": "9.7"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "8.3"
+        },
+        {
+          "time_seconds": "1.6",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "2.0",
+          "synthetic_speed_mps": "6.5"
+        },
+        {
+          "time_seconds": "2.2",
+          "synthetic_speed_mps": "6.0"
+        },
+        {
+          "time_seconds": "2.6",
+          "synthetic_speed_mps": "5.3"
+        },
+        {
+          "time_seconds": "3.0",
+          "synthetic_speed_mps": "5.2"
+        },
+        {
+          "time_seconds": "3.4",
+          "synthetic_speed_mps": "5.0"
+        },
+        {
+          "time_seconds": "3.8",
+          "synthetic_speed_mps": "5.1"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "rule_override": null,
+      "note": "Original bytes retained; this is authored synthetic input, not a real flight or human outcome.",
+      "input_provenance": "AI_assisted_candidate_construction",
+      "original_path": "docs/最终论文/latex_kbs_v6/experiments/e5_controlled_task_review_v3/review_inputs/C03/trace_candidates/C03_02.json",
+      "original_sha256": "640976eee841ead4cdad8ad4e90f648ef3e71bcc63b37df037781a93e50d26ec"
+    },
+    {
+      "case_id": "C03_03",
+      "task_id": "C03",
+      "category": "original_authored_candidate",
+      "samples": [
+        {
+          "time_seconds": "0.0",
+          "synthetic_speed_mps": "5.0"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "9.4"
+        },
+        {
+          "time_seconds": "0.8",
+          "synthetic_speed_mps": "9.7"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "8.3"
+        },
+        {
+          "time_seconds": "1.6",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "2.0",
+          "synthetic_speed_mps": "5.3"
+        },
+        {
+          "time_seconds": "2.2",
+          "synthetic_speed_mps": "5.1"
+        },
+        {
+          "time_seconds": "2.6",
+          "synthetic_speed_mps": "5.0"
+        },
+        {
+          "time_seconds": "3.0",
+          "synthetic_speed_mps": "9.5"
+        },
+        {
+          "time_seconds": "3.4",
+          "synthetic_speed_mps": "9.3"
+        },
+        {
+          "time_seconds": "3.8",
+          "synthetic_speed_mps": "8.0"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "rule_override": null,
+      "note": "Original bytes retained; this is authored synthetic input, not a real flight or human outcome.",
+      "input_provenance": "AI_assisted_candidate_construction",
+      "original_path": "docs/最终论文/latex_kbs_v6/experiments/e5_controlled_task_review_v3/review_inputs/C03/trace_candidates/C03_03.json",
+      "original_sha256": "53fbfa63750791c559394985a5ac418638ea6003a397a73d9043ecfc77a554ed"
+    },
+    {
+      "case_id": "C04_01",
+      "task_id": "C04",
+      "category": "original_authored_candidate",
+      "samples": [
+        {
+          "time_seconds": "0.0",
+          "synthetic_speed_mps": "4.4"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "8.9"
+        },
+        {
+          "time_seconds": "0.8",
+          "synthetic_speed_mps": "9.2"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "7.8"
+        },
+        {
+          "time_seconds": "1.6",
+          "synthetic_speed_mps": "6.7"
+        },
+        {
+          "time_seconds": "2.0",
+          "synthetic_speed_mps": "6.1"
+        },
+        {
+          "time_seconds": "2.2",
+          "synthetic_speed_mps": "4.7"
+        },
+        {
+          "time_seconds": "2.6",
+          "synthetic_speed_mps": "4.5"
+        },
+        {
+          "time_seconds": "3.0",
+          "synthetic_speed_mps": "4.5"
+        },
+        {
+          "time_seconds": "3.4",
+          "synthetic_speed_mps": "4.4"
+        },
+        {
+          "time_seconds": "3.8",
+          "synthetic_speed_mps": "4.5"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "rule_override": null,
+      "note": "Original bytes retained; this is authored synthetic input, not a real flight or human outcome.",
+      "input_provenance": "AI_assisted_candidate_construction",
+      "original_path": "docs/最终论文/latex_kbs_v6/experiments/e5_controlled_task_review_v3/review_inputs/C04/trace_candidates/C04_01.json",
+      "original_sha256": "2ef70470fd6b218f2a44f96f842e9384be42f898ed0b08d7c0e51a36ee40d7a9"
+    },
+    {
+      "case_id": "C04_02",
+      "task_id": "C04",
+      "category": "original_authored_candidate",
+      "samples": [
+        {
+          "time_seconds": "0.0",
+          "synthetic_speed_mps": "4.4"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "8.9"
+        },
+        {
+          "time_seconds": "0.8",
+          "synthetic_speed_mps": "9.2"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "7.8"
+        },
+        {
+          "time_seconds": "1.6",
+          "synthetic_speed_mps": "6.7"
+        },
+        {
+          "time_seconds": "2.0",
+          "synthetic_speed_mps": "6.1"
+        },
+        {
+          "time_seconds": "2.2",
+          "synthetic_speed_mps": "5.2"
+        },
+        {
+          "time_seconds": "2.6",
+          "synthetic_speed_mps": "5.0"
+        },
+        {
+          "time_seconds": "3.0",
+          "synthetic_speed_mps": "4.7"
+        },
+        {
+          "time_seconds": "3.4",
+          "synthetic_speed_mps": "4.4"
+        },
+        {
+          "time_seconds": "3.8",
+          "synthetic_speed_mps": "4.5"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "rule_override": null,
+      "note": "Original bytes retained; this is authored synthetic input, not a real flight or human outcome.",
+      "input_provenance": "AI_assisted_candidate_construction",
+      "original_path": "docs/最终论文/latex_kbs_v6/experiments/e5_controlled_task_review_v3/review_inputs/C04/trace_candidates/C04_02.json",
+      "original_sha256": "45980e5d6b9b3d5be3f739c968bcb9ecc1515a7ed1afdb3be0c4ccc6f120528d"
+    },
+    {
+      "case_id": "C04_03",
+      "task_id": "C04",
+      "category": "original_authored_candidate",
+      "samples": [
+        {
+          "time_seconds": "0.0",
+          "synthetic_speed_mps": "4.4"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "8.9"
+        },
+        {
+          "time_seconds": "0.8",
+          "synthetic_speed_mps": "9.2"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "7.8"
+        },
+        {
+          "time_seconds": "1.6",
+          "synthetic_speed_mps": "6.7"
+        },
+        {
+          "time_seconds": "2.0",
+          "synthetic_speed_mps": "6.1"
+        },
+        {
+          "time_seconds": "2.2",
+          "synthetic_speed_mps": "4.7"
+        },
+        {
+          "time_seconds": "2.6",
+          "synthetic_speed_mps": "4.5"
+        },
+        {
+          "time_seconds": "3.0",
+          "synthetic_speed_mps": "9.0"
+        },
+        {
+          "time_seconds": "3.4",
+          "synthetic_speed_mps": "8.8"
+        },
+        {
+          "time_seconds": "3.8",
+          "synthetic_speed_mps": "7.5"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "rule_override": null,
+      "note": "Original bytes retained; this is authored synthetic input, not a real flight or human outcome.",
+      "input_provenance": "AI_assisted_candidate_construction",
+      "original_path": "docs/最终论文/latex_kbs_v6/experiments/e5_controlled_task_review_v3/review_inputs/C04/trace_candidates/C04_03.json",
+      "original_sha256": "5e7b1f42d86778c58ca57e2c3bc74d34d52ab1d5e3bd1f8a98caa4ebff36489f"
+    },
+    {
+      "case_id": "C01_upper_below",
+      "task_id": "C01",
+      "category": "invariant_boundary",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "5.4"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "6.3999999999"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C01_upper_equal",
+      "task_id": "C01",
+      "category": "invariant_boundary",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "5.4"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "6.4"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C01_upper_above",
+      "task_id": "C01",
+      "category": "invariant_boundary",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "5.4"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "6.4000000001"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C01_last_violation",
+      "task_id": "C01",
+      "category": "invariant_last_sample",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "5.4"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "6.4"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "7.4"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C01_value_epsilon",
+      "task_id": "C01",
+      "category": "value_epsilon_boundary",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "6.4"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "6.40001"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Declared nonzero value tolerance experiment; does not alter the original C01/C02 rule.",
+      "rule_override": {
+        "value_epsilon": "0.00001"
+      },
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C02_upper_below",
+      "task_id": "C02",
+      "category": "invariant_boundary",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "6.2"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "7.1999999999"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C02_upper_equal",
+      "task_id": "C02",
+      "category": "invariant_boundary",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "6.2"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "7.2"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C02_upper_above",
+      "task_id": "C02",
+      "category": "invariant_boundary",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "6.2"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "7.2000000001"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C02_last_violation",
+      "task_id": "C02",
+      "category": "invariant_last_sample",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "6.2"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "8.2"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C02_value_epsilon",
+      "task_id": "C02",
+      "category": "value_epsilon_boundary",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "7.20001"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Declared nonzero value tolerance experiment; does not alter the original C01/C02 rule.",
+      "rule_override": {
+        "value_epsilon": "0.00001"
+      },
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_trigger_equal",
+      "task_id": "C03",
+      "category": "strict_trigger_boundary",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "9.1"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "7.2"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_trigger_above_tiny",
+      "task_id": "C03",
+      "category": "strict_trigger_boundary",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "9.1000000001"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "5.3"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_recovery_below",
+      "task_id": "C03",
+      "category": "recovery_value_boundary",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "5.2999999999"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_recovery_equal",
+      "task_id": "C03",
+      "category": "recovery_value_boundary",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "5.3"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_recovery_above",
+      "task_id": "C03",
+      "category": "recovery_value_boundary",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "5.3000000001"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_deadline_recovery_before",
+      "task_id": "C03",
+      "category": "closed_deadline_and_timestamp_tolerance",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.799999",
+          "synthetic_speed_mps": "5.3"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Compare strict closed-window semantics (epsilon=0) separately from declared operational epsilon=1e-9.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_terminal_before",
+      "task_id": "C03",
+      "category": "finite_prefix_terminal",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.799999",
+          "synthetic_speed_mps": "7.2"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Pending at the deadline is not invented future recovery or failure; expiry requires a later supplied observation.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_deadline_recovery_equal",
+      "task_id": "C03",
+      "category": "closed_deadline_and_timestamp_tolerance",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "5.3"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Compare strict closed-window semantics (epsilon=0) separately from declared operational epsilon=1e-9.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_terminal_equal",
+      "task_id": "C03",
+      "category": "finite_prefix_terminal",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "7.2"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Pending at the deadline is not invented future recovery or failure; expiry requires a later supplied observation.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_deadline_recovery_inside_epsilon",
+      "task_id": "C03",
+      "category": "closed_deadline_and_timestamp_tolerance",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.8000000005",
+          "synthetic_speed_mps": "5.3"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Compare strict closed-window semantics (epsilon=0) separately from declared operational epsilon=1e-9.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_terminal_inside_epsilon",
+      "task_id": "C03",
+      "category": "finite_prefix_terminal",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.8000000005",
+          "synthetic_speed_mps": "7.2"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Pending at the deadline is not invented future recovery or failure; expiry requires a later supplied observation.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_deadline_recovery_epsilon_equal",
+      "task_id": "C03",
+      "category": "closed_deadline_and_timestamp_tolerance",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.800000001",
+          "synthetic_speed_mps": "5.3"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Compare strict closed-window semantics (epsilon=0) separately from declared operational epsilon=1e-9.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_terminal_epsilon_equal",
+      "task_id": "C03",
+      "category": "finite_prefix_terminal",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.800000001",
+          "synthetic_speed_mps": "7.2"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Pending at the deadline is not invented future recovery or failure; expiry requires a later supplied observation.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_deadline_recovery_outside_epsilon",
+      "task_id": "C03",
+      "category": "closed_deadline_and_timestamp_tolerance",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.800000002",
+          "synthetic_speed_mps": "5.3"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Compare strict closed-window semantics (epsilon=0) separately from declared operational epsilon=1e-9.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_terminal_outside_epsilon",
+      "task_id": "C03",
+      "category": "finite_prefix_terminal",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.800000002",
+          "synthetic_speed_mps": "7.2"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Pending at the deadline is not invented future recovery or failure; expiry requires a later supplied observation.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_deadline_recovery_after",
+      "task_id": "C03",
+      "category": "closed_deadline_and_timestamp_tolerance",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.800001",
+          "synthetic_speed_mps": "5.3"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Compare strict closed-window semantics (epsilon=0) separately from declared operational epsilon=1e-9.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_terminal_after",
+      "task_id": "C03",
+      "category": "finite_prefix_terminal",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.800001",
+          "synthetic_speed_mps": "7.2"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Pending at the deadline is not invented future recovery or failure; expiry requires a later supplied observation.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_repeated_triggers",
+      "task_id": "C03",
+      "category": "level_triggered_repeated_obligations",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "5.3"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_mixed_expired_recovered",
+      "task_id": "C03",
+      "category": "individual_deadline_order",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "2.0",
+          "synthetic_speed_mps": "5.3"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_violation_dominates_pending",
+      "task_id": "C03",
+      "category": "terminal_precedence",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "2.0",
+          "synthetic_speed_mps": "10.1"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_pre_trigger_recovery_only",
+      "task_id": "C03",
+      "category": "no_past_witness",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "5.3"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "0.8",
+          "synthetic_speed_mps": "7.2"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_value_epsilon_trigger",
+      "task_id": "C03",
+      "category": "value_epsilon_boundary",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "9.10001"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "7.2"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Tolerance expands trigger/recovery bounds only in this explicitly changed-rule case.",
+      "rule_override": {
+        "value_epsilon": "0.00001"
+      },
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_sampling_interval_0.2",
+      "task_id": "C03",
+      "category": "native_observation_gap",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "0.2",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.8",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.0",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.4",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.6",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "5.3"
+        }
+      ],
+      "relation_to": "C03_deadline_recovery_equal",
+      "transform": "same_trigger_and_recovery_endpoints_different_neutral_observations",
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_sampling_interval_0.45",
+      "task_id": "C03",
+      "category": "native_observation_gap",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "0.45",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.90",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.35",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "5.3"
+        }
+      ],
+      "relation_to": "C03_deadline_recovery_equal",
+      "transform": "same_trigger_and_recovery_endpoints_different_neutral_observations",
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_future_suffix_recovery",
+      "task_id": "C03",
+      "category": "future_suffix_nonretroactivity",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "5.3"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Both accepted continuations share the observations at t<=0.6; past transition events must be identical.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_future_suffix_no_recovery",
+      "task_id": "C03",
+      "category": "future_suffix_nonretroactivity",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "7.2"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Both accepted continuations share the observations at t<=0.6; past transition events must be identical.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_trigger_equal",
+      "task_id": "C04",
+      "category": "strict_trigger_boundary",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "8.6"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "6.65"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_trigger_above_tiny",
+      "task_id": "C04",
+      "category": "strict_trigger_boundary",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "8.6000000001"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "4.7"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_recovery_below",
+      "task_id": "C04",
+      "category": "recovery_value_boundary",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.2",
+          "synthetic_speed_mps": "4.6999999999"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_recovery_equal",
+      "task_id": "C04",
+      "category": "recovery_value_boundary",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.2",
+          "synthetic_speed_mps": "4.7"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_recovery_above",
+      "task_id": "C04",
+      "category": "recovery_value_boundary",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.2",
+          "synthetic_speed_mps": "4.7000000001"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_deadline_recovery_before",
+      "task_id": "C04",
+      "category": "closed_deadline_and_timestamp_tolerance",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.199999",
+          "synthetic_speed_mps": "4.7"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Compare strict closed-window semantics (epsilon=0) separately from declared operational epsilon=1e-9.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_terminal_before",
+      "task_id": "C04",
+      "category": "finite_prefix_terminal",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.199999",
+          "synthetic_speed_mps": "6.65"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Pending at the deadline is not invented future recovery or failure; expiry requires a later supplied observation.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_deadline_recovery_equal",
+      "task_id": "C04",
+      "category": "closed_deadline_and_timestamp_tolerance",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.2",
+          "synthetic_speed_mps": "4.7"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Compare strict closed-window semantics (epsilon=0) separately from declared operational epsilon=1e-9.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_terminal_equal",
+      "task_id": "C04",
+      "category": "finite_prefix_terminal",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.2",
+          "synthetic_speed_mps": "6.65"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Pending at the deadline is not invented future recovery or failure; expiry requires a later supplied observation.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_deadline_recovery_inside_epsilon",
+      "task_id": "C04",
+      "category": "closed_deadline_and_timestamp_tolerance",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.1",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.2000000005",
+          "synthetic_speed_mps": "4.7"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Compare strict closed-window semantics (epsilon=0) separately from declared operational epsilon=1e-9.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_terminal_inside_epsilon",
+      "task_id": "C04",
+      "category": "finite_prefix_terminal",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.1",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.2000000005",
+          "synthetic_speed_mps": "6.65"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Pending at the deadline is not invented future recovery or failure; expiry requires a later supplied observation.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_deadline_recovery_epsilon_equal",
+      "task_id": "C04",
+      "category": "closed_deadline_and_timestamp_tolerance",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.1",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.200000001",
+          "synthetic_speed_mps": "4.7"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Compare strict closed-window semantics (epsilon=0) separately from declared operational epsilon=1e-9.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_terminal_epsilon_equal",
+      "task_id": "C04",
+      "category": "finite_prefix_terminal",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.1",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.200000001",
+          "synthetic_speed_mps": "6.65"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Pending at the deadline is not invented future recovery or failure; expiry requires a later supplied observation.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_deadline_recovery_outside_epsilon",
+      "task_id": "C04",
+      "category": "closed_deadline_and_timestamp_tolerance",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.1",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.200000002",
+          "synthetic_speed_mps": "4.7"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Compare strict closed-window semantics (epsilon=0) separately from declared operational epsilon=1e-9.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_terminal_outside_epsilon",
+      "task_id": "C04",
+      "category": "finite_prefix_terminal",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.1",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.200000002",
+          "synthetic_speed_mps": "6.65"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Pending at the deadline is not invented future recovery or failure; expiry requires a later supplied observation.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_deadline_recovery_after",
+      "task_id": "C04",
+      "category": "closed_deadline_and_timestamp_tolerance",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.1",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.200001",
+          "synthetic_speed_mps": "4.7"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Compare strict closed-window semantics (epsilon=0) separately from declared operational epsilon=1e-9.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_terminal_after",
+      "task_id": "C04",
+      "category": "finite_prefix_terminal",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.1",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.200001",
+          "synthetic_speed_mps": "6.65"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Pending at the deadline is not invented future recovery or failure; expiry requires a later supplied observation.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_repeated_triggers",
+      "task_id": "C04",
+      "category": "level_triggered_repeated_obligations",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.2",
+          "synthetic_speed_mps": "4.7"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_mixed_expired_recovered",
+      "task_id": "C04",
+      "category": "individual_deadline_order",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.1",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.4",
+          "synthetic_speed_mps": "4.7"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_violation_dominates_pending",
+      "task_id": "C04",
+      "category": "terminal_precedence",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.1",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.4",
+          "synthetic_speed_mps": "9.6"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_pre_trigger_recovery_only",
+      "task_id": "C04",
+      "category": "no_past_witness",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "4.7"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "0.8",
+          "synthetic_speed_mps": "6.65"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_value_epsilon_trigger",
+      "task_id": "C04",
+      "category": "value_epsilon_boundary",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "8.60001"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "6.65"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Tolerance expands trigger/recovery bounds only in this explicitly changed-rule case.",
+      "rule_override": {
+        "value_epsilon": "0.00001"
+      },
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_sampling_interval_0.2",
+      "task_id": "C04",
+      "category": "native_observation_gap",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "0.2",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.8",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.0",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.4",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.6",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.0",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.2",
+          "synthetic_speed_mps": "4.7"
+        }
+      ],
+      "relation_to": "C04_deadline_recovery_equal",
+      "transform": "same_trigger_and_recovery_endpoints_different_neutral_observations",
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_sampling_interval_0.45",
+      "task_id": "C04",
+      "category": "native_observation_gap",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "0.45",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.90",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.35",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.80",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.2",
+          "synthetic_speed_mps": "4.7"
+        }
+      ],
+      "relation_to": "C04_deadline_recovery_equal",
+      "transform": "same_trigger_and_recovery_endpoints_different_neutral_observations",
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_future_suffix_recovery",
+      "task_id": "C04",
+      "category": "future_suffix_nonretroactivity",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.2",
+          "synthetic_speed_mps": "4.7"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Both accepted continuations share the observations at t<=0.6; past transition events must be identical.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_future_suffix_no_recovery",
+      "task_id": "C04",
+      "category": "future_suffix_nonretroactivity",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "2.2",
+          "synthetic_speed_mps": "6.65"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "Both accepted continuations share the observations at t<=0.6; past transition events must be identical.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C01_upper_equal_time_shift_1000",
+      "task_id": "C01",
+      "category": "time_translation_float_precision",
+      "samples": [
+        {
+          "time_seconds": "1000",
+          "synthetic_speed_mps": "5.4"
+        },
+        {
+          "time_seconds": "1000.4",
+          "synthetic_speed_mps": "6.4"
+        }
+      ],
+      "relation_to": "C01_upper_equal",
+      "transform": "time_translation_plus_1000",
+      "note": "Large origin is a numerical stress test, not a claim that original E5 inputs have this origin.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C01_upper_equal_time_shift_1000000000",
+      "task_id": "C01",
+      "category": "time_translation_float_precision",
+      "samples": [
+        {
+          "time_seconds": "1000000000",
+          "synthetic_speed_mps": "5.4"
+        },
+        {
+          "time_seconds": "1000000000.4",
+          "synthetic_speed_mps": "6.4"
+        }
+      ],
+      "relation_to": "C01_upper_equal",
+      "transform": "time_translation_plus_1000000000",
+      "note": "Large origin is a numerical stress test, not a claim that original E5 inputs have this origin.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C01_value_and_threshold_shift",
+      "task_id": "C01",
+      "category": "rule_value_translation",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "7.9"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "8.9000000001"
+        }
+      ],
+      "relation_to": "C01_upper_above",
+      "transform": "signal_and_thresholds_plus_2.5",
+      "note": "",
+      "rule_override": {
+        "kind": "invariant",
+        "upper": "8.9",
+        "recovery": null,
+        "deadline": null,
+        "value_epsilon": "0",
+        "dwell": "0",
+        "formula": "G(synthetic_speed_mps <= 6.4)"
+      },
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C02_upper_equal_time_shift_1000",
+      "task_id": "C02",
+      "category": "time_translation_float_precision",
+      "samples": [
+        {
+          "time_seconds": "1000",
+          "synthetic_speed_mps": "6.2"
+        },
+        {
+          "time_seconds": "1000.4",
+          "synthetic_speed_mps": "7.2"
+        }
+      ],
+      "relation_to": "C02_upper_equal",
+      "transform": "time_translation_plus_1000",
+      "note": "Large origin is a numerical stress test, not a claim that original E5 inputs have this origin.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C02_upper_equal_time_shift_1000000000",
+      "task_id": "C02",
+      "category": "time_translation_float_precision",
+      "samples": [
+        {
+          "time_seconds": "1000000000",
+          "synthetic_speed_mps": "6.2"
+        },
+        {
+          "time_seconds": "1000000000.4",
+          "synthetic_speed_mps": "7.2"
+        }
+      ],
+      "relation_to": "C02_upper_equal",
+      "transform": "time_translation_plus_1000000000",
+      "note": "Large origin is a numerical stress test, not a claim that original E5 inputs have this origin.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C02_value_and_threshold_shift",
+      "task_id": "C02",
+      "category": "rule_value_translation",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "8.7"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "9.7000000001"
+        }
+      ],
+      "relation_to": "C02_upper_above",
+      "transform": "signal_and_thresholds_plus_2.5",
+      "note": "",
+      "rule_override": {
+        "kind": "invariant",
+        "upper": "9.7",
+        "recovery": null,
+        "deadline": null,
+        "value_epsilon": "0",
+        "dwell": "0",
+        "formula": "G(synthetic_speed_mps <= 7.2)"
+      },
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_deadline_recovery_equal_time_shift_1000",
+      "task_id": "C03",
+      "category": "time_translation_float_precision",
+      "samples": [
+        {
+          "time_seconds": "1000",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "1000.3",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1000.6",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1000.9",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1001.2",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1001.5",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1001.8",
+          "synthetic_speed_mps": "5.3"
+        }
+      ],
+      "relation_to": "C03_deadline_recovery_equal",
+      "transform": "time_translation_plus_1000",
+      "note": "Large origin is a numerical stress test, not a claim that original E5 inputs have this origin.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_deadline_recovery_equal_time_shift_1000000000",
+      "task_id": "C03",
+      "category": "time_translation_float_precision",
+      "samples": [
+        {
+          "time_seconds": "1000000000",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "1000000000.3",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1000000000.6",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1000000000.9",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1000000001.2",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1000000001.5",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1000000001.8",
+          "synthetic_speed_mps": "5.3"
+        }
+      ],
+      "relation_to": "C03_deadline_recovery_equal",
+      "transform": "time_translation_plus_1000000000",
+      "note": "Large origin is a numerical stress test, not a claim that original E5 inputs have this origin.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_deadline_recovery_epsilon_equal_time_shift_1000",
+      "task_id": "C03",
+      "category": "time_translation_float_precision",
+      "samples": [
+        {
+          "time_seconds": "1000",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "1000.3",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1000.6",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1000.9",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1001.2",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1001.5",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1001.800000001",
+          "synthetic_speed_mps": "5.3"
+        }
+      ],
+      "relation_to": "C03_deadline_recovery_epsilon_equal",
+      "transform": "time_translation_plus_1000",
+      "note": "Large origin is a numerical stress test, not a claim that original E5 inputs have this origin.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_deadline_recovery_epsilon_equal_time_shift_1000000000",
+      "task_id": "C03",
+      "category": "time_translation_float_precision",
+      "samples": [
+        {
+          "time_seconds": "1000000000",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "1000000000.3",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1000000000.6",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1000000000.9",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1000000001.2",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1000000001.5",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1000000001.800000001",
+          "synthetic_speed_mps": "5.3"
+        }
+      ],
+      "relation_to": "C03_deadline_recovery_epsilon_equal",
+      "transform": "time_translation_plus_1000000000",
+      "note": "Large origin is a numerical stress test, not a claim that original E5 inputs have this origin.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_terminal_outside_epsilon_time_shift_1000",
+      "task_id": "C03",
+      "category": "time_translation_float_precision",
+      "samples": [
+        {
+          "time_seconds": "1000",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "1000.3",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1000.6",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1000.9",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1001.2",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1001.5",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1001.800000002",
+          "synthetic_speed_mps": "7.2"
+        }
+      ],
+      "relation_to": "C03_terminal_outside_epsilon",
+      "transform": "time_translation_plus_1000",
+      "note": "Large origin is a numerical stress test, not a claim that original E5 inputs have this origin.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_terminal_outside_epsilon_time_shift_1000000000",
+      "task_id": "C03",
+      "category": "time_translation_float_precision",
+      "samples": [
+        {
+          "time_seconds": "1000000000",
+          "synthetic_speed_mps": "10.1"
+        },
+        {
+          "time_seconds": "1000000000.3",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1000000000.6",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1000000000.9",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1000000001.2",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1000000001.5",
+          "synthetic_speed_mps": "7.2"
+        },
+        {
+          "time_seconds": "1000000001.800000002",
+          "synthetic_speed_mps": "7.2"
+        }
+      ],
+      "relation_to": "C03_terminal_outside_epsilon",
+      "transform": "time_translation_plus_1000000000",
+      "note": "Large origin is a numerical stress test, not a claim that original E5 inputs have this origin.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C03_value_and_threshold_shift",
+      "task_id": "C03",
+      "category": "rule_value_translation",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "12.6"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "12.6"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "12.6"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "9.7"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "9.7"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "9.7"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "7.8"
+        }
+      ],
+      "relation_to": "C03_repeated_triggers",
+      "transform": "signal_and_thresholds_plus_2.5",
+      "note": "",
+      "rule_override": {
+        "kind": "response",
+        "upper": "11.6",
+        "recovery": "7.8",
+        "deadline": "1.8",
+        "value_epsilon": "0",
+        "dwell": "0",
+        "formula": "G((synthetic_speed_mps > 9.1) -> F[0,1.8](synthetic_speed_mps <= 5.3))"
+      },
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_deadline_recovery_equal_time_shift_1000",
+      "task_id": "C04",
+      "category": "time_translation_float_precision",
+      "samples": [
+        {
+          "time_seconds": "1000",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "1000.3",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1000.6",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1000.9",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1001.2",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1001.5",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1001.8",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1002.2",
+          "synthetic_speed_mps": "4.7"
+        }
+      ],
+      "relation_to": "C04_deadline_recovery_equal",
+      "transform": "time_translation_plus_1000",
+      "note": "Large origin is a numerical stress test, not a claim that original E5 inputs have this origin.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_deadline_recovery_equal_time_shift_1000000000",
+      "task_id": "C04",
+      "category": "time_translation_float_precision",
+      "samples": [
+        {
+          "time_seconds": "1000000000",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "1000000000.3",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1000000000.6",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1000000000.9",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1000000001.2",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1000000001.5",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1000000001.8",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1000000002.2",
+          "synthetic_speed_mps": "4.7"
+        }
+      ],
+      "relation_to": "C04_deadline_recovery_equal",
+      "transform": "time_translation_plus_1000000000",
+      "note": "Large origin is a numerical stress test, not a claim that original E5 inputs have this origin.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_deadline_recovery_epsilon_equal_time_shift_1000",
+      "task_id": "C04",
+      "category": "time_translation_float_precision",
+      "samples": [
+        {
+          "time_seconds": "1000",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "1000.3",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1000.6",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1000.9",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1001.2",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1001.5",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1001.8",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1002.1",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1002.200000001",
+          "synthetic_speed_mps": "4.7"
+        }
+      ],
+      "relation_to": "C04_deadline_recovery_epsilon_equal",
+      "transform": "time_translation_plus_1000",
+      "note": "Large origin is a numerical stress test, not a claim that original E5 inputs have this origin.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_deadline_recovery_epsilon_equal_time_shift_1000000000",
+      "task_id": "C04",
+      "category": "time_translation_float_precision",
+      "samples": [
+        {
+          "time_seconds": "1000000000",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "1000000000.3",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1000000000.6",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1000000000.9",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1000000001.2",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1000000001.5",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1000000001.8",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1000000002.1",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1000000002.200000001",
+          "synthetic_speed_mps": "4.7"
+        }
+      ],
+      "relation_to": "C04_deadline_recovery_epsilon_equal",
+      "transform": "time_translation_plus_1000000000",
+      "note": "Large origin is a numerical stress test, not a claim that original E5 inputs have this origin.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_terminal_outside_epsilon_time_shift_1000",
+      "task_id": "C04",
+      "category": "time_translation_float_precision",
+      "samples": [
+        {
+          "time_seconds": "1000",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "1000.3",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1000.6",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1000.9",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1001.2",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1001.5",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1001.8",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1002.1",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1002.200000002",
+          "synthetic_speed_mps": "6.65"
+        }
+      ],
+      "relation_to": "C04_terminal_outside_epsilon",
+      "transform": "time_translation_plus_1000",
+      "note": "Large origin is a numerical stress test, not a claim that original E5 inputs have this origin.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_terminal_outside_epsilon_time_shift_1000000000",
+      "task_id": "C04",
+      "category": "time_translation_float_precision",
+      "samples": [
+        {
+          "time_seconds": "1000000000",
+          "synthetic_speed_mps": "9.6"
+        },
+        {
+          "time_seconds": "1000000000.3",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1000000000.6",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1000000000.9",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1000000001.2",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1000000001.5",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1000000001.8",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1000000002.1",
+          "synthetic_speed_mps": "6.65"
+        },
+        {
+          "time_seconds": "1000000002.200000002",
+          "synthetic_speed_mps": "6.65"
+        }
+      ],
+      "relation_to": "C04_terminal_outside_epsilon",
+      "transform": "time_translation_plus_1000000000",
+      "note": "Large origin is a numerical stress test, not a claim that original E5 inputs have this origin.",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "C04_value_and_threshold_shift",
+      "task_id": "C04",
+      "category": "rule_value_translation",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "12.1"
+        },
+        {
+          "time_seconds": "0.3",
+          "synthetic_speed_mps": "12.1"
+        },
+        {
+          "time_seconds": "0.6",
+          "synthetic_speed_mps": "12.1"
+        },
+        {
+          "time_seconds": "0.9",
+          "synthetic_speed_mps": "9.15"
+        },
+        {
+          "time_seconds": "1.2",
+          "synthetic_speed_mps": "9.15"
+        },
+        {
+          "time_seconds": "1.5",
+          "synthetic_speed_mps": "9.15"
+        },
+        {
+          "time_seconds": "1.8",
+          "synthetic_speed_mps": "9.15"
+        },
+        {
+          "time_seconds": "2.2",
+          "synthetic_speed_mps": "7.2"
+        }
+      ],
+      "relation_to": "C04_repeated_triggers",
+      "transform": "signal_and_thresholds_plus_2.5",
+      "note": "",
+      "rule_override": {
+        "kind": "response",
+        "upper": "11.1",
+        "recovery": "7.2",
+        "deadline": "2.2",
+        "value_epsilon": "0",
+        "dwell": "0",
+        "formula": "G((synthetic_speed_mps > 8.6) -> F[0,2.2](synthetic_speed_mps <= 4.7))"
+      },
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "input_one_sample",
+      "task_id": "C01",
+      "category": "input_contract_boundary",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "1"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "input_duplicate_time",
+      "task_id": "C01",
+      "category": "input_contract_boundary",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "1"
+        },
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "1"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "input_reverse_time",
+      "task_id": "C01",
+      "category": "input_contract_boundary",
+      "samples": [
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "1"
+        },
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "1"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "input_gap_exceeded",
+      "task_id": "C01",
+      "category": "input_contract_boundary",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "1"
+        },
+        {
+          "time_seconds": "0.50001",
+          "synthetic_speed_mps": "1"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "input_gap_equal",
+      "task_id": "C01",
+      "category": "input_contract_boundary",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "1"
+        },
+        {
+          "time_seconds": "0.5",
+          "synthetic_speed_mps": "1"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "input_nan_value",
+      "task_id": "C01",
+      "category": "input_contract_boundary",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "1"
+        },
+        {
+          "time_seconds": "0.4",
+          "synthetic_speed_mps": "NaN"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "input_infinite_time",
+      "task_id": "C01",
+      "category": "input_contract_boundary",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "1"
+        },
+        {
+          "time_seconds": "Infinity",
+          "synthetic_speed_mps": "1"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    },
+    {
+      "case_id": "input_nan_time",
+      "task_id": "C01",
+      "category": "input_contract_boundary",
+      "samples": [
+        {
+          "time_seconds": "0",
+          "synthetic_speed_mps": "1"
+        },
+        {
+          "time_seconds": "NaN",
+          "synthetic_speed_mps": "1"
+        }
+      ],
+      "relation_to": null,
+      "transform": null,
+      "note": "",
+      "rule_override": null,
+      "input_provenance": "synthetic_technical_case_not_public_flight_data"
+    }
+  ],
+  "limitations": [
+    "All 12 originals and new fixtures are authored synthetic technical inputs, not public real flight logs or human task records.",
+    "Same-program numerical comparison is no human-independent reference or deployment certification.",
+    "No human completion time, accuracy advantage or labor-saving measurement is produced.",
+    "Observed-point success does not imply continuous-time success between measurements."
+  ]
+}

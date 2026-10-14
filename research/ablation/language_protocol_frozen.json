@@ -1,0 +1,23 @@
+{
+  "frozen_utc": "2026-10-13T10:35:12.119688+00:00",
+  "model": "gpt-5.5",
+  "reasoning_effort": "low",
+  "conditions": [
+    "full",
+    "without_role_mapping",
+    "without_skeleton",
+    "without_both"
+  ],
+  "repetitions_per_condition": 5,
+  "planned_calls": 20,
+  "unique_items": 19,
+  "model_record_opportunities": 380,
+  "global_vocabulary_and_json_equal": true,
+  "shared_task_definition_equal": true,
+  "source_identifiers_removed": true,
+  "fixed_item_order": true,
+  "no_gold_or_sources_in_requests": true,
+  "source_review_and_score_reference_separate": true,
+  "schema_does_not_conditionally_map_templates_to_roles": true,
+  "failure_denominator_policy": "all 20 invocations and all 380 item opportunities retained; failure=incorrect for unconditional accuracy, separately reported"
+}

@@ -1,0 +1,15 @@
+{
+  "nodeStyles": {
+    "Requirement": {"color": "#4C8EDA", "size": 78, "captions": [{"type": "property", "captionKey": "_display_caption"}]},
+    "STLFormula": {"color": "#57C7E3", "size": 78, "captions": [{"type": "property", "captionKey": "_display_caption"}]},
+    "ParameterBinding": {"color": "#FFC454", "size": 78, "captions": [{"type": "property", "captionKey": "_display_caption"}]},
+    "FormulaParameter": {"color": "#C990C0", "size": 78, "captions": [{"type": "property", "captionKey": "_display_caption"}]},
+    "Signal": {"color": "#F16667", "size": 78, "captions": [{"type": "property", "captionKey": "_display_caption"}]},
+    "STLTemplate": {"color": "#8DCC93", "size": 78, "captions": [{"type": "property", "captionKey": "_display_caption"}]},
+    "RuntimeMonitor": {"color": "#569480", "size": 78, "captions": [{"type": "property", "captionKey": "_display_caption"}]},
+    "Entity": {}, "STKGSnapshot": {}, "Threshold": {}, "NumericTolerance": {}, "RuntimeParameter": {}
+  },
+  "relStyles": {},
+  "stylingPriorityOrder": ["Requirement", "STLFormula", "ParameterBinding", "FormulaParameter", "Signal", "STLTemplate", "RuntimeMonitor", "Threshold", "NumericTolerance", "RuntimeParameter", "Entity", "STKGSnapshot"],
+  "note": "Native Neo4j Browser 2026.02.3 preferences. Derived _display_caption never replaces archived values or IDs. Source parameter numbers retain full precision; view labels use five significant digits."
+}

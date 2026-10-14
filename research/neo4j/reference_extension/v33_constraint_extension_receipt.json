@@ -1,0 +1,124 @@
+{
+  "status": "passed",
+  "denominator": "new independently generated v33 graph/configuration variants only",
+  "new_variant_count": 651,
+  "new_variant_rejected_count": 651,
+  "historical_validator_rejected": 217,
+  "historical_validator_accepted": 434,
+  "positive_control_count": 88,
+  "positive_controls_accepted": 88,
+  "clean_graph": {
+    "nodes": 158,
+    "relationships": 350,
+    "bindings": 84,
+    "accepted": true,
+    "errors": [],
+    "execution_context_fully_known_equal_checks": 0,
+    "execution_context_unknown_or_not_applicable_checks": 336,
+    "interpretation": "Record-chain integrity and absence of declared known conflicts do not prove deployment applicability or physical calibration."
+  },
+  "families": [
+    {
+      "family": "binding_owner_property",
+      "variants": 84,
+      "historical_rejected": 84,
+      "extended_rejected": 84,
+      "accepted_when_assigned_extension_disabled": 0
+    },
+    {
+      "family": "duplicate_requirement_mapping",
+      "variants": 24,
+      "historical_rejected": 24,
+      "extended_rejected": 24,
+      "accepted_when_assigned_extension_disabled": 0
+    },
+    {
+      "family": "isolated_parameter_binding",
+      "variants": 84,
+      "historical_rejected": 0,
+      "extended_rejected": 84,
+      "accepted_when_assigned_extension_disabled": 84
+    },
+    {
+      "family": "known_conflict_coordinate_frame",
+      "variants": 84,
+      "historical_rejected": 0,
+      "extended_rejected": 84,
+      "accepted_when_assigned_extension_disabled": 84
+    },
+    {
+      "family": "known_conflict_firmware_context",
+      "variants": 84,
+      "historical_rejected": 0,
+      "extended_rejected": 84,
+      "accepted_when_assigned_extension_disabled": 84
+    },
+    {
+      "family": "known_conflict_flight_mode_context",
+      "variants": 84,
+      "historical_rejected": 0,
+      "extended_rejected": 84,
+      "accepted_when_assigned_extension_disabled": 84
+    },
+    {
+      "family": "known_conflict_vehicle_context",
+      "variants": 84,
+      "historical_rejected": 0,
+      "extended_rejected": 84,
+      "accepted_when_assigned_extension_disabled": 84
+    },
+    {
+      "family": "numeric_boolean_type",
+      "variants": 16,
+      "historical_rejected": 8,
+      "extended_rejected": 16,
+      "accepted_when_assigned_extension_disabled": 8
+    },
+    {
+      "family": "required_property_type",
+      "variants": 7,
+      "historical_rejected": 1,
+      "extended_rejected": 7,
+      "accepted_when_assigned_extension_disabled": 6
+    },
+    {
+      "family": "shared_parameter_binding",
+      "variants": 84,
+      "historical_rejected": 84,
+      "extended_rejected": 84,
+      "accepted_when_assigned_extension_disabled": 0
+    },
+    {
+      "family": "wrong_endpoint_source_type",
+      "variants": 8,
+      "historical_rejected": 8,
+      "extended_rejected": 8,
+      "accepted_when_assigned_extension_disabled": 0
+    },
+    {
+      "family": "wrong_endpoint_target_type",
+      "variants": 8,
+      "historical_rejected": 8,
+      "extended_rejected": 8,
+      "accepted_when_assigned_extension_disabled": 0
+    }
+  ],
+  "input_sha256": {
+    "docs\\最终论文\\latex_kbs_v6\\results\\v4_enriched_graph_nodes.csv": "78b7d4348a49e0f3ccd94c24b6e5221d43e4a21e5000bae2b811e8b962f4845c",
+    "specification\\v2\\results\\traceability_graph\\relationships.csv": "cb263a607ddbf21e6d99e663f25c4014a71656232333a0ddc431b6a66b887f73",
+    "specification\\v2\\results\\traceability_graph\\formula_parameter_bindings.csv": "e34304d8b7dcf434308ab97a6d0d27e96684ed6bc0e995154d490a9c3408de45"
+  },
+  "execution_context_fields": [
+    "execution_vehicle_context",
+    "execution_flight_mode_context",
+    "execution_firmware_context",
+    "execution_coordinate_frame"
+  ],
+  "limitations": [
+    "Variants and applicability fixtures are constructed configuration checks, not new independent requirements or flight measurements.",
+    "Historical 354 variants and their reported outcomes remain unchanged and are not combined with this denominator.",
+    "Safeguards can overlap; disabling an assigned extension may still leave a mutant rejected by another predicate.",
+    "The clean graph has no fully known execution-context matches; unknown/not_recorded markers are preserved.",
+    "Record-chain integrity and absence of known conflicts do not establish physical applicability, safety or deployment calibration."
+  ]
+}

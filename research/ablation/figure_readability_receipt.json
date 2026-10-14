@@ -1,0 +1,31 @@
+{
+  "layout": "structural panels vertical; language one full-width panel above two panels; binding figure enlarged fonts",
+  "actual_png_review_completed": true,
+  "all_min_fonts_at_510pt_above_7pt": true,
+  "figures": [
+    {
+      "file": "v33_structural_ablation.pdf",
+      "width_pt": 481.4455625,
+      "height_pt": 584.91675,
+      "native_min_font_pt": 8.8,
+      "min_font_at_510pt_width": 9.321926193888224,
+      "sha256": "1fbb55dc11da8949762905604d8638549e1307afc6b19b6e0ad57dbc0442ed7c"
+    },
+    {
+      "file": "v33_fair_language_ablation.pdf",
+      "width_pt": 486.46475,
+      "height_pt": 486.8819644522,
+      "native_min_font_pt": 9.0,
+      "min_font_at_510pt_width": 9.43542157987809,
+      "sha256": "bc2ab4ac8e650146b34399a6ebe8f5f825606af5e74a6e5da32238c373896b33"
+    },
+    {
+      "file": "v33_binding_ambiguity.pdf",
+      "width_pt": 503.530625,
+      "height_pt": 289.3459829067,
+      "native_min_font_pt": 10.0,
+      "min_font_at_510pt_width": 10.128480268702624,
+      "sha256": "d92220da9c049843e6aeb7b6381438a2a5b2f8ef0f710b716c68bf2322d0df70"
+    }
+  ]
+}

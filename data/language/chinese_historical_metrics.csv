@@ -1,0 +1,7 @@
+﻿method,test_item_count,gold_in_scope_count,gold_out_of_scope_count,scope_macro_f1,structured_tuple_exact_match,signal_accuracy_in_scope,template_accuracy_in_scope,parameter_role_exact_match_in_scope,formula_structure_exact_match,correct_rejection_rate,predicted_in_scope_count,false_acceptance_count,graph_accepted_count,graph_rejected_candidate_count,graph_false_acceptance_count
+full_typed_raw,19,8,11,0.8869047619047619,0.8947368421052632,0.75,0.75,0.75,0.8947368421052632,1.0,6,0,,,
+full_typed_plus_stkg,19,8,11,0.8869047619047619,0.8947368421052632,0.75,0.75,0.75,0.8947368421052632,1.0,6,0,6.0,0.0,0.0
+no_graph_catalog_raw,19,8,11,0.6144927536231883,0.21052631578947367,0.0,0.0,0.0,0.21052631578947367,0.36363636363636365,15,7,,,
+no_graph_catalog_plus_stkg,19,8,11,0.36666666666666664,0.5789473684210527,0.0,0.0,0.0,0.5789473684210527,1.0,0,0,0.0,15.0,0.0
+direct_formula_raw,19,8,11,0.43452380952380953,0.10526315789473684,0.0,0.0,0.0,0.10526315789473684,0.18181818181818182,16,9,,,
+direct_formula_plus_stkg,19,8,11,0.36666666666666664,0.5789473684210527,0.0,0.0,0.0,0.5789473684210527,1.0,0,0,0.0,16.0,0.0

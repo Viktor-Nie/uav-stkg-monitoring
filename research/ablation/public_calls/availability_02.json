@@ -1,0 +1,35 @@
+{
+  "receipt": {
+    "call_id": "availability_02",
+    "requested_model": "gpt-5.5",
+    "serving_model": "not_returned_by_cli",
+    "cli_version": "0.145.0",
+    "reasoning_effort": "low",
+    "temperature": "not_exposed",
+    "request_sha256": "73aa416801c6315f0dd371f45fc2f2a435fdb76cbcedbe6bb3689f87327c6995",
+    "started_utc": "2026-10-13T10:34:55.743026+00:00",
+    "model_process_invocations": 1,
+    "backend_request_count": "not_observable",
+    "status": "completed",
+    "workdir_policy": "fresh_empty_temporary_directory_outside_project",
+    "exit_code": 0,
+    "unexpected_tool_events": 0,
+    "usage": [
+      {
+        "input_tokens": 9752,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 15,
+        "reasoning_output_tokens": 0
+      }
+    ],
+    "elapsed_seconds": 7.327372799998557,
+    "finished_utc": "2026-10-13T10:35:03.078009+00:00"
+  },
+  "request": {
+    "instruction": "Return {\"ok\":true}. Do not use tools."
+  },
+  "output": {
+    "ok": true
+  }
+}

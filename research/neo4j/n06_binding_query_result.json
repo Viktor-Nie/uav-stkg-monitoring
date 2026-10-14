@@ -1,0 +1,57 @@
+[
+  {
+    "role": "deadline_seconds",
+    "parameter_id": "parameter:prototype_recovery_deadline_2s",
+    "value": 2.0,
+    "unit": "s",
+    "source_type": "prototype_runtime_configuration",
+    "source_reference": "specification/run_all.py:build_monitor_specs",
+    "vehicle_context": "not_recorded",
+    "flight_mode_context": "not_recorded",
+    "firmware_context": "not_recorded"
+  },
+  {
+    "role": "dwell_seconds",
+    "parameter_id": "parameter:sampled_point_dwell_0s",
+    "value": 0.0,
+    "unit": "s",
+    "source_type": "semantic_default",
+    "source_reference": "docs/重构工作台/01_采样数据STL语义与监测契约.md",
+    "vehicle_context": "not_applicable",
+    "flight_mode_context": "not_applicable",
+    "firmware_context": "not_applicable"
+  },
+  {
+    "role": "recovery_upper",
+    "parameter_id": "parameter:speed_3d_p95_train",
+    "value": 5.82665111059551,
+    "unit": "m/s",
+    "source_type": "derived_statistical_reference",
+    "source_reference": "specification/results/research_monitor_thresholds.csv",
+    "vehicle_context": "not_recorded_in_threshold_export",
+    "flight_mode_context": "not_recorded_in_threshold_export",
+    "firmware_context": "not_recorded_in_threshold_export"
+  },
+  {
+    "role": "trigger_upper",
+    "parameter_id": "parameter:speed_3d_p99_train",
+    "value": 6.62613257694774,
+    "unit": "m/s",
+    "source_type": "derived_statistical_reference",
+    "source_reference": "specification/results/research_monitor_thresholds.csv",
+    "vehicle_context": "not_recorded_in_threshold_export",
+    "flight_mode_context": "not_recorded_in_threshold_export",
+    "firmware_context": "not_recorded_in_threshold_export"
+  },
+  {
+    "role": "value_epsilon",
+    "parameter_id": "parameter:zero_epsilon_speed_3d_mps",
+    "value": 0.0,
+    "unit": "m/s",
+    "source_type": "semantic_default",
+    "source_reference": "docs/重构工作台/01_采样数据STL语义与监测契约.md",
+    "vehicle_context": "not_applicable",
+    "flight_mode_context": "not_applicable",
+    "firmware_context": "not_applicable"
+  }
+]

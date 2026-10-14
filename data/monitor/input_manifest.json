@@ -1,0 +1,33 @@
+{
+  "schema": "packaged_constructed_monitor_inputs_v1",
+  "source_kind": "existing constructed computational fixtures, not independent flight samples",
+  "no_raw_flight_archives": true,
+  "no_full_third_party_documents": true,
+  "no_personal_annotation_metadata": true,
+  "semantic600_source": "v4_semantic_differential_traces.csv (436 positive dwell; manuscript suite)",
+  "sha256": {
+    "boundary_12_contract_controls.json": "34f4efba6c3bc07e1c96952d77ed6bfa9e3badd72a2ddfdb40a612056401f8d0",
+    "boundary_648_cases.json": "2598efaacf05fe4aae57d8cb6d8b125d6539bc223cbf482d2e9aff4f11aa5a82",
+    "boundary_contract.json": "85fac429a76a3ad9d0d4f1e2b8e13741c9fc151cfd7a3233a7127ea5b2fd1043",
+    "boundary_decimal_oracle.py": "a3564a23035ddc597572f5a00ddc9da2f98c59559cfe1aee393d4447b627cff4",
+    "e5_102_protocol.json": "924102b5828d106550151f8c61f0a792c12e22ee69a7d65f6eaf4d5d5c949ea3",
+    "e5_decimal_oracle.py": "6d83e371a9b56ce91d06ca0ae9b76927b045ec82ff2c2b21d7d333481ba0934f",
+    "independent_reference_semantics.py": "ff099d3a7b82700d81cb68259041cd0a6e255dfd06f1312c37556042b5b94257",
+    "legacy_test_metamorphic_monitor.py": "8f5835c1226c8fbfd23d40cdd1895e5d7978668c8fc0597257769437d1c64640",
+    "legacy_test_sampled_data_contract.py": "84252aa2d472b532a1157eda39ddb32f0a77d42dab9c804179e798ca0a0f1b52",
+    "legacy_test_sampled_monitor.py": "a839613ffcbc60cbddd0f6544b83ae94f52158372b0630c2020f20358bd1e487",
+    "semantic_differential_600.csv": "faafe8322be48468105e3707f58d3cfbe592b572865e91cbeee2904c6201a51d",
+    "original_12/C01_01.json": "007b542fdd364189e3493c51c966c0e60f3ae6cb7f959007c14a85ee4530819e",
+    "original_12/C01_02.json": "0cff605c27b785c67d8c46e210eed945346dde4b4a5900b4b9925e938318a2ee",
+    "original_12/C01_03.json": "025fff4ad8d4e1412d4fd9bad116ed6029be0e18c55ab068e6b272e3c6d2f7c7",
+    "original_12/C02_01.json": "ae27b89f727bd7e5a5b33c6be6d64ef5a657768d8996a1bbafc434421f4e32fe",
+    "original_12/C02_02.json": "27b516058a0f7e4e76cfc32defd888992f063c6bf75b3fcb29cc521b47a3d9f2",
+    "original_12/C02_03.json": "54b3c0dfda40602281acdbe286e535ead76886c93ba93740c5210c7a14412791",
+    "original_12/C03_01.json": "8f84f1ed34e683f1985552602ef46a00dafd07dc7453ee09c22418f652d482b2",
+    "original_12/C03_02.json": "640976eee841ead4cdad8ad4e90f648ef3e71bcc63b37df037781a93e50d26ec",
+    "original_12/C03_03.json": "53fbfa63750791c559394985a5ac418638ea6003a397a73d9043ecfc77a554ed",
+    "original_12/C04_01.json": "2ef70470fd6b218f2a44f96f842e9384be42f898ed0b08d7c0e51a36ee40d7a9",
+    "original_12/C04_02.json": "45980e5d6b9b3d5be3f739c968bcb9ecc1515a7ed1afdb3be0c4ccc6f120528d",
+    "original_12/C04_03.json": "5e7b1f42d86778c58ca57e2c3bc74d34d52ab1d5e3bd1f8a98caa4ebff36489f"
+  }
+}

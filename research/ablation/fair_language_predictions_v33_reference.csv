@@ -1,0 +1,381 @@
+source_item_id,condition,repetition,reference_scope,predicted_scope,signal_id,template_id,roles,formula_structure,tuple_correct,formula_correct,signal_correct,template_correct,role_correct,graph_accepted,graph_reason,failed_call
+UKCAA_PEOPLE_01,full,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_ROLL_01,full,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_VOLT_01,full,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MIN_01,full,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_PITCH_01,full,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_SPEED_01,full,1,out_of_scope,in_scope,speed_3d_mps,invariant_upper,upper_bound,"G[0,T](speed_3d_mps <= upper_bound)",False,False,False,False,False,True,accepted,False
+PX4_GEOFENCE_ALT_01,full,1,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+PX4_LINK_LOSS_01,full,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_ACTION_01,full,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_CAPACITY_01,full,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_VISUAL_01,full,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MAX_01,full,1,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ARDUPILOT_ALTITUDE_REF_01,full,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_YIELD_01,full,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_ALT_01,full,1,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ECFR_107_ALT_01,full,1,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+UKCAA_HEIGHT_01,full,1,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ARDUPILOT_GCS_TIMEOUT_01,full,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_SEPARATION_01,full,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+UKCAA_PEOPLE_01,full,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_ROLL_01,full,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_VOLT_01,full,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MIN_01,full,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_PITCH_01,full,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_SPEED_01,full,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_GEOFENCE_ALT_01,full,2,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+PX4_LINK_LOSS_01,full,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_ACTION_01,full,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_CAPACITY_01,full,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_VISUAL_01,full,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MAX_01,full,2,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ARDUPILOT_ALTITUDE_REF_01,full,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_YIELD_01,full,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_ALT_01,full,2,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ECFR_107_ALT_01,full,2,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+UKCAA_HEIGHT_01,full,2,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ARDUPILOT_GCS_TIMEOUT_01,full,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_SEPARATION_01,full,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+UKCAA_PEOPLE_01,full,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_ROLL_01,full,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_VOLT_01,full,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MIN_01,full,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_PITCH_01,full,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_SPEED_01,full,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_GEOFENCE_ALT_01,full,3,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+PX4_LINK_LOSS_01,full,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_ACTION_01,full,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_CAPACITY_01,full,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_VISUAL_01,full,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MAX_01,full,3,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ARDUPILOT_ALTITUDE_REF_01,full,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_YIELD_01,full,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_ALT_01,full,3,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ECFR_107_ALT_01,full,3,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+UKCAA_HEIGHT_01,full,3,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ARDUPILOT_GCS_TIMEOUT_01,full,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_SEPARATION_01,full,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+UKCAA_PEOPLE_01,full,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_ROLL_01,full,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_VOLT_01,full,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MIN_01,full,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_PITCH_01,full,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_SPEED_01,full,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_GEOFENCE_ALT_01,full,4,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+PX4_LINK_LOSS_01,full,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_ACTION_01,full,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_CAPACITY_01,full,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_VISUAL_01,full,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MAX_01,full,4,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ARDUPILOT_ALTITUDE_REF_01,full,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_YIELD_01,full,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_ALT_01,full,4,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ECFR_107_ALT_01,full,4,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+UKCAA_HEIGHT_01,full,4,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ARDUPILOT_GCS_TIMEOUT_01,full,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_SEPARATION_01,full,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+UKCAA_PEOPLE_01,full,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_ROLL_01,full,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_VOLT_01,full,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MIN_01,full,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_PITCH_01,full,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_SPEED_01,full,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_GEOFENCE_ALT_01,full,5,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+PX4_LINK_LOSS_01,full,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_ACTION_01,full,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_CAPACITY_01,full,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_VISUAL_01,full,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MAX_01,full,5,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ARDUPILOT_ALTITUDE_REF_01,full,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_YIELD_01,full,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_ALT_01,full,5,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ECFR_107_ALT_01,full,5,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+UKCAA_HEIGHT_01,full,5,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ARDUPILOT_GCS_TIMEOUT_01,full,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_SEPARATION_01,full,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+UKCAA_PEOPLE_01,without_role_mapping,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_ROLL_01,without_role_mapping,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_VOLT_01,without_role_mapping,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MIN_01,without_role_mapping,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_PITCH_01,without_role_mapping,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_SPEED_01,without_role_mapping,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_GEOFENCE_ALT_01,without_role_mapping,1,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+PX4_LINK_LOSS_01,without_role_mapping,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_ACTION_01,without_role_mapping,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_CAPACITY_01,without_role_mapping,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_VISUAL_01,without_role_mapping,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MAX_01,without_role_mapping,1,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ARDUPILOT_ALTITUDE_REF_01,without_role_mapping,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_YIELD_01,without_role_mapping,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_ALT_01,without_role_mapping,1,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ECFR_107_ALT_01,without_role_mapping,1,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+UKCAA_HEIGHT_01,without_role_mapping,1,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ARDUPILOT_GCS_TIMEOUT_01,without_role_mapping,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_SEPARATION_01,without_role_mapping,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+UKCAA_PEOPLE_01,without_role_mapping,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_ROLL_01,without_role_mapping,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_VOLT_01,without_role_mapping,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MIN_01,without_role_mapping,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_PITCH_01,without_role_mapping,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_SPEED_01,without_role_mapping,2,out_of_scope,in_scope,speed_3d_mps,invariant_upper,upper_bound,"G[0,T](speed_3d_mps <= upper_bound)",False,False,False,False,False,True,accepted,False
+PX4_GEOFENCE_ALT_01,without_role_mapping,2,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+PX4_LINK_LOSS_01,without_role_mapping,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_ACTION_01,without_role_mapping,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_CAPACITY_01,without_role_mapping,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_VISUAL_01,without_role_mapping,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MAX_01,without_role_mapping,2,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ARDUPILOT_ALTITUDE_REF_01,without_role_mapping,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_YIELD_01,without_role_mapping,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_ALT_01,without_role_mapping,2,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ECFR_107_ALT_01,without_role_mapping,2,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+UKCAA_HEIGHT_01,without_role_mapping,2,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ARDUPILOT_GCS_TIMEOUT_01,without_role_mapping,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_SEPARATION_01,without_role_mapping,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+UKCAA_PEOPLE_01,without_role_mapping,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_ROLL_01,without_role_mapping,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_VOLT_01,without_role_mapping,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MIN_01,without_role_mapping,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_PITCH_01,without_role_mapping,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_SPEED_01,without_role_mapping,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_GEOFENCE_ALT_01,without_role_mapping,3,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+PX4_LINK_LOSS_01,without_role_mapping,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_ACTION_01,without_role_mapping,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_CAPACITY_01,without_role_mapping,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_VISUAL_01,without_role_mapping,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MAX_01,without_role_mapping,3,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ARDUPILOT_ALTITUDE_REF_01,without_role_mapping,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_YIELD_01,without_role_mapping,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_ALT_01,without_role_mapping,3,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ECFR_107_ALT_01,without_role_mapping,3,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+UKCAA_HEIGHT_01,without_role_mapping,3,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ARDUPILOT_GCS_TIMEOUT_01,without_role_mapping,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_SEPARATION_01,without_role_mapping,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+UKCAA_PEOPLE_01,without_role_mapping,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_ROLL_01,without_role_mapping,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_VOLT_01,without_role_mapping,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MIN_01,without_role_mapping,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_PITCH_01,without_role_mapping,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_SPEED_01,without_role_mapping,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_GEOFENCE_ALT_01,without_role_mapping,4,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+PX4_LINK_LOSS_01,without_role_mapping,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_ACTION_01,without_role_mapping,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_CAPACITY_01,without_role_mapping,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_VISUAL_01,without_role_mapping,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MAX_01,without_role_mapping,4,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ARDUPILOT_ALTITUDE_REF_01,without_role_mapping,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_YIELD_01,without_role_mapping,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_ALT_01,without_role_mapping,4,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ECFR_107_ALT_01,without_role_mapping,4,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+UKCAA_HEIGHT_01,without_role_mapping,4,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ARDUPILOT_GCS_TIMEOUT_01,without_role_mapping,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_SEPARATION_01,without_role_mapping,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+UKCAA_PEOPLE_01,without_role_mapping,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_ROLL_01,without_role_mapping,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_VOLT_01,without_role_mapping,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MIN_01,without_role_mapping,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_PITCH_01,without_role_mapping,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_SPEED_01,without_role_mapping,5,out_of_scope,in_scope,speed_3d_mps,invariant_upper,upper_bound,"G[0,T](speed_3d_mps <= upper_bound)",False,False,False,False,False,True,accepted,False
+PX4_GEOFENCE_ALT_01,without_role_mapping,5,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+PX4_LINK_LOSS_01,without_role_mapping,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_ACTION_01,without_role_mapping,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_CAPACITY_01,without_role_mapping,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_VISUAL_01,without_role_mapping,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MAX_01,without_role_mapping,5,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ARDUPILOT_ALTITUDE_REF_01,without_role_mapping,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_YIELD_01,without_role_mapping,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_ALT_01,without_role_mapping,5,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ECFR_107_ALT_01,without_role_mapping,5,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+UKCAA_HEIGHT_01,without_role_mapping,5,in_scope,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)",True,True,True,True,True,True,accepted,False
+ARDUPILOT_GCS_TIMEOUT_01,without_role_mapping,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_SEPARATION_01,without_role_mapping,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+UKCAA_PEOPLE_01,without_skeleton,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_ROLL_01,without_skeleton,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_VOLT_01,without_skeleton,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MIN_01,without_skeleton,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_PITCH_01,without_skeleton,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_SPEED_01,without_skeleton,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_GEOFENCE_ALT_01,without_skeleton,1,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+PX4_LINK_LOSS_01,without_skeleton,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_ACTION_01,without_skeleton,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_CAPACITY_01,without_skeleton,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_VISUAL_01,without_skeleton,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MAX_01,without_skeleton,1,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+ARDUPILOT_ALTITUDE_REF_01,without_skeleton,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_YIELD_01,without_skeleton,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_ALT_01,without_skeleton,1,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+ECFR_107_ALT_01,without_skeleton,1,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+UKCAA_HEIGHT_01,without_skeleton,1,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+ARDUPILOT_GCS_TIMEOUT_01,without_skeleton,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_SEPARATION_01,without_skeleton,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+UKCAA_PEOPLE_01,without_skeleton,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_ROLL_01,without_skeleton,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_VOLT_01,without_skeleton,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MIN_01,without_skeleton,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_PITCH_01,without_skeleton,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_SPEED_01,without_skeleton,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_GEOFENCE_ALT_01,without_skeleton,2,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+PX4_LINK_LOSS_01,without_skeleton,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_ACTION_01,without_skeleton,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_CAPACITY_01,without_skeleton,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_VISUAL_01,without_skeleton,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MAX_01,without_skeleton,2,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+ARDUPILOT_ALTITUDE_REF_01,without_skeleton,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_YIELD_01,without_skeleton,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_ALT_01,without_skeleton,2,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+ECFR_107_ALT_01,without_skeleton,2,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+UKCAA_HEIGHT_01,without_skeleton,2,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+ARDUPILOT_GCS_TIMEOUT_01,without_skeleton,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_SEPARATION_01,without_skeleton,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+UKCAA_PEOPLE_01,without_skeleton,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_ROLL_01,without_skeleton,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_VOLT_01,without_skeleton,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MIN_01,without_skeleton,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_PITCH_01,without_skeleton,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_SPEED_01,without_skeleton,3,out_of_scope,in_scope,speed_3d_mps,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),False,False,False,False,False,False,formula_field_mismatch,False
+PX4_GEOFENCE_ALT_01,without_skeleton,3,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+PX4_LINK_LOSS_01,without_skeleton,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_ACTION_01,without_skeleton,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_CAPACITY_01,without_skeleton,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_VISUAL_01,without_skeleton,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MAX_01,without_skeleton,3,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+ARDUPILOT_ALTITUDE_REF_01,without_skeleton,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_YIELD_01,without_skeleton,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_ALT_01,without_skeleton,3,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+ECFR_107_ALT_01,without_skeleton,3,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+UKCAA_HEIGHT_01,without_skeleton,3,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+ARDUPILOT_GCS_TIMEOUT_01,without_skeleton,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_SEPARATION_01,without_skeleton,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+UKCAA_PEOPLE_01,without_skeleton,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_ROLL_01,without_skeleton,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_VOLT_01,without_skeleton,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MIN_01,without_skeleton,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_PITCH_01,without_skeleton,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_SPEED_01,without_skeleton,4,out_of_scope,in_scope,speed_3d_mps,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),False,False,False,False,False,False,formula_field_mismatch,False
+PX4_GEOFENCE_ALT_01,without_skeleton,4,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+PX4_LINK_LOSS_01,without_skeleton,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_ACTION_01,without_skeleton,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_CAPACITY_01,without_skeleton,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_VISUAL_01,without_skeleton,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MAX_01,without_skeleton,4,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+ARDUPILOT_ALTITUDE_REF_01,without_skeleton,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_YIELD_01,without_skeleton,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_ALT_01,without_skeleton,4,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+ECFR_107_ALT_01,without_skeleton,4,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+UKCAA_HEIGHT_01,without_skeleton,4,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+ARDUPILOT_GCS_TIMEOUT_01,without_skeleton,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_SEPARATION_01,without_skeleton,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+UKCAA_PEOPLE_01,without_skeleton,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_ROLL_01,without_skeleton,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_VOLT_01,without_skeleton,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MIN_01,without_skeleton,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_PITCH_01,without_skeleton,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_SPEED_01,without_skeleton,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_GEOFENCE_ALT_01,without_skeleton,5,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+PX4_LINK_LOSS_01,without_skeleton,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_ACTION_01,without_skeleton,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_CAPACITY_01,without_skeleton,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_VISUAL_01,without_skeleton,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MAX_01,without_skeleton,5,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+ARDUPILOT_ALTITUDE_REF_01,without_skeleton,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_YIELD_01,without_skeleton,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_ALT_01,without_skeleton,5,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+ECFR_107_ALT_01,without_skeleton,5,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+UKCAA_HEIGHT_01,without_skeleton,5,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+ARDUPILOT_GCS_TIMEOUT_01,without_skeleton,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_SEPARATION_01,without_skeleton,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+UKCAA_PEOPLE_01,without_both,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_ROLL_01,without_both,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_VOLT_01,without_both,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MIN_01,without_both,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_PITCH_01,without_both,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_SPEED_01,without_both,1,out_of_scope,in_scope,speed_3d_mps,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),False,False,False,False,False,False,formula_field_mismatch,False
+PX4_GEOFENCE_ALT_01,without_both,1,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+PX4_LINK_LOSS_01,without_both,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_ACTION_01,without_both,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_CAPACITY_01,without_both,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_VISUAL_01,without_both,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MAX_01,without_both,1,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+ARDUPILOT_ALTITUDE_REF_01,without_both,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_YIELD_01,without_both,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_ALT_01,without_both,1,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+ECFR_107_ALT_01,without_both,1,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+UKCAA_HEIGHT_01,without_both,1,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+ARDUPILOT_GCS_TIMEOUT_01,without_both,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_SEPARATION_01,without_both,1,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+UKCAA_PEOPLE_01,without_both,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_ROLL_01,without_both,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_VOLT_01,without_both,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MIN_01,without_both,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_PITCH_01,without_both,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_SPEED_01,without_both,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_GEOFENCE_ALT_01,without_both,2,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+PX4_LINK_LOSS_01,without_both,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_ACTION_01,without_both,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_CAPACITY_01,without_both,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_VISUAL_01,without_both,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MAX_01,without_both,2,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+ARDUPILOT_ALTITUDE_REF_01,without_both,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_YIELD_01,without_both,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_ALT_01,without_both,2,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+ECFR_107_ALT_01,without_both,2,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+UKCAA_HEIGHT_01,without_both,2,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+ARDUPILOT_GCS_TIMEOUT_01,without_both,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_SEPARATION_01,without_both,2,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+UKCAA_PEOPLE_01,without_both,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_ROLL_01,without_both,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_VOLT_01,without_both,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MIN_01,without_both,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_PITCH_01,without_both,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_SPEED_01,without_both,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_GEOFENCE_ALT_01,without_both,3,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+PX4_LINK_LOSS_01,without_both,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_ACTION_01,without_both,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_CAPACITY_01,without_both,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_VISUAL_01,without_both,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MAX_01,without_both,3,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+ARDUPILOT_ALTITUDE_REF_01,without_both,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_YIELD_01,without_both,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_ALT_01,without_both,3,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+ECFR_107_ALT_01,without_both,3,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+UKCAA_HEIGHT_01,without_both,3,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+ARDUPILOT_GCS_TIMEOUT_01,without_both,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_SEPARATION_01,without_both,3,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+UKCAA_PEOPLE_01,without_both,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_ROLL_01,without_both,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_VOLT_01,without_both,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MIN_01,without_both,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_PITCH_01,without_both,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_SPEED_01,without_both,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_GEOFENCE_ALT_01,without_both,4,in_scope,in_scope,height_m,invariant_upper,upper_bound,G (SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+PX4_LINK_LOSS_01,without_both,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_ACTION_01,without_both,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_CAPACITY_01,without_both,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_VISUAL_01,without_both,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MAX_01,without_both,4,in_scope,in_scope,height_m,invariant_upper,upper_bound,G (SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+ARDUPILOT_ALTITUDE_REF_01,without_both,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_YIELD_01,without_both,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_ALT_01,without_both,4,in_scope,in_scope,height_m,invariant_upper,upper_bound,G (SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+ECFR_107_ALT_01,without_both,4,in_scope,in_scope,height_m,invariant_upper,upper_bound,G (SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+UKCAA_HEIGHT_01,without_both,4,in_scope,in_scope,height_m,invariant_upper,upper_bound,G (SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+ARDUPILOT_GCS_TIMEOUT_01,without_both,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_SEPARATION_01,without_both,4,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+UKCAA_PEOPLE_01,without_both,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_ROLL_01,without_both,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_VOLT_01,without_both,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MIN_01,without_both,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_FAILURE_PITCH_01,without_both,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_SPEED_01,without_both,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+PX4_GEOFENCE_ALT_01,without_both,5,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+PX4_LINK_LOSS_01,without_both,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_ACTION_01,without_both,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_BATT_CAPACITY_01,without_both,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_VISUAL_01,without_both,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ARDUPILOT_FENCE_ALT_MAX_01,without_both,5,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+ARDUPILOT_ALTITUDE_REF_01,without_both,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ECFR_107_YIELD_01,without_both,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_ALT_01,without_both,5,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+ECFR_107_ALT_01,without_both,5,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+UKCAA_HEIGHT_01,without_both,5,in_scope,in_scope,height_m,invariant_upper,upper_bound,G(SIGNAL <= upper_bound),True,False,True,True,True,False,formula_field_mismatch,False
+ARDUPILOT_GCS_TIMEOUT_01,without_both,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False
+ICAROUS_SEPARATION_01,without_both,5,out_of_scope,out_of_scope,,,,,True,True,True,True,True,False,model_refusal,False

@@ -1,0 +1,316 @@
+{
+  "call_id": "formula_no_graph_catalog",
+  "request_sha256": "5327972ef401268cc75985a6f62e50c0119b0f184e4059292b51b3f1745efd21",
+  "system_prompt_sha256": "d8c9a0af4dcc941f6a8eaf419a5cc6930b522da67fbb4a04f2378035d993cee8",
+  "request_payload": {
+    "instruction": "For every Chinese UAV requirement, decide whether it belongs to this deliberately narrow STL fragment. If it does, return a candidate signal, temporal template, parameter-role list, and parameterized STL structure. If it does not, set scope to out_of_scope and leave signal_id, template_id, parameter_roles, and formula_structure empty. Never invent numerical values. Return one JSON array only, preserving every id exactly once. Each object must contain id, scope, signal_id, template_id, parameter_roles, formula_structure, and refusal_reason.\nInfer a concise snake_case signal identifier, an STL template name, parameter-role names, and a parameterized STL formula directly from the sentence. No external signal/template catalog or knowledge-graph constraints are supplied.",
+    "records": [
+      {
+        "id": "ARDUPILOT_ALTITUDE_REF_01",
+        "text": "该条目为高度参考系（ASL/AGL）的语义说明，非运行约束"
+      },
+      {
+        "id": "ARDUPILOT_BATT_ACTION_01",
+        "text": "电池出现次要故障时，无人机应执行返航或降落等响应动作"
+      },
+      {
+        "id": "ARDUPILOT_BATT_CAPACITY_01",
+        "text": "电池剩余容量低于配置阈值时，无人机应触发电池失效保护"
+      },
+      {
+        "id": "ARDUPILOT_BATT_VOLT_01",
+        "text": "电池电压低于配置阈值并持续配置时长后，触发电池失效保护"
+      },
+      {
+        "id": "ARDUPILOT_FENCE_ALT_MAX_01",
+        "text": "启用围栏后，飞行高度始终不超过配置的最大高度值"
+      },
+      {
+        "id": "ARDUPILOT_FENCE_ALT_MIN_01",
+        "text": "启用围栏后，飞行高度不得低于配置的最低高度值"
+      },
+      {
+        "id": "ARDUPILOT_GCS_TIMEOUT_01",
+        "text": "丢失 MAVLink 心跳达到配置时限后，触发地面站失效保护"
+      },
+      {
+        "id": "ECFR_107_ALT_01",
+        "text": "无人机飞行高度始终不超过地面以上 400 英尺（约 122 米）"
+      },
+      {
+        "id": "ECFR_107_SPEED_01",
+        "text": "小型无人机地速通常不超过规定的最大值"
+      },
+      {
+        "id": "ECFR_107_VISUAL_01",
+        "text": "飞行员必须始终保持对无人机的目视接触"
+      },
+      {
+        "id": "ECFR_107_YIELD_01",
+        "text": "无人机必须给其他航空器让路"
+      },
+      {
+        "id": "ICAROUS_ALT_01",
+        "text": "自主飞行的高度始终不超过任务指定的高度上限"
+      },
+      {
+        "id": "ICAROUS_SEPARATION_01",
+        "text": "飞行中应与入侵飞行器保持规定的水平或垂直间隔"
+      },
+      {
+        "id": "PX4_FAILURE_PITCH_01",
+        "text": "若俯仰角绝对值超过允许最大值并持续达到指定时长，则触发故障检测"
+      },
+      {
+        "id": "PX4_FAILURE_ROLL_01",
+        "text": "若横滚角绝对值超过允许最大值并持续达到指定时长，则触发故障检测"
+      },
+      {
+        "id": "PX4_GEOFENCE_ALT_01",
+        "text": "无人机飞行高度始终不超过地理围栏配置的最大高度值"
+      },
+      {
+        "id": "PX4_LINK_LOSS_01",
+        "text": "失去地面站数据链路并超过配置时限后，无人机应触发失效保护响应"
+      },
+      {
+        "id": "UKCAA_HEIGHT_01",
+        "text": "无人机飞行高度始终不超过距最近地表点 120 米（400 英尺）"
+      },
+      {
+        "id": "UKCAA_PEOPLE_01",
+        "text": "无人机与人员的距离不得小于 50 米"
+      }
+    ],
+    "output_rule": "Return only a JSON object with one key named records whose value is the required array. Preserve every id exactly once. Do not use tools, files, IDs, or source names as label shortcuts."
+  },
+  "requested_model": "gpt-5.5",
+  "api_version": "Codex CLI 0.145.0",
+  "temperature": "not_exposed_by_cli",
+  "reasoning_effort": "low",
+  "record_count": 19,
+  "started_utc": "2026-09-14T14:08:26.586780Z",
+  "elapsed_seconds": 141.32020560000092,
+  "usage": {
+    "input_tokens": 15747,
+    "cached_input_tokens": 11648,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1384,
+    "reasoning_output_tokens": 70
+  },
+  "serving_snapshot": "not independently returned; historical response_model label was assigned by the runner",
+  "structured_output": [
+    {
+      "id": "ARDUPILOT_ALTITUDE_REF_01",
+      "scope": "out_of_scope",
+      "signal_id": "",
+      "template_id": "",
+      "parameter_roles": [],
+      "formula_structure": "",
+      "refusal_reason": "语义说明，不是可监测的运行约束"
+    },
+    {
+      "id": "ARDUPILOT_BATT_ACTION_01",
+      "scope": "out_of_scope",
+      "signal_id": "",
+      "template_id": "",
+      "parameter_roles": [],
+      "formula_structure": "",
+      "refusal_reason": "要求执行返航或降落等离散响应动作，超出数值信号时序约束片段"
+    },
+    {
+      "id": "ARDUPILOT_BATT_CAPACITY_01",
+      "scope": "in_scope",
+      "signal_id": "battery_remaining_capacity",
+      "template_id": "threshold_eventually_response",
+      "parameter_roles": [
+        "capacity_threshold",
+        "response_deadline"
+      ],
+      "formula_structure": "G((battery_remaining_capacity < capacity_threshold) -> F[0,response_deadline](battery_failsafe_triggered))",
+      "refusal_reason": ""
+    },
+    {
+      "id": "ARDUPILOT_BATT_VOLT_01",
+      "scope": "in_scope",
+      "signal_id": "battery_voltage",
+      "template_id": "sustained_threshold_response",
+      "parameter_roles": [
+        "voltage_threshold",
+        "duration",
+        "response_deadline"
+      ],
+      "formula_structure": "G((G[0,duration](battery_voltage < voltage_threshold)) -> F[0,response_deadline](battery_failsafe_triggered))",
+      "refusal_reason": ""
+    },
+    {
+      "id": "ARDUPILOT_FENCE_ALT_MAX_01",
+      "scope": "in_scope",
+      "signal_id": "flight_altitude",
+      "template_id": "always_upper_bound_when_enabled",
+      "parameter_roles": [
+        "max_altitude"
+      ],
+      "formula_structure": "G(geofence_enabled -> (flight_altitude <= max_altitude))",
+      "refusal_reason": ""
+    },
+    {
+      "id": "ARDUPILOT_FENCE_ALT_MIN_01",
+      "scope": "in_scope",
+      "signal_id": "flight_altitude",
+      "template_id": "always_lower_bound_when_enabled",
+      "parameter_roles": [
+        "min_altitude"
+      ],
+      "formula_structure": "G(geofence_enabled -> (flight_altitude >= min_altitude))",
+      "refusal_reason": ""
+    },
+    {
+      "id": "ARDUPILOT_GCS_TIMEOUT_01",
+      "scope": "in_scope",
+      "signal_id": "mavlink_heartbeat_present",
+      "template_id": "absence_duration_response",
+      "parameter_roles": [
+        "timeout",
+        "response_deadline"
+      ],
+      "formula_structure": "G((G[0,timeout](!mavlink_heartbeat_present)) -> F[0,response_deadline](gcs_failsafe_triggered))",
+      "refusal_reason": ""
+    },
+    {
+      "id": "ECFR_107_ALT_01",
+      "scope": "in_scope",
+      "signal_id": "agl_altitude",
+      "template_id": "always_upper_bound",
+      "parameter_roles": [
+        "max_altitude_400_ft"
+      ],
+      "formula_structure": "G(agl_altitude <= max_altitude_400_ft)",
+      "refusal_reason": ""
+    },
+    {
+      "id": "ECFR_107_SPEED_01",
+      "scope": "in_scope",
+      "signal_id": "ground_speed",
+      "template_id": "always_upper_bound",
+      "parameter_roles": [
+        "max_ground_speed"
+      ],
+      "formula_structure": "G(ground_speed <= max_ground_speed)",
+      "refusal_reason": ""
+    },
+    {
+      "id": "ECFR_107_VISUAL_01",
+      "scope": "out_of_scope",
+      "signal_id": "",
+      "template_id": "",
+      "parameter_roles": [],
+      "formula_structure": "",
+      "refusal_reason": "目视接触不是明确的数值信号阈值约束"
+    },
+    {
+      "id": "ECFR_107_YIELD_01",
+      "scope": "out_of_scope",
+      "signal_id": "",
+      "template_id": "",
+      "parameter_roles": [],
+      "formula_structure": "",
+      "refusal_reason": "让路是高层行为/交互规则，不是窄片段内的数值时序约束"
+    },
+    {
+      "id": "ICAROUS_ALT_01",
+      "scope": "in_scope",
+      "signal_id": "flight_altitude",
+      "template_id": "always_upper_bound",
+      "parameter_roles": [
+        "mission_altitude_upper_bound"
+      ],
+      "formula_structure": "G(flight_altitude <= mission_altitude_upper_bound)",
+      "refusal_reason": ""
+    },
+    {
+      "id": "ICAROUS_SEPARATION_01",
+      "scope": "in_scope",
+      "signal_id": "aircraft_separation",
+      "template_id": "always_disjunctive_lower_bound",
+      "parameter_roles": [
+        "min_horizontal_separation",
+        "min_vertical_separation"
+      ],
+      "formula_structure": "G((horizontal_separation >= min_horizontal_separation) | (vertical_separation >= min_vertical_separation))",
+      "refusal_reason": ""
+    },
+    {
+      "id": "PX4_FAILURE_PITCH_01",
+      "scope": "in_scope",
+      "signal_id": "pitch_angle",
+      "template_id": "sustained_absolute_upper_bound_response",
+      "parameter_roles": [
+        "max_pitch_angle",
+        "duration",
+        "response_deadline"
+      ],
+      "formula_structure": "G((G[0,duration](abs(pitch_angle) > max_pitch_angle)) -> F[0,response_deadline](failure_detected))",
+      "refusal_reason": ""
+    },
+    {
+      "id": "PX4_FAILURE_ROLL_01",
+      "scope": "in_scope",
+      "signal_id": "roll_angle",
+      "template_id": "sustained_absolute_upper_bound_response",
+      "parameter_roles": [
+        "max_roll_angle",
+        "duration",
+        "response_deadline"
+      ],
+      "formula_structure": "G((G[0,duration](abs(roll_angle) > max_roll_angle)) -> F[0,response_deadline](failure_detected))",
+      "refusal_reason": ""
+    },
+    {
+      "id": "PX4_GEOFENCE_ALT_01",
+      "scope": "in_scope",
+      "signal_id": "flight_altitude",
+      "template_id": "always_upper_bound",
+      "parameter_roles": [
+        "geofence_max_altitude"
+      ],
+      "formula_structure": "G(flight_altitude <= geofence_max_altitude)",
+      "refusal_reason": ""
+    },
+    {
+      "id": "PX4_LINK_LOSS_01",
+      "scope": "in_scope",
+      "signal_id": "gcs_link_present",
+      "template_id": "absence_duration_response",
+      "parameter_roles": [
+        "timeout",
+        "response_deadline"
+      ],
+      "formula_structure": "G((G[0,timeout](!gcs_link_present)) -> F[0,response_deadline](failsafe_response_triggered))",
+      "refusal_reason": ""
+    },
+    {
+      "id": "UKCAA_HEIGHT_01",
+      "scope": "in_scope",
+      "signal_id": "height_above_nearest_surface",
+      "template_id": "always_upper_bound",
+      "parameter_roles": [
+        "max_height_120_m"
+      ],
+      "formula_structure": "G(height_above_nearest_surface <= max_height_120_m)",
+      "refusal_reason": ""
+    },
+    {
+      "id": "UKCAA_PEOPLE_01",
+      "scope": "in_scope",
+      "signal_id": "distance_to_people",
+      "template_id": "always_lower_bound",
+      "parameter_roles": [
+        "min_distance_50_m"
+      ],
+      "formula_structure": "G(distance_to_people >= min_distance_50_m)",
+      "refusal_reason": ""
+    }
+  ],
+  "backend_retry_count": "not part of the experimental item denominator; original diagnostics remain in the sealed local record"
+}

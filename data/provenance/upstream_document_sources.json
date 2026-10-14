@@ -1,0 +1,146 @@
+[
+  {
+    "source_family": "ARDUPILOT_COPTER_DOCS",
+    "url": "https://ardupilot.org/copter/docs/common-understanding-altitude.html",
+    "version_or_snapshot": "historical snapshot accessed 2026-08-10; source locators reviewed 2026-10-13",
+    "source_snapshot_sha256": "5efa5e771d388850cd647237a37a7276583b45bd0d76fb35a4daffbd6e2c2337",
+    "included": false,
+    "acquisition_note": "Obtain upstream version; historical snapshot bytes may differ from the current page. Full snapshot excluded; short curated inputs and locator ledger supplied."
+  },
+  {
+    "source_family": "ARDUPILOT_BATTERY_FAILSAFE",
+    "url": "https://ardupilot.org/copter/docs/failsafe-battery.html",
+    "version_or_snapshot": "historical snapshot accessed 2026-08-10; source locators reviewed 2026-10-13",
+    "source_snapshot_sha256": "38dfa575c987e6d0e1e8a8318776c18eefc03dcb9e35d68d12c555d596d4362c",
+    "included": false,
+    "acquisition_note": "Obtain upstream version; historical snapshot bytes may differ from the current page. Full snapshot excluded; short curated inputs and locator ledger supplied."
+  },
+  {
+    "source_family": "ARDUPILOT_COPTER_DOCS",
+    "url": "https://ardupilot.org/copter/docs/common-geofencing-landing-page.html",
+    "version_or_snapshot": "historical snapshot accessed 2026-08-10; source locators reviewed 2026-10-13",
+    "source_snapshot_sha256": "7fbc869c589e4e45189415b2146ccc413587b83242115b87717bb102a169de68",
+    "included": false,
+    "acquisition_note": "Obtain upstream version; historical snapshot bytes may differ from the current page. Full snapshot excluded; short curated inputs and locator ledger supplied."
+  },
+  {
+    "source_family": "ARDUPILOT_COPTER_DOCS",
+    "url": "https://ardupilot.org/copter/docs/gcs-failsafe.html",
+    "version_or_snapshot": "historical snapshot accessed 2026-08-10; source locators reviewed 2026-10-13",
+    "source_snapshot_sha256": "aeced1478ea88b79b5c67dcd75641018bf9f41c6629ad389d8325860a7b0d831",
+    "included": false,
+    "acquisition_note": "Obtain upstream version; historical snapshot bytes may differ from the current page. Full snapshot excluded; short curated inputs and locator ledger supplied."
+  },
+  {
+    "source_family": "ECFR_14_CFR_107_51",
+    "url": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-107/subpart-B/section-107.51",
+    "version_or_snapshot": "historical snapshot accessed 2026-08-10; source locators reviewed 2026-10-13",
+    "source_snapshot_sha256": "ece582b22108a2f762c1ac4a2503674ff4efb185014698be5b71980e719620d2",
+    "included": false,
+    "acquisition_note": "Obtain upstream version; historical snapshot bytes may differ from the current page. Full snapshot excluded; short curated inputs and locator ledger supplied."
+  },
+  {
+    "source_family": "ECFR_14_CFR_107_51",
+    "url": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-107/subpart-B/section-107.31",
+    "version_or_snapshot": "historical snapshot accessed 2026-08-10; source locators reviewed 2026-10-13",
+    "source_snapshot_sha256": "ece582b22108a2f762c1ac4a2503674ff4efb185014698be5b71980e719620d2",
+    "included": false,
+    "acquisition_note": "Obtain upstream version; historical snapshot bytes may differ from the current page. Full snapshot excluded; short curated inputs and locator ledger supplied."
+  },
+  {
+    "source_family": "ECFR_14_CFR_107_51",
+    "url": "https://www.govinfo.gov/link/cfr/14/107?link-type=pdf&year=mostrecent",
+    "version_or_snapshot": "historical snapshot accessed 2026-08-10; source locators reviewed 2026-10-13",
+    "source_snapshot_sha256": "ece582b22108a2f762c1ac4a2503674ff4efb185014698be5b71980e719620d2",
+    "included": false,
+    "acquisition_note": "Obtain upstream version; historical snapshot bytes may differ from the current page. Full snapshot excluded; short curated inputs and locator ledger supplied."
+  },
+  {
+    "source_family": "ICAROUS_MONITORING_2020",
+    "url": "https://shemesh.larc.nasa.gov/fm/papers/FMAS2020_3.pdf",
+    "version_or_snapshot": "historical snapshot accessed 2026-08-10; source locators reviewed 2026-10-13",
+    "source_snapshot_sha256": "b9e935e78c351e72028d7ec2e5159d34b284fb527412b0d5720c2763b4e00c81",
+    "included": false,
+    "acquisition_note": "Obtain upstream version; historical snapshot bytes may differ from the current page. Full snapshot excluded; short curated inputs and locator ledger supplied."
+  },
+  {
+    "source_family": "PX4_SAFETY_V116",
+    "url": "https://docs.px4.io/v1.16/en/config/safety",
+    "version_or_snapshot": "historical snapshot accessed 2026-08-10; source locators reviewed 2026-10-13",
+    "source_snapshot_sha256": "d7556fba3d288eaf8d7900b594fc599eea415b5fe17956e608292f08cf9cb25a",
+    "included": false,
+    "acquisition_note": "Obtain upstream version; historical snapshot bytes may differ from the current page. Full snapshot excluded; short curated inputs and locator ledger supplied."
+  },
+  {
+    "source_family": "UK_CAA_DRONE_CODE",
+    "url": "https://www.caa.co.uk/drones/open-category/drone-code/where-you-can-fly-points-3-to-9/",
+    "version_or_snapshot": "historical snapshot accessed 2026-08-10; source locators reviewed 2026-10-13",
+    "source_snapshot_sha256": "bcc5ef59184db169fcfd80e192b62b6d5d6df1e16edb3404418673c90f40539e",
+    "included": false,
+    "acquisition_note": "Obtain upstream version; historical snapshot bytes may differ from the current page. Full snapshot excluded; short curated inputs and locator ledger supplied."
+  },
+  {
+    "source_family": "PX4_Safety_v1_16_20260810.html",
+    "url": "https://docs.px4.io/v1.16/en/config/safety",
+    "version_or_snapshot": "2026-08-10",
+    "source_snapshot_sha256": "d7556fba3d288eaf8d7900b594fc599eea415b5fe17956e608292f08cf9cb25a",
+    "included": false,
+    "acquisition_note": "Full upstream snapshot excluded; curated corpus strings and source pointers supplied."
+  },
+  {
+    "source_family": "ArduPilot_Copter_Fences_20260810.html",
+    "url": "https://ardupilot.org/copter/docs/common-geofencing-landing-page.html",
+    "version_or_snapshot": "2026-08-10",
+    "source_snapshot_sha256": "7fbc869c589e4e45189415b2146ccc413587b83242115b87717bb102a169de68",
+    "included": false,
+    "acquisition_note": "Full upstream snapshot excluded; curated corpus strings and source pointers supplied."
+  },
+  {
+    "source_family": "ArduPilot_Copter_GCS_Failsafe_20260810.html",
+    "url": "https://ardupilot.org/copter/docs/gcs-failsafe.html",
+    "version_or_snapshot": "2026-08-10",
+    "source_snapshot_sha256": "aeced1478ea88b79b5c67dcd75641018bf9f41c6629ad389d8325860a7b0d831",
+    "included": false,
+    "acquisition_note": "Full upstream snapshot excluded; curated corpus strings and source pointers supplied."
+  },
+  {
+    "source_family": "ArduPilot_Copter_Altitude_20260810.html",
+    "url": "https://ardupilot.org/copter/docs/common-understanding-altitude.html",
+    "version_or_snapshot": "2026-08-10",
+    "source_snapshot_sha256": "5efa5e771d388850cd647237a37a7276583b45bd0d76fb35a4daffbd6e2c2337",
+    "included": false,
+    "acquisition_note": "Full upstream snapshot excluded; curated corpus strings and source pointers supplied."
+  },
+  {
+    "source_family": "eCFR_14_CFR_107_51_20260810.html",
+    "url": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-107/subpart-B/section-107.51",
+    "version_or_snapshot": "2026-08-10",
+    "source_snapshot_sha256": "ece582b22108a2f762c1ac4a2503674ff4efb185014698be5b71980e719620d2",
+    "included": false,
+    "acquisition_note": "Full upstream snapshot excluded; curated corpus strings and source pointers supplied."
+  },
+  {
+    "source_family": "ArduPilot_Copter_Battery_Failsafe_20260810.html",
+    "url": "https://ardupilot.org/copter/docs/failsafe-battery.html",
+    "version_or_snapshot": "2026-08-10",
+    "source_snapshot_sha256": "38dfa575c987e6d0e1e8a8318776c18eefc03dcb9e35d68d12c555d596d4362c",
+    "included": false,
+    "acquisition_note": "Full upstream snapshot excluded; curated corpus strings and source pointers supplied."
+  },
+  {
+    "source_family": "ArduPilot_Copter_Radio_Failsafe_20260815.html",
+    "url": "https://ardupilot.org/copter/docs/radio-failsafe.html",
+    "version_or_snapshot": "2026-08-15",
+    "source_snapshot_sha256": "08368fadca680f50cd5b5ed87d5c88ea7306b1de58928394144c2dbd1a4520bf",
+    "included": false,
+    "acquisition_note": "Full upstream snapshot excluded; curated corpus strings and source pointers supplied."
+  },
+  {
+    "source_family": "UK_CAA_Drone_Code_20260810.html",
+    "url": "https://www.caa.co.uk/drones/open-category/drone-code/where-you-can-fly-points-3-to-9/",
+    "version_or_snapshot": "2026-08-10",
+    "source_snapshot_sha256": "bcc5ef59184db169fcfd80e192b62b6d5d6df1e16edb3404418673c90f40539e",
+    "included": false,
+    "acquisition_note": "Full upstream snapshot excluded; curated corpus strings and source pointers supplied."
+  }
+]

@@ -1,0 +1,547 @@
+{
+  "planned": 20,
+  "attempted": 20,
+  "completed": 20,
+  "calls": [
+    {
+      "call_id": "full_r1",
+      "requested_model": "gpt-5.5",
+      "serving_model": "not_returned_by_cli",
+      "cli_version": "0.145.0",
+      "reasoning_effort": "low",
+      "temperature": "not_exposed",
+      "request_sha256": "5c5a2750dbc385e1280d3b3fc6ff461c9705905cbdfb564df2e0a66c94f95dd9",
+      "started_utc": "2026-10-13T10:35:12.125031+00:00",
+      "model_process_invocations": 1,
+      "backend_request_count": "not_observable",
+      "status": "completed",
+      "workdir_policy": "fresh_empty_temporary_directory_outside_project",
+      "exit_code": 0,
+      "unexpected_tool_events": 0,
+      "usage": [
+        {
+          "input_tokens": 10713,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1088,
+          "reasoning_output_tokens": 142
+        }
+      ],
+      "elapsed_seconds": 24.850206400002207,
+      "finished_utc": "2026-10-13T10:35:36.988224+00:00"
+    },
+    {
+      "call_id": "without_role_mapping_r1",
+      "requested_model": "gpt-5.5",
+      "serving_model": "not_returned_by_cli",
+      "cli_version": "0.145.0",
+      "reasoning_effort": "low",
+      "temperature": "not_exposed",
+      "request_sha256": "e5adb5a847c4083556db73cf556d68479034a2e200e135f6b00c404387fa5b2e",
+      "started_utc": "2026-10-13T10:35:12.125949+00:00",
+      "model_process_invocations": 1,
+      "backend_request_count": "not_observable",
+      "status": "completed",
+      "workdir_policy": "fresh_empty_temporary_directory_outside_project",
+      "exit_code": 0,
+      "unexpected_tool_events": 0,
+      "usage": [
+        {
+          "input_tokens": 10682,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1121,
+          "reasoning_output_tokens": 158
+        }
+      ],
+      "elapsed_seconds": 15.97838199999751,
+      "finished_utc": "2026-10-13T10:35:28.118128+00:00"
+    },
+    {
+      "call_id": "without_skeleton_r1",
+      "requested_model": "gpt-5.5",
+      "serving_model": "not_returned_by_cli",
+      "cli_version": "0.145.0",
+      "reasoning_effort": "low",
+      "temperature": "not_exposed",
+      "request_sha256": "a81875c0f0f613817ec5c5efaea36e76f9cac42399d4b6bd9b51b27a1abd4454",
+      "started_utc": "2026-10-13T10:35:12.125031+00:00",
+      "model_process_invocations": 1,
+      "backend_request_count": "not_observable",
+      "status": "completed",
+      "workdir_policy": "fresh_empty_temporary_directory_outside_project",
+      "exit_code": 0,
+      "unexpected_tool_events": 0,
+      "usage": [
+        {
+          "input_tokens": 10653,
+          "cached_input_tokens": 8704,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1174,
+          "reasoning_output_tokens": 217
+        }
+      ],
+      "elapsed_seconds": 17.84814170000027,
+      "finished_utc": "2026-10-13T10:35:29.989632+00:00"
+    },
+    {
+      "call_id": "without_both_r1",
+      "requested_model": "gpt-5.5",
+      "serving_model": "not_returned_by_cli",
+      "cli_version": "0.145.0",
+      "reasoning_effort": "low",
+      "temperature": "not_exposed",
+      "request_sha256": "f3430367804a9d7e7978f05401207efc82d0f9df50c43d7c20122172f3bb37b1",
+      "started_utc": "2026-10-13T10:35:12.127013+00:00",
+      "model_process_invocations": 1,
+      "backend_request_count": "not_observable",
+      "status": "completed",
+      "workdir_policy": "fresh_empty_temporary_directory_outside_project",
+      "exit_code": 0,
+      "unexpected_tool_events": 0,
+      "usage": [
+        {
+          "input_tokens": 10622,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1186,
+          "reasoning_output_tokens": 215
+        }
+      ],
+      "elapsed_seconds": 14.725662900000316,
+      "finished_utc": "2026-10-13T10:35:26.869817+00:00"
+    },
+    {
+      "call_id": "full_r2",
+      "requested_model": "gpt-5.5",
+      "serving_model": "not_returned_by_cli",
+      "cli_version": "0.145.0",
+      "reasoning_effort": "low",
+      "temperature": "not_exposed",
+      "request_sha256": "5c5a2750dbc385e1280d3b3fc6ff461c9705905cbdfb564df2e0a66c94f95dd9",
+      "started_utc": "2026-10-13T10:35:26.872044+00:00",
+      "model_process_invocations": 1,
+      "backend_request_count": "not_observable",
+      "status": "completed",
+      "workdir_policy": "fresh_empty_temporary_directory_outside_project",
+      "exit_code": 0,
+      "unexpected_tool_events": 0,
+      "usage": [
+        {
+          "input_tokens": 10709,
+          "cached_input_tokens": 8704,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1282,
+          "reasoning_output_tokens": 260
+        }
+      ],
+      "elapsed_seconds": 16.053218999997625,
+      "finished_utc": "2026-10-13T10:35:42.933148+00:00"
+    },
+    {
+      "call_id": "without_role_mapping_r2",
+      "requested_model": "gpt-5.5",
+      "serving_model": "not_returned_by_cli",
+      "cli_version": "0.145.0",
+      "reasoning_effort": "low",
+      "temperature": "not_exposed",
+      "request_sha256": "e5adb5a847c4083556db73cf556d68479034a2e200e135f6b00c404387fa5b2e",
+      "started_utc": "2026-10-13T10:35:28.120825+00:00",
+      "model_process_invocations": 1,
+      "backend_request_count": "not_observable",
+      "status": "completed",
+      "workdir_policy": "fresh_empty_temporary_directory_outside_project",
+      "exit_code": 0,
+      "unexpected_tool_events": 0,
+      "usage": [
+        {
+          "input_tokens": 10684,
+          "cached_input_tokens": 8704,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 962,
+          "reasoning_output_tokens": 43
+        }
+      ],
+      "elapsed_seconds": 15.557433099998889,
+      "finished_utc": "2026-10-13T10:35:43.687278+00:00"
+    },
+    {
+      "call_id": "without_skeleton_r2",
+      "requested_model": "gpt-5.5",
+      "serving_model": "not_returned_by_cli",
+      "cli_version": "0.145.0",
+      "reasoning_effort": "low",
+      "temperature": "not_exposed",
+      "request_sha256": "a81875c0f0f613817ec5c5efaea36e76f9cac42399d4b6bd9b51b27a1abd4454",
+      "started_utc": "2026-10-13T10:35:29.991279+00:00",
+      "model_process_invocations": 1,
+      "backend_request_count": "not_observable",
+      "status": "completed",
+      "workdir_policy": "fresh_empty_temporary_directory_outside_project",
+      "exit_code": 0,
+      "unexpected_tool_events": 0,
+      "usage": [
+        {
+          "input_tokens": 10651,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 919,
+          "reasoning_output_tokens": 78
+        }
+      ],
+      "elapsed_seconds": 21.323336299999937,
+      "finished_utc": "2026-10-13T10:35:51.321508+00:00"
+    },
+    {
+      "call_id": "without_both_r2",
+      "requested_model": "gpt-5.5",
+      "serving_model": "not_returned_by_cli",
+      "cli_version": "0.145.0",
+      "reasoning_effort": "low",
+      "temperature": "not_exposed",
+      "request_sha256": "f3430367804a9d7e7978f05401207efc82d0f9df50c43d7c20122172f3bb37b1",
+      "started_utc": "2026-10-13T10:35:36.990170+00:00",
+      "model_process_invocations": 1,
+      "backend_request_count": "not_observable",
+      "status": "completed",
+      "workdir_policy": "fresh_empty_temporary_directory_outside_project",
+      "exit_code": 0,
+      "unexpected_tool_events": 0,
+      "usage": [
+        {
+          "input_tokens": 10622,
+          "cached_input_tokens": 8704,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1117,
+          "reasoning_output_tokens": 165
+        }
+      ],
+      "elapsed_seconds": 25.167720499997813,
+      "finished_utc": "2026-10-13T10:36:02.164310+00:00"
+    },
+    {
+      "call_id": "full_r3",
+      "requested_model": "gpt-5.5",
+      "serving_model": "not_returned_by_cli",
+      "cli_version": "0.145.0",
+      "reasoning_effort": "low",
+      "temperature": "not_exposed",
+      "request_sha256": "5c5a2750dbc385e1280d3b3fc6ff461c9705905cbdfb564df2e0a66c94f95dd9",
+      "started_utc": "2026-10-13T10:35:42.934731+00:00",
+      "model_process_invocations": 1,
+      "backend_request_count": "not_observable",
+      "status": "completed",
+      "workdir_policy": "fresh_empty_temporary_directory_outside_project",
+      "exit_code": 0,
+      "unexpected_tool_events": 0,
+      "usage": [
+        {
+          "input_tokens": 10709,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1017,
+          "reasoning_output_tokens": 134
+        }
+      ],
+      "elapsed_seconds": 22.684998500000802,
+      "finished_utc": "2026-10-13T10:36:05.627374+00:00"
+    },
+    {
+      "call_id": "without_role_mapping_r3",
+      "requested_model": "gpt-5.5",
+      "serving_model": "not_returned_by_cli",
+      "cli_version": "0.145.0",
+      "reasoning_effort": "low",
+      "temperature": "not_exposed",
+      "request_sha256": "e5adb5a847c4083556db73cf556d68479034a2e200e135f6b00c404387fa5b2e",
+      "started_utc": "2026-10-13T10:35:43.688283+00:00",
+      "model_process_invocations": 1,
+      "backend_request_count": "not_observable",
+      "status": "completed",
+      "workdir_policy": "fresh_empty_temporary_directory_outside_project",
+      "exit_code": 0,
+      "unexpected_tool_events": 0,
+      "usage": [
+        {
+          "input_tokens": 10686,
+          "cached_input_tokens": 8704,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1118,
+          "reasoning_output_tokens": 203
+        }
+      ],
+      "elapsed_seconds": 13.760880600002565,
+      "finished_utc": "2026-10-13T10:35:57.456873+00:00"
+    },
+    {
+      "call_id": "without_skeleton_r3",
+      "requested_model": "gpt-5.5",
+      "serving_model": "not_returned_by_cli",
+      "cli_version": "0.145.0",
+      "reasoning_effort": "low",
+      "temperature": "not_exposed",
+      "request_sha256": "a81875c0f0f613817ec5c5efaea36e76f9cac42399d4b6bd9b51b27a1abd4454",
+      "started_utc": "2026-10-13T10:35:51.322500+00:00",
+      "model_process_invocations": 1,
+      "backend_request_count": "not_observable",
+      "status": "completed",
+      "workdir_policy": "fresh_empty_temporary_directory_outside_project",
+      "exit_code": 0,
+      "unexpected_tool_events": 0,
+      "usage": [
+        {
+          "input_tokens": 10655,
+          "cached_input_tokens": 8704,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1095,
+          "reasoning_output_tokens": 219
+        }
+      ],
+      "elapsed_seconds": 13.790051299998595,
+      "finished_utc": "2026-10-13T10:36:05.120161+00:00"
+    },
+    {
+      "call_id": "without_both_r3",
+      "requested_model": "gpt-5.5",
+      "serving_model": "not_returned_by_cli",
+      "cli_version": "0.145.0",
+      "reasoning_effort": "low",
+      "temperature": "not_exposed",
+      "request_sha256": "f3430367804a9d7e7978f05401207efc82d0f9df50c43d7c20122172f3bb37b1",
+      "started_utc": "2026-10-13T10:35:57.459039+00:00",
+      "model_process_invocations": 1,
+      "backend_request_count": "not_observable",
+      "status": "completed",
+      "workdir_policy": "fresh_empty_temporary_directory_outside_project",
+      "exit_code": 0,
+      "unexpected_tool_events": 0,
+      "usage": [
+        {
+          "input_tokens": 10622,
+          "cached_input_tokens": 8704,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1279,
+          "reasoning_output_tokens": 400
+        }
+      ],
+      "elapsed_seconds": 17.242868699999235,
+      "finished_utc": "2026-10-13T10:36:14.709063+00:00"
+    },
+    {
+      "call_id": "full_r4",
+      "requested_model": "gpt-5.5",
+      "serving_model": "not_returned_by_cli",
+      "cli_version": "0.145.0",
+      "reasoning_effort": "low",
+      "temperature": "not_exposed",
+      "request_sha256": "5c5a2750dbc385e1280d3b3fc6ff461c9705905cbdfb564df2e0a66c94f95dd9",
+      "started_utc": "2026-10-13T10:36:02.165288+00:00",
+      "model_process_invocations": 1,
+      "backend_request_count": "not_observable",
+      "status": "completed",
+      "workdir_policy": "fresh_empty_temporary_directory_outside_project",
+      "exit_code": 0,
+      "unexpected_tool_events": 0,
+      "usage": [
+        {
+          "input_tokens": 10715,
+          "cached_input_tokens": 8704,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1078,
+          "reasoning_output_tokens": 219
+        }
+      ],
+      "elapsed_seconds": 16.443417200000113,
+      "finished_utc": "2026-10-13T10:36:18.615754+00:00"
+    },
+    {
+      "call_id": "without_role_mapping_r4",
+      "requested_model": "gpt-5.5",
+      "serving_model": "not_returned_by_cli",
+      "cli_version": "0.145.0",
+      "reasoning_effort": "low",
+      "temperature": "not_exposed",
+      "request_sha256": "e5adb5a847c4083556db73cf556d68479034a2e200e135f6b00c404387fa5b2e",
+      "started_utc": "2026-10-13T10:36:05.121828+00:00",
+      "model_process_invocations": 1,
+      "backend_request_count": "not_observable",
+      "status": "completed",
+      "workdir_policy": "fresh_empty_temporary_directory_outside_project",
+      "exit_code": 0,
+      "unexpected_tool_events": 0,
+      "usage": [
+        {
+          "input_tokens": 10682,
+          "cached_input_tokens": 8704,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1113,
+          "reasoning_output_tokens": 262
+        }
+      ],
+      "elapsed_seconds": 15.267763900003047,
+      "finished_utc": "2026-10-13T10:36:20.396312+00:00"
+    },
+    {
+      "call_id": "without_skeleton_r4",
+      "requested_model": "gpt-5.5",
+      "serving_model": "not_returned_by_cli",
+      "cli_version": "0.145.0",
+      "reasoning_effort": "low",
+      "temperature": "not_exposed",
+      "request_sha256": "a81875c0f0f613817ec5c5efaea36e76f9cac42399d4b6bd9b51b27a1abd4454",
+      "started_utc": "2026-10-13T10:36:05.628367+00:00",
+      "model_process_invocations": 1,
+      "backend_request_count": "not_observable",
+      "status": "completed",
+      "workdir_policy": "fresh_empty_temporary_directory_outside_project",
+      "exit_code": 0,
+      "unexpected_tool_events": 0,
+      "usage": [
+        {
+          "input_tokens": 10655,
+          "cached_input_tokens": 8704,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1080,
+          "reasoning_output_tokens": 186
+        }
+      ],
+      "elapsed_seconds": 15.465870299998642,
+      "finished_utc": "2026-10-13T10:36:21.102291+00:00"
+    },
+    {
+      "call_id": "without_both_r4",
+      "requested_model": "gpt-5.5",
+      "serving_model": "not_returned_by_cli",
+      "cli_version": "0.145.0",
+      "reasoning_effort": "low",
+      "temperature": "not_exposed",
+      "request_sha256": "f3430367804a9d7e7978f05401207efc82d0f9df50c43d7c20122172f3bb37b1",
+      "started_utc": "2026-10-13T10:36:14.710050+00:00",
+      "model_process_invocations": 1,
+      "backend_request_count": "not_observable",
+      "status": "completed",
+      "workdir_policy": "fresh_empty_temporary_directory_outside_project",
+      "exit_code": 0,
+      "unexpected_tool_events": 0,
+      "usage": [
+        {
+          "input_tokens": 10622,
+          "cached_input_tokens": 8704,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1128,
+          "reasoning_output_tokens": 299
+        }
+      ],
+      "elapsed_seconds": 28.316127799997048,
+      "finished_utc": "2026-10-13T10:36:43.033364+00:00"
+    },
+    {
+      "call_id": "full_r5",
+      "requested_model": "gpt-5.5",
+      "serving_model": "not_returned_by_cli",
+      "cli_version": "0.145.0",
+      "reasoning_effort": "low",
+      "temperature": "not_exposed",
+      "request_sha256": "5c5a2750dbc385e1280d3b3fc6ff461c9705905cbdfb564df2e0a66c94f95dd9",
+      "started_utc": "2026-10-13T10:36:18.616759+00:00",
+      "model_process_invocations": 1,
+      "backend_request_count": "not_observable",
+      "status": "completed",
+      "workdir_policy": "fresh_empty_temporary_directory_outside_project",
+      "exit_code": 0,
+      "unexpected_tool_events": 0,
+      "usage": [
+        {
+          "input_tokens": 10711,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1015,
+          "reasoning_output_tokens": 121
+        }
+      ],
+      "elapsed_seconds": 23.485681399997702,
+      "finished_utc": "2026-10-13T10:36:42.110415+00:00"
+    },
+    {
+      "call_id": "without_role_mapping_r5",
+      "requested_model": "gpt-5.5",
+      "serving_model": "not_returned_by_cli",
+      "cli_version": "0.145.0",
+      "reasoning_effort": "low",
+      "temperature": "not_exposed",
+      "request_sha256": "e5adb5a847c4083556db73cf556d68479034a2e200e135f6b00c404387fa5b2e",
+      "started_utc": "2026-10-13T10:36:20.399319+00:00",
+      "model_process_invocations": 1,
+      "backend_request_count": "not_observable",
+      "status": "completed",
+      "workdir_policy": "fresh_empty_temporary_directory_outside_project",
+      "exit_code": 0,
+      "unexpected_tool_events": 0,
+      "usage": [
+        {
+          "input_tokens": 10680,
+          "cached_input_tokens": 8704,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1022,
+          "reasoning_output_tokens": 21
+        }
+      ],
+      "elapsed_seconds": 12.962044899999455,
+      "finished_utc": "2026-10-13T10:36:33.368349+00:00"
+    },
+    {
+      "call_id": "without_skeleton_r5",
+      "requested_model": "gpt-5.5",
+      "serving_model": "not_returned_by_cli",
+      "cli_version": "0.145.0",
+      "reasoning_effort": "low",
+      "temperature": "not_exposed",
+      "request_sha256": "a81875c0f0f613817ec5c5efaea36e76f9cac42399d4b6bd9b51b27a1abd4454",
+      "started_utc": "2026-10-13T10:36:21.103795+00:00",
+      "model_process_invocations": 1,
+      "backend_request_count": "not_observable",
+      "status": "completed",
+      "workdir_policy": "fresh_empty_temporary_directory_outside_project",
+      "exit_code": 0,
+      "unexpected_tool_events": 0,
+      "usage": [
+        {
+          "input_tokens": 10653,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1101,
+          "reasoning_output_tokens": 205
+        }
+      ],
+      "elapsed_seconds": 14.217629599999782,
+      "finished_utc": "2026-10-13T10:36:35.328729+00:00"
+    },
+    {
+      "call_id": "without_both_r5",
+      "requested_model": "gpt-5.5",
+      "serving_model": "not_returned_by_cli",
+      "cli_version": "0.145.0",
+      "reasoning_effort": "low",
+      "temperature": "not_exposed",
+      "request_sha256": "f3430367804a9d7e7978f05401207efc82d0f9df50c43d7c20122172f3bb37b1",
+      "started_utc": "2026-10-13T10:36:33.370357+00:00",
+      "model_process_invocations": 1,
+      "backend_request_count": "not_observable",
+      "status": "completed",
+      "workdir_policy": "fresh_empty_temporary_directory_outside_project",
+      "exit_code": 0,
+      "unexpected_tool_events": 0,
+      "usage": [
+        {
+          "input_tokens": 10620,
+          "cached_input_tokens": 8704,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1033,
+          "reasoning_output_tokens": 170
+        }
+      ],
+      "elapsed_seconds": 14.070637000000715,
+      "finished_utc": "2026-10-13T10:36:47.448178+00:00"
+    }
+  ]
+}

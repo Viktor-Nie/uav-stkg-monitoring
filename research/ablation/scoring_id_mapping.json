@@ -1,0 +1,78 @@
+[
+  {
+    "anonymous_id": "Q001",
+    "source_item_id": "UKCAA_PEOPLE_01"
+  },
+  {
+    "anonymous_id": "Q002",
+    "source_item_id": "PX4_FAILURE_ROLL_01"
+  },
+  {
+    "anonymous_id": "Q003",
+    "source_item_id": "ARDUPILOT_BATT_VOLT_01"
+  },
+  {
+    "anonymous_id": "Q004",
+    "source_item_id": "ARDUPILOT_FENCE_ALT_MIN_01"
+  },
+  {
+    "anonymous_id": "Q005",
+    "source_item_id": "PX4_FAILURE_PITCH_01"
+  },
+  {
+    "anonymous_id": "Q006",
+    "source_item_id": "ECFR_107_SPEED_01"
+  },
+  {
+    "anonymous_id": "Q007",
+    "source_item_id": "PX4_GEOFENCE_ALT_01"
+  },
+  {
+    "anonymous_id": "Q008",
+    "source_item_id": "PX4_LINK_LOSS_01"
+  },
+  {
+    "anonymous_id": "Q009",
+    "source_item_id": "ARDUPILOT_BATT_ACTION_01"
+  },
+  {
+    "anonymous_id": "Q010",
+    "source_item_id": "ARDUPILOT_BATT_CAPACITY_01"
+  },
+  {
+    "anonymous_id": "Q011",
+    "source_item_id": "ECFR_107_VISUAL_01"
+  },
+  {
+    "anonymous_id": "Q012",
+    "source_item_id": "ARDUPILOT_FENCE_ALT_MAX_01"
+  },
+  {
+    "anonymous_id": "Q013",
+    "source_item_id": "ARDUPILOT_ALTITUDE_REF_01"
+  },
+  {
+    "anonymous_id": "Q014",
+    "source_item_id": "ECFR_107_YIELD_01"
+  },
+  {
+    "anonymous_id": "Q015",
+    "source_item_id": "ICAROUS_ALT_01"
+  },
+  {
+    "anonymous_id": "Q016",
+    "source_item_id": "ECFR_107_ALT_01"
+  },
+  {
+    "anonymous_id": "Q017",
+    "source_item_id": "UKCAA_HEIGHT_01"
+  },
+  {
+    "anonymous_id": "Q018",
+    "source_item_id": "ARDUPILOT_GCS_TIMEOUT_01"
+  },
+  {
+    "anonymous_id": "Q019",
+    "source_item_id": "ICAROUS_SEPARATION_01"
+  }
+]

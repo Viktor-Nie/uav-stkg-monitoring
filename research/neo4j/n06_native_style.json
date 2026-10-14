@@ -1,0 +1,72 @@
+{
+  "node": {
+    "diameter": "240px",
+    "color": "#FFFFFF",
+    "border-color": "#111111",
+    "border-width": "3px",
+    "text-color-internal": "#000000",
+    "font-size": "48px",
+    "caption": "{_display_caption}"
+  },
+  "relationship": {
+    "color": "#111111",
+    "shaft-width": "4px",
+    "font-size": "48px",
+    "padding": "15px",
+    "text-color-external": "#000000",
+    "text-color-internal": "#000000",
+    "caption": "<type>"
+  },
+  "node.Requirement": {
+    "color": "#4C8EDA",
+    "caption": "{_display_caption}"
+  },
+  "node.STLFormula": {
+    "color": "#57C7E3",
+    "caption": "{_display_caption}"
+  },
+  "node.ParameterBinding": {
+    "color": "#FFC454",
+    "caption": "{_display_caption}"
+  },
+  "node.FormulaParameter": {
+    "color": "#C990C0",
+    "caption": "{_display_caption}"
+  },
+  "node.Signal": {
+    "color": "#F16667",
+    "caption": "{_display_caption}"
+  },
+  "node.STLTemplate": {
+    "color": "#8DCC93",
+    "caption": "{_display_caption}"
+  },
+  "node.RuntimeMonitor": {
+    "color": "#569480",
+    "caption": "{_display_caption}"
+  },
+  "relationship.FORMALIZED_AS": {
+    "caption": "1"
+  },
+  "relationship.USES_TEMPLATE": {
+    "caption": "2"
+  },
+  "relationship.IMPLEMENTED_BY": {
+    "caption": "3"
+  },
+  "relationship.EXECUTED_BY": {
+    "caption": "4"
+  },
+  "relationship.HAS_PARAMETER_BINDING": {
+    "caption": "5"
+  },
+  "relationship.BINDS_PARAMETER": {
+    "caption": "6"
+  },
+  "relationship.APPLIES_TO_SIGNAL": {
+    "caption": "7"
+  },
+  "relationship.READS_SIGNAL": {
+    "caption": "8"
+  }
+}

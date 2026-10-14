@@ -1,0 +1,66 @@
+{
+  "status": "passed",
+  "version": "2026.02.3",
+  "instance": "independent native Windows task instance",
+  "import": null,
+  "roundtrip": {
+    "nodes_compared": 158,
+    "relationships_compared": 350,
+    "all_source_labels_properties_and_endpoints_equal": true,
+    "comparison": "logical IDs, exact names, label sets, original JSON and flattened typed property maps; Neo4j internal IDs excluded; snapshot wrapper metadata and separately verified derived display captions excluded",
+    "display_metadata": "_display_caption is deterministic from logical ID, role and rounded value/unit; source precision is unchanged"
+  },
+  "queries": {
+    "n06_query_nodes": 15,
+    "n06_query_relationships": 20,
+    "n06_binding_rows": 5,
+    "full_query_nodes": 158,
+    "full_query_relationships": 350,
+    "isolated_nodes": [
+      {
+        "id": "parameter:height_p95_train"
+      }
+    ],
+    "database_components": [
+      {
+        "name": "Neo4j Kernel",
+        "versions": [
+          "2026.02.3"
+        ],
+        "edition": "community"
+      },
+      {
+        "name": "Cypher",
+        "versions": [
+          "5",
+          "25"
+        ],
+        "edition": ""
+      }
+    ]
+  },
+  "display_metadata": "source labels/values remain exact; derived captions verified by the same frozen comparison",
+  "historical_database_modified": false,
+  "verification_read_only": true,
+  "allowed_display_metadata": {
+    "node_keys": [
+      "_display_caption"
+    ],
+    "snapshot_metadata": [
+      "STKGSnapshot label",
+      "_snapshot_id node and edge property"
+    ],
+    "derivation_exactly_checked_for_all_nodes": true,
+    "source_values_changed": false
+  },
+  "native_figures_sha256": {
+    "fig04_neo4j_n06.png": "00cee6ed13e7abf6d2d30e336d581e77e93a7be92d609403966b817b3ffaa188",
+    "fig04_neo4j_n06.pdf": "3aade31382b48adb11b78d1cd2be38a5395da5a75bb2b47060b09a76ea97605c",
+    "fig_neo4j_full.png": "0d7dcfddbd20b0e3841baab2741d2aff3645c3610af1f9f84f5d021993a8edd2",
+    "fig_neo4j_full.pdf": "d15d6018824829b2a64dc0e7136792a68cba54ca6030e6099fef76a0e1b41bc3"
+  },
+  "figure_sources": {
+    "N06": "same-version native Windows instance, bundled legacy Browser, actual 15/20 query, 48px fonts and fixed presentation coordinates",
+    "full_graph": "previous verified same-version Docker instance, native current Browser export, actual 158/350 query"
+  }
+}

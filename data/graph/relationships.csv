@@ -1,0 +1,351 @@
+﻿source,relation,target,properties_json
+binding:N01:upper_bound,APPLIES_TO_SIGNAL,signal:speed_3d_mps,{}
+binding:N01:upper_bound,BINDS_PARAMETER,parameter:speed_3d_p99_train,{}
+binding:N01:value_epsilon,APPLIES_TO_SIGNAL,signal:speed_3d_mps,{}
+binding:N01:value_epsilon,BINDS_PARAMETER,parameter:zero_epsilon_speed_3d_mps,{}
+binding:N02:upper_bound,APPLIES_TO_SIGNAL,signal:height_m,{}
+binding:N02:upper_bound,BINDS_PARAMETER,parameter:height_p99_train,{}
+binding:N02:value_epsilon,APPLIES_TO_SIGNAL,signal:height_m,{}
+binding:N02:value_epsilon,BINDS_PARAMETER,parameter:zero_epsilon_height_m,{}
+binding:N03:upper_bound,APPLIES_TO_SIGNAL,signal:abs_roll_rad,{}
+binding:N03:upper_bound,BINDS_PARAMETER,parameter:abs_roll_p99_train,{}
+binding:N03:value_epsilon,APPLIES_TO_SIGNAL,signal:abs_roll_rad,{}
+binding:N03:value_epsilon,BINDS_PARAMETER,parameter:zero_epsilon_abs_roll_rad,{}
+binding:N04:upper_bound,APPLIES_TO_SIGNAL,signal:abs_pitch_rad,{}
+binding:N04:upper_bound,BINDS_PARAMETER,parameter:abs_pitch_p99_train,{}
+binding:N04:value_epsilon,APPLIES_TO_SIGNAL,signal:abs_pitch_rad,{}
+binding:N04:value_epsilon,BINDS_PARAMETER,parameter:zero_epsilon_abs_pitch_rad,{}
+binding:N05:upper_bound,APPLIES_TO_SIGNAL,signal:ang_rate_norm_rps,{}
+binding:N05:upper_bound,BINDS_PARAMETER,parameter:ang_rate_norm_p99_train,{}
+binding:N05:value_epsilon,APPLIES_TO_SIGNAL,signal:ang_rate_norm_rps,{}
+binding:N05:value_epsilon,BINDS_PARAMETER,parameter:zero_epsilon_ang_rate_norm_rps,{}
+binding:N06:deadline_seconds,APPLIES_TO_SIGNAL,signal:speed_3d_mps,{}
+binding:N06:deadline_seconds,BINDS_PARAMETER,parameter:prototype_recovery_deadline_2s,{}
+binding:N06:dwell_seconds,APPLIES_TO_SIGNAL,signal:speed_3d_mps,{}
+binding:N06:dwell_seconds,BINDS_PARAMETER,parameter:sampled_point_dwell_0s,{}
+binding:N06:recovery_upper,APPLIES_TO_SIGNAL,signal:speed_3d_mps,{}
+binding:N06:recovery_upper,BINDS_PARAMETER,parameter:speed_3d_p95_train,{}
+binding:N06:trigger_upper,APPLIES_TO_SIGNAL,signal:speed_3d_mps,{}
+binding:N06:trigger_upper,BINDS_PARAMETER,parameter:speed_3d_p99_train,{}
+binding:N06:value_epsilon,APPLIES_TO_SIGNAL,signal:speed_3d_mps,{}
+binding:N06:value_epsilon,BINDS_PARAMETER,parameter:zero_epsilon_speed_3d_mps,{}
+binding:N07:deadline_seconds,APPLIES_TO_SIGNAL,signal:abs_roll_rad,{}
+binding:N07:deadline_seconds,BINDS_PARAMETER,parameter:prototype_recovery_deadline_2s,{}
+binding:N07:dwell_seconds,APPLIES_TO_SIGNAL,signal:abs_roll_rad,{}
+binding:N07:dwell_seconds,BINDS_PARAMETER,parameter:sampled_point_dwell_0s,{}
+binding:N07:recovery_upper,APPLIES_TO_SIGNAL,signal:abs_roll_rad,{}
+binding:N07:recovery_upper,BINDS_PARAMETER,parameter:abs_roll_p95_train,{}
+binding:N07:trigger_upper,APPLIES_TO_SIGNAL,signal:abs_roll_rad,{}
+binding:N07:trigger_upper,BINDS_PARAMETER,parameter:abs_roll_p99_train,{}
+binding:N07:value_epsilon,APPLIES_TO_SIGNAL,signal:abs_roll_rad,{}
+binding:N07:value_epsilon,BINDS_PARAMETER,parameter:zero_epsilon_abs_roll_rad,{}
+binding:N08:deadline_seconds,APPLIES_TO_SIGNAL,signal:abs_pitch_rad,{}
+binding:N08:deadline_seconds,BINDS_PARAMETER,parameter:prototype_recovery_deadline_2s,{}
+binding:N08:dwell_seconds,APPLIES_TO_SIGNAL,signal:abs_pitch_rad,{}
+binding:N08:dwell_seconds,BINDS_PARAMETER,parameter:sampled_point_dwell_0s,{}
+binding:N08:recovery_upper,APPLIES_TO_SIGNAL,signal:abs_pitch_rad,{}
+binding:N08:recovery_upper,BINDS_PARAMETER,parameter:abs_pitch_p95_train,{}
+binding:N08:trigger_upper,APPLIES_TO_SIGNAL,signal:abs_pitch_rad,{}
+binding:N08:trigger_upper,BINDS_PARAMETER,parameter:abs_pitch_p99_train,{}
+binding:N08:value_epsilon,APPLIES_TO_SIGNAL,signal:abs_pitch_rad,{}
+binding:N08:value_epsilon,BINDS_PARAMETER,parameter:zero_epsilon_abs_pitch_rad,{}
+binding:N09:deadline_seconds,APPLIES_TO_SIGNAL,signal:ang_rate_norm_rps,{}
+binding:N09:deadline_seconds,BINDS_PARAMETER,parameter:prototype_recovery_deadline_2s,{}
+binding:N09:dwell_seconds,APPLIES_TO_SIGNAL,signal:ang_rate_norm_rps,{}
+binding:N09:dwell_seconds,BINDS_PARAMETER,parameter:sampled_point_dwell_0s,{}
+binding:N09:recovery_upper,APPLIES_TO_SIGNAL,signal:ang_rate_norm_rps,{}
+binding:N09:recovery_upper,BINDS_PARAMETER,parameter:ang_rate_norm_p95_train,{}
+binding:N09:trigger_upper,APPLIES_TO_SIGNAL,signal:ang_rate_norm_rps,{}
+binding:N09:trigger_upper,BINDS_PARAMETER,parameter:ang_rate_norm_p99_train,{}
+binding:N09:value_epsilon,APPLIES_TO_SIGNAL,signal:ang_rate_norm_rps,{}
+binding:N09:value_epsilon,BINDS_PARAMETER,parameter:zero_epsilon_ang_rate_norm_rps,{}
+binding:N10:upper_bound,APPLIES_TO_SIGNAL,signal:speed_3d_mps,{}
+binding:N10:upper_bound,BINDS_PARAMETER,parameter:speed_3d_p99_train,{}
+binding:N10:value_epsilon,APPLIES_TO_SIGNAL,signal:speed_3d_mps,{}
+binding:N10:value_epsilon,BINDS_PARAMETER,parameter:zero_epsilon_speed_3d_mps,{}
+binding:N11:upper_bound,APPLIES_TO_SIGNAL,signal:height_m,{}
+binding:N11:upper_bound,BINDS_PARAMETER,parameter:height_p99_train,{}
+binding:N11:value_epsilon,APPLIES_TO_SIGNAL,signal:height_m,{}
+binding:N11:value_epsilon,BINDS_PARAMETER,parameter:zero_epsilon_height_m,{}
+binding:N12:deadline_seconds,APPLIES_TO_SIGNAL,signal:speed_3d_mps,{}
+binding:N12:deadline_seconds,BINDS_PARAMETER,parameter:prototype_recovery_deadline_2s,{}
+binding:N12:dwell_seconds,APPLIES_TO_SIGNAL,signal:speed_3d_mps,{}
+binding:N12:dwell_seconds,BINDS_PARAMETER,parameter:sampled_point_dwell_0s,{}
+binding:N12:recovery_upper,APPLIES_TO_SIGNAL,signal:speed_3d_mps,{}
+binding:N12:recovery_upper,BINDS_PARAMETER,parameter:speed_3d_p95_train,{}
+binding:N12:trigger_upper,APPLIES_TO_SIGNAL,signal:speed_3d_mps,{}
+binding:N12:trigger_upper,BINDS_PARAMETER,parameter:speed_3d_p99_train,{}
+binding:N12:value_epsilon,APPLIES_TO_SIGNAL,signal:speed_3d_mps,{}
+binding:N12:value_epsilon,BINDS_PARAMETER,parameter:zero_epsilon_speed_3d_mps,{}
+binding:N13:deadline_seconds,APPLIES_TO_SIGNAL,signal:abs_roll_rad,{}
+binding:N13:deadline_seconds,BINDS_PARAMETER,parameter:prototype_recovery_deadline_2s,{}
+binding:N13:dwell_seconds,APPLIES_TO_SIGNAL,signal:abs_roll_rad,{}
+binding:N13:dwell_seconds,BINDS_PARAMETER,parameter:sampled_point_dwell_0s,{}
+binding:N13:recovery_upper,APPLIES_TO_SIGNAL,signal:abs_roll_rad,{}
+binding:N13:recovery_upper,BINDS_PARAMETER,parameter:abs_roll_p95_train,{}
+binding:N13:trigger_upper,APPLIES_TO_SIGNAL,signal:abs_roll_rad,{}
+binding:N13:trigger_upper,BINDS_PARAMETER,parameter:abs_roll_p99_train,{}
+binding:N13:value_epsilon,APPLIES_TO_SIGNAL,signal:abs_roll_rad,{}
+binding:N13:value_epsilon,BINDS_PARAMETER,parameter:zero_epsilon_abs_roll_rad,{}
+binding:N14:deadline_seconds,APPLIES_TO_SIGNAL,signal:abs_pitch_rad,{}
+binding:N14:deadline_seconds,BINDS_PARAMETER,parameter:prototype_recovery_deadline_2s,{}
+binding:N14:dwell_seconds,APPLIES_TO_SIGNAL,signal:abs_pitch_rad,{}
+binding:N14:dwell_seconds,BINDS_PARAMETER,parameter:sampled_point_dwell_0s,{}
+binding:N14:recovery_upper,APPLIES_TO_SIGNAL,signal:abs_pitch_rad,{}
+binding:N14:recovery_upper,BINDS_PARAMETER,parameter:abs_pitch_p95_train,{}
+binding:N14:trigger_upper,APPLIES_TO_SIGNAL,signal:abs_pitch_rad,{}
+binding:N14:trigger_upper,BINDS_PARAMETER,parameter:abs_pitch_p99_train,{}
+binding:N14:value_epsilon,APPLIES_TO_SIGNAL,signal:abs_pitch_rad,{}
+binding:N14:value_epsilon,BINDS_PARAMETER,parameter:zero_epsilon_abs_pitch_rad,{}
+binding:N15:upper_bound,APPLIES_TO_SIGNAL,signal:ang_rate_norm_rps,{}
+binding:N15:upper_bound,BINDS_PARAMETER,parameter:ang_rate_norm_p99_train,{}
+binding:N15:value_epsilon,APPLIES_TO_SIGNAL,signal:ang_rate_norm_rps,{}
+binding:N15:value_epsilon,BINDS_PARAMETER,parameter:zero_epsilon_ang_rate_norm_rps,{}
+binding:N16:upper_bound,APPLIES_TO_SIGNAL,signal:abs_roll_rad,{}
+binding:N16:upper_bound,BINDS_PARAMETER,parameter:abs_roll_p99_train,{}
+binding:N16:value_epsilon,APPLIES_TO_SIGNAL,signal:abs_roll_rad,{}
+binding:N16:value_epsilon,BINDS_PARAMETER,parameter:zero_epsilon_abs_roll_rad,{}
+binding:N17:deadline_seconds,APPLIES_TO_SIGNAL,signal:ang_rate_norm_rps,{}
+binding:N17:deadline_seconds,BINDS_PARAMETER,parameter:prototype_recovery_deadline_2s,{}
+binding:N17:dwell_seconds,APPLIES_TO_SIGNAL,signal:ang_rate_norm_rps,{}
+binding:N17:dwell_seconds,BINDS_PARAMETER,parameter:sampled_point_dwell_0s,{}
+binding:N17:recovery_upper,APPLIES_TO_SIGNAL,signal:ang_rate_norm_rps,{}
+binding:N17:recovery_upper,BINDS_PARAMETER,parameter:ang_rate_norm_p95_train,{}
+binding:N17:trigger_upper,APPLIES_TO_SIGNAL,signal:ang_rate_norm_rps,{}
+binding:N17:trigger_upper,BINDS_PARAMETER,parameter:ang_rate_norm_p99_train,{}
+binding:N17:value_epsilon,APPLIES_TO_SIGNAL,signal:ang_rate_norm_rps,{}
+binding:N17:value_epsilon,BINDS_PARAMETER,parameter:zero_epsilon_ang_rate_norm_rps,{}
+binding:N18:upper_bound,APPLIES_TO_SIGNAL,signal:abs_pitch_rad,{}
+binding:N18:upper_bound,BINDS_PARAMETER,parameter:abs_pitch_p99_train,{}
+binding:N18:value_epsilon,APPLIES_TO_SIGNAL,signal:abs_pitch_rad,{}
+binding:N18:value_epsilon,BINDS_PARAMETER,parameter:zero_epsilon_abs_pitch_rad,{}
+binding:T01:upper_bound,APPLIES_TO_SIGNAL,signal:speed_3d_mps,{}
+binding:T01:upper_bound,BINDS_PARAMETER,parameter:speed_3d_p99_train,{}
+binding:T01:value_epsilon,APPLIES_TO_SIGNAL,signal:speed_3d_mps,{}
+binding:T01:value_epsilon,BINDS_PARAMETER,parameter:zero_epsilon_speed_3d_mps,{}
+binding:T02:upper_bound,APPLIES_TO_SIGNAL,signal:height_m,{}
+binding:T02:upper_bound,BINDS_PARAMETER,parameter:height_p99_train,{}
+binding:T02:value_epsilon,APPLIES_TO_SIGNAL,signal:height_m,{}
+binding:T02:value_epsilon,BINDS_PARAMETER,parameter:zero_epsilon_height_m,{}
+binding:T03:deadline_seconds,APPLIES_TO_SIGNAL,signal:speed_3d_mps,{}
+binding:T03:deadline_seconds,BINDS_PARAMETER,parameter:prototype_recovery_deadline_2s,{}
+binding:T03:dwell_seconds,APPLIES_TO_SIGNAL,signal:speed_3d_mps,{}
+binding:T03:dwell_seconds,BINDS_PARAMETER,parameter:sampled_point_dwell_0s,{}
+binding:T03:recovery_upper,APPLIES_TO_SIGNAL,signal:speed_3d_mps,{}
+binding:T03:recovery_upper,BINDS_PARAMETER,parameter:speed_3d_p95_train,{}
+binding:T03:trigger_upper,APPLIES_TO_SIGNAL,signal:speed_3d_mps,{}
+binding:T03:trigger_upper,BINDS_PARAMETER,parameter:speed_3d_p99_train,{}
+binding:T03:value_epsilon,APPLIES_TO_SIGNAL,signal:speed_3d_mps,{}
+binding:T03:value_epsilon,BINDS_PARAMETER,parameter:zero_epsilon_speed_3d_mps,{}
+binding:T04:deadline_seconds,APPLIES_TO_SIGNAL,signal:abs_roll_rad,{}
+binding:T04:deadline_seconds,BINDS_PARAMETER,parameter:prototype_recovery_deadline_2s,{}
+binding:T04:dwell_seconds,APPLIES_TO_SIGNAL,signal:abs_roll_rad,{}
+binding:T04:dwell_seconds,BINDS_PARAMETER,parameter:sampled_point_dwell_0s,{}
+binding:T04:recovery_upper,APPLIES_TO_SIGNAL,signal:abs_roll_rad,{}
+binding:T04:recovery_upper,BINDS_PARAMETER,parameter:abs_roll_p95_train,{}
+binding:T04:trigger_upper,APPLIES_TO_SIGNAL,signal:abs_roll_rad,{}
+binding:T04:trigger_upper,BINDS_PARAMETER,parameter:abs_roll_p99_train,{}
+binding:T04:value_epsilon,APPLIES_TO_SIGNAL,signal:abs_roll_rad,{}
+binding:T04:value_epsilon,BINDS_PARAMETER,parameter:zero_epsilon_abs_roll_rad,{}
+binding:T05:deadline_seconds,APPLIES_TO_SIGNAL,signal:abs_pitch_rad,{}
+binding:T05:deadline_seconds,BINDS_PARAMETER,parameter:prototype_recovery_deadline_2s,{}
+binding:T05:dwell_seconds,APPLIES_TO_SIGNAL,signal:abs_pitch_rad,{}
+binding:T05:dwell_seconds,BINDS_PARAMETER,parameter:sampled_point_dwell_0s,{}
+binding:T05:recovery_upper,APPLIES_TO_SIGNAL,signal:abs_pitch_rad,{}
+binding:T05:recovery_upper,BINDS_PARAMETER,parameter:abs_pitch_p95_train,{}
+binding:T05:trigger_upper,APPLIES_TO_SIGNAL,signal:abs_pitch_rad,{}
+binding:T05:trigger_upper,BINDS_PARAMETER,parameter:abs_pitch_p99_train,{}
+binding:T05:value_epsilon,APPLIES_TO_SIGNAL,signal:abs_pitch_rad,{}
+binding:T05:value_epsilon,BINDS_PARAMETER,parameter:zero_epsilon_abs_pitch_rad,{}
+binding:T06:deadline_seconds,APPLIES_TO_SIGNAL,signal:ang_rate_norm_rps,{}
+binding:T06:deadline_seconds,BINDS_PARAMETER,parameter:prototype_recovery_deadline_2s,{}
+binding:T06:dwell_seconds,APPLIES_TO_SIGNAL,signal:ang_rate_norm_rps,{}
+binding:T06:dwell_seconds,BINDS_PARAMETER,parameter:sampled_point_dwell_0s,{}
+binding:T06:recovery_upper,APPLIES_TO_SIGNAL,signal:ang_rate_norm_rps,{}
+binding:T06:recovery_upper,BINDS_PARAMETER,parameter:ang_rate_norm_p95_train,{}
+binding:T06:trigger_upper,APPLIES_TO_SIGNAL,signal:ang_rate_norm_rps,{}
+binding:T06:trigger_upper,BINDS_PARAMETER,parameter:ang_rate_norm_p99_train,{}
+binding:T06:value_epsilon,APPLIES_TO_SIGNAL,signal:ang_rate_norm_rps,{}
+binding:T06:value_epsilon,BINDS_PARAMETER,parameter:zero_epsilon_ang_rate_norm_rps,{}
+formula:N01,EXECUTED_BY,monitor:sampled_point_invariant_upper_v2,{}
+formula:N01,HAS_PARAMETER_BINDING,binding:N01:upper_bound,"{""role"": ""upper_bound""}"
+formula:N01,HAS_PARAMETER_BINDING,binding:N01:value_epsilon,"{""role"": ""value_epsilon""}"
+formula:N01,READS_SIGNAL,signal:speed_3d_mps,{}
+formula:N01,USES_TEMPLATE,template:invariant_upper,{}
+formula:N02,EXECUTED_BY,monitor:sampled_point_invariant_upper_v2,{}
+formula:N02,HAS_PARAMETER_BINDING,binding:N02:upper_bound,"{""role"": ""upper_bound""}"
+formula:N02,HAS_PARAMETER_BINDING,binding:N02:value_epsilon,"{""role"": ""value_epsilon""}"
+formula:N02,READS_SIGNAL,signal:height_m,{}
+formula:N02,USES_TEMPLATE,template:invariant_upper,{}
+formula:N03,EXECUTED_BY,monitor:sampled_point_invariant_upper_v2,{}
+formula:N03,HAS_PARAMETER_BINDING,binding:N03:upper_bound,"{""role"": ""upper_bound""}"
+formula:N03,HAS_PARAMETER_BINDING,binding:N03:value_epsilon,"{""role"": ""value_epsilon""}"
+formula:N03,READS_SIGNAL,signal:abs_roll_rad,{}
+formula:N03,USES_TEMPLATE,template:invariant_upper,{}
+formula:N04,EXECUTED_BY,monitor:sampled_point_invariant_upper_v2,{}
+formula:N04,HAS_PARAMETER_BINDING,binding:N04:upper_bound,"{""role"": ""upper_bound""}"
+formula:N04,HAS_PARAMETER_BINDING,binding:N04:value_epsilon,"{""role"": ""value_epsilon""}"
+formula:N04,READS_SIGNAL,signal:abs_pitch_rad,{}
+formula:N04,USES_TEMPLATE,template:invariant_upper,{}
+formula:N05,EXECUTED_BY,monitor:sampled_point_invariant_upper_v2,{}
+formula:N05,HAS_PARAMETER_BINDING,binding:N05:upper_bound,"{""role"": ""upper_bound""}"
+formula:N05,HAS_PARAMETER_BINDING,binding:N05:value_epsilon,"{""role"": ""value_epsilon""}"
+formula:N05,READS_SIGNAL,signal:ang_rate_norm_rps,{}
+formula:N05,USES_TEMPLATE,template:invariant_upper,{}
+formula:N06,EXECUTED_BY,monitor:sampled_point_bounded_response_v2,{}
+formula:N06,HAS_PARAMETER_BINDING,binding:N06:deadline_seconds,"{""role"": ""deadline_seconds""}"
+formula:N06,HAS_PARAMETER_BINDING,binding:N06:dwell_seconds,"{""role"": ""dwell_seconds""}"
+formula:N06,HAS_PARAMETER_BINDING,binding:N06:recovery_upper,"{""role"": ""recovery_upper""}"
+formula:N06,HAS_PARAMETER_BINDING,binding:N06:trigger_upper,"{""role"": ""trigger_upper""}"
+formula:N06,HAS_PARAMETER_BINDING,binding:N06:value_epsilon,"{""role"": ""value_epsilon""}"
+formula:N06,READS_SIGNAL,signal:speed_3d_mps,{}
+formula:N06,USES_TEMPLATE,template:bounded_response,{}
+formula:N07,EXECUTED_BY,monitor:sampled_point_bounded_response_v2,{}
+formula:N07,HAS_PARAMETER_BINDING,binding:N07:deadline_seconds,"{""role"": ""deadline_seconds""}"
+formula:N07,HAS_PARAMETER_BINDING,binding:N07:dwell_seconds,"{""role"": ""dwell_seconds""}"
+formula:N07,HAS_PARAMETER_BINDING,binding:N07:recovery_upper,"{""role"": ""recovery_upper""}"
+formula:N07,HAS_PARAMETER_BINDING,binding:N07:trigger_upper,"{""role"": ""trigger_upper""}"
+formula:N07,HAS_PARAMETER_BINDING,binding:N07:value_epsilon,"{""role"": ""value_epsilon""}"
+formula:N07,READS_SIGNAL,signal:abs_roll_rad,{}
+formula:N07,USES_TEMPLATE,template:bounded_response,{}
+formula:N08,EXECUTED_BY,monitor:sampled_point_bounded_response_v2,{}
+formula:N08,HAS_PARAMETER_BINDING,binding:N08:deadline_seconds,"{""role"": ""deadline_seconds""}"
+formula:N08,HAS_PARAMETER_BINDING,binding:N08:dwell_seconds,"{""role"": ""dwell_seconds""}"
+formula:N08,HAS_PARAMETER_BINDING,binding:N08:recovery_upper,"{""role"": ""recovery_upper""}"
+formula:N08,HAS_PARAMETER_BINDING,binding:N08:trigger_upper,"{""role"": ""trigger_upper""}"
+formula:N08,HAS_PARAMETER_BINDING,binding:N08:value_epsilon,"{""role"": ""value_epsilon""}"
+formula:N08,READS_SIGNAL,signal:abs_pitch_rad,{}
+formula:N08,USES_TEMPLATE,template:bounded_response,{}
+formula:N09,EXECUTED_BY,monitor:sampled_point_bounded_response_v2,{}
+formula:N09,HAS_PARAMETER_BINDING,binding:N09:deadline_seconds,"{""role"": ""deadline_seconds""}"
+formula:N09,HAS_PARAMETER_BINDING,binding:N09:dwell_seconds,"{""role"": ""dwell_seconds""}"
+formula:N09,HAS_PARAMETER_BINDING,binding:N09:recovery_upper,"{""role"": ""recovery_upper""}"
+formula:N09,HAS_PARAMETER_BINDING,binding:N09:trigger_upper,"{""role"": ""trigger_upper""}"
+formula:N09,HAS_PARAMETER_BINDING,binding:N09:value_epsilon,"{""role"": ""value_epsilon""}"
+formula:N09,READS_SIGNAL,signal:ang_rate_norm_rps,{}
+formula:N09,USES_TEMPLATE,template:bounded_response,{}
+formula:N10,EXECUTED_BY,monitor:sampled_point_invariant_upper_v2,{}
+formula:N10,HAS_PARAMETER_BINDING,binding:N10:upper_bound,"{""role"": ""upper_bound""}"
+formula:N10,HAS_PARAMETER_BINDING,binding:N10:value_epsilon,"{""role"": ""value_epsilon""}"
+formula:N10,READS_SIGNAL,signal:speed_3d_mps,{}
+formula:N10,USES_TEMPLATE,template:invariant_upper,{}
+formula:N11,EXECUTED_BY,monitor:sampled_point_invariant_upper_v2,{}
+formula:N11,HAS_PARAMETER_BINDING,binding:N11:upper_bound,"{""role"": ""upper_bound""}"
+formula:N11,HAS_PARAMETER_BINDING,binding:N11:value_epsilon,"{""role"": ""value_epsilon""}"
+formula:N11,READS_SIGNAL,signal:height_m,{}
+formula:N11,USES_TEMPLATE,template:invariant_upper,{}
+formula:N12,EXECUTED_BY,monitor:sampled_point_bounded_response_v2,{}
+formula:N12,HAS_PARAMETER_BINDING,binding:N12:deadline_seconds,"{""role"": ""deadline_seconds""}"
+formula:N12,HAS_PARAMETER_BINDING,binding:N12:dwell_seconds,"{""role"": ""dwell_seconds""}"
+formula:N12,HAS_PARAMETER_BINDING,binding:N12:recovery_upper,"{""role"": ""recovery_upper""}"
+formula:N12,HAS_PARAMETER_BINDING,binding:N12:trigger_upper,"{""role"": ""trigger_upper""}"
+formula:N12,HAS_PARAMETER_BINDING,binding:N12:value_epsilon,"{""role"": ""value_epsilon""}"
+formula:N12,READS_SIGNAL,signal:speed_3d_mps,{}
+formula:N12,USES_TEMPLATE,template:bounded_response,{}
+formula:N13,EXECUTED_BY,monitor:sampled_point_bounded_response_v2,{}
+formula:N13,HAS_PARAMETER_BINDING,binding:N13:deadline_seconds,"{""role"": ""deadline_seconds""}"
+formula:N13,HAS_PARAMETER_BINDING,binding:N13:dwell_seconds,"{""role"": ""dwell_seconds""}"
+formula:N13,HAS_PARAMETER_BINDING,binding:N13:recovery_upper,"{""role"": ""recovery_upper""}"
+formula:N13,HAS_PARAMETER_BINDING,binding:N13:trigger_upper,"{""role"": ""trigger_upper""}"
+formula:N13,HAS_PARAMETER_BINDING,binding:N13:value_epsilon,"{""role"": ""value_epsilon""}"
+formula:N13,READS_SIGNAL,signal:abs_roll_rad,{}
+formula:N13,USES_TEMPLATE,template:bounded_response,{}
+formula:N14,EXECUTED_BY,monitor:sampled_point_bounded_response_v2,{}
+formula:N14,HAS_PARAMETER_BINDING,binding:N14:deadline_seconds,"{""role"": ""deadline_seconds""}"
+formula:N14,HAS_PARAMETER_BINDING,binding:N14:dwell_seconds,"{""role"": ""dwell_seconds""}"
+formula:N14,HAS_PARAMETER_BINDING,binding:N14:recovery_upper,"{""role"": ""recovery_upper""}"
+formula:N14,HAS_PARAMETER_BINDING,binding:N14:trigger_upper,"{""role"": ""trigger_upper""}"
+formula:N14,HAS_PARAMETER_BINDING,binding:N14:value_epsilon,"{""role"": ""value_epsilon""}"
+formula:N14,READS_SIGNAL,signal:abs_pitch_rad,{}
+formula:N14,USES_TEMPLATE,template:bounded_response,{}
+formula:N15,EXECUTED_BY,monitor:sampled_point_invariant_upper_v2,{}
+formula:N15,HAS_PARAMETER_BINDING,binding:N15:upper_bound,"{""role"": ""upper_bound""}"
+formula:N15,HAS_PARAMETER_BINDING,binding:N15:value_epsilon,"{""role"": ""value_epsilon""}"
+formula:N15,READS_SIGNAL,signal:ang_rate_norm_rps,{}
+formula:N15,USES_TEMPLATE,template:invariant_upper,{}
+formula:N16,EXECUTED_BY,monitor:sampled_point_invariant_upper_v2,{}
+formula:N16,HAS_PARAMETER_BINDING,binding:N16:upper_bound,"{""role"": ""upper_bound""}"
+formula:N16,HAS_PARAMETER_BINDING,binding:N16:value_epsilon,"{""role"": ""value_epsilon""}"
+formula:N16,READS_SIGNAL,signal:abs_roll_rad,{}
+formula:N16,USES_TEMPLATE,template:invariant_upper,{}
+formula:N17,EXECUTED_BY,monitor:sampled_point_bounded_response_v2,{}
+formula:N17,HAS_PARAMETER_BINDING,binding:N17:deadline_seconds,"{""role"": ""deadline_seconds""}"
+formula:N17,HAS_PARAMETER_BINDING,binding:N17:dwell_seconds,"{""role"": ""dwell_seconds""}"
+formula:N17,HAS_PARAMETER_BINDING,binding:N17:recovery_upper,"{""role"": ""recovery_upper""}"
+formula:N17,HAS_PARAMETER_BINDING,binding:N17:trigger_upper,"{""role"": ""trigger_upper""}"
+formula:N17,HAS_PARAMETER_BINDING,binding:N17:value_epsilon,"{""role"": ""value_epsilon""}"
+formula:N17,READS_SIGNAL,signal:ang_rate_norm_rps,{}
+formula:N17,USES_TEMPLATE,template:bounded_response,{}
+formula:N18,EXECUTED_BY,monitor:sampled_point_invariant_upper_v2,{}
+formula:N18,HAS_PARAMETER_BINDING,binding:N18:upper_bound,"{""role"": ""upper_bound""}"
+formula:N18,HAS_PARAMETER_BINDING,binding:N18:value_epsilon,"{""role"": ""value_epsilon""}"
+formula:N18,READS_SIGNAL,signal:abs_pitch_rad,{}
+formula:N18,USES_TEMPLATE,template:invariant_upper,{}
+formula:T01,EXECUTED_BY,monitor:sampled_point_invariant_upper_v2,{}
+formula:T01,HAS_PARAMETER_BINDING,binding:T01:upper_bound,"{""role"": ""upper_bound""}"
+formula:T01,HAS_PARAMETER_BINDING,binding:T01:value_epsilon,"{""role"": ""value_epsilon""}"
+formula:T01,READS_SIGNAL,signal:speed_3d_mps,{}
+formula:T01,USES_TEMPLATE,template:invariant_upper,{}
+formula:T02,EXECUTED_BY,monitor:sampled_point_invariant_upper_v2,{}
+formula:T02,HAS_PARAMETER_BINDING,binding:T02:upper_bound,"{""role"": ""upper_bound""}"
+formula:T02,HAS_PARAMETER_BINDING,binding:T02:value_epsilon,"{""role"": ""value_epsilon""}"
+formula:T02,READS_SIGNAL,signal:height_m,{}
+formula:T02,USES_TEMPLATE,template:invariant_upper,{}
+formula:T03,EXECUTED_BY,monitor:sampled_point_bounded_response_v2,{}
+formula:T03,HAS_PARAMETER_BINDING,binding:T03:deadline_seconds,"{""role"": ""deadline_seconds""}"
+formula:T03,HAS_PARAMETER_BINDING,binding:T03:dwell_seconds,"{""role"": ""dwell_seconds""}"
+formula:T03,HAS_PARAMETER_BINDING,binding:T03:recovery_upper,"{""role"": ""recovery_upper""}"
+formula:T03,HAS_PARAMETER_BINDING,binding:T03:trigger_upper,"{""role"": ""trigger_upper""}"
+formula:T03,HAS_PARAMETER_BINDING,binding:T03:value_epsilon,"{""role"": ""value_epsilon""}"
+formula:T03,READS_SIGNAL,signal:speed_3d_mps,{}
+formula:T03,USES_TEMPLATE,template:bounded_response,{}
+formula:T04,EXECUTED_BY,monitor:sampled_point_bounded_response_v2,{}
+formula:T04,HAS_PARAMETER_BINDING,binding:T04:deadline_seconds,"{""role"": ""deadline_seconds""}"
+formula:T04,HAS_PARAMETER_BINDING,binding:T04:dwell_seconds,"{""role"": ""dwell_seconds""}"
+formula:T04,HAS_PARAMETER_BINDING,binding:T04:recovery_upper,"{""role"": ""recovery_upper""}"
+formula:T04,HAS_PARAMETER_BINDING,binding:T04:trigger_upper,"{""role"": ""trigger_upper""}"
+formula:T04,HAS_PARAMETER_BINDING,binding:T04:value_epsilon,"{""role"": ""value_epsilon""}"
+formula:T04,READS_SIGNAL,signal:abs_roll_rad,{}
+formula:T04,USES_TEMPLATE,template:bounded_response,{}
+formula:T05,EXECUTED_BY,monitor:sampled_point_bounded_response_v2,{}
+formula:T05,HAS_PARAMETER_BINDING,binding:T05:deadline_seconds,"{""role"": ""deadline_seconds""}"
+formula:T05,HAS_PARAMETER_BINDING,binding:T05:dwell_seconds,"{""role"": ""dwell_seconds""}"
+formula:T05,HAS_PARAMETER_BINDING,binding:T05:recovery_upper,"{""role"": ""recovery_upper""}"
+formula:T05,HAS_PARAMETER_BINDING,binding:T05:trigger_upper,"{""role"": ""trigger_upper""}"
+formula:T05,HAS_PARAMETER_BINDING,binding:T05:value_epsilon,"{""role"": ""value_epsilon""}"
+formula:T05,READS_SIGNAL,signal:abs_pitch_rad,{}
+formula:T05,USES_TEMPLATE,template:bounded_response,{}
+formula:T06,EXECUTED_BY,monitor:sampled_point_bounded_response_v2,{}
+formula:T06,HAS_PARAMETER_BINDING,binding:T06:deadline_seconds,"{""role"": ""deadline_seconds""}"
+formula:T06,HAS_PARAMETER_BINDING,binding:T06:dwell_seconds,"{""role"": ""dwell_seconds""}"
+formula:T06,HAS_PARAMETER_BINDING,binding:T06:recovery_upper,"{""role"": ""recovery_upper""}"
+formula:T06,HAS_PARAMETER_BINDING,binding:T06:trigger_upper,"{""role"": ""trigger_upper""}"
+formula:T06,HAS_PARAMETER_BINDING,binding:T06:value_epsilon,"{""role"": ""value_epsilon""}"
+formula:T06,READS_SIGNAL,signal:ang_rate_norm_rps,{}
+formula:T06,USES_TEMPLATE,template:bounded_response,{}
+requirement:N01,FORMALIZED_AS,formula:N01,{}
+requirement:N02,FORMALIZED_AS,formula:N02,{}
+requirement:N03,FORMALIZED_AS,formula:N03,{}
+requirement:N04,FORMALIZED_AS,formula:N04,{}
+requirement:N05,FORMALIZED_AS,formula:N05,{}
+requirement:N06,FORMALIZED_AS,formula:N06,{}
+requirement:N07,FORMALIZED_AS,formula:N07,{}
+requirement:N08,FORMALIZED_AS,formula:N08,{}
+requirement:N09,FORMALIZED_AS,formula:N09,{}
+requirement:N10,FORMALIZED_AS,formula:N10,{}
+requirement:N11,FORMALIZED_AS,formula:N11,{}
+requirement:N12,FORMALIZED_AS,formula:N12,{}
+requirement:N13,FORMALIZED_AS,formula:N13,{}
+requirement:N14,FORMALIZED_AS,formula:N14,{}
+requirement:N15,FORMALIZED_AS,formula:N15,{}
+requirement:N16,FORMALIZED_AS,formula:N16,{}
+requirement:N17,FORMALIZED_AS,formula:N17,{}
+requirement:N18,FORMALIZED_AS,formula:N18,{}
+requirement:T01,FORMALIZED_AS,formula:T01,{}
+requirement:T02,FORMALIZED_AS,formula:T02,{}
+requirement:T03,FORMALIZED_AS,formula:T03,{}
+requirement:T04,FORMALIZED_AS,formula:T04,{}
+requirement:T05,FORMALIZED_AS,formula:T05,{}
+requirement:T06,FORMALIZED_AS,formula:T06,{}
+template:bounded_response,IMPLEMENTED_BY,monitor:sampled_point_bounded_response_v2,{}
+template:invariant_upper,IMPLEMENTED_BY,monitor:sampled_point_invariant_upper_v2,{}

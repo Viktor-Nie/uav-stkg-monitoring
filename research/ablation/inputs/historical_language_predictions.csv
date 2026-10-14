@@ -1,0 +1,58 @@
+source_item_id,configuration,raw_scope,raw_signal_id,raw_template_id,raw_roles,raw_formula_text
+ARDUPILOT_ALTITUDE_REF_01,full_typed,out_of_scope,,,,
+ARDUPILOT_BATT_ACTION_01,full_typed,out_of_scope,,,,
+ARDUPILOT_BATT_CAPACITY_01,full_typed,out_of_scope,,,,
+ARDUPILOT_BATT_VOLT_01,full_typed,out_of_scope,,,,
+ARDUPILOT_FENCE_ALT_MAX_01,full_typed,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)"
+ARDUPILOT_FENCE_ALT_MIN_01,full_typed,out_of_scope,,,,
+ARDUPILOT_GCS_TIMEOUT_01,full_typed,out_of_scope,,,,
+ECFR_107_ALT_01,full_typed,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)"
+ECFR_107_SPEED_01,full_typed,in_scope,speed_3d_mps,invariant_upper,upper_bound,"G[0,T](speed_3d_mps <= upper_bound)"
+ECFR_107_VISUAL_01,full_typed,out_of_scope,,,,
+ECFR_107_YIELD_01,full_typed,out_of_scope,,,,
+ICAROUS_ALT_01,full_typed,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)"
+ICAROUS_SEPARATION_01,full_typed,out_of_scope,,,,
+PX4_FAILURE_PITCH_01,full_typed,out_of_scope,,,,
+PX4_FAILURE_ROLL_01,full_typed,out_of_scope,,,,
+PX4_GEOFENCE_ALT_01,full_typed,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)"
+PX4_LINK_LOSS_01,full_typed,out_of_scope,,,,
+UKCAA_HEIGHT_01,full_typed,in_scope,height_m,invariant_upper,upper_bound,"G[0,T](height_m <= upper_bound)"
+UKCAA_PEOPLE_01,full_typed,out_of_scope,,,,
+ARDUPILOT_ALTITUDE_REF_01,no_graph_catalog,out_of_scope,,,,
+ARDUPILOT_BATT_ACTION_01,no_graph_catalog,out_of_scope,,,,
+ARDUPILOT_BATT_CAPACITY_01,no_graph_catalog,in_scope,battery_remaining_capacity,threshold_eventually_response,capacity_threshold;response_deadline,"G((battery_remaining_capacity < capacity_threshold) -> F[0,response_deadline](battery_failsafe_triggered))"
+ARDUPILOT_BATT_VOLT_01,no_graph_catalog,in_scope,battery_voltage,sustained_threshold_response,duration;response_deadline;voltage_threshold,"G((G[0,duration](battery_voltage < voltage_threshold)) -> F[0,response_deadline](battery_failsafe_triggered))"
+ARDUPILOT_FENCE_ALT_MAX_01,no_graph_catalog,in_scope,flight_altitude,always_upper_bound_when_enabled,max_altitude,G(geofence_enabled -> (flight_altitude <= max_altitude))
+ARDUPILOT_FENCE_ALT_MIN_01,no_graph_catalog,in_scope,flight_altitude,always_lower_bound_when_enabled,min_altitude,G(geofence_enabled -> (flight_altitude >= min_altitude))
+ARDUPILOT_GCS_TIMEOUT_01,no_graph_catalog,in_scope,mavlink_heartbeat_present,absence_duration_response,response_deadline;timeout,"G((G[0,timeout](!mavlink_heartbeat_present)) -> F[0,response_deadline](gcs_failsafe_triggered))"
+ECFR_107_ALT_01,no_graph_catalog,in_scope,agl_altitude,always_upper_bound,max_altitude_400_ft,G(agl_altitude <= max_altitude_400_ft)
+ECFR_107_SPEED_01,no_graph_catalog,in_scope,ground_speed,always_upper_bound,max_ground_speed,G(ground_speed <= max_ground_speed)
+ECFR_107_VISUAL_01,no_graph_catalog,out_of_scope,,,,
+ECFR_107_YIELD_01,no_graph_catalog,out_of_scope,,,,
+ICAROUS_ALT_01,no_graph_catalog,in_scope,flight_altitude,always_upper_bound,mission_altitude_upper_bound,G(flight_altitude <= mission_altitude_upper_bound)
+ICAROUS_SEPARATION_01,no_graph_catalog,in_scope,aircraft_separation,always_disjunctive_lower_bound,min_horizontal_separation;min_vertical_separation,G((horizontal_separation >= min_horizontal_separation) | (vertical_separation >= min_vertical_separation))
+PX4_FAILURE_PITCH_01,no_graph_catalog,in_scope,pitch_angle,sustained_absolute_upper_bound_response,duration;max_pitch_angle;response_deadline,"G((G[0,duration](abs(pitch_angle) > max_pitch_angle)) -> F[0,response_deadline](failure_detected))"
+PX4_FAILURE_ROLL_01,no_graph_catalog,in_scope,roll_angle,sustained_absolute_upper_bound_response,duration;max_roll_angle;response_deadline,"G((G[0,duration](abs(roll_angle) > max_roll_angle)) -> F[0,response_deadline](failure_detected))"
+PX4_GEOFENCE_ALT_01,no_graph_catalog,in_scope,flight_altitude,always_upper_bound,geofence_max_altitude,G(flight_altitude <= geofence_max_altitude)
+PX4_LINK_LOSS_01,no_graph_catalog,in_scope,gcs_link_present,absence_duration_response,response_deadline;timeout,"G((G[0,timeout](!gcs_link_present)) -> F[0,response_deadline](failsafe_response_triggered))"
+UKCAA_HEIGHT_01,no_graph_catalog,in_scope,height_above_nearest_surface,always_upper_bound,max_height_120_m,G(height_above_nearest_surface <= max_height_120_m)
+UKCAA_PEOPLE_01,no_graph_catalog,in_scope,distance_to_people,always_lower_bound,min_distance_50_m,G(distance_to_people >= min_distance_50_m)
+ARDUPILOT_ALTITUDE_REF_01,direct_formula,out_of_scope,,,,
+ARDUPILOT_BATT_ACTION_01,direct_formula,in_scope,"battery_minor_fault,response_return_home,response_land",event_implies_eventually_disjunctive_response,response_deadline,"G( battery_minor_fault -> F_[0,response_deadline](response_return_home OR response_land) )"
+ARDUPILOT_BATT_CAPACITY_01,direct_formula,in_scope,"battery_remaining_capacity,battery_capacity_threshold,battery_failsafe_triggered",threshold_breach_implies_eventually_response,response_deadline,"G( battery_remaining_capacity < battery_capacity_threshold -> F_[0,response_deadline](battery_failsafe_triggered) )"
+ARDUPILOT_BATT_VOLT_01,direct_formula,in_scope,"battery_voltage,battery_voltage_threshold,battery_failsafe_triggered",sustained_threshold_breach_implies_response,configured_duration;response_deadline,"G( G_[0,configured_duration](battery_voltage < battery_voltage_threshold) -> F_[0,response_deadline](battery_failsafe_triggered) )"
+ARDUPILOT_FENCE_ALT_MAX_01,direct_formula,in_scope,"fence_enabled,flight_altitude,configured_max_altitude",conditional_always_upper_bound,,G( fence_enabled -> flight_altitude <= configured_max_altitude )
+ARDUPILOT_FENCE_ALT_MIN_01,direct_formula,in_scope,"fence_enabled,flight_altitude,configured_min_altitude",conditional_always_lower_bound,,G( fence_enabled -> flight_altitude >= configured_min_altitude )
+ARDUPILOT_GCS_TIMEOUT_01,direct_formula,in_scope,"mavlink_heartbeat_present,ground_station_failsafe_triggered",absence_for_duration_implies_response,configured_timeout;response_deadline,"G( G_[0,configured_timeout](NOT mavlink_heartbeat_present) -> F_[0,response_deadline](ground_station_failsafe_triggered) )"
+ECFR_107_ALT_01,direct_formula,in_scope,agl_altitude,always_upper_bound_constant,max_agl_altitude=400_ft,G( agl_altitude <= 400_ft )
+ECFR_107_SPEED_01,direct_formula,out_of_scope,,,,
+ECFR_107_VISUAL_01,direct_formula,in_scope,visual_contact_maintained,always_boolean_condition,,G( visual_contact_maintained )
+ECFR_107_YIELD_01,direct_formula,out_of_scope,,,,
+ICAROUS_ALT_01,direct_formula,in_scope,"flight_altitude,mission_altitude_upper_limit",always_upper_bound_parameter,,G( flight_altitude <= mission_altitude_upper_limit )
+ICAROUS_SEPARATION_01,direct_formula,in_scope,"horizontal_separation,vertical_separation,required_horizontal_separation,required_vertical_separation",always_disjunctive_separation_minimum,,G( horizontal_separation >= required_horizontal_separation OR vertical_separation >= required_vertical_separation )
+PX4_FAILURE_PITCH_01,direct_formula,in_scope,"pitch_angle,allowed_max_pitch_angle,fault_detection_triggered",sustained_absolute_threshold_breach_implies_response,response_deadline;specified_duration,"G( G_[0,specified_duration](abs(pitch_angle) > allowed_max_pitch_angle) -> F_[0,response_deadline](fault_detection_triggered) )"
+PX4_FAILURE_ROLL_01,direct_formula,in_scope,"roll_angle,allowed_max_roll_angle,fault_detection_triggered",sustained_absolute_threshold_breach_implies_response,response_deadline;specified_duration,"G( G_[0,specified_duration](abs(roll_angle) > allowed_max_roll_angle) -> F_[0,response_deadline](fault_detection_triggered) )"
+PX4_GEOFENCE_ALT_01,direct_formula,in_scope,"flight_altitude,geofence_max_altitude",always_upper_bound_parameter,,G( flight_altitude <= geofence_max_altitude )
+PX4_LINK_LOSS_01,direct_formula,in_scope,"ground_station_link_available,failsafe_response_triggered",absence_for_duration_implies_response,configured_timeout;response_deadline,"G( G_[0,configured_timeout](NOT ground_station_link_available) -> F_[0,response_deadline](failsafe_response_triggered) )"
+UKCAA_HEIGHT_01,direct_formula,in_scope,altitude_above_nearest_surface_point,always_upper_bound_constant,max_height=120_m,G( altitude_above_nearest_surface_point <= 120_m )
+UKCAA_PEOPLE_01,direct_formula,in_scope,distance_to_person,always_lower_bound_constant,min_person_distance=50_m,G( distance_to_person >= 50_m )

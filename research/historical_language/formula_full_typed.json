@@ -1,0 +1,288 @@
+{
+  "call_id": "formula_full_typed",
+  "request_sha256": "f1ced54547ca59e3686c30b33cb80344177f644cc0a85e22147d88cd17f62690",
+  "system_prompt_sha256": "d3df5a1b849443d67cf3854d26afae19d54a6dcdcf042fd4a046d77348aa5eea",
+  "request_payload": {
+    "instruction": "For every Chinese UAV requirement, decide whether it belongs to this deliberately narrow STL fragment. If it does, return a candidate signal, temporal template, parameter-role list, and parameterized STL structure. If it does not, set scope to out_of_scope and leave signal_id, template_id, parameter_roles, and formula_structure empty. Never invent numerical values. Return one JSON array only, preserving every id exactly once. Each object must contain id, scope, signal_id, template_id, parameter_roles, formula_structure, and refusal_reason.\nThe admissible signal catalog is exactly: speed_3d_mps, height_m, abs_roll_rad, abs_pitch_rad, ang_rate_norm_rps.\nThe admissible templates are exactly:\n1) invariant_upper with roles [upper_bound] and canonical structure G[0,T](SIGNAL <= upper_bound)\n2) bounded_response with roles [trigger_upper,recovery_upper,deadline_seconds] and canonical structure G[0,T]((SIGNAL > trigger_upper) -> F[0,deadline_seconds](SIGNAL <= recovery_upper))\nUse scope=in_scope only if one signal and one template fit exactly. Use only catalog identifiers and canonical structures.",
+    "records": [
+      {
+        "id": "ARDUPILOT_ALTITUDE_REF_01",
+        "text": "该条目为高度参考系（ASL/AGL）的语义说明，非运行约束"
+      },
+      {
+        "id": "ARDUPILOT_BATT_ACTION_01",
+        "text": "电池出现次要故障时，无人机应执行返航或降落等响应动作"
+      },
+      {
+        "id": "ARDUPILOT_BATT_CAPACITY_01",
+        "text": "电池剩余容量低于配置阈值时，无人机应触发电池失效保护"
+      },
+      {
+        "id": "ARDUPILOT_BATT_VOLT_01",
+        "text": "电池电压低于配置阈值并持续配置时长后，触发电池失效保护"
+      },
+      {
+        "id": "ARDUPILOT_FENCE_ALT_MAX_01",
+        "text": "启用围栏后，飞行高度始终不超过配置的最大高度值"
+      },
+      {
+        "id": "ARDUPILOT_FENCE_ALT_MIN_01",
+        "text": "启用围栏后，飞行高度不得低于配置的最低高度值"
+      },
+      {
+        "id": "ARDUPILOT_GCS_TIMEOUT_01",
+        "text": "丢失 MAVLink 心跳达到配置时限后，触发地面站失效保护"
+      },
+      {
+        "id": "ECFR_107_ALT_01",
+        "text": "无人机飞行高度始终不超过地面以上 400 英尺（约 122 米）"
+      },
+      {
+        "id": "ECFR_107_SPEED_01",
+        "text": "小型无人机地速通常不超过规定的最大值"
+      },
+      {
+        "id": "ECFR_107_VISUAL_01",
+        "text": "飞行员必须始终保持对无人机的目视接触"
+      },
+      {
+        "id": "ECFR_107_YIELD_01",
+        "text": "无人机必须给其他航空器让路"
+      },
+      {
+        "id": "ICAROUS_ALT_01",
+        "text": "自主飞行的高度始终不超过任务指定的高度上限"
+      },
+      {
+        "id": "ICAROUS_SEPARATION_01",
+        "text": "飞行中应与入侵飞行器保持规定的水平或垂直间隔"
+      },
+      {
+        "id": "PX4_FAILURE_PITCH_01",
+        "text": "若俯仰角绝对值超过允许最大值并持续达到指定时长，则触发故障检测"
+      },
+      {
+        "id": "PX4_FAILURE_ROLL_01",
+        "text": "若横滚角绝对值超过允许最大值并持续达到指定时长，则触发故障检测"
+      },
+      {
+        "id": "PX4_GEOFENCE_ALT_01",
+        "text": "无人机飞行高度始终不超过地理围栏配置的最大高度值"
+      },
+      {
+        "id": "PX4_LINK_LOSS_01",
+        "text": "失去地面站数据链路并超过配置时限后，无人机应触发失效保护响应"
+      },
+      {
+        "id": "UKCAA_HEIGHT_01",
+        "text": "无人机飞行高度始终不超过距最近地表点 120 米（400 英尺）"
+      },
+      {
+        "id": "UKCAA_PEOPLE_01",
+        "text": "无人机与人员的距离不得小于 50 米"
+      }
+    ],
+    "output_rule": "Return only a JSON object with one key named records whose value is the required array. Preserve every id exactly once. Do not use tools, files, IDs, or source names as label shortcuts."
+  },
+  "requested_model": "gpt-5.5",
+  "api_version": "Codex CLI 0.145.0",
+  "temperature": "not_exposed_by_cli",
+  "reasoning_effort": "low",
+  "record_count": 19,
+  "started_utc": "2026-09-14T14:06:08.519762Z",
+  "elapsed_seconds": 138.0474693000433,
+  "usage": {
+    "input_tokens": 15841,
+    "cached_input_tokens": 1408,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1246,
+    "reasoning_output_tokens": 105
+  },
+  "serving_snapshot": "not independently returned; historical response_model label was assigned by the runner",
+  "structured_output": [
+    {
+      "id": "ARDUPILOT_ALTITUDE_REF_01",
+      "scope": "out_of_scope",
+      "signal_id": "",
+      "template_id": "",
+      "parameter_roles": [],
+      "formula_structure": "",
+      "refusal_reason": "语义说明，不是对 catalog 中单一信号的运行时 STL 约束"
+    },
+    {
+      "id": "ARDUPILOT_BATT_ACTION_01",
+      "scope": "out_of_scope",
+      "signal_id": "",
+      "template_id": "",
+      "parameter_roles": [],
+      "formula_structure": "",
+      "refusal_reason": "涉及电池故障后的返航或降落动作，不对应 admissible signal catalog 中的单一连续信号约束"
+    },
+    {
+      "id": "ARDUPILOT_BATT_CAPACITY_01",
+      "scope": "out_of_scope",
+      "signal_id": "",
+      "template_id": "",
+      "parameter_roles": [],
+      "formula_structure": "",
+      "refusal_reason": "电池容量和失效保护触发不在 admissible signal catalog 中"
+    },
+    {
+      "id": "ARDUPILOT_BATT_VOLT_01",
+      "scope": "out_of_scope",
+      "signal_id": "",
+      "template_id": "",
+      "parameter_roles": [],
+      "formula_structure": "",
+      "refusal_reason": "电池电压和持续低压触发失效保护不在 admissible signal catalog 或两个模板中"
+    },
+    {
+      "id": "ARDUPILOT_FENCE_ALT_MAX_01",
+      "scope": "in_scope",
+      "signal_id": "height_m",
+      "template_id": "invariant_upper",
+      "parameter_roles": [
+        "upper_bound"
+      ],
+      "formula_structure": "G[0,T](height_m <= upper_bound)",
+      "refusal_reason": ""
+    },
+    {
+      "id": "ARDUPILOT_FENCE_ALT_MIN_01",
+      "scope": "out_of_scope",
+      "signal_id": "",
+      "template_id": "",
+      "parameter_roles": [],
+      "formula_structure": "",
+      "refusal_reason": "这是高度下界约束，而 admissible templates 只支持上界不变式或同一信号的上界恢复响应"
+    },
+    {
+      "id": "ARDUPILOT_GCS_TIMEOUT_01",
+      "scope": "out_of_scope",
+      "signal_id": "",
+      "template_id": "",
+      "parameter_roles": [],
+      "formula_structure": "",
+      "refusal_reason": "MAVLink 心跳丢失和失效保护触发不在 admissible signal catalog 中"
+    },
+    {
+      "id": "ECFR_107_ALT_01",
+      "scope": "in_scope",
+      "signal_id": "height_m",
+      "template_id": "invariant_upper",
+      "parameter_roles": [
+        "upper_bound"
+      ],
+      "formula_structure": "G[0,T](height_m <= upper_bound)",
+      "refusal_reason": ""
+    },
+    {
+      "id": "ECFR_107_SPEED_01",
+      "scope": "in_scope",
+      "signal_id": "speed_3d_mps",
+      "template_id": "invariant_upper",
+      "parameter_roles": [
+        "upper_bound"
+      ],
+      "formula_structure": "G[0,T](speed_3d_mps <= upper_bound)",
+      "refusal_reason": ""
+    },
+    {
+      "id": "ECFR_107_VISUAL_01",
+      "scope": "out_of_scope",
+      "signal_id": "",
+      "template_id": "",
+      "parameter_roles": [],
+      "formula_structure": "",
+      "refusal_reason": "目视接触不是 admissible signal catalog 中的数值信号"
+    },
+    {
+      "id": "ECFR_107_YIELD_01",
+      "scope": "out_of_scope",
+      "signal_id": "",
+      "template_id": "",
+      "parameter_roles": [],
+      "formula_structure": "",
+      "refusal_reason": "让路是行为/交通规则，不是对 catalog 中单一信号的上界或恢复约束"
+    },
+    {
+      "id": "ICAROUS_ALT_01",
+      "scope": "in_scope",
+      "signal_id": "height_m",
+      "template_id": "invariant_upper",
+      "parameter_roles": [
+        "upper_bound"
+      ],
+      "formula_structure": "G[0,T](height_m <= upper_bound)",
+      "refusal_reason": ""
+    },
+    {
+      "id": "ICAROUS_SEPARATION_01",
+      "scope": "out_of_scope",
+      "signal_id": "",
+      "template_id": "",
+      "parameter_roles": [],
+      "formula_structure": "",
+      "refusal_reason": "水平或垂直间隔不在 admissible signal catalog 中，且属于距离下界/分离约束"
+    },
+    {
+      "id": "PX4_FAILURE_PITCH_01",
+      "scope": "out_of_scope",
+      "signal_id": "",
+      "template_id": "",
+      "parameter_roles": [],
+      "formula_structure": "",
+      "refusal_reason": "描述的是俯仰角超限持续后触发故障检测，不是支持的上界不变式，也不是同一信号在期限内恢复到上界以下"
+    },
+    {
+      "id": "PX4_FAILURE_ROLL_01",
+      "scope": "out_of_scope",
+      "signal_id": "",
+      "template_id": "",
+      "parameter_roles": [],
+      "formula_structure": "",
+      "refusal_reason": "描述的是横滚角超限持续后触发故障检测，不是支持的上界不变式，也不是同一信号在期限内恢复到上界以下"
+    },
+    {
+      "id": "PX4_GEOFENCE_ALT_01",
+      "scope": "in_scope",
+      "signal_id": "height_m",
+      "template_id": "invariant_upper",
+      "parameter_roles": [
+        "upper_bound"
+      ],
+      "formula_structure": "G[0,T](height_m <= upper_bound)",
+      "refusal_reason": ""
+    },
+    {
+      "id": "PX4_LINK_LOSS_01",
+      "scope": "out_of_scope",
+      "signal_id": "",
+      "template_id": "",
+      "parameter_roles": [],
+      "formula_structure": "",
+      "refusal_reason": "地面站链路丢失和失效保护响应不在 admissible signal catalog 中"
+    },
+    {
+      "id": "UKCAA_HEIGHT_01",
+      "scope": "in_scope",
+      "signal_id": "height_m",
+      "template_id": "invariant_upper",
+      "parameter_roles": [
+        "upper_bound"
+      ],
+      "formula_structure": "G[0,T](height_m <= upper_bound)",
+      "refusal_reason": ""
+    },
+    {
+      "id": "UKCAA_PEOPLE_01",
+      "scope": "out_of_scope",
+      "signal_id": "",
+      "template_id": "",
+      "parameter_roles": [],
+      "formula_structure": "",
+      "refusal_reason": "与人员距离不得小于 50 米是距离下界约束，且距离信号不在 admissible signal catalog 中"
+    }
+  ],
+  "backend_retry_count": "not part of the experimental item denominator; original diagnostics remain in the sealed local record"
+}

@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "cases": 14,
+  "invalid_boundaries_rejected": 9,
+  "valid_controls_accepted": 5,
+  "unique_graph_fixtures": 14,
+  "tested_formula": "N06",
+  "tested_parameter_roles": [
+    "trigger_upper",
+    "recovery_upper",
+    "deadline_seconds",
+    "dwell_seconds",
+    "value_epsilon"
+  ],
+  "adjacent_boundary_definition": "math.nextafter in IEEE-754 binary64; exact values preserved in repr/JSON",
+  "frozen_fragment_domains": "d>0; 0<=tau<d; r<=u; epsilon=0",
+  "input_sha256": {
+    "frozen_graph_nodes.csv": "78b7d4348a49e0f3ccd94c24b6e5221d43e4a21e5000bae2b811e8b962f4845c",
+    "frozen_graph_relationships.csv": "cb263a607ddbf21e6d99e663f25c4014a71656232333a0ddc431b6a66b887f73"
+  },
+  "interpretation": "Constructed numerical configuration boundary tests only. Independent of the historical 354 and new 651 variant denominators; not flight measurements or calibrated operating limits."
+}

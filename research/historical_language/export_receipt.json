@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "historical_calls": 5,
+  "regeneration": false,
+  "items": [
+    {
+      "call_id": "scope_01",
+      "original_sha256": "f3ec9ac8d0c70e6ff19f655fbc96d8c91d41aa76eeec8692e25fa547a40db13a",
+      "release_file": "scope_01.json",
+      "retained": "exact request payload, parsed response, hashes and research settings",
+      "excluded": "raw CLI transport/session diagnostics and local process state"
+    },
+    {
+      "call_id": "formula_full_typed",
+      "original_sha256": "88a0a85abb6c291dd4f42d44378ebacfcd89ae8edeb5af2bc2e80fc9e9045ce6",
+      "release_file": "formula_full_typed.json",
+      "retained": "exact request payload, parsed response, hashes and research settings",
+      "excluded": "raw CLI transport/session diagnostics and local process state"
+    },
+    {
+      "call_id": "formula_no_graph_catalog",
+      "original_sha256": "53d8e4568bbc1521404388cdc71f962e82afcfa6371dae80ea479dff8c8563d7",
+      "release_file": "formula_no_graph_catalog.json",
+      "retained": "exact request payload, parsed response, hashes and research settings",
+      "excluded": "raw CLI transport/session diagnostics and local process state"
+    },
+    {
+      "call_id": "formula_direct_formula",
+      "original_sha256": "e13a6b735574571b4526984e62fc47c0dc8bc7c1f5a29ed3aefade56f2dccc10",
+      "release_file": "formula_direct_formula.json",
+      "retained": "exact request payload, parsed response, hashes and research settings",
+      "excluded": "raw CLI transport/session diagnostics and local process state"
+    },
+    {
+      "call_id": "internal_chain_full_typed",
+      "original_sha256": "e078f7fa91ae6f11108fd03e3b62cc60d40fda318c48b7ba26d16035da8d4ff5",
+      "release_file": "internal_chain_full_typed.json",
+      "retained": "exact request payload, parsed response, hashes and research settings",
+      "excluded": "raw CLI transport/session diagnostics and local process state"
+    }
+  ],
+  "annotation_independence": "unverified; original submitted annotation tables remain locally retained"
+}
