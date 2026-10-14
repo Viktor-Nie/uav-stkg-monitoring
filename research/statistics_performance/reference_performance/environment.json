@@ -1,0 +1,19 @@
+{
+  "utc": "2026-10-14T05:44:49.170111+00:00",
+  "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
+  "executable": "Python interpreter; local filesystem path omitted",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "logical_cpus": 24,
+  "pandas": "2.3.3",
+  "numpy": "2.3.5",
+  "pid": 37636,
+  "cpu_environment": {
+    "OMP_NUM_THREADS": "not_set",
+    "MKL_NUM_THREADS": "not_set",
+    "OPENBLAS_NUM_THREADS": "not_set"
+  },
+  "device_role": "ground desktop offline batch; no airborne latency measurement",
+  "cpu_inventory": "{\"Name\":\"Intel(R) Core(TM) i7-14650HX\",\"NumberOfCores\":16,\"NumberOfLogicalProcessors\":24}",
+  "cpu_inventory_exit_code": 0
+}

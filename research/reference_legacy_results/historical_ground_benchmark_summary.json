@@ -1,0 +1,26 @@
+{
+  "schema": "v2-end-to-end-replay-benchmark-v1",
+  "device_id_operator_supplied": "LENOVO 83DG ground-edge bench",
+  "device_role_operator_supplied": "edge",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python_version": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
+  "cpu_logical_count": 24,
+  "trace_sha256": "f52a9e669d4a966da61d686748e6cbdcb8f923dbd0f06bc57ab5cd2e3f3752ca",
+  "measurement_scope": "CSV parsing + graph-bound monitor execution + in-memory CSV result serialization; excludes telemetry transport, flight-control scheduling and hardware I/O callbacks",
+  "memory_scope": "tracemalloc Python-allocation peak only; not process RSS or device-wide memory",
+  "device_specification_operator_supplied": "Intel Core i7-14650HX (16 cores, 24 logical processors; reported max 2200 MHz); 16 GB RAM; Windows 11 Home 64-bit 10.0.26200; physical Lenovo mobile computer; ground bench only, not airborne",
+  "warmup_iterations": 10,
+  "measured_iterations": 30,
+  "latency_ms": {
+    "p50": 1181.5985500000002,
+    "p95": 1226.7600300000001,
+    "p99": 1251.569858,
+    "max": 1260.7483,
+    "mean": 1183.25091
+  },
+  "throughput_trace_samples_per_second": 1031.7505795854595,
+  "python_allocation_peak_bytes": {
+    "p50": 959456.5,
+    "max": 2999762
+  }
+}

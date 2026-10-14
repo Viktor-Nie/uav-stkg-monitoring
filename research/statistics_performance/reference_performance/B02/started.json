@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-14T05:44:58.113295+00:00",
+  "cell": {
+    "workload_id": "B02",
+    "samples": 1000,
+    "density": "sparse",
+    "trace_path": "inputs/B_1000_sparse.csv"
+  },
+  "pid": 3708,
+  "smoke": false,
+  "frozen_configuration_sha256": "5a81e0dc1949eeeaeff128edbbc0c9acf28a93987494bb4607dfba5d948517d5"
+}

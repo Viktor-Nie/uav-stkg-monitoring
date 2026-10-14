@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "smoke": false,
+  "cells": 9,
+  "complete_cells": 9,
+  "configuration_sha256": "5a81e0dc1949eeeaeff128edbbc0c9acf28a93987494bb4607dfba5d948517d5",
+  "source_unchanged": true,
+  "bound_specifications_match_original": true,
+  "model_calls": 0,
+  "training_runs": 0,
+  "continuation_disclosed": true
+}

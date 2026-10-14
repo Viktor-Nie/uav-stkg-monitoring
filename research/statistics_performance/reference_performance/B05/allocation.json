@@ -1,0 +1,16 @@
+{
+  "started_utc": "2026-10-14T05:46:21.799055+00:00",
+  "finished_utc": "2026-10-14T05:46:35.409156+00:00",
+  "python_allocation_peak_bytes": 4469398,
+  "duration_ms": 13608.8543,
+  "excluded_from_timing_median": true,
+  "not_RSS": true,
+  "counts": {
+    "formula_count": 24,
+    "trigger_count": 12000,
+    "recovery_count": 12000,
+    "expired_count": 0,
+    "pending_count": 0,
+    "invariant_violation_count": 12000
+  }
+}

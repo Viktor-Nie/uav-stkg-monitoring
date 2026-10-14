@@ -1,0 +1,77 @@
+\subsection{Correctness of the finite-observation reporting policy}
+\label{sec:finite-policy-proof}
+
+We prove correctness for the completed-segment witness definition in Equation~\eqref{eq:supp-witness-set} and the main-text partition and reporting rule. The assumptions are an admitted finite trace with strictly increasing timestamps; finite $b,u,r,d,\tau,\epsilon_y,\epsilon_t$; $d>0$; $0\leq\tau<d$; $r\leq u$; nonnegative tolerances; one obligation per triggering observation; and exact real arithmetic. Contract rejection is an admission outcome and is outside these propositions. The graph's finite-parameter checks and the input contract establish separate premises; an accepted trace alone does not validate arbitrary API parameter objects.
+
+\begin{proposition}[Correctness of the invariant monitor]
+\label{prop:invariant-complete}
+Algorithm~\ref{alg:invariant} returns exactly
+$J_{\mathrm{viol}}=\{i\in\{0,\ldots,n\}\mid y_i>b+\epsilon_y\}$.
+It returns \textnormal{\textsc{Violated}} exactly when the finite-observation invariant is false, and \textnormal{\textsc{Satisfied}} otherwise.
+\end{proposition}
+\begin{proof}
+After processing index $k$, let $J_k$ be the stored set. We prove
+$J_k=\{i\mid 0\leq i\leq k,\ y_i>b+\epsilon_y\}$.
+Before index zero both sets are empty. Suppose the equality holds after index $k-1$. At index $k$ the algorithm adds $k$ if and only if its violating predicate is true and retains every earlier member. Thus the equality holds after index $k$. Induction gives the claim at $k=n$. Negating the finite conjunction of inclusive bounds gives exactly the existence of one strict violating index. The algorithm's empty/nonempty distinction therefore gives the stated verdict. Retaining the set also shows that a later nonviolating observation cannot erase an earlier violation.
+\end{proof}
+
+For the response proof, write $B_i=t_i+d+\epsilon_t$ and define the following sets for the prefix ending at $k$:
+\begin{equation}
+\begin{aligned}
+I_k&=\{i\leq k\mid y_i>u+\epsilon_y\},\\
+R_k&=\{i\in I_k\mid\exists a,j:\ i<a\leq j\leq k,\ W_i(a,j)\},\\
+X_k&=\{i\in I_k\setminus R_k\mid\exists h\leq k:\ t_h>B_i\},\\
+P_k&=I_k\setminus(R_k\cup X_k).
+\end{aligned}
+\label{eq:proof-prefix-partition}
+\end{equation}
+Here $W_i$ uses the same comparisons as Equation~\eqref{eq:supp-witness-set}, restricted to the prefix. For the empty prefix all four sets are empty. If the final prefix value is a recovery observation, define $s_k$ as the least index such that every observation from $s_k$ through $k$ satisfies $y\leq r+\epsilon_y$. Otherwise set $s_k=\bot$. Thus $s_k$ starts the maximal contiguous recovery suffix in the sequence of retained indices, without any interpolation.
+
+\begin{proposition}[Correctness of the FIFO response monitor]
+\label{prop:response-complete}
+Under the stated assumptions, after every processed index $k$, Algorithm~\ref{alg:response} has the following state:
+\begin{enumerate}
+\item The queue contains exactly the trigger indices $P_k$, once each and in increasing trigger order, each with its own deadline $D_i=t_i+d$.
+\item Its stored recovery start is $\alpha=\bot$ exactly when $s_k=\bot$, and otherwise $\alpha=t_{s_k}$.
+\item The recorded recovered and expired memberships are exactly $R_k$ and $X_k$, and no recorded terminal membership is later changed.
+\item The expiry flag is true exactly when $X_k\ne\varnothing$ and never changes back to false.
+\end{enumerate}
+Consequently, terminal recording gives precisely $I_{\mathrm{rec}},I_{\mathrm{exp}},I_{\mathrm{pend}}$ and the main-text response verdict.
+\end{proposition}
+\begin{proof}
+Two facts first justify the state reductions. Because $r\leq u$ and both predicates use the same $\epsilon_y$, a recovery observation satisfies $y\leq r+\epsilon_y\leq u+\epsilon_y$ and cannot be a strict trigger. Also, strictly increasing trigger times and the common $d,\epsilon_t$ imply strictly increasing $D_i$ and $B_i$. Finally, once an unresolved obligation reaches an observation $t_h>B_i$, every later observation also exceeds $B_i$. It can never acquire a witness ending at or before its boundary. A recovered obligation retains its already observed witness under all later prefixes, and an expired obligation can never become recovered. Thus $R_k$ and $X_k$ are persistent sets.
+
+The base case is the empty prefix: the queue and event sets are empty, $\alpha=\bot$, and the expiry flag is false. All four claims hold. Suppose they hold after $k-1$. We show that the four ordered stages at index $k$ preserve them.
+
+\emph{Stage 1: recovery-segment update.} If $y_k>r+\epsilon_y$, no recovery suffix ends at $k$, so resetting $\alpha$ to $\bot$ is exact. If $y_k\leq r+\epsilon_y$ and the preceding suffix was empty, the maximal new suffix begins at $k$ and setting $\alpha=t_k$ is exact. If the preceding suffix was nonempty, appending another recovery observation leaves its least index unchanged; retaining $\alpha$ is exact. This establishes claim 2 before any queue operation. If a recovery suffix exists, every old queued trigger $i$ precedes $s_k$: no trigger can lie inside that suffix by predicate disjointness, and every old trigger satisfies $i<k$. This fact is essential when one completed suffix discharges the whole live queue.
+
+\emph{Stage 2: expiry.} By the induction hypothesis, the old queue contains exactly $P_{k-1}$ in increasing $B_i$ order. The members satisfying $t_k>B_i$ form a prefix of this queue, so repeated head removal finds all and only those members. None has a witness in the previous prefix, by its membership in $P_{k-1}$, and none can have a witness ending at $k$ because $t_k>B_i$. They therefore belong to $X_k$. Conversely, an old live member newly belonging to $X_k$ must satisfy $t_k>B_i$: no earlier observation exceeded its boundary, since it was in $P_{k-1}$. Hence this stage removes exactly the newly expired old members. It preserves all previous expired records and sets the flag if any new expiry occurs. An equality $t_k=B_i$ is not removed.
+
+\emph{Stage 3: recovery.} Consider any old member still queued after expiry. It satisfies $t_k\leq B_i$. If the recovery suffix exists and $t_k-t_{s_k}\geq\tau-\epsilon_t$, then $i<s_k\leq k$ by Stage 1, all observations in $[s_k,k]$ satisfy recovery, and the time and dwell comparisons hold. Thus $(s_k,k)$ is a witness for every remaining queued member. Recovering all of them is sound.
+
+For completeness, suppose an old live member has a witness newly available in this prefix. Its endpoint must be $k$, because otherwise it would already lie in $R_{k-1}$ and could not have been queued. Let its witness be $(a,k)$. Since all observations from $a$ through $k$ satisfy recovery, the maximal suffix exists with $s_k\leq a$. Consequently
+$t_k-t_{s_k}\geq t_k-t_a\geq\tau-\epsilon_t$.
+Stage 1 also gives $i<s_k$. The algorithm's dwell condition therefore holds, and it recovers this member. If the dwell condition fails, the same implication proves that no newly ending witness exists for any remaining member. Thus this stage removes exactly the newly recovered old members. The argument permits $a=k$ and therefore includes both $\tau=0$ and $0<\tau\leq\epsilon_t$.
+
+\emph{Stage 4: new trigger.} If $y_k>u+\epsilon_y$, exactly one new obligation is required. It has no witness because a witness requires a strictly later start index, and no prefix observation exceeds $B_k$ because $B_k=t_k+d+\epsilon_t>t_k$. Hence $k\in P_k$. Predicate disjointness implies that $\alpha=\bot$ on this observation; its new obligation has not been recovered earlier in this update. Appending it preserves increasing trigger/deadline order. If the trigger predicate is false, no new obligation is added. All old triggers have already been placed in exactly their prefix-defined classes by Stages 2 and 3, so the final queue is precisely $P_k$. Events and the persistent flag satisfy claims 3 and 4. This completes the induction.
+
+At $k=n$, Equation~\eqref{eq:proof-prefix-partition} equals the terminal partition. The queue yields exactly the terminal pending memberships, without changing any earlier recovery or expiry. The flag is true exactly when at least one obligation expired, so its precedence over a nonempty queue gives \textsc{Violated}; otherwise a nonempty queue gives \textsc{Inconclusive}; otherwise the result is \textsc{Satisfied}. These are precisely the three branches of the declared reporting rule.
+\end{proof}
+
+\paragraph{Numerical scope of the proof.}
+The propositions concern exact comparisons over the retained real-valued observations and finite parameters. For a floating-point implementation, a sufficient transfer assumption is that input admission preserves the same ordered trace and that every Boolean comparison used by the execution has its exact truth value: $y_i>b+\epsilon_y$, $y_i>u+\epsilon_y$, $y_i\leq r+\epsilon_y$, $t_j>B_i$, and $t_j-t_a\geq\tau-\epsilon_t$ for the relevant indices. Computed quantities must be finite. Under these assumptions, identical initial state and identical decisions in each ordered stage imply identical state and outputs by the same induction. A certified error bound smaller than the distance to each comparison boundary can establish fidelity away from equality; equality cases require their own arithmetic check. A numerical tolerance by itself does not imply fidelity.
+
+The timestamp adapter subtracts a source origin in Decimal arithmetic before converting the retained relative span to floating point. It preserves exact source coordinates for reporting, but subsequent deadline addition, dwell subtraction, and value-threshold addition still use floating point. For example, source times $(0,0.1,0.30000000000000004)$ with values $(0.75,2,0)$, $u=1$, $r=0.5$, $d=0.2$, and $\tau=\epsilon_y=\epsilon_t=0$ have a trigger at $0.1$ and exact deadline $0.3$. The last observation is strictly late, so the exact policy expires it. Binary floating-point addition instead produces $\operatorname{fl}(0.1+0.2)=0.30000000000000004$, and the frozen implementation recovers it at equality. Origin subtraction cannot remove this relative-span example. Likewise, exact $b=0.1$, $\epsilon_y=0.2$, and observed $y=0.30000000000000004$ violate $y\leq b+\epsilon_y$, although rounded threshold addition can make the implementation admit equality. These retained counterexamples delimit the comparison-fidelity premise; no unconditional exact-source correctness is inferred from the theorem or regression suite.
+
+\paragraph{Difference from nominal sampled STL.}
+For clarity, take the ordinary sampled interpretation of $\mathbf{F}_I$ as existential quantification over retained indices whose timestamp differences belong to $I$, and $\mathbf{G}_I$ as universal quantification over such indices. With $\epsilon_t=0$ and $\tau=0$, the witness definition reduces exactly to a later recovery observation within $d$: choosing $a=j$ proves one direction, and any witness endpoint $j$ proves the other. This identifies the pointwise consequent, while the separate reporting convention still governs an unresolved terminal obligation. The RTAMT evidence additionally has uniform timestamps, deadline grid alignment, zero value tolerance, zero dwell, and only binary terminal outcomes; its observed agreement is confined to that shared subset.
+
+For positive dwell the two definitions differ even with zero tolerances and without truncating the candidate dwell interval at trace end. Let $t=(0,0.5,2.25)$, $y=(2,0,0)$, $u=1$, $r=0.5$, $d=2$, and $\tau=1$. At the trigger $t_0=0$, the nominal consequent $\mathbf{F}_{(0,1]}\mathbf{G}_{[0,1]}\mu_{\mathrm{rec}}$ has start $a=1$ at $0.5$. The only retained observation in $[0.5,1.5]$ is the recovery observation at $0.5$, so this sampled consequent is true. Under the completed-segment policy, no retained recovery pair spans one second by deadline $2$: $(1,1)$ has zero duration, and the next possible completion at $2.25$ is late. The obligation therefore expires at $2.25$. Calling the witness rule a complete expansion of the nested STL formula would be false.
+
+A positive tolerance also changes the nominal comparison. With $t=(0,0.625,1)$, $y=(2,0,0)$, $d=1$, $\tau=0.5$, $\epsilon_t=0.125$, and the same thresholds, the pair $(1,2)$ qualifies because its observed span $0.375$ equals $\tau-\epsilon_t$. The completed-segment policy is satisfied. The nominal $\mathbf{F}_{(0,0.5]}$ has no candidate start, so the sampled STL consequent is false. Even with zero dwell, a sole recovery at $1.0625$ is admitted when $d=1$ and $\epsilon_t=0.125$, although it lies outside the nominal interval $(0,1]$. These examples describe the specified numerical policy; they do not alter a catalog value or reinterpret a nominal safety deadline.
+
+\paragraph{Terminal equality is a reporting convention.}
+Let $t=(0,1)$ and $y=(2,0.75)$ with $d=1$, $\tau=\epsilon_t=0$, $u=1$, and $r=0.5$. The obligation has no recovery witness, but the last observation equals its boundary and no strictly later observation has been consumed. The algorithm and the declared policy return \textsc{Inconclusive}. Every strictly increasing future observation would lie beyond the boundary and could not provide a timely witness. Thus the result is deliberately an observed-expiry convention, rather than the strongest three-valued classification obtained from all possible future extensions. A later observation at $1.25$ causes expiry, even if that observation satisfies recovery, and later recovery cannot erase it.
+
+\paragraph{Independent implementation checks.}
+The accompanying \nolinkurl{research/semantics/verify_semantics.py} enumerates witness index pairs with exact rational arithmetic, rather than maintaining a queue or recovery-start state. It separately records explicit endpoint cases, the nominal-STL counterexamples, and the floating-point disagreements above. Its finite exhaustive comparisons use a dyadic grid on which the tested core arithmetic is exact. The bounded checks support the implementation audit and do not replace the inductive proof or extend its assumptions.

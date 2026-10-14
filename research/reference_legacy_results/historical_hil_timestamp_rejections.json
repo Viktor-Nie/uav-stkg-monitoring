@@ -1,0 +1,131 @@
+{
+  "purpose": "Frozen multiscenario HIL timestamp audit; no deduplication, interpolation or resampling",
+  "sampling_rule": "A v2 sampled-point trace requires strictly increasing original timestamps",
+  "case_count": 6,
+  "cases": [
+    {
+      "case_id": "hil_normal_waypoint_41",
+      "source_file": "materials/external_datasets/rflymad/HIL-Supplement/normal_waypoint_41/TrueData/UAVState_data.xlsx",
+      "sheet_name": "extimatedataset",
+      "raw_observation_count": 8261,
+      "timestamp_column": "uavTime",
+      "timestamp_unit": "not asserted by this audit",
+      "duplicate_timestamp_pairs": 5524,
+      "descending_timestamp_pairs": 0,
+      "minimum_delta": 0.0,
+      "maximum_delta": 81.0,
+      "median_positive_delta": 20.0,
+      "strictly_increasing": false,
+      "sampled_point_trace_emitted": false,
+      "eligibility": "rejected_input_contract",
+      "rejection_or_hold_reasons": [
+        "repeated_or_nonincreasing_original_timestamps_no_deduplication_permitted"
+      ]
+    },
+    {
+      "case_id": "hil_sensor_noise_acc_hover_127",
+      "source_file": "materials/external_datasets/rflymad/HIL-Supplement/sensor_noise_acc_hover_127/TrueData/UAVState_data.xlsx",
+      "sheet_name": "extimatedataset",
+      "raw_observation_count": 3290,
+      "timestamp_column": "uavTime",
+      "timestamp_unit": "not asserted by this audit",
+      "duplicate_timestamp_pairs": 1882,
+      "descending_timestamp_pairs": 0,
+      "minimum_delta": 0.0,
+      "maximum_delta": 75.0,
+      "median_positive_delta": 25.0,
+      "strictly_increasing": false,
+      "sampled_point_trace_emitted": false,
+      "eligibility": "rejected_input_contract",
+      "rejection_or_hold_reasons": [
+        "repeated_or_nonincreasing_original_timestamps_no_deduplication_permitted"
+      ]
+    },
+    {
+      "case_id": "hil_sensor_mag_waypoint_28",
+      "source_file": "materials/external_datasets/rflymad/HIL-Supplement/sensor_mag_waypoint_28/TrueData/UAVState_data.xlsx",
+      "sheet_name": "extimatedataset",
+      "raw_observation_count": 13572,
+      "timestamp_column": "uavTime",
+      "timestamp_unit": "not asserted by this audit",
+      "duplicate_timestamp_pairs": 9799,
+      "descending_timestamp_pairs": 0,
+      "minimum_delta": 0.0,
+      "maximum_delta": 59.0,
+      "median_positive_delta": 28.0,
+      "strictly_increasing": false,
+      "sampled_point_trace_emitted": false,
+      "eligibility": "rejected_input_contract",
+      "rejection_or_hold_reasons": [
+        "repeated_or_nonincreasing_original_timestamps_no_deduplication_permitted"
+      ]
+    },
+    {
+      "case_id": "hil_sensor_mag_velocity_82",
+      "source_file": "materials/external_datasets/rflymad/HIL-Supplement/sensor_mag_velocity_82/TrueData/UAVState_data.xlsx",
+      "sheet_name": "extimatedataset",
+      "raw_observation_count": 5098,
+      "timestamp_column": "uavTime",
+      "timestamp_unit": "not asserted by this audit",
+      "duplicate_timestamp_pairs": 2715,
+      "descending_timestamp_pairs": 0,
+      "minimum_delta": 0.0,
+      "maximum_delta": 66.0,
+      "median_positive_delta": 24.0,
+      "strictly_increasing": false,
+      "sampled_point_trace_emitted": false,
+      "eligibility": "rejected_input_contract",
+      "rejection_or_hold_reasons": [
+        "repeated_or_nonincreasing_original_timestamps_no_deduplication_permitted"
+      ]
+    },
+    {
+      "case_id": "hil_propeller_hover_10",
+      "source_file": "materials/external_datasets/rflymad/HIL-Supplement/propeller_hover_10/TrueData/UAVState_data.xlsx",
+      "sheet_name": "extimatedataset",
+      "raw_observation_count": 5826,
+      "timestamp_column": "uavTime",
+      "timestamp_unit": "not asserted by this audit",
+      "duplicate_timestamp_pairs": 3657,
+      "descending_timestamp_pairs": 0,
+      "minimum_delta": 0.0,
+      "maximum_delta": 44.0,
+      "median_positive_delta": 20.0,
+      "strictly_increasing": false,
+      "sampled_point_trace_emitted": false,
+      "eligibility": "rejected_input_contract",
+      "rejection_or_hold_reasons": [
+        "repeated_or_nonincreasing_original_timestamps_no_deduplication_permitted"
+      ]
+    },
+    {
+      "case_id": "hil_motor_hover_case_1",
+      "source_file": "materials/external_datasets/rflymad/HIL-Complete-StateOnly/HIL_Motor_1/hover-motor-1/TestCase_1_2000000000/TrueData/UAVState_data.xlsx",
+      "sheet_name": "extimatedataset",
+      "raw_observation_count": 5834,
+      "timestamp_column": "uavTime",
+      "timestamp_unit": "not asserted by this audit",
+      "duplicate_timestamp_pairs": 3666,
+      "descending_timestamp_pairs": 0,
+      "minimum_delta": 0.0,
+      "maximum_delta": 44.0,
+      "median_positive_delta": 20.0,
+      "strictly_increasing": false,
+      "sampled_point_trace_emitted": false,
+      "eligibility": "rejected_input_contract",
+      "rejection_or_hold_reasons": [
+        "repeated_or_nonincreasing_original_timestamps_no_deduplication_permitted"
+      ]
+    }
+  ],
+  "accepted_case_ids": [],
+  "rejected_case_ids": [
+    "hil_normal_waypoint_41",
+    "hil_sensor_noise_acc_hover_127",
+    "hil_sensor_mag_waypoint_28",
+    "hil_sensor_mag_velocity_82",
+    "hil_propeller_hover_10",
+    "hil_motor_hover_case_1"
+  ],
+  "interpretation_boundary": "This is negative input-integrity evidence across HIL scenario types. It does not turn the sheets into runtime-monitor inputs, does not infer timestamp units or coordinate frames, and does not quantify monitoring performance."
+}

@@ -1,0 +1,123 @@
+{
+  "schema": "monitor_scale_extension_protocol_v1",
+  "frozen_utc": "2026-10-11T08:24:33.612332+00:00",
+  "frozen_before_runs": true,
+  "training": false,
+  "model_calls": false,
+  "new_flight_scoring": false,
+  "A": {
+    "cases": 648,
+    "rejected_contract_cases": 12,
+    "patterns": [
+      "no_trigger",
+      "early_recovery",
+      "closed_deadline",
+      "deadline_plus_epsilon",
+      "deadline_plus_two_epsilon",
+      "exact_dwell_at_recovery_bound",
+      "short_dwell_end",
+      "interrupted_recovery",
+      "overlapping_triggers",
+      "expired_then_late_recovery",
+      "expired_and_pending",
+      "pending_end"
+    ],
+    "contract": {
+      "maximum_gap": "0.05",
+      "timestamp_epsilon": "0.000000001"
+    },
+    "channels": [
+      "absolute_float",
+      "decimal_origin_relative_float"
+    ],
+    "signature_fields": [
+      "invariant_verdict",
+      "invariant_violations",
+      "response_verdict",
+      "triggers",
+      "recovered",
+      "expired",
+      "pending"
+    ],
+    "prefixes": "every length >=2, plus singleton only for rejection group",
+    "reference": "Independent Decimal per-trigger future-witness enumeration; no shared FIFO state",
+    "failure_rule": "Persist all mismatches and rejects; no relabelling, filtering or production modification"
+  },
+  "B": {
+    "workload_cells": 9,
+    "formula_ids": [
+      "formula:N01",
+      "formula:N02",
+      "formula:N03",
+      "formula:N04",
+      "formula:N05",
+      "formula:N06",
+      "formula:N07",
+      "formula:N08",
+      "formula:N09",
+      "formula:N10",
+      "formula:N11",
+      "formula:N12",
+      "formula:N13",
+      "formula:N14",
+      "formula:N15",
+      "formula:N16",
+      "formula:N17",
+      "formula:N18",
+      "formula:T01",
+      "formula:T02",
+      "formula:T03",
+      "formula:T04",
+      "formula:T05",
+      "formula:T06"
+    ],
+    "samples": [
+      1000,
+      10000,
+      100000
+    ],
+    "density_patterns": [
+      "quiescent",
+      "sparse (4 high observations per 40)",
+      "dense"
+    ],
+    "warmup": 2,
+    "measurements": 5,
+    "cell_timeout_seconds": 60,
+    "cell_memory_stop_bytes": 2147483648,
+    "sequence": "ascending length then quiescent/sparse/dense; fixed without best-run selection",
+    "timing_scope": "CSV parse + graph-bound 24-formula replay + summary CSV serialization; internal events allocated but complete event-ledger serialization is not timed",
+    "tracemalloc_in_timing": false,
+    "memory": "One separate iteration after timings with tracemalloc; Python allocation peak, not RSS",
+    "timeout_scope": "Entire workload child including imports, warmup, measured iterations, and independent memory pass",
+    "summary_rule": "Median only if all five measured iterations finish; partial records retained and never described as complete"
+  },
+  "input_sha256": {
+    "inputs/A_cases.json": "2598efaacf05fe4aae57d8cb6d8b125d6539bc223cbf482d2e9aff4f11aa5a82",
+    "inputs/A_rejected_contract_cases.json": "34f4efba6c3bc07e1c96952d77ed6bfa9e3badd72a2ddfdb40a612056401f8d0",
+    "inputs/B_100000_dense.csv": "b5e4a46bf328b605bf02c96070727b8f11f8408df93d811fdddb3b18ed3865a0",
+    "inputs/B_100000_quiescent.csv": "3aa3007ad24d41492e23a73110df3fca55183f3292fbb9464b6f255ecf3c4fee",
+    "inputs/B_100000_sparse.csv": "f3521a92ad57a6f9fb707c36a90a63ca0c7e6bd215e5178c83ab6086276a74a2",
+    "inputs/B_10000_dense.csv": "e0c967d1880959b5867b903b01a0b7720b329cc0b0f4d43aac56a6df172ec275",
+    "inputs/B_10000_quiescent.csv": "3ba8a49ebdce8bf5ce66850d664a331e98b01475f142336a4bbc48055fe520a6",
+    "inputs/B_10000_sparse.csv": "f7fa20f3c238ecda23d2062d67a7e2b2dc45eb58eaeb555e148d5c4e2345b8d7",
+    "inputs/B_1000_dense.csv": "873bd72a994057f0672e9b7ad8fbb7b72868f2c3fef63527fe36c89afdb97907",
+    "inputs/B_1000_quiescent.csv": "d81a08e0f3718439714a1fd5c171a7bd9b0d4b3e316dacc9087ddc6320eb2ac0",
+    "inputs/B_1000_sparse.csv": "19672e34a9b71508159bdd952811782f8300897b13ff22c1d635cc4776c3bea7",
+    "inputs/B_bound_specifications.json": "2ec3291da818baedf1f60770abf62620e843b064162c09cc6b8b31767e4d1261",
+    "inputs/B_workloads.json": "0705f3d32bf4685d2896c6fc8c547625ef6557fb90b6b5aa423b7fb695f18111"
+  },
+  "read_only_source_sha256": {
+    "analysis/results/77_monitor_scale_extension_20261011/decimal_oracle.py": "a3564a23035ddc597572f5a00ddc9da2f98c59559cfe1aee393d4447b627cff4",
+    "analysis/results/77_monitor_scale_extension_20261011/experiment.py": "2b48a6ecda149ef78fcbf31a0e969606612cb7d2416c4a847f26749bf739a20b",
+    "specification/v2/build_traceability_graph.py": "8b4cfe677a7b334a54e1e5932a4f75e0b21fc38410dadc5cc13c2ed2b271ad56",
+    "specification/v2/monitor_from_traceability_graph.py": "55b846e1f94a4b5bf82c456217f431ae8c4775a83f4d2dcbea3615cb55ee1a06",
+    "specification/v2/results/traceability_graph/nodes.csv": "a16967fa772dfcee0beca832a3a5135bb766347e8d72465d7b1e7a36bf39afb8",
+    "specification/v2/results/traceability_graph/relationships.csv": "cb263a607ddbf21e6d99e663f25c4014a71656232333a0ddc431b6a66b887f73",
+    "specification/v2/sampled_data_contract.py": "4081619d8b3bdf6295ab09bdd0db2831ed0a996c02dd872e0b36dbde46c4d981",
+    "specification/v2/sampled_monitor.py": "24b35ae63793f0bb848a7dbffa8ab8ddbca5f8b4c747322bf619c6f622298eef",
+    "specification/v2/verify_traceability_graph.py": "e8bf980caa6efd4f5858f918da11d0c35f9207d65735c765c5a856a5a047b9c2"
+  },
+  "environment_sha256": "bb8e4ed46dd3bbb2f30877f8f49c04954ba3c513e38d136e85587c1ff8596e6a",
+  "scope": "New constructed computational cases; not new language corpus, independent flights, physical safety validation or an extension of earlier 102/600 denominators"
+}

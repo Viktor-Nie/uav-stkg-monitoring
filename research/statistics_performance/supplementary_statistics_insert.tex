@@ -1,0 +1,37 @@
+\section{Conditional uncertainty of the frozen language results}
+\label{sec:conditional-uncertainty}
+The resampling analysis is descriptive and conditional on the observed documents and saved model outputs. The 215 English strings come from eight curated document families, and the nineteen Chinese strings from six source families. These families were not randomly sampled from a defined population; several document families share a publisher, and leave-one-family-out training folds overlap. We therefore report 95\% conditional percentile resampling intervals rather than population confidence intervals or significance tests. No item-level independent-and-identically-distributed assumption is made. The source-reviewed Chinese reference (five abstract in-scope height structures and fourteen rejections) remains provisional pending independent human review. Reference-label uncertainty and unresolved height-frame applicability are not incorporated in these intervals.
+
+All calculations use seed 2026101404 and 20,000 resamples, with linear interpolation of the 2.5th and 97.5th percentiles. For English, a resample draws eight family indices with replacement; each selected family retains all its items, and the same indices are used for all five methods. Accuracy and fixed-three-class macro F1 are first calculated within each family, with absent classes contributing zero, then averaged equally across the eight selected families. This preserves the main-table estimand. The retained file \code{english\_per\_family.csv} records each denominator and score; the complete draw indices and paired method differences are also supplied.
+
+\begin{table}[htbp]
+\caption{English equal-family scores with 95\% conditional source-family resampling intervals. Each method uses the same 215 strings and eight families. Brackets describe empirical family reweighting and do not define population confidence limits.}
+\label{tab:english-conditional-intervals}
+\centering\footnotesize
+\begin{tabularx}{\textwidth}{Ycc}
+\toprule
+Method & Accuracy [interval] & Fixed-three-class F1 [interval] \\
+\midrule
+\input{generated/english_interval_rows.tex}
+\bottomrule
+\end{tabularx}
+\end{table}
+
+For the Chinese prompt experiment, each condition has five saved independent contexts, each scoring the same nineteen strings. The 380 item opportunities therefore remain nineteen unique texts, not 380 independent observations. A source-family resample draws six family indices with replacement and retains every item within each family. Scores are recomputed on the selected rows in each context, and the five context scores are then averaged; this preserves the item-weighted run metric used in the original table. A context-only resample instead draws five context indices within each condition while holding all nineteen texts fixed. The crossed analysis independently draws the six source-family indices and five context indices. Family draws are shared across conditions for paired contrasts; context draws are independent across conditions because repetition numbers do not denote paired random seeds. All three interval sets and all paired differences are retained. Historical Chinese predictions receive source-family-only intervals, with no invented repetitions.
+
+\begin{table}[htbp]
+\caption{Chinese five-context mean scores with crossed source-family/context 95\% conditional resampling intervals. All four conditions use nineteen unique texts in six families; reference uncertainty is excluded.}
+\label{tab:chinese-conditional-intervals}
+\centering\footnotesize
+\begin{tabularx}{\textwidth}{Yccc}
+\toprule
+Condition & Scope F1 [interval] & Tuple exact [interval] & Correct rejection [interval] \\
+\midrule
+\input{generated/chinese_interval_rows.tex}
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The English LLM minus character-SVM fixed-three-class F1 contrast is 0.056 with interval $[-0.068,0.157]$; the corresponding accuracy contrast is $-0.019$ with interval $[-0.121,0.079]$. Conditional intervals for the Chinese prompt contrasts overlap zero. This analysis supports reporting the observed variation without identifying a generally superior model or a stable causal benefit of either prompt component. A degenerate interval for a uniformly correct saved outcome reflects the finite empirical support of the resampling distribution and does not establish future error-free behavior. There are no positive bounded-response items in the provisional reference, so response-role and response-skeleton effectiveness remain unmeasured.
+
+The offline script re-scores all 380 rows from the retained public call outputs before resampling, checks the English family scores against their frozen expected values, and verifies that all input hashes remain unchanged. It saves the seed, all family/context draw indices, per-family/per-context count vectors, interval tables, paired differences, and a machine-readable receipt. It makes no new model calls, performs no training, and does not add language items or flight records.

@@ -1,0 +1,10 @@
+{
+  "workload_id": "B03",
+  "samples": 1000,
+  "density": "dense",
+  "trace_path": "inputs/B_1000_dense.csv",
+  "started_utc": "2026-10-14T05:45:03.958549+00:00",
+  "finished_utc": "2026-10-14T05:45:15.586362+00:00",
+  "exit_code": 0,
+  "status": "passed"
+}

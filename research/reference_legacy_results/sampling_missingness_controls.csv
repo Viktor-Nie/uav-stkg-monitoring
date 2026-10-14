@@ -1,0 +1,21 @@
+﻿frequency_hz,nominal_period_seconds,missingness_mode,requested_missing_fraction,repetition_count,mean_removed_observation_count,accepted_input_rate,rejected_input_rate,interpretation
+10.0,0.1,dropped_observations_no_imputation,0.0,40,0.0,1.0,0.0,any retained trace with a timing interval outside the 5% jitter budget is rejected; no sample is filled
+10.0,0.1,dropped_observations_no_imputation,0.01,40,0.425,0.725,0.275,any retained trace with a timing interval outside the 5% jitter budget is rejected; no sample is filled
+10.0,0.1,dropped_observations_no_imputation,0.05,40,2.125,0.075,0.925,any retained trace with a timing interval outside the 5% jitter budget is rejected; no sample is filled
+10.0,0.1,dropped_observations_no_imputation,0.1,40,5.05,0.0,1.0,any retained trace with a timing interval outside the 5% jitter budget is rejected; no sample is filled
+10.0,0.1,nan_signal_value_no_imputation,,1,0.0,0.0,1.0,a NaN value is rejected before monitoring and is never imputed
+20.0,0.05,dropped_observations_no_imputation,0.0,40,0.0,1.0,0.0,any retained trace with a timing interval outside the 5% jitter budget is rejected; no sample is filled
+20.0,0.05,dropped_observations_no_imputation,0.01,40,1.15,0.325,0.675,any retained trace with a timing interval outside the 5% jitter budget is rejected; no sample is filled
+20.0,0.05,dropped_observations_no_imputation,0.05,40,5.25,0.025,0.975,any retained trace with a timing interval outside the 5% jitter budget is rejected; no sample is filled
+20.0,0.05,dropped_observations_no_imputation,0.1,40,10.4,0.0,1.0,any retained trace with a timing interval outside the 5% jitter budget is rejected; no sample is filled
+20.0,0.05,nan_signal_value_no_imputation,,1,0.0,0.0,1.0,a NaN value is rejected before monitoring and is never imputed
+50.0,0.02,dropped_observations_no_imputation,0.0,40,0.0,1.0,0.0,any retained trace with a timing interval outside the 5% jitter budget is rejected; no sample is filled
+50.0,0.02,dropped_observations_no_imputation,0.01,40,2.3,0.125,0.875,any retained trace with a timing interval outside the 5% jitter budget is rejected; no sample is filled
+50.0,0.02,dropped_observations_no_imputation,0.05,40,13.825,0.0,1.0,any retained trace with a timing interval outside the 5% jitter budget is rejected; no sample is filled
+50.0,0.02,dropped_observations_no_imputation,0.1,40,25.5,0.0,1.0,any retained trace with a timing interval outside the 5% jitter budget is rejected; no sample is filled
+50.0,0.02,nan_signal_value_no_imputation,,1,0.0,0.0,1.0,a NaN value is rejected before monitoring and is never imputed
+100.0,0.01,dropped_observations_no_imputation,0.0,40,0.0,1.0,0.0,any retained trace with a timing interval outside the 5% jitter budget is rejected; no sample is filled
+100.0,0.01,dropped_observations_no_imputation,0.01,40,5.625,0.0,1.0,any retained trace with a timing interval outside the 5% jitter budget is rejected; no sample is filled
+100.0,0.01,dropped_observations_no_imputation,0.05,40,24.7,0.0,1.0,any retained trace with a timing interval outside the 5% jitter budget is rejected; no sample is filled
+100.0,0.01,dropped_observations_no_imputation,0.1,40,50.125,0.0,1.0,any retained trace with a timing interval outside the 5% jitter budget is rejected; no sample is filled
+100.0,0.01,nan_signal_value_no_imputation,,1,0.0,0.0,1.0,a NaN value is rejected before monitoring and is never imputed

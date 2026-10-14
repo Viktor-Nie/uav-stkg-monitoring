@@ -1,0 +1,26 @@
+{
+  "action": "full",
+  "status": "timeout_60s",
+  "exit_code": 1,
+  "elapsed_seconds": 60.89789160000146,
+  "observed_process_tree_working_set_peak_bytes": 242507776,
+  "guarded_pids": [
+    9752,
+    24868,
+    31484
+  ],
+  "termination": {
+    "native_taskkill_exit": 0,
+    "target_root_pid": 9752,
+    "observed_target_descendants": [
+      9752,
+      24868,
+      31484
+    ],
+    "additional_exact_descendant_termination": [
+      24868,
+      9752
+    ]
+  },
+  "scope": "Sum of sampled resident working sets across this child and actual descendants; not unique physical memory and not Python-allocation peak"
+}

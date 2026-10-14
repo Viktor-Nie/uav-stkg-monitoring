@@ -1,0 +1,18 @@
+{
+  "schema": "extension_read_only_validation_v1",
+  "protocol_sha256": "c4983ead4bc4169a081de2d876c980acfd7970b2d7acd935bff485849fd00bd3",
+  "A_648_unique_full_factor_cells": true,
+  "A_1320_case_channel_records": true,
+  "A_all_prefix_discrepancies_retained": true,
+  "A_table_full_signatures_reconcile": true,
+  "B_all_9_cells_retained": true,
+  "B_medians_exactly_recomputed_from_5_iterations": true,
+  "frozen_inputs_and_pinned_sources_byte_unchanged": true,
+  "old_graph_verification_bytes_match_historical_manifest": true,
+  "preflight_identical_write_recorded": "preflight_write_incident.json",
+  "reference_is_authored_computational_implementation_not_human_gold": true,
+  "new_training_or_model_calls_or_flight_scoring": false,
+  "guard_amendment_sha256": "2f19420560ec471825fef53098badeda1b013efac0c3745799aab6767efb508b",
+  "initial_launcher_working_set_peaks_invalidated": true,
+  "B05_original_memory_pass_interruption_retained": true
+}

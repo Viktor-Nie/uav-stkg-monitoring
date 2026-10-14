@@ -1,0 +1,12 @@
+case_class,all_cases,training_cases,training_windows
+accelerometer,126,90,6931
+barometer,126,90,6861
+gps,126,90,6957
+gyroscope,126,90,6960
+load_lose,291,207,16053
+low_voltage,36,24,1997
+magnetometer,126,90,6965
+motor,921,649,55294
+normal,240,168,8296
+propeller,435,307,22379
+sensor_noise,60,36,2815

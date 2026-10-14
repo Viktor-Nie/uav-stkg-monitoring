@@ -1,0 +1,75 @@
+[
+  {
+    "source_id": "audit_relational_parity.py",
+    "original_sha256": "b36fbb06d85a43033a87e7178efac5c0daf50702097fa168ba2fa16cba788664",
+    "release_file": "research/historical_audits/relational_verifier.py",
+    "selected_original_definitions": [
+      "CONTEXT_FIELDS",
+      "REQUIRED_ROLES",
+      "project_tables",
+      "validate_relational"
+    ],
+    "adaptation": "Only selected complete definitions and portable imports; scientific predicate bodies unchanged."
+  },
+  {
+    "source_id": "audit_source_bindings.py",
+    "original_sha256": "e92cc12d6e6204812cbb870e96324cb9ec9864ed70abbd81c6f05c022aaa5aa3",
+    "release_file": "research/historical_audits/source_binding_verifier.py",
+    "selected_original_definitions": [
+      "DECLARED_SOURCE_FIELDS",
+      "REQUIRED_FIELDS",
+      "RUNTIME_REF",
+      "SEMANTIC_REF",
+      "THRESHOLD_REF",
+      "generator_source_declarations",
+      "input_label",
+      "read_csv",
+      "run",
+      "same_number",
+      "sha256",
+      "unique_index"
+    ],
+    "adaptation": "Selected complete definitions; only filesystem constants localized, logical source pointers and predicates unchanged."
+  },
+  {
+    "source_id": "specification/results/research_monitor_thresholds.csv",
+    "release_file": "research/historical_audits/source_inputs/specification/results/research_monitor_thresholds.csv",
+    "sha256": "8661624492ac29bc7f1ddcd86fe13165eaed488b5e745fac5e320c5d7216380f",
+    "usage": "Frozen evidence read statically by the source-binding audit; no training or old build entry is executed."
+  },
+  {
+    "source_id": "specification/v2/data/monitor_runtime_parameters_v2.csv",
+    "release_file": "research/historical_audits/source_inputs/specification/v2/data/monitor_runtime_parameters_v2.csv",
+    "sha256": "0ebb4d75ef8cfdd1c39cd924547ea5a830ab0f06bdc027abc2b8ee8954f28ded",
+    "usage": "Frozen evidence read statically by the source-binding audit; no training or old build entry is executed."
+  },
+  {
+    "source_id": "specification/v2/data/signal_context_v2.csv",
+    "release_file": "research/historical_audits/source_inputs/specification/v2/data/signal_context_v2.csv",
+    "sha256": "b7992466499a06012a67e2725977d0af0d0231d28ff136758d5beb5b4a706c75",
+    "usage": "Frozen evidence read statically by the source-binding audit; no training or old build entry is executed."
+  },
+  {
+    "source_id": "specification/v2/build_traceability_graph.py",
+    "release_file": "research/historical_audits/source_inputs/specification/v2/build_traceability_graph.py",
+    "sha256": "8b4cfe677a7b334a54e1e5932a4f75e0b21fc38410dadc5cc13c2ed2b271ad56",
+    "usage": "Frozen evidence read statically by the source-binding audit; no training or old build entry is executed."
+  },
+  {
+    "source_id": "specification/run_all.py",
+    "release_file": "research/historical_audits/source_inputs/specification/run_all.py",
+    "sha256": "a6c39239dc2d2d2def786caab4ff9500a7d6dc4810e50bbf993bf199673126a0",
+    "usage": "Frozen evidence read statically by the source-binding audit; no training or old build entry is executed."
+  },
+  {
+    "source_id": "docs/重构工作台/01_采样数据STL语义与监测契约.md",
+    "release_file": "research/historical_audits/source_inputs/docs/重构工作台/01_采样数据STL语义与监测契约.md",
+    "sha256": "dd392748209e5cf6356629a38fc4fd277040801f2333a4e67d63694f09478d99",
+    "usage": "Frozen evidence read statically by the source-binding audit; no training or old build entry is executed."
+  },
+  {
+    "source_id": "results/v6_relational_parity_details.csv",
+    "release_file": "research/historical_audits/expected_relational_parity_details.csv",
+    "sha256": "9e45c6162387c1638d5f8e7a239c012f01b98ec927ff3ffaf245f58aa5ff38b7"
+  }
+]

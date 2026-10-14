@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-14T05:48:51.752857+00:00",
+  "status": "passed",
+  "smoke": false,
+  "background_samples": 248,
+  "process_memory": {
+    "working_set_bytes": 122884096,
+    "process_peak_working_set_bytes": 162758656
+  }
+}

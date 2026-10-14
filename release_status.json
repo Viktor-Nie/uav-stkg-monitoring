@@ -1,8 +1,8 @@
 {
-  "release_status": "versioned_research_artifacts",
-  "annotation_status": "Frozen submitted tables; independent human workflow is not authenticated by file hashes.",
+  "release_status": "research_artifact_with_provisional_reference",
+  "annotation_status": "Author-reported independent historical A/B and separate C; revised nineteen-label review pending.",
   "llm_status": "Historical predictions and new controlled runs are separate. Model identity, prompt, schema and structured outputs are retained; no claim of AI-free research is made.",
-  "upstream_data": "Original flight archives and full third-party document snapshots are obtained from their original sources, not redistributed in this release.",
+  "upstream_data": "Three unchanged complete IDF_DS v1.0 CSV members are supplied under CC BY 4.0 with attribution. Full archives and other third-party snapshots remain upstream.",
   "default_execution": "Offline validation and rescoring from frozen inputs; no model call, training or download.",
   "source_file_copies": [
     {
@@ -54,9 +54,9 @@
       "sha256": "c4ecc6b8f50fcae8afa702c93360d25c146680fb7d52c1c711b5e3cc9cd1a463"
     }
   ],
-  "default_reproduction": "offline frozen graph + English scoring + language ablation/plots + constructed monitor suites + graph extension",
-  "public_url": "https://github.com/Viktor-Nie/uav-stkg-monitoring",
-  "publication_status": "research_artifact_version_v33",
+  "default_reproduction": "Offline frozen primary checks, bounded semantics, conditional statistics, complete timing-record verification and verified IDF replay; full HIL/four-source raw reconstruction is an explicit optional path.",
+  "public_url": "https://github.com/Viktor-Nie/uav-stkg-monitoring/tree/v34",
+  "publication_status": "fixed_tag_target_v34",
   "license_status": "not_assigned",
   "v33_reviewed_reference": {
     "items": 19,
@@ -64,6 +64,8 @@
     "out_of_scope": 14,
     "independent_human_authentication": "not established"
   },
-  "original_flight_data_redistributed": false,
-  "version": "v33"
+  "original_flight_data_redistributed": "Only three complete verified IDF members under CC BY 4.0 with attribution; no full archives.",
+  "version": "v34",
+  "reference_status": "Provisional computational source review; no new independently adjudicated reference claimed.",
+  "human_revision_review": "pending; no new independent human gold reference is claimed"
 }

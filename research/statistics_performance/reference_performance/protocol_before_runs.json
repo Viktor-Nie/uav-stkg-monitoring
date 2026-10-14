@@ -1,0 +1,23 @@
+{
+  "frozen_utc": "2026-10-14T05:44:51.072935+00:00",
+  "configuration_sha256": "5a81e0dc1949eeeaeff128edbbc0c9acf28a93987494bb4607dfba5d948517d5",
+  "runner_sha256": "2b9dfa4521dbb2f08bea402c63c103faf0ed4940c21139837065b50966a1849c",
+  "warmups": 2,
+  "timed": 5,
+  "allocation_pass": true,
+  "smoke": false,
+  "per_cell_budget_seconds": 7200,
+  "worker_working_set_limit_bytes": 2147483648,
+  "timing_scope": "CSV parsing + current frozen production graph replay of 24 formulas + summary CSV serialization",
+  "exclusions": [
+    "full event-ledger serialization",
+    "telemetry",
+    "actuation",
+    "allocation tracing"
+  ],
+  "order": "ascending samples then quiescent/sparse/dense; no best-run selection",
+  "old_results": "Original 60-second-budget partial results retained separately; no old timings are substituted",
+  "entry_version": "v34 precision-aware production graph replay; old v2 entry timings are not a speedup comparator",
+  "memory": "separate tracemalloc Python allocation peak; process working set recorded separately",
+  "background_policy": "root-coordinated CPU window; system CPU fraction sampled every 0.5s; ambient OS/app activity is not claimed absent"
+}

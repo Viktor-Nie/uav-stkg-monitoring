@@ -1,0 +1,28 @@
+{
+  "schema": "uav_stl_rtamt_differential_evidence_v1",
+  "status": "passed",
+  "comparator": "RTAMT discrete-time STL evaluator",
+  "rtamt_version": "0.3.5",
+  "implementation_under_test": "specification/v2/sampled_monitor.py",
+  "test_source": "specification/v2/test_differential_rtamt.py",
+  "shared_subset": {
+    "sampling_period_seconds": 0.05,
+    "relative_jitter_tolerance": 0.0,
+    "maximum_gap_seconds": 0.05,
+    "timestamp_epsilon_seconds": 1e-09,
+    "value_tolerance": 0.0,
+    "dwell_seconds": 0.0,
+    "signal_count": 1,
+    "uniform_samples_only": true
+  },
+  "cases": {
+    "fixed_invariant_compared": 2,
+    "fixed_bounded_response_compared": 2,
+    "random_seed": 20260809,
+    "random_generated": 80,
+    "random_decided_compared": 60,
+    "random_inconclusive_skipped": 20,
+    "mismatch_count": 0
+  },
+  "interpretation": "Agreement is limited to the declared shared discrete-time subset; it is not a general-STL or continuous-time correctness proof."
+}

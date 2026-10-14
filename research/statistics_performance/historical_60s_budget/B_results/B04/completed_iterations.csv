@@ -1,0 +1,8 @@
+﻿phase,iteration,parse_ms,monitor_ms,summary_serialization_ms,total_ms,summary_output_bytes,trace_samples,formula_count,trigger_count,recovery_count,expired_count,pending_count,invariant_violation_count
+warmup,1,10.1476,2240.877,1.501,2252.5256,2624,10000,24,0,0,0,0,0
+warmup,2,7.7948,3644.1759,0.4649,3652.4356,2624,10000,24,0,0,0,0,0
+measured,1,7.4868,3063.6412,0.4543,3071.5823,2624,10000,24,0,0,0,0,0
+measured,2,8.5108,2777.592,0.7456,2786.8484,2624,10000,24,0,0,0,0,0
+measured,3,8.4032,2971.1605,1.5504,2981.1141,2624,10000,24,0,0,0,0,0
+measured,4,13.2565,2897.6312,0.4823,2911.37,2624,10000,24,0,0,0,0,0
+measured,5,9.1021,2810.9043,0.738,2820.7444,2624,10000,24,0,0,0,0,0

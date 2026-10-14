@@ -1,0 +1,120 @@
+[
+  {
+    "source": "specification/v2/adapt_external_flight_review_ulog.py",
+    "source_sha256": "a171945c37f867398b9ce95266d7269866bf0864f79f55e1c366a042dc433519",
+    "functions": [
+      "to_abs_roll_pitch"
+    ],
+    "destination": "research/real_replay/flight_attitude.py",
+    "destination_sha256": "968169f6f81db03d8fe722ecf744f1328239186c1fdcd0ee8ac29cf4b6c7673a",
+    "changes": []
+  },
+  {
+    "source": "specification/v2/adapt_external_flight_review_event_time.py",
+    "source_sha256": "f6fd04f8d04284c325f82ff0fdfd74288c3ada4d1e556f0476ce478686aed356",
+    "functions": [
+      "_topic",
+      "_finite_timestamp",
+      "extract_observations"
+    ],
+    "destination": "research/real_replay/flight_review.py",
+    "destination_sha256": "2c8db53f957c0deaa28eb27c001fec30409e44719fd9a483430899fe22281b3d",
+    "changes": [
+      [
+        "path: Path = INPUT",
+        "path: Path"
+      ]
+    ]
+  },
+  {
+    "source": "specification/v2/replay_idf_ds_event_time.py",
+    "source_sha256": "c87c3edefb700a4506cf8e2834ec42d87df93dd55bb6b4972ae67d22ecf438c0",
+    "functions": [
+      "_sha256",
+      "_topic",
+      "_attitude_values",
+      "extract_observations"
+    ],
+    "destination": "research/real_replay/idf_ds.py",
+    "destination_sha256": "dcbc03a262cf5200b357ed467c1c473ae9afd5c249a30be0e178219e23938675",
+    "changes": [
+      [
+        "input_dir: Path = INPUT_DIR",
+        "input_dir: Path"
+      ],
+      [
+        "str((input_dir / \"source_acquisition_manifest.json\").relative_to(ROOT)).replace(\"\\\\\", \"/\")",
+        "\"source_acquisition_manifest.json\""
+      ]
+    ]
+  },
+  {
+    "source": "specification/v2/replay_insane_px4_imu_event_time.py",
+    "source_sha256": "7e08477ac2b981c909cf93163bfc22412092125f2e226529ae00c4f7ca83a18e",
+    "functions": [
+      "_sha256",
+      "_read_px4_imu",
+      "_calibration_audit",
+      "extract_observations"
+    ],
+    "destination": "research/real_replay/insane.py",
+    "destination_sha256": "11ab75f1bffda6d9ee3a8dbde899c215d74ce6798ea5a89f3f14b7114cef2fde",
+    "changes": [
+      [
+        "segment_path: Path = SEGMENT",
+        "segment_path: Path"
+      ],
+      [
+        "path: Path = CALIBRATION_ARCHIVE",
+        "path: Path"
+      ],
+      [
+        "def extract_observations()",
+        "def extract_observations(input_dir: Path)"
+      ],
+      [
+        "frame = _read_px4_imu()",
+        "segment = input_dir / \"indoor_1_px4_imu_segment.bin\"\n    frame = _read_px4_imu(segment)"
+      ],
+      [
+        "str(path.relative_to(ROOT)).replace(\"\\\\\", \"/\")",
+        "path.name"
+      ],
+      [
+        "str(SEGMENT.relative_to(ROOT)).replace(\"\\\\\", \"/\")",
+        "segment.name"
+      ],
+      [
+        "_sha256(SEGMENT)",
+        "_sha256(segment)"
+      ],
+      [
+        "_calibration_audit()",
+        "_calibration_audit(input_dir / \"insane_sensor_calib_preprocessed.zip\")"
+      ]
+    ]
+  },
+  {
+    "source": "analysis/rflymad_hil_complete_state_index.py",
+    "source_sha256": "a24b372574ddb0b1fd8dbace11fe268ca8bc5f578846d859d8f71e8c3e01665d",
+    "functions": [
+      "number_list",
+      "read_test_info",
+      "infer_status",
+      "map_official_class"
+    ],
+    "destination": "research/threshold_reproduction/case_metadata.py",
+    "destination_sha256": "db72b1dda49e8a7e28489ac2eaaf0e0eb51f2803618a22eaf0fbfbbe1c326f1c",
+    "changes": []
+  },
+  {
+    "source": "analysis/rflymad_hil_complete_split_manifest.py",
+    "source_sha256": "33b9e403682907e32c3a837e676461a224da651b246efb8b214705b5e1aee700",
+    "functions": [
+      "allocate_counts"
+    ],
+    "destination": "research/threshold_reproduction/split_allocation.py",
+    "destination_sha256": "2be10a146a11f463e278851b6a42bd0effec74e75ee492116bedc341d5cc88f8",
+    "changes": []
+  }
+]

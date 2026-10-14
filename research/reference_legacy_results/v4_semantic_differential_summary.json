@@ -1,0 +1,25 @@
+{
+  "schema": "uav_stl_kbs_v4_semantic_differential_v1",
+  "status": "passed",
+  "seed": 20260914,
+  "total_traces": 600,
+  "traces_by_profile": {
+    "strict_fixed_rate": 300,
+    "native_event_time": 300
+  },
+  "all_parameter_domain_valid": true,
+  "parameter_domain": "d > 0 and 0 <= tau < d",
+  "all_input_contracts_accepted": true,
+  "positive_dwell_traces": 436,
+  "invariant_mismatches": 0,
+  "response_mismatches": 0,
+  "response_verdict_counts": {
+    "violated": 394,
+    "satisfied": 141,
+    "inconclusive_end_of_trace": 65
+  },
+  "production_evaluator": "specification/v2/sampled_monitor.py",
+  "independent_reference_evaluator": "specification/v2/independent_reference_semantics.py",
+  "row_level_evidence": "results/v4_semantic_differential_traces.csv",
+  "interpretation_boundary": "Agreement for the two declared finite-observation templates only; positive-dwell rows test the documented conservative local policy, not RTAMT equivalence or general STL semantics."
+}

@@ -1,80 +1,118 @@
 # Traceable UAV specification and offline monitoring
 
-Research artifacts for **Traceable UAV requirement formalization and offline monitoring with a knowledge graph**.
+Research artifacts for *Traceable UAV requirement formalization and offline
+monitoring with a knowledge graph*. This v34 research version adds the finite-policy
+proof, conditional language statistics, complete repeated workload records,
+raw-source adapters, and a verified IDF acquisition correction. Renewed human
+review of the nineteen source-corrected labels remains pending. Reproducing their
+provisional scores does not turn them into a new human-adjudicated gold standard.
 
-The workflow separates a typed language candidate, an admissible configuration and a verdict on recorded observations. Numerical values are resolved from a frozen catalog through explicit parameter roles. The monitor supports scalar upper-bound invariants and bounded recovery under declared finite-observation contracts.
+## Default offline reproduction
 
-## Reproduce the frozen results
-
-Use Python 3.11 or later in a fresh environment:
+Use Python 3.11 or later with the pinned scientific packages:
 
 ```sh
 python -m pip install -r requirements.txt
-python reproduce.py --output outputs/reproduction
+python reproduce.py --output outputs/reproduction_001
 ```
 
-This command does not call a language model, train a model or download data. It validates the supplied graph, re-executes 2,832 decisions on 354 targeted graph variants, checks them against the retained decisions, recomputes the five methods' scope metrics on 215 records and eight source families, rescores the 20 retained controlled language runs and historical methods, redraws three ablation figures, executes the 102/648/600 constructed monitor suites, and checks the new graph constraints. Use a fresh output directory for each run. F1 uses the fixed three-label set, with absent classes contributing zero; family scores receive equal weight.
+Use a new output directory. This path makes no model call, performs no training,
+and downloads nothing. It reconstructs the 2,832 decisions on 354 graph variants;
+recomputes English scores on 215 strings/eight source families; rescores the
+retained nineteen-item historical outputs and twenty controlled prompt contexts;
+redraws ablation figures; executes the 102/648/600 constructed monitor suites;
+checks the graph-constraint extensions and numeric conflicts; reruns relational
+parity and the 84-binding source audit; checks 24 finite-screen records/six
+refusal probes; runs the exact finite semantics checks and counterexamples;
+recalculates historical annotation agreement and conditional language intervals;
+verifies all nine complete workload records; checks HIL source composition; and
+independently replays the three supplied verified IDF native streams plus speed.
 
-The historical 19-item language results, source-reviewed reference and new controlled prompt experiments remain separate. Repeated model runs do not increase the number of independent requirements. A passed structural gate does not prove that a candidate correctly interprets its text.
-
-## Artifacts and provenance
-
-- `data/graph/`: the frozen 158-node, 350-relationship graph and 84 role bindings.
-- `data/structural_ablation/`: targeted mutations, component decisions and coarse-adjacency ambiguity counts.
-- `data/language/`: source pointers, retained predictions and fixed-denominator scores.
-- `src/uav_stkg/`: executable configuration checks and monitoring tools.
-
-Source pointers in the graph are logical identifiers retained from the frozen experiment. The release's `data/provenance/source_identifier_index.csv` maps these identifiers to the supplied artifact or upstream acquisition location. Submitted annotation tables are evidence files; their hashes do not by themselves authenticate independent human labeling.
-
-The role-binding test deliberately weakens several kinds of information at once. It is an ambiguity stress test, rather than a single-factor removal of binding nodes. Targeted configuration changes and constructed traces are not additional flight samples.
-
-## Neo4j visualization
-
-The same frozen export can be loaded into an isolated local Neo4j database to inspect its actual nodes, relationships and properties. The canonical N06 neighborhood contains 15 nodes and 20 relationships. Neo4j provides query inspection and visualization; the offline monitor continues to use the verified graph export. Database deployment latency and onboard real-time execution are outside this evaluation.
-
-## External data and limitations
-
-Original flight archives and full third-party document snapshots are obtained from their cited upstream sources. They are not redistributed here. Data references, versions, hashes and acquisition instructions identify the inputs required for optional flight replay. Research reference thresholds have not been physically calibrated for deployment. Recorded observations cannot exclude excursions between samples.
-
-Language-model identity, prompts, output schema and structured experimental outputs are part of the research record. They describe the actual method and are retained for reproducibility. Unrelated local development materials and authentication information are excluded.
-
-The fixed research artifact version is `v33` in [Viktor-Nie/uav-stkg-monitoring](https://github.com/Viktor-Nie/uav-stkg-monitoring/tree/v33). A project-wide public code license has not been assigned.
-
-## Individual offline checks
+The default workload step recomputes medians/quartiles from 45 actual timings,
+18 warm-ups and nine allocation passes. It does not repeat the timing experiment.
+The HIL default verifies the previously executed raw-reconstruction receipt and
+composition, rather than claiming to recompute quantiles without telemetry.
+The complete raw-HIL and four-source commands below provide that separate path.
 
 ```sh
-python reproduce.py --core-only --output outputs/core_run_001
-python reproduce_ablation.py --output outputs/ablation_run_001
-python reproduce_monitor.py --output outputs/monitor_run_001
-python reproduce_graph_extension.py --output outputs/graph_run_001
+python reproduce.py --core-only --output outputs/core_001
+python reproduce_historical_audits.py --output outputs/source_parity_001
+python reproduce_semantics.py --output outputs/semantics_001
+python reproduce_idf_verified.py --output outputs/idf_001
+python research/statistics_performance/performance.py --output outputs/new_timings_001
 ```
 
-The ablation driver verifies eight retained CSV results exactly and draws the
-structural-module, equal-vocabulary language, and binding-ambiguity figures.
-The numeric candidate entry in `research/ablation/validate_candidate.py` checks
-the original text before returning catalog bindings; conflicts stop before the
-structural gate. Chinese/English number words outside its limited grammar are
-refused rather than silently replaced. The historical generation runner remains
-archived; this new entry does not overwrite old experiment decisions.
+The last command is explicitly opt-in and runs the full nine-cell workload;
+desktop batch cost is not onboard latency. Six original complete cells and three
+later complete cells form the retained run, with both clock periods and ambient
+load disclosed. Original 60-second partial results remain separately identified.
 
-The formal monitor suite includes 102 cases/553 prefixes/24 transformations,
-648 cases/16,134 prefixes/12 separate contract controls, and the 600-trace
-semantic comparison (436 positive-dwell configurations). These are constructed
-tests, not additional flight samples. The default package excludes the four
-source-specific replay groups. Their acquisition pointers and frozen
-derived-input hashes are in `data/monitor/optional_real_replay_sources.json`;
-the release does not promise that downloading a current upstream file will
-recreate an old derived CSV without the versioned adapter and profile.
+## Optional raw-source reproduction
 
-`data/provenance/upstream_document_sources.json` records source snapshot hashes,
-versions/access dates, and upstream links. Historical hashes identify the exact
-retained input, rather than guaranteeing that a changing website still serves
-those bytes. Short curated requirement strings are supplied; full third-party
-archives/documents remain upstream. Annotation-table independence is unverified.
+Install `requirements-replay.txt` for the existing source-specific adapter
+dependencies. `research/real_replay/SOURCE_INPUTS.md` specifies exact archive
+versions, member identities, hashes, upstream links and preparation commands.
+The raw entry points import only this package and never import an external
+historical workspace as executable code.
 
-The source-reviewed 19-item reference contains five abstract height descriptors
-and fourteen unsupported items. Correct scope/tuple selection is distinct from
-physical frame alignment; none of these five is certified as an executable AGL,
-relative-height, or closest-surface monitor binding. Removing prompt skeletons
-loses all positive gate coverage, and all 24 legal semantic-error challenges
-pass the structural gate. These limitations are part of the reported results.
+```sh
+python research/threshold_reproduction/reproduce_thresholds.py --raw-state-root EXTERNAL_HIL_ROOT --reference-split research/threshold_reproduction/frozen_case_split.csv --workers 1 --output outputs/hil_raw_001
+python research/real_replay/reproduce_real_replays.py --input-root EXTERNAL_MATERIALS_ROOT --output outputs/raw_replay_001
+```
+
+The actual full HIL reconstruction covers 2,613 cases/201,026 endpoint windows,
+including 141,508 training windows. Seven consumed columns, the split and the
+executed quantile CSV match exactly. Normal cases contribute 8,296 training
+windows; fault-type missions contribute 133,212, including pre-injection periods.
+These are mixed research reference quantiles, not certified healthy safety limits.
+
+The four replay groups retain 68 formula--trace evaluations and 28,210 event
+rows. RflyMAD has three correlated logs and nine distinct configurations per
+log; its 20-Hz held-grid adapter is separate from the native single-signal
+profiles. No event count is an independent flight or labeled fault sample count.
+
+Re-acquiring IDF_DS v1.0 uncovered two truncated historical CSV tails. The
+complete official inputs add ten native observations (25,773 to 25,783), changing
+no configuration verdict or event row. Three verified complete members are
+supplied under the record's CC BY 4.0 license, with author attribution in
+`data/external/idf_ds_lap120_verified_v34/ATTRIBUTION.md`. `historical_v33` is a
+separate explicit profile that reconstructs the old byte prefixes for regression.
+Other upstream archives and full third-party document snapshots stay upstream.
+
+## Interpretation boundaries
+
+The graph contains 158 nodes, 350 relationships and 84 parameter bindings.
+Neo4j provides actual materialization and native display (N06: 15 nodes/20
+relationships); the CSV runtime remains. Source pointers are resolved through
+`data/provenance/source_identifier_index.csv` and source-specific manifests.
+
+The author reports that distinct classmates A and B independently annotated the
+historical tables and a third classmate C adjudicated differences. Anonymous
+decisions and the reported process are in `data/annotation`. File hashes do not
+independently authenticate that process. The new nineteen-label review is pending;
+original labels, computational revisions and retained predictions remain separate.
+
+Conditional resampling describes empirical source-family/context reweighting;
+it is not population inference. Repeats do not increase the number of unique
+requirements. All 24 legal semantic-error challenges pass the structural gate,
+so compatibility does not prove correct interpretation. The binding-adjacency
+comparison weakens multiple safeguards and remains an ambiguity stress test.
+
+The FIFO proof concerns the declared completed-segment reporting policy under
+exact arithmetic or comparison fidelity. Positive dwell is not a general sampled
+STL expansion. Terminal equality and two floating-point counterexamples are
+explicitly retained. Recorded data do not establish continuous physical safety,
+height-frame compatibility, threshold calibration or airborne execution.
+
+LLM model settings, necessary prompts, schemas and structured outputs are part
+of the actual research method and remain supplied. Unrelated writing-process
+materials, local development history, local machine paths and credentials are
+excluded. A project-wide code license has not been assigned; the separately
+identified IDF source files retain their CC BY 4.0 terms.
+
+The prior sealed research release remains [v33](https://github.com/Viktor-Nie/uav-stkg-monitoring/tree/v33).
+The fixed research version is [v34](https://github.com/Viktor-Nie/uav-stkg-monitoring/tree/v34).
+`data/provenance/manuscript_artifact_map.csv` maps manuscript identifiers to
+supplied artifacts, current reproduction commands, or explicitly private historical
+process records. This research version preserves the pending nineteen-label human
+review; it is not a claim that all manuscript acceptance conditions are complete.

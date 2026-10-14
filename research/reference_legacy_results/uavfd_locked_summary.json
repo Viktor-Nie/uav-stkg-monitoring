@@ -1,0 +1,83 @@
+{
+  "status": "completed_once_frozen_external_test_with_corrected_boolean_aggregation",
+  "finished_utc": "2026-10-07T06:49:08.316057+00:00",
+  "protocol_sha256": "7af26161f9edc767158ce40babd44e04a0c68d247b9873ad02f4733d7c1ffd4c",
+  "feature_sha256": "2c41c2c6b578114ad288e44259daedbaaf3c99e9d330332f6db2b6319fcdc835",
+  "predictions_sha256": "ece80be503173d7c1b898452867b7e3e2811e8b89f91fa39c7953924bd01afef",
+  "results": [
+    {
+      "model": "state_control_mlp108_seed20261006",
+      "cutoff": 0.5569426417350769,
+      "source_records": 18,
+      "onboard_flight_state_intervals": 19,
+      "windows": 1376,
+      "healthy_source_records": 6,
+      "damaged_source_records": 12,
+      "pooled_tn_fp_fn_tp": [
+        356,
+        43,
+        778,
+        199
+      ],
+      "source_record_weighted_tn_fp_fn_tp": [
+        5.433593246829084,
+        0.5664067531709159,
+        9.70505659411122,
+        2.294943405888783
+      ],
+      "source_record_weighted_false_positive_rate": 0.094401125528486,
+      "source_record_weighted_false_negative_rate": 0.8087547161759348,
+      "source_record_weighted_balanced_accuracy": 0.5484220791477896,
+      "pooled_false_positive_rate": 0.10776942355889724,
+      "pooled_false_negative_rate": 0.7963152507676561
+    },
+    {
+      "model": "round23_fixed84_reference",
+      "cutoff": 0.8184305429458618,
+      "source_records": 18,
+      "onboard_flight_state_intervals": 19,
+      "windows": 1376,
+      "healthy_source_records": 6,
+      "damaged_source_records": 12,
+      "pooled_tn_fp_fn_tp": [
+        396,
+        3,
+        974,
+        3
+      ],
+      "source_record_weighted_tn_fp_fn_tp": [
+        5.962310781587891,
+        0.03768921841210998,
+        11.970323968249375,
+        0.0296760317506245
+      ],
+      "source_record_weighted_false_positive_rate": 0.006281536402018329,
+      "source_record_weighted_false_negative_rate": 0.9975269973541147,
+      "source_record_weighted_balanced_accuracy": 0.49809573312193356,
+      "pooled_false_positive_rate": 0.007518796992481203,
+      "pooled_false_negative_rate": 0.9969293756397134
+    }
+  ],
+  "training_or_threshold_tuning": false,
+  "all_exclusions_recorded": true,
+  "same_domain_command_final_confirmation": false,
+  "limits": [
+    "Cross-platform, controller, estimator and installed-damage domain; normalized requests are not calibrated equal physical torque.",
+    "Author condition tags apply per flight, not to a fault-command onset; no diagnostic latency or physical safety conclusion.",
+    "Only admitted closed onboard-flight-state windows are tested; exclusions and their denominator remain visible.",
+    "Do not tune these original models on the newly inspected test or reclassify development scores as external results."
+  ],
+  "aggregation_corrected_utc": "2026-10-07T06:56:53.104188+00:00",
+  "aggregation_correction": "protocol_amendment_boolean_aggregation.json",
+  "preserved_initial_summary": "analysis/results/42_uav_fd_external_validation_20261007/context_before_boolean_aggregation_fix/evaluation_summary.json",
+  "weighting": "Each original author file has total weight1; NO_FAULT2 contains two closed flying intervals but is not counted as two independent experimental files.",
+  "weighted_counts_independently_crosschecked_against_per_record_rates": true,
+  "inference_repeated_for_fix": false,
+  "raw_outputs_unchanged": {
+    "analysis/results/42_uav_fd_external_validation_20261007/predictions.csv": "ece80be503173d7c1b898452867b7e3e2811e8b89f91fa39c7953924bd01afef",
+    "analysis/results/42_uav_fd_external_validation_20261007/per_flight_metrics.csv": "8184186b20ab7c008949a93abb561907ac555659249c2f63f21c9425a2773e8b",
+    "analysis/results/42_uav_fd_external_validation_20261007/window_features.csv": "2c41c2c6b578114ad288e44259daedbaaf3c99e9d330332f6db2b6319fcdc835",
+    "analysis/results/42_uav_fd_external_validation_20261007/protocol_before_predictions.json": "7af26161f9edc767158ce40babd44e04a0c68d247b9873ad02f4733d7c1ffd4c",
+    "analysis/results/42_uav_fd_external_validation_20261007/feature_admission.json": "b226364857571289b7a2fb7b379f40cf184092f9de64672d6069ffc35d2d6586"
+  }
+}

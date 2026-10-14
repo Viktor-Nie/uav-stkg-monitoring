@@ -1,0 +1,194 @@
+{
+  "started_utc": "2026-10-14T07:05:46.833677+00:00",
+  "reason": "Previous host interruption after six complete cells; no Python worker remained. B07 had only a zero-byte iterations file and no completed timing. No completed repetitions are selected or discarded.",
+  "reused_complete_cells": 6,
+  "new_full_cells": [
+    "B07",
+    "B08",
+    "B09"
+  ],
+  "same_frozen_runner_and_configuration": true,
+  "different_clock_periods": "Original and continuation timestamps and load records retained; offline timing comparison is conditional on this desktop environment.",
+  "reused_file_sha256": [
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B01/allocation.json",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B01/allocation.json",
+      "sha256": "bc6d806483d5efa8f3d76e822c27e6e1fc312aa4479efac30ced423655ba3f98"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B01/background_load.csv",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B01/background_load.csv",
+      "sha256": "73d1696c37ec3a78551f38a57996e80b18b4274aabb29f012ed6f2cc4b05dac5"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B01/completed.json",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B01/completed.json",
+      "sha256": "a993bef99a408e3395446886df57dd0a7fa5b19432916d93abb16f3c144fe875"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B01/first_summary.csv",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B01/first_summary.csv",
+      "sha256": "9fd2c78bee315af01f552b73b85ce1212a35bebd029318566b2778c74c41a902"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B01/iterations.csv",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B01/iterations.csv",
+      "sha256": "6ded43444ac4d73dac44ca34fb7b5316e770931a8b1d40ca1b21afc2cb570379"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B01/started.json",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B01/started.json",
+      "sha256": "a308d9e1d203444999489606939b7ca6fc562dbd771151fce64607b02524b590"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B02/allocation.json",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B02/allocation.json",
+      "sha256": "8bb13a1881d73b8f84c225b705b5d8c0980de8d99b754375ac89590fc1129fef"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B02/background_load.csv",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B02/background_load.csv",
+      "sha256": "82c7fec7a50374d23465b613841406bd6dab1bd79bafa3fa93c29844f79a8f5b"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B02/completed.json",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B02/completed.json",
+      "sha256": "bc7798cce7e9e06d49d489ccc2fed8c1aaba38f4d0f461fabca0b2ce7cb75843"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B02/first_summary.csv",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B02/first_summary.csv",
+      "sha256": "2b30f0f7cc3dee1cb51c3c94cb4c8086d4c0d6e7637c2a131a51c3377e19c2f2"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B02/iterations.csv",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B02/iterations.csv",
+      "sha256": "0a1fd0c87c1aeb1ea3e137484fe8430e21a8d0dcab036513f62b5b9993c2dc15"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B02/started.json",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B02/started.json",
+      "sha256": "c350faed2483312bce56e7b99e30fd71a9bf29306abb2c71b0ef6dcbfae89635"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B03/allocation.json",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B03/allocation.json",
+      "sha256": "a7bba7c558482065f043896b22d98ccfe6c2d3baf02567a884f799a6f743a415"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B03/background_load.csv",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B03/background_load.csv",
+      "sha256": "46479ef77778a4f07a3fba2e78d63f9d157a2dfc023b002be50b412f03a1e3a3"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B03/completed.json",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B03/completed.json",
+      "sha256": "fae54319ef8b0eb7a0d2cc5365eff6a702a6df94395d7429f36700f40292a174"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B03/first_summary.csv",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B03/first_summary.csv",
+      "sha256": "16f6fc07ff6f3815f7fee02dec542828d78405828b9f3202f86fa69329a66393"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B03/iterations.csv",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B03/iterations.csv",
+      "sha256": "2ef4569ea07651d6e6713e5fb1ce25a122f6f47a5c6df555687c947f460e2ebb"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B03/started.json",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B03/started.json",
+      "sha256": "26628904cb8114b0a6cd8d398f2c67c366031605b9cdd60e7bc2001fec9b6a41"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B04/allocation.json",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B04/allocation.json",
+      "sha256": "95654e4eb970d6c25798525fe5cd4c9d963a2b6a650cc5430c656831cd9675a1"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B04/background_load.csv",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B04/background_load.csv",
+      "sha256": "af595feac6d57a9808ef598f63f1c7740922506c8d562eba12647a4ba0da86a2"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B04/completed.json",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B04/completed.json",
+      "sha256": "67ea97e9ea68e8f038997aee330993cdeeb8bc9fe8aac5a4883944b980c11f45"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B04/first_summary.csv",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B04/first_summary.csv",
+      "sha256": "5140068d07fcb99be768d6ba17f835efa2670262a5deecee16670952ff65ef37"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B04/iterations.csv",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B04/iterations.csv",
+      "sha256": "19ca0e8813e019d050fe4ab2cbde9fa605d9e8ed504c0b1c72750abb1a601363"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B04/started.json",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B04/started.json",
+      "sha256": "8dc561d8ff6f5b97cbfa8bc94a4042caa3789329b6b9d8cafee6657935aa156d"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B05/allocation.json",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B05/allocation.json",
+      "sha256": "790be9d2bc75db7d9a2d5facb6261eb863910677dfd7a636e9787eb9e96bec4d"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B05/background_load.csv",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B05/background_load.csv",
+      "sha256": "626f76cde2a09ea840e20166f952c2bd1741dd4279a732d27e08196fdf129742"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B05/completed.json",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B05/completed.json",
+      "sha256": "94fbd729fd0703d79e7ef1de0cf2019f8c94396d212468ef7d6738072d623192"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B05/first_summary.csv",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B05/first_summary.csv",
+      "sha256": "8cca320cb053300a8fad4cc6bb3358e23e5185ab8ac472c4421ed09af487cf68"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B05/iterations.csv",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B05/iterations.csv",
+      "sha256": "662eb00b87a19b58a53bd523f07a81041400b93d0f1ec0aa21968b346c36be2a"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B05/started.json",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B05/started.json",
+      "sha256": "af4f77bef508fe549663226411dbb085eb6eed7a51cec010274bf6103ac01665"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B06/allocation.json",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B06/allocation.json",
+      "sha256": "5a808a43bb83fdb10c91e0a30efe222225c32bd3dc5f0f385d340bab5294758a"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B06/background_load.csv",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B06/background_load.csv",
+      "sha256": "a875307a68c80c5968465da2b2133091f1dc150e131b87bf9c8fd1f8a788f7ad"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B06/completed.json",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B06/completed.json",
+      "sha256": "c2bed45a32a9b6a4568ade0c215124e3d51467365be2f32ead3b890a49ef2034"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B06/first_summary.csv",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B06/first_summary.csv",
+      "sha256": "5eb489f29b4888e061b41b3a77b56b96034ef8f4f640c6907ce967e2d57af85a"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B06/iterations.csv",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B06/iterations.csv",
+      "sha256": "9a98ce43e9a729bc9ee8fc9b7e86ebc2ee7f49bcd270b3ae35a2d7eb3932c9aa"
+    },
+    {
+      "original": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_001/B06/started.json",
+      "retained": "analysis/results/96_kbs_full_checklist_20261014/statistics_performance/performance_complete_resumed_002/B06/started.json",
+      "sha256": "b815230139752e05be324565cd77c80d46312aa0eb0e95a79877f0992761b555"
+    }
+  ]
+}

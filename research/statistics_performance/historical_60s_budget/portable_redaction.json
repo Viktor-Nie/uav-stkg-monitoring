@@ -1,0 +1,21 @@
+{
+  "kind": "portable historical environment copy; not original bytes",
+  "redacted_fields": [
+    "executable"
+  ],
+  "reason": "remove the local Windows home/project path from the public research candidate",
+  "original_sha256": "bb8e4ed46dd3bbb2f30877f8f49c04954ba3c513e38d136e85587c1ff8596e6a",
+  "portable_sha256": "9cd7ffc9d984a1f2b6507bd6960f44206b3bc434da132fd81bd981092677f08b",
+  "preserved_fields": [
+    "python",
+    "platform",
+    "processor",
+    "logical_cpus",
+    "packages",
+    "device_role"
+  ],
+  "original_bytes_location": "retained in private v34 audit evidence and original experiment; not redistributed in this portable directory",
+  "amended_utc": "2026-10-14T04:08:23.963414+00:00",
+  "prior_configuration_sha256_used_by_interface_smoke": "c16bcdc1a3e1978d1837e468a02572d01e28af663c00e6fb3edb8577a2a4b4cc",
+  "no_performance_timings_replaced": true
+}

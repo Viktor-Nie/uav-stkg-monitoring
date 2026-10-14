@@ -1,0 +1,2 @@
+﻿method,held_out_source_family,item_count,scope_accuracy,scope_macro_f1,signal_accuracy_in_scope,template_accuracy_in_scope,parameter_role_set_exact_match_in_scope,formula_structure_exact_match,correct_rejection_rate,numeric_parameter_extraction
+posthoc_keyword_diagnostic,ALL,19,0.9473684210526315,0.9467787114845938,1.0,1.0,1.0,0.9473684210526315,0.9090909090909091,not_evaluated

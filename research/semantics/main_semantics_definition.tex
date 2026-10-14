@@ -1,0 +1,50 @@
+Here $T=t_n-t_0$ is the admitted observation horizon, and the outer $\mathbf{G}$ checks each admitted observation. Equation~\eqref{eq:response} states the nominal response pattern: recovery begins strictly after a trigger, and its dwell interval is to finish within $d$. The parameters satisfy $r\leq u$, $d>0$, $0\leq\tau<d$, and $\epsilon_y,\epsilon_t\geq0$, with all values finite. The timestamp tolerance $\epsilon_t$ belongs to the monitor's comparisons, rather than to an STL operator.
+
+Every cataloged response record uses $d=2$~s and $\tau=0$~s. Its nominal consequent is the pointwise STL formula $\mathbf{F}_{(0,2]}\mu_{\mathrm{rec}}$. The monitor's finite-observation reporting policy is defined separately below. For positive $\tau$, it requires an observed completed recovery segment; it is not the expansion of the nested STL operators in Equation~\eqref{eq:response}. Even for $\tau=0$, a positive $\epsilon_t$ changes the operational comparison boundary relative to the nominal interval, and terminal pending obligations use the explicit reporting convention below. The RTAMT comparison is restricted to its declared shared subset.
+
+The invariant evaluates the supplied observations as
+\begin{equation}
+\llbracket\varphi_{\mathrm{inv}}^{\epsilon_y}\rrbracket_{\zeta}
+=\bigwedge_{i=0}^{n}\bigl(y_i\leq b+\epsilon_y\bigr).
+\label{eq:invariant-expanded}
+\end{equation}
+For a trigger at index $i$, the completed-segment policy admits a recovery witness $(a,j)$ exactly when
+\begin{equation}
+W_i(a,j)\Longleftrightarrow
+\left[
+\begin{array}{l}
+i<a\leq j\leq n,\\
+t_j\leq t_i+d+\epsilon_t,\\
+t_j-t_a\geq\tau-\epsilon_t,\\
+\displaystyle\bigwedge_{k=a}^{j}(y_k\leq r+\epsilon_y)
+\end{array}
+\right].
+\label{eq:recovery-witness}
+\end{equation}
+Here $a$ and $j$ delimit retained observations in one uninterrupted recovery segment; every intervening retained observation must satisfy recovery. The witness need not use the maximal segment, although the algorithm stores its earliest start. No predicate is asserted between observations. The strict index condition $i<a$ prevents a trigger from discharging its own obligation. Its nominal deadline is $D_i=t_i+d$, while the operational boundary is $B_i=D_i+\epsilon_t$: recovery completion is admitted at equality, and expiry requires $t_j>B_i$. The dwell comparison uses $\tau-\epsilon_t$; in particular, $0<\tau\leq\epsilon_t$ permits a single later recovery observation. These explicit tolerances neither bound all floating-point errors nor establish a physical claim beyond $D_i$.
+
+Let $I_{\mathrm{trg}}=\{i\mid\mu_{\mathrm{trg}}(i)\}$ and define the disjoint terminal obligation sets
+\begin{equation}
+\begin{aligned}
+I_{\mathrm{rec}}&=\{i\in I_{\mathrm{trg}}\mid\exists a,j:W_i(a,j)\},\\
+I_{\mathrm{exp}}&=\{i\in I_{\mathrm{trg}}\setminus I_{\mathrm{rec}}\mid
+                         \exists j:t_j>B_i\},\\
+I_{\mathrm{pend}}&=I_{\mathrm{trg}}\setminus
+                         (I_{\mathrm{rec}}\cup I_{\mathrm{exp}}).
+\end{aligned}
+\label{eq:response-partition}
+\end{equation}
+The response reporting rule is
+\par\noindent\begin{minipage}{\linewidth}\small
+\begin{equation}
+\nu_{\mathrm{resp}}=
+\begin{cases}
+\mathrm{VIOLATED}, & I_{\mathrm{exp}}\neq\emptyset,\\
+\mathrm{INCONCLUSIVE}, & I_{\mathrm{exp}}=\emptyset\ \land\ I_{\mathrm{pend}}\neq\emptyset,\\
+\mathrm{SATISFIED}, & \text{otherwise}.
+\end{cases}
+\label{eq:response-verdict}
+\end{equation}
+\end{minipage}\par
+
+The invariant is \textsc{Violated} if Equation~\eqref{eq:invariant-expanded} is false and \textsc{Satisfied} otherwise. The semantic verdict set is $\mathbb{V}=\{\mathrm{SATISFIED},\allowbreak\mathrm{VIOLATED},\allowbreak\mathrm{INCONCLUSIVE}\}$, with $\mathrm{REJECTED\_INPUT}\notin\mathbb{V}$. An unresolved obligation at a final observation $t_n=B_i$ remains pending because expiry requires a strictly later observation. Although strictly increasing future observations then cannot provide a witness by $B_i$, the implementation waits for observed expiry evidence. Thus this three-valued rule is a reporting policy, not a classification obtained by quantifying over every possible trace extension. Supplementary Section~\ref{supp:sec:finite-policy-proof} gives the complete correctness proof, numerical assumptions, and explicit non-equivalence examples.

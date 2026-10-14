@@ -1,0 +1,22 @@
+{
+  "workload_id": "B05",
+  "samples": 10000,
+  "density": "sparse",
+  "status": "interrupted_for_process_tree_guard_correction",
+  "exit_code": null,
+  "elapsed_seconds": null,
+  "completed_warmup": 2,
+  "completed_measured": 5,
+  "timing_median_ms": 3587.5418,
+  "monitor_median_ms": 3576.9387,
+  "throughput_samples_per_s": 2787.4239681332774,
+  "separate_memory_pass_completed": false,
+  "python_allocation_peak_bytes": null,
+  "observed_process_working_set_peak_bytes": null,
+  "complete_cell": false,
+  "observed_trigger_count": 12000,
+  "observed_expired_count": 0,
+  "observed_pending_count": 0,
+  "initial_launcher_memory_guard_invalid": true,
+  "observed_process_tree_working_set_peak_bytes": null
+}

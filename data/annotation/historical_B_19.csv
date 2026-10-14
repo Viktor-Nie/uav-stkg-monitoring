@@ -1,0 +1,20 @@
+source_item_id,source_family_id,annotator_slot,scope,signal_id,template_id,parameter_slots,formula_or_reason
+ECFR_107_SPEED_01,ECFR_14_CFR_107_51,B,conditional,speed_3d_mps,invariant_upper,upper_bound=法规规定的最大地速值；地速参考系与单位换算未明确,"G[0,T] (speed_3d_mps ≤ upper_bound)，需明确地速参考系与单位换算后方可完全落地"
+ARDUPILOT_BATT_ACTION_01,ARDUPILOT_BATTERY_FAILSAFE,B,out_of_scope,none,none,无可用参数槽,当前信号集不含电池状态信号与飞行模式信号，无法观测电池故障及其响应动作
+PX4_LINK_LOSS_01,PX4_SAFETY_V116,B,out_of_scope,none,none,无可用参数槽,当前信号集不含通信链路状态信号，无法观测数据链路丢失事件
+ARDUPILOT_ALTITUDE_REF_01,ARDUPILOT_COPTER_DOCS,B,out_of_scope,none,none,无可用参数槽,该条目属于语义说明而非可观测信号约束，无连续信号时间约束可形式化
+ARDUPILOT_BATT_CAPACITY_01,ARDUPILOT_BATTERY_FAILSAFE,B,out_of_scope,none,none,无可用参数槽,当前信号集不含电池容量信号，且下限触发约束不在现有模板支持范围内
+ECFR_107_VISUAL_01,ECFR_14_CFR_107_51,B,out_of_scope,none,none,无可用参数槽,当前信号集不含飞行员视觉观测状态信号，无法观测目视接触是否保持
+PX4_FAILURE_PITCH_01,PX4_SAFETY_V116,B,conditional,abs_pitch_rad,bounded_response,trigger_upper=FD_FAIL_P 配置值；deadline_seconds=FD_FAIL_P_TTRI 配置值；recovery_upper=FD_FAIL_P 配置值,"G[0,T] ((abs_pitch_rad > FD_FAIL_P) → F[0,FD_FAIL_P_TTRI] (abs_pitch_rad ≤ FD_FAIL_P))，需确认故障检测器启用上下文"
+PX4_FAILURE_ROLL_01,PX4_SAFETY_V116,B,conditional,abs_roll_rad,bounded_response,trigger_upper=FD_FAIL_R 配置值；deadline_seconds=FD_FAIL_R_TTRI 配置值；recovery_upper=FD_FAIL_R 配置值,"G[0,T] ((abs_roll_rad > FD_FAIL_R) → F[0,FD_FAIL_R_TTRI] (abs_roll_rad ≤ FD_FAIL_R))，需确认故障检测器启用上下文"
+ICAROUS_ALT_01,ICAROUS_MONITORING_2020,B,conditional,height_m,invariant_upper,upper_bound=任务配置高度值；高度参考系未明确,"G[0,T] (height_m ≤ upper_bound)，需明确任务高度配置值与参考系"
+ICAROUS_SEPARATION_01,ICAROUS_MONITORING_2020,B,out_of_scope,none,none,无可用参数槽,当前信号集不含入侵飞行器位置与相对距离信号，无法观测间隔是否保持
+ARDUPILOT_FENCE_ALT_MIN_01,ARDUPILOT_COPTER_DOCS,B,out_of_scope,none,none,无可用参数槽,当前仅支持上限模板（invariant_upper），不支持下限约束，且无下限模板可用
+ARDUPILOT_BATT_VOLT_01,ARDUPILOT_BATTERY_FAILSAFE,B,out_of_scope,none,none,无可用参数槽,当前信号集不含电池电压信号，且下限触发约束不在现有模板支持范围内
+ARDUPILOT_FENCE_ALT_MAX_01,ARDUPILOT_COPTER_DOCS,B,conditional,height_m,invariant_upper,upper_bound=FENCE_ALT_MAX 配置值；需确认 FENCE_ENABLE 启用状态与高度参考系,"G[0,T] (height_m ≤ FENCE_ALT_MAX)，需确认围栏启用状态与高度参考系后方可完全落地"
+ECFR_107_YIELD_01,ECFR_14_CFR_107_51,B,out_of_scope,none,none,无可用参数槽,当前信号集不含其他航空器位置、相对距离与让路状态信号，无法观测让路行为是否发生
+ECFR_107_ALT_01,ECFR_14_CFR_107_51,B,conditional,height_m,invariant_upper,upper_bound=400 英尺 AGL（约 122 米）；需确认 AGL 参考系与例外适用条件,"G[0,T] (height_m ≤ 400ft_AGL)，需确认高度参考系与例外条件后方可完全落地"
+ARDUPILOT_GCS_TIMEOUT_01,ARDUPILOT_COPTER_DOCS,B,out_of_scope,none,none,无可用参数槽,当前信号集不含链路心跳与飞行模式状态信号，无法观测心跳丢失与保护触发
+UKCAA_HEIGHT_01,UK_CAA_DRONE_CODE,B,conditional,height_m,invariant_upper,upper_bound=120 米（400 英尺）；需确认距地表高度参考与运行类别适用性,"G[0,T] (height_m ≤ 120m_surface)，需确认地表参考系与运行类别后方可完全落地"
+UKCAA_PEOPLE_01,UK_CAA_DRONE_CODE,B,out_of_scope,none,none,无可用参数槽,当前信号集不含人员位置与相对距离信号，无法观测与人员的距离约束
+PX4_GEOFENCE_ALT_01,PX4_SAFETY_V116,B,conditional,height_m,invariant_upper,upper_bound=GF_MAX_VER_DIST 配置值；高度参考系未明确,"G[0,T] (height_m ≤ GF_MAX_VER_DIST)，需明确高度参考系后方可完全落地"

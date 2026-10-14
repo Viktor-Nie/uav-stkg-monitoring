@@ -1,0 +1,3 @@
+﻿method,held_out_source_family,item_count,scope_accuracy,scope_macro_f1,signal_accuracy_in_scope,template_accuracy_in_scope,parameter_role_set_exact_match_in_scope,formula_structure_exact_match,correct_rejection_rate,numeric_parameter_extraction
+char_tfidf_1nn_text_only,ALL,19,0.631578947368421,0.631578947368421,0.625,0.75,0.75,0.5789473684210527,0.5454545454545454,not_evaluated
+frozen_embedding_1nn_text_only,ALL,19,0.7894736842105263,0.788888888888889,0.5,0.625,0.625,0.631578947368421,0.7272727272727273,not_evaluated

@@ -1,0 +1,24 @@
+{
+  "schema": "uav_stkg_event_traceability_audit_v1",
+  "status": "passed",
+  "event_count": 28210,
+  "source_event_counts": {
+    "FlightReview": 88,
+    "IDF_DS": 27250,
+    "INSANE": 8,
+    "RflyMAD": 864
+  },
+  "unique_formula_count": 16,
+  "problem_counts": {},
+  "problem_examples": [],
+  "input_sha256": {
+    "v4_enriched_graph_nodes.csv": "78b7d4348a49e0f3ccd94c24b6e5221d43e4a21e5000bae2b811e8b962f4845c",
+    "relationships.csv": "cb263a607ddbf21e6d99e663f25c4014a71656232333a0ddc431b6a66b887f73",
+    "formula_parameter_bindings.csv": "e34304d8b7dcf434308ab97a6d0d27e96684ed6bc0e995154d490a9c3408de45",
+    "nl_stl_pairs.csv": "da1d0ff0d0aff036f1f5d8b31366aa09d8068ca40c5b0584d0a5ffd75bd7a925",
+    "canonical_formula_monitor_events.csv": "9534b1b620189af772088e18a0cf1c4fc2ab8096f60d492f8e2999b2ea9bf20d",
+    "external_flight_review_event_time_graph_bound_events.csv": "ff8c24b11c891c93d2edc2c860a0870b13fb71c636227fa2f09031bc182c6ee7",
+    "graph_bound_monitor_events.csv": "6b165ee10c41c89e35edae8777c5ea0295349a67e9f5ca0a2584c079fc1381a3"
+  },
+  "interpretation": "Every retained event is checked against requirement source text, STKG edges, parameter provenance fields, and exact frozen runtime values. This is an internal traceability audit, not a diagnostic-accuracy or physical-safety evaluation."
+}

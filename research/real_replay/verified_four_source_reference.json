@@ -1,0 +1,227 @@
+{
+  "schema": "verified-four-source-replay-v34",
+  "idf_profile": "verified_v34",
+  "fresh_replay": {
+    "configuration_count": 68,
+    "event_count": 28210,
+    "source_counts": {
+      "RflyMAD": {
+        "configurations": 27,
+        "events": 864
+      },
+      "FlightReview": {
+        "configurations": 15,
+        "events": 88
+      },
+      "IDF_DS": {
+        "configurations": 21,
+        "events": 27250
+      },
+      "INSANE": {
+        "configurations": 5,
+        "events": 8
+      }
+    }
+  },
+  "derived_sha256": {
+    "multi_real_motor_replay/406_1_online_input.csv": "3505ff5c2ea80c4228fc53ec4709c4a68a8b4fd8177e5cff27cb64d7f2b49394",
+    "multi_real_motor_replay/406_1_observable_trace.csv": "f52a9e669d4a966da61d686748e6cbdcb8f923dbd0f06bc57ab5cd2e3f3752ca",
+    "multi_real_motor_replay/406_2_online_input.csv": "76aac221d027656bd6ec476f0c6d5280d248fc94c2a8ad246aa0297968a4ae1a",
+    "multi_real_motor_replay/406_2_observable_trace.csv": "3666a2136ff68b582fdbc80000558d10d6b74eec904385f57b6936ece9f553bc",
+    "multi_real_motor_replay/407_1_online_input.csv": "e500147341d4bb54a95a36719033f2ced264e5257b928a6161a243ecb569ea60",
+    "multi_real_motor_replay/407_1_observable_trace.csv": "2ba3c472bf865c47ae68b3d1aebdf22696d6732bf386c3f37ee6cc222381b2fe",
+    "external_flight_review_event_time_signal_observations.csv": "14b9b73f10b7e155aab059878ca1502a87391cb1eb2872d43420dfc40505ad44",
+    "idf_ds_lap120_event_time/native_signal_observations.csv": "5203ca37aefa15d0ed8e24fea2adbcb0ce92a2c4f7697e460086f915c5d761f3",
+    "insane_indoor1_px4_imu_event_time/native_signal_observations.csv": "744d1f09b8a8f167e3f09835210738b50d39a0e0bb6567d14cbe809d4bb4e616"
+  },
+  "fresh_output_sha256": {
+    "fresh_monitor_outcomes.csv": "b289acda7ef993ffedd82d8886e2ff13c4a193568da7b1cee3bfaf9254efe5c9",
+    "fresh_monitor_events.csv": "0f3622278edf2b026368003baea9e8bcea1328e0b8b90e3bf7b9d6f1ee31d3ba"
+  },
+  "event_rows_equal_historical": true,
+  "source_sample_counts_corrected": true,
+  "raw_sources": {
+    "406_1": {
+      "case_id": "406_1",
+      "grid_start_us": 231405299,
+      "grid_end_us": 292404002,
+      "grid_period_us": 50000,
+      "alignment": "causal zero-order hold latest source timestamp <= grid timestamp; sampled-point replay only",
+      "input_records": [
+        {
+          "path": "external_datasets/rflymad/Real-Minimal-406_1/log_26_2023-6-2-10-09-14_estimator_local_position_0.csv",
+          "sha256": "99642f0f6ecc6f115bb0d46bb5fa8cbbaaba7e86690d223283c70f5f9e962b5d",
+          "bytes": 44772,
+          "role": "native_topic_export"
+        },
+        {
+          "path": "external_datasets/rflymad/Real-Minimal-406_1/log_26_2023-6-2-10-09-14_vehicle_attitude_0.csv",
+          "sha256": "73b12d29e445e23d64f3cb4780cea8a15ef6986095b0102767132df027313b17",
+          "bytes": 1441556,
+          "role": "native_topic_export"
+        },
+        {
+          "path": "external_datasets/rflymad/Real-Minimal-406_1/log_26_2023-6-2-10-09-14_vehicle_angular_velocity_0.csv",
+          "sha256": "b25973f230f6595ee1d716a093b931c2c26c08eedbdcade8a7d591f08a3ed7f8",
+          "bytes": 2323823,
+          "role": "native_topic_export"
+        },
+        {
+          "path": "external_datasets/rflymad/Real-Minimal-406_1/log_26_2023-6-2-10-09-14_rfly_ctrl_lxl_0.csv",
+          "sha256": "d875a83ae95f058f1f71ab7bed5d53fad53fd667c59cd542e653cc2d022c57f9",
+          "bytes": 54299,
+          "role": "timestamp_bounds_only_no_control_values"
+        }
+      ],
+      "orientation_adapter": "scipy.Rotation.from_quat.as_euler_xyz"
+    },
+    "406_2": {
+      "case_id": "406_2",
+      "grid_start_us": 198960881,
+      "grid_end_us": 260460869,
+      "grid_period_us": 50000,
+      "alignment": "causal zero-order hold latest source timestamp <= grid timestamp; sampled-point replay only",
+      "input_records": [
+        {
+          "path": "external_datasets/rflymad/Real-Motor-Extension/406_2/log_27_2023-6-2-10-13-42_estimator_local_position_0.csv",
+          "sha256": "d8aba261d2aa33b1b6928a78cf9958f0c64e4bbf7267a5351a6cb8d1cf43e2a0",
+          "bytes": 46203,
+          "role": "native_topic_export"
+        },
+        {
+          "path": "external_datasets/rflymad/Real-Motor-Extension/406_2/log_27_2023-6-2-10-13-42_vehicle_attitude_0.csv",
+          "sha256": "235cabfe088a657acd878bec28a32572eacefd8f353e3553fd58e8b48b472510",
+          "bytes": 1458605,
+          "role": "native_topic_export"
+        },
+        {
+          "path": "external_datasets/rflymad/Real-Motor-Extension/406_2/log_27_2023-6-2-10-13-42_vehicle_angular_velocity_0.csv",
+          "sha256": "af4ef75f06b72e22d1881f5e1cd03fe9a5d5b9053ef00dded356ac8c987fa362",
+          "bytes": 2336440,
+          "role": "native_topic_export"
+        },
+        {
+          "path": "external_datasets/rflymad/Real-Motor-Extension/406_2/log_27_2023-6-2-10-13-42_rfly_ctrl_lxl_0.csv",
+          "sha256": "ce9709ff5ce7ec9672a57de15072c30c59d5a02ef09bdd983f3bedae2a086537",
+          "bytes": 54607,
+          "role": "timestamp_bounds_only_no_control_values"
+        }
+      ],
+      "orientation_adapter": "scipy.Rotation.from_quat.as_euler_xyz"
+    },
+    "407_1": {
+      "case_id": "407_1",
+      "grid_start_us": 112627945,
+      "grid_end_us": 175729578,
+      "grid_period_us": 50000,
+      "alignment": "causal zero-order hold latest source timestamp <= grid timestamp; sampled-point replay only",
+      "input_records": [
+        {
+          "path": "external_datasets/rflymad/Real-Motor-Raw-Official/Real-Motor.zip",
+          "sha256": "77161c06b2c27b0827e253f4b0bdd36bb5074414e8d235da0a5b7f6aa01efab6",
+          "bytes": 5982544439,
+          "role": "official_archive_407_1"
+        }
+      ],
+      "orientation_adapter": "direct_original_quaternion_formula"
+    },
+    "FlightReview": {
+      "inputs": [
+        {
+          "path": "datasets/v2_px4_flight_review/0000c079-6820-409a-95da-e86358b6c20f.ulg",
+          "sha256": "63482730793be48ffa782274dadb0ac65dcb038b7b163f9e0df1cce7f45441ff",
+          "bytes": 3687935,
+          "role": "original_ulog"
+        }
+      ],
+      "version": "log UUID 0000c079-6820-409a-95da-e86358b6c20f"
+    },
+    "IDF_DS": {
+      "acquisition_manifest": "source_acquisition_manifest.json",
+      "source_record_doi": "10.5281/zenodo.16992976",
+      "source_license": "CC-BY-4.0",
+      "selected_platform": "Pixhawk 6X with Jetson Orin NX companion computer",
+      "source_files_sha256": {
+        "vehicle_local_position_0.csv": "5d1c69ef87b475506b35fae8797674e2c84f6074377d741660f4b7573b1ae24d",
+        "vehicle_attitude_0.csv": "76001fbf0b72ac67a17f847593e05a0f1941450eb0da799d147c0e6efdf0a7b4",
+        "vehicle_angular_velocity_0.csv": "596d5f6db55828b8a0054dafc04a027f6c8587f907b3701fcf761e314b47469f"
+      },
+      "topic_selection_audits": {
+        "vehicle_local_position": {
+          "source_file": "vehicle_local_position_0.csv",
+          "source_row_count": 2578,
+          "rows_with_missing_selected_fields": 0,
+          "selection": "longest contiguous complete native-observation segment; no interpolation, imputation, or gap bridging",
+          "selected_row_start_zero_based": 0,
+          "selected_row_count": 2578,
+          "selected_first_timestamp_us": 1093662656,
+          "selected_last_timestamp_us": 1351362838
+        },
+        "vehicle_attitude": {
+          "source_file": "vehicle_attitude_0.csv",
+          "source_row_count": 5157,
+          "rows_with_missing_selected_fields": 0,
+          "selection": "longest contiguous complete native-observation segment; no interpolation, imputation, or gap bridging",
+          "selected_row_start_zero_based": 0,
+          "selected_row_count": 5157,
+          "selected_first_timestamp_us": 1093612426,
+          "selected_last_timestamp_us": 1351412433
+        },
+        "vehicle_angular_velocity": {
+          "source_file": "vehicle_angular_velocity_0.csv",
+          "source_row_count": 12891,
+          "rows_with_missing_selected_fields": 0,
+          "selection": "longest contiguous complete native-observation segment; no interpolation, imputation, or gap bridging",
+          "selected_row_start_zero_based": 0,
+          "selected_row_count": 12891,
+          "selected_first_timestamp_us": 1093604709,
+          "selected_last_timestamp_us": 1351404713
+        }
+      },
+      "time_origin": "minimum native PX4 microsecond timestamp among the selected topics",
+      "source_time_clock": "PX4 boot-relative integer microseconds; not wall-clock, transport-latency, or hardware-I/O timing"
+    },
+    "INSANE": {
+      "dataset": "INSANE indoor_1 real indoor multicopter flight",
+      "source_page": "https://www.aau.at/en/smart-systems-technologies/control-of-networked-systems/datasets/insane-dataset/",
+      "source_sensor_archive_url": "https://cns-data.aau.at/insane-dataset/indoor_1_sensors.zip",
+      "source_calibration_archive_url": "https://cns-data.aau.at/insane-dataset/insane_sensor_calib_preprocessed.zip",
+      "source_license": "BSD-2-Clause-License with no commercial use allowed (source page wording)",
+      "platform_scope": "3 kg extended carbon-frame quadcopter; PixHawk4 with ICM20689 PX4 IMU; two Raspberry Pi 4 companion boards, as documented by the source paper.",
+      "member_range": {
+        "path": "indoor_1_px4_imu_segment.bin",
+        "sha256": "7b5bbf40d4d1a004436b6c153d80ca1063363cce9c4449d8cc09279403f5464b",
+        "zip_member": "indoor_1_sensors/px4_imu.csv",
+        "zip_member_crc32": "ecf2f396",
+        "zip_member_compressed_size": 3705983,
+        "zip_member_uncompressed_size": 8860615
+      },
+      "calibration": {
+        "archive": "insane_sensor_calib_preprocessed.zip",
+        "archive_sha256": "cff4fbd099051cf0ff29838f7ab4bc67ff35d70cc6555029e537ca1036c215f2",
+        "sensor_calibration_yaml": "insane_sensor_calib_preprocessed/sensor_calibration.yaml",
+        "entries": [
+          "insane_sensor_calib_preprocessed/",
+          "insane_sensor_calib_preprocessed/LICENSE",
+          "insane_sensor_calib_preprocessed/camera_calibration_klu1.yaml",
+          "insane_sensor_calib_preprocessed/camera_calibration_klu2.yaml",
+          "insane_sensor_calib_preprocessed/camera_calibration_mars.yaml",
+          "insane_sensor_calib_preprocessed/mag_calibration_klu.yaml",
+          "insane_sensor_calib_preprocessed/mag_calibration_mars.yaml",
+          "insane_sensor_calib_preprocessed/sensor_calibration.yaml"
+        ],
+        "verified_fields": [
+          "p_vc_pximu",
+          "R_vc_pximu",
+          "p_pximu_rtk1",
+          "p_pximu_rtk2",
+          "T_pximu_lsimu",
+          "T_pximu_rsimu"
+        ],
+        "boundary": "The archive supplies sensor-frame transformations and calibration data. It does not turn this project's research-reference thresholds into engineering safety limits."
+      },
+      "time_origin": "first retained published t timestamp; absolute source epoch time is retained separately and not interpreted as transport latency",
+      "source_time_clock": "published PX4-IMU observation timestamp in seconds; no cross-topic alignment, resampling, hold, interpolation or imputation"
+    }
+  }
+}

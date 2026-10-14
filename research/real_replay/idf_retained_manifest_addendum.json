@@ -1,0 +1,61 @@
+{
+  "original_manifest_sha256": "c70e5d5253fe3122ff7244a560e0a9bdcabfc5c9efe4e6e3b57531c326bc453d",
+  "original_manifest_preserved": true,
+  "source": {
+    "record_doi": "10.5281/zenodo.16992976",
+    "record_url": "https://zenodo.org/records/16992976",
+    "record_version": "v1.0",
+    "license": "CC-BY-4.0",
+    "archive_name": "Holybro Pixhawk.zip",
+    "archive_size_bytes": 2121943653,
+    "archive_md5": "8b990cc4c7ec1225a16e9a28225e5162",
+    "accessed_utc": "2026-09-04T10:00:00Z"
+  },
+  "selection": {
+    "platform": "Pixhawk 6X with Jetson Orin NX companion computer",
+    "flight_directory": "processed/UnGrouped flights/lap_120",
+    "reason": "The three native PX4 topic exports retain integer microsecond timestamps and supply the position/velocity, attitude quaternion, and angular-rate observations needed for a read-only event-time adapter.",
+    "non_selection": "The grouped CSV representation was inspected but its timestamp field is ISO-formatted from a microsecond source with a nanosecond interpretation. It is not used as an event-time source. The complete 2.1 GB archive is not retained."
+  },
+  "member_checks": [
+    {
+      "local_file": "vehicle_local_position_0.csv",
+      "archive_member": "Holybro Pixhawk/processed/UnGrouped flights/lap_120/log_1_2025-7-3-08-59-46_10vueltas_vehicle_local_position_0.csv",
+      "sha256": "5d1c69ef87b475506b35fae8797674e2c84f6074377d741660f4b7573b1ae24d",
+      "retained_manifest_uncompressed_bytes": 1118244,
+      "actual_verified_file_bytes": 1118244,
+      "actual_crc32": "6e2f0666",
+      "archive_metadata_still_requires_archive_member_check": false
+    },
+    {
+      "local_file": "vehicle_angular_velocity_0.csv",
+      "archive_member": "Holybro Pixhawk/processed/UnGrouped flights/lap_120/log_1_2025-7-3-08-59-46_10vueltas_vehicle_angular_velocity_0.csv",
+      "sha256": "2fa31d61ec72b51510927f7479db07eb20100ac41a9ae476d1fc66eb68b64cc0",
+      "retained_manifest_uncompressed_bytes": 1175329,
+      "actual_verified_file_bytes": 1175131,
+      "actual_crc32": "a4aa6d54",
+      "archive_metadata_still_requires_archive_member_check": true
+    },
+    {
+      "local_file": "vehicle_attitude_0.csv",
+      "archive_member": "Holybro Pixhawk/processed/UnGrouped flights/lap_120/log_1_2025-7-3-08-59-46_10vueltas_vehicle_attitude_0.csv",
+      "sha256": "1f10468104464677c4b2acde957ff96be63aca4bc6702a462986229aa1088645",
+      "retained_manifest_uncompressed_bytes": 621843,
+      "actual_verified_file_bytes": 621402,
+      "actual_crc32": "a6990765",
+      "archive_metadata_still_requires_archive_member_check": true
+    }
+  ],
+  "interpretation": "All retained file hashes match the original manifest. Two historical size fields disagree with the retained bytes; they are not used to overwrite or normalize source data. Fresh archive extraction must verify its SHA before claiming the same frozen input.",
+  "upstream_verification": {
+    "record": "https://zenodo.org/records/16992976",
+    "version": "v1.0",
+    "archive_md5": "8b990cc4c7ec1225a16e9a28225e5162",
+    "range_bytes_transferred": 3922930,
+    "license": "cc-by-4.0",
+    "old_inputs_are_exact_prefixes": true,
+    "root_cause": "Two retained CSVs ended before the complete official member tails, including incomplete terminal rows. This is historical acquisition truncation, not just incorrect size metadata.",
+    "verified_inputs": "data/external/idf_ds_lap120_verified_v34",
+    "historical_inputs_unchanged": true
+  }
+}

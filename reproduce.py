@@ -79,6 +79,14 @@ def main() -> None:
             ('reproduce_ablation.py','ablation','reproduction_receipt.json'),
             ('reproduce_monitor.py','monitor','summary.json'),
             ('reproduce_graph_extension.py','graph_extension','reproduction_receipt.json'),
+            ('reproduce_historical_audits.py','historical_audits','receipt.json'),
+            ('reproduce_catalog_screen.py','catalog_screen','receipt.json'),
+            ('reproduce_semantics.py','semantics','receipt.json'),
+            ('research/annotation/reproduce_annotation.py','annotation','annotation_receipt.json'),
+            ('research/statistics_performance/conditional_statistics.py','conditional_statistics','receipt.json'),
+            ('research/statistics_performance/verify_performance.py','performance_records','receipt.json'),
+            ('research/threshold_reproduction/verify_threshold_provenance.py','threshold_provenance','receipt.json'),
+            ('reproduce_idf_verified.py','verified_idf','receipt.json'),
         ):
             target = output / name
             completed = subprocess.run([sys.executable,'-B',str(ROOT/driver),'--output',str(target)],cwd=ROOT,capture_output=True,text=True,encoding='utf-8')
@@ -91,6 +99,8 @@ def main() -> None:
     hashes = {str(p.relative_to(ROOT)).replace("\\", "/"): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((ROOT / "data").rglob("*")) if p.is_file()}
     receipt = {"status": "passed", "graph": {"nodes": len(nodes), "relationships": len(edges), "bindings": sum(nodes["label"].eq("ParameterBinding")) if "label" in nodes else 84}, "structural_decisions": len(detail), "historical_mutants": 354, "english_scores": english, "input_sha256": hashes, "model_calls": 0, "training_runs": 0, "downloads": 0}
     receipt['extensions'] = extensions
+    receipt['reference_status'] = {'historical_human_workflow':'author reports independent classmates A/B and separate adjudicator C','revised_19_reference':'provisional computational source review; renewed human decisions pending'}
+    receipt['external_raw_reproduction'] = {'full_HIL_quantiles':'optional explicit raw-state root; default checks prior raw receipt and composition','four_source_replays':'optional explicit upstream root; default independently replays verified CC-BY IDF members','downloads_this_run':0}
     (output / "receipt.json").write_text(json.dumps(receipt, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"status": receipt["status"], "graph": receipt["graph"], "structural_decisions": len(detail), "english_scores": english}, indent=2))
 

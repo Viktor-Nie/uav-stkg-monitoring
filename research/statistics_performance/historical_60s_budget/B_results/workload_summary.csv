@@ -1,0 +1,10 @@
+﻿workload_id,samples,density,status,exit_code,elapsed_seconds,completed_warmup,completed_measured,timing_median_ms,monitor_median_ms,throughput_samples_per_s,separate_memory_pass_completed,python_allocation_peak_bytes,observed_process_working_set_peak_bytes,complete_cell,observed_trigger_count,observed_expired_count,observed_pending_count,initial_launcher_memory_guard_invalid,observed_process_tree_working_set_peak_bytes
+B01,1000,quiescent,completed,0,5.826683799998136,2,5,442.0881,439.283,2261.9925756879684,True,750383,,True,0,0,0,True,
+B02,1000,sparse,completed,0,6.446787500000937,2,5,534.3241,531.8992,1871.5232945697187,True,774008,,True,1200,0,0,True,
+B03,1000,dense,completed,0,14.46045360000062,2,5,1200.6052,1197.5368,832.9132674088034,True,1345716,,True,12000,11508,492,True,
+B04,10000,quiescent,completed,0,30.93295489999946,2,5,2911.37,2897.6312,3434.8090417913218,True,1210938,,True,0,0,0,True,
+B05,10000,sparse,interrupted_for_process_tree_guard_correction,,,2,5,3587.5418,3576.9387,2787.4239681332774,False,,,False,12000,0,0,True,
+B06,10000,dense,timeout_60s,1,60.88580279999951,2,4,,,,False,,,False,120000,119508,492,False,122728448
+B07,100000,quiescent,timeout_60s,1,60.70096879999983,2,0,,,,False,,,False,0,0,0,False,119697408
+B08,100000,sparse,timeout_60s,1,60.84034129999782,1,0,,,,False,,,False,120000,0,0,False,130539520
+B09,100000,dense,timeout_60s,1,60.89789160000146,0,0,,,,False,,,False,,,,False,242507776

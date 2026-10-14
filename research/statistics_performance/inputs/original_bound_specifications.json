@@ -1,0 +1,208 @@
+{
+  "formula_ids": [
+    "formula:N01",
+    "formula:N02",
+    "formula:N03",
+    "formula:N04",
+    "formula:N05",
+    "formula:N06",
+    "formula:N07",
+    "formula:N08",
+    "formula:N09",
+    "formula:N10",
+    "formula:N11",
+    "formula:N12",
+    "formula:N13",
+    "formula:N14",
+    "formula:N15",
+    "formula:N16",
+    "formula:N17",
+    "formula:N18",
+    "formula:T01",
+    "formula:T02",
+    "formula:T03",
+    "formula:T04",
+    "formula:T05",
+    "formula:T06"
+  ],
+  "specifications": [
+    {
+      "signal": "speed_3d_mps",
+      "upper_bound": 6.62613257694774,
+      "value_epsilon": 0.0
+    },
+    {
+      "signal": "height_m",
+      "upper_bound": 126.99721900939898,
+      "value_epsilon": 0.0
+    },
+    {
+      "signal": "abs_roll_rad",
+      "upper_bound": 0.5574074685573572,
+      "value_epsilon": 0.0
+    },
+    {
+      "signal": "abs_pitch_rad",
+      "upper_bound": 0.7853479439020157,
+      "value_epsilon": 0.0
+    },
+    {
+      "signal": "ang_rate_norm_rps",
+      "upper_bound": 3.281953779625089,
+      "value_epsilon": 0.0
+    },
+    {
+      "signal": "speed_3d_mps",
+      "trigger_upper": 6.62613257694774,
+      "recovery_upper": 5.82665111059551,
+      "deadline_seconds": 2.0,
+      "dwell_seconds": 0.0,
+      "value_epsilon": 0.0
+    },
+    {
+      "signal": "abs_roll_rad",
+      "trigger_upper": 0.5574074685573572,
+      "recovery_upper": 0.1504013158380983,
+      "deadline_seconds": 2.0,
+      "dwell_seconds": 0.0,
+      "value_epsilon": 0.0
+    },
+    {
+      "signal": "abs_pitch_rad",
+      "trigger_upper": 0.7853479439020157,
+      "recovery_upper": 0.7290556132793425,
+      "deadline_seconds": 2.0,
+      "dwell_seconds": 0.0,
+      "value_epsilon": 0.0
+    },
+    {
+      "signal": "ang_rate_norm_rps",
+      "trigger_upper": 3.281953779625089,
+      "recovery_upper": 0.5260089970606737,
+      "deadline_seconds": 2.0,
+      "dwell_seconds": 0.0,
+      "value_epsilon": 0.0
+    },
+    {
+      "signal": "speed_3d_mps",
+      "upper_bound": 6.62613257694774,
+      "value_epsilon": 0.0
+    },
+    {
+      "signal": "height_m",
+      "upper_bound": 126.99721900939898,
+      "value_epsilon": 0.0
+    },
+    {
+      "signal": "speed_3d_mps",
+      "trigger_upper": 6.62613257694774,
+      "recovery_upper": 5.82665111059551,
+      "deadline_seconds": 2.0,
+      "dwell_seconds": 0.0,
+      "value_epsilon": 0.0
+    },
+    {
+      "signal": "abs_roll_rad",
+      "trigger_upper": 0.5574074685573572,
+      "recovery_upper": 0.1504013158380983,
+      "deadline_seconds": 2.0,
+      "dwell_seconds": 0.0,
+      "value_epsilon": 0.0
+    },
+    {
+      "signal": "abs_pitch_rad",
+      "trigger_upper": 0.7853479439020157,
+      "recovery_upper": 0.7290556132793425,
+      "deadline_seconds": 2.0,
+      "dwell_seconds": 0.0,
+      "value_epsilon": 0.0
+    },
+    {
+      "signal": "ang_rate_norm_rps",
+      "upper_bound": 3.281953779625089,
+      "value_epsilon": 0.0
+    },
+    {
+      "signal": "abs_roll_rad",
+      "upper_bound": 0.5574074685573572,
+      "value_epsilon": 0.0
+    },
+    {
+      "signal": "ang_rate_norm_rps",
+      "trigger_upper": 3.281953779625089,
+      "recovery_upper": 0.5260089970606737,
+      "deadline_seconds": 2.0,
+      "dwell_seconds": 0.0,
+      "value_epsilon": 0.0
+    },
+    {
+      "signal": "abs_pitch_rad",
+      "upper_bound": 0.7853479439020157,
+      "value_epsilon": 0.0
+    },
+    {
+      "signal": "speed_3d_mps",
+      "upper_bound": 6.62613257694774,
+      "value_epsilon": 0.0
+    },
+    {
+      "signal": "height_m",
+      "upper_bound": 126.99721900939898,
+      "value_epsilon": 0.0
+    },
+    {
+      "signal": "speed_3d_mps",
+      "trigger_upper": 6.62613257694774,
+      "recovery_upper": 5.82665111059551,
+      "deadline_seconds": 2.0,
+      "dwell_seconds": 0.0,
+      "value_epsilon": 0.0
+    },
+    {
+      "signal": "abs_roll_rad",
+      "trigger_upper": 0.5574074685573572,
+      "recovery_upper": 0.1504013158380983,
+      "deadline_seconds": 2.0,
+      "dwell_seconds": 0.0,
+      "value_epsilon": 0.0
+    },
+    {
+      "signal": "abs_pitch_rad",
+      "trigger_upper": 0.7853479439020157,
+      "recovery_upper": 0.7290556132793425,
+      "deadline_seconds": 2.0,
+      "dwell_seconds": 0.0,
+      "value_epsilon": 0.0
+    },
+    {
+      "signal": "ang_rate_norm_rps",
+      "trigger_upper": 3.281953779625089,
+      "recovery_upper": 0.5260089970606737,
+      "deadline_seconds": 2.0,
+      "dwell_seconds": 0.0,
+      "value_epsilon": 0.0
+    }
+  ],
+  "signal_levels": {
+    "abs_pitch_rad": {
+      "low": -0.27094438672065746,
+      "high": 1.7853479439020157
+    },
+    "abs_roll_rad": {
+      "low": -0.8495986841619017,
+      "high": 1.5574074685573573
+    },
+    "ang_rate_norm_rps": {
+      "low": -0.4739910029393263,
+      "high": 4.2819537796250895
+    },
+    "height_m": {
+      "low": 125.99721900939898,
+      "high": 127.99721900939898
+    },
+    "speed_3d_mps": {
+      "low": 4.82665111059551,
+      "high": 7.62613257694774
+    }
+  }
+}

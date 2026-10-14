@@ -1,0 +1,5 @@
+﻿frequency_hz,nominal_period_seconds,baseline_signal_value,upper_bound,additive_gaussian_noise_sigma,repetition_count,trace_with_any_sample_false_violation_rate,mean_false_violating_sample_count,p95_false_violating_sample_count,interpretation
+20.0,0.05,0.95,1.0,0.0,200,0.0,0.0,0.0,synthetic measurement-noise sensitivity; not a calibrated sensor-noise model
+20.0,0.05,0.95,1.0,0.01,200,0.0,0.0,0.0,synthetic measurement-noise sensitivity; not a calibrated sensor-noise model
+20.0,0.05,0.95,1.0,0.02,200,0.465,0.565,2.0,synthetic measurement-noise sensitivity; not a calibrated sensor-noise model
+20.0,0.05,0.95,1.0,0.05,200,1.0,16.315,23.0,synthetic measurement-noise sensitivity; not a calibrated sensor-noise model

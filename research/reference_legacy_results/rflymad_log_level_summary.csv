@@ -1,0 +1,4 @@
+﻿case_id,source,sample_count,sampling_contract_eligible,formula_count,satisfied_formula_count,violated_formula_count,inconclusive_formula_count,rejected_formula_count,triggered_obligation_count,recovered_obligation_count,expired_obligation_count,pending_obligation_count
+406_1,analysis/results/15_rflymad_real_minimal_frozen_eval/real_motor_online_input.csv,1220,True,9,8,1,0,0,3,3,0,0
+406_2,analysis/results/17_rflymad_real_motor_extension/406_2/real_motor_online_input.csv,1230,True,9,7,2,0,0,14,14,0,0
+407_1,analysis/results/17_rflymad_real_motor_extension/407_1/real_motor_online_input_raw_ulog_rebuilt.csv,1263,True,9,6,3,0,0,271,75,196,0

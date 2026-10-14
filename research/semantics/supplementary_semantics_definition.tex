@@ -1,0 +1,15 @@
+The finite-observation report is defined by a completed-segment policy, rather than by expanding the nominal nested STL operators of Equation~\eqref{eq:supp-response-template}. For each trigger index $i$, define
+\begin{equation}
+ \mathcal{W}_i=\left\{(a,j)\ \middle|\
+ \begin{array}{l}
+ i<a\le j\le n,\quad t_j\le t_i+d+\epsilon_t,\\[-1mm]
+ t_j-t_a\ge\tau-\epsilon_t,\quad
+ y_k\le r+\epsilon_y\quad\text{for every }k\in\{a,\ldots,j\}
+ \end{array}\right\}.
+ \label{eq:supp-witness-set}
+\end{equation}
+The indices $a$ and $j$ delimit retained observations from one uninterrupted recovery segment. They need not delimit its maximal run. No assertion concerns unobserved values between these observations. An obligation recovers exactly when $\mathcal{W}_i\ne\varnothing$. Otherwise it expires at the first retained observation $t_j>B_i$, where $D_i=t_i+d$ is the nominal deadline and $B_i=D_i+\epsilon_t$ is the operational comparison boundary. If no such observation exists, it remains pending. These three sets partition the trigger indices, and the verdict gives priority to any expiry, followed by pending, followed by satisfaction, as in main-text Equations~\eqref{main:eq:response-partition}--\eqref{main:eq:response-verdict}.
+
+For $\tau=0$, a witness may take $a=j$: recovery requires a later retained observation with $t_j\le t_i+d+\epsilon_t$ and $y_j\le r+\epsilon_y$. When $\epsilon_t=0$, this witness condition is exactly the nominal sampled-point consequent $\mathbf{F}_{(0,d]}\mu_{\mathrm{rec}}$. For the RTAMT shared subset, uniform sampling, deadlines on that grid, zero value tolerance and zero dwell, and the reported binary outcome restriction additionally apply. The nonzero implementation tolerance used in that comparison is an explicit numerical boundary policy; it is not a general proof of nominal STL equivalence.
+
+All catalog responses bind $d=2$ s and $\tau=0$. Positive dwell is a separately declared extension: $t_j-t_a\geq\tau-\epsilon_t$ must be observed before $B_i$. Consequently, $0<\tau\leq\epsilon_t$ permits a single later recovery observation. The invariant retains its direct observed-point definition. English descriptions use level triggering at every exceeding observation and do not introduce edge triggering. The formal proof, terminal equality convention, positive-dwell counterexample, and floating-point assumptions are given in Section~\ref{sec:finite-policy-proof}. Historical local differential evidence remains separate from that proof and does not establish general STL equivalence.

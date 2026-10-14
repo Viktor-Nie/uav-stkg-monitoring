@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-14T07:14:18.051934+00:00",
+  "cell": {
+    "workload_id": "B09",
+    "samples": 100000,
+    "density": "dense",
+    "trace_path": "inputs/B_100000_dense.csv"
+  },
+  "pid": 34928,
+  "smoke": false,
+  "frozen_configuration_sha256": "5a81e0dc1949eeeaeff128edbbc0c9acf28a93987494bb4607dfba5d948517d5"
+}

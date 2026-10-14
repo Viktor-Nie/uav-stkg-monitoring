@@ -1,0 +1,8 @@
+At trace end, the response is violated if any obligation expired, inconclusive if obligations remain unresolved without expiry, and satisfied otherwise. Fig.~\ref{fig:monitor-state-flow} shows the stored state and processing order.
+
+\begin{proposition}[Correctness for the declared observation policy]
+\label{prop:finite-policy-consistency}
+Assume an admitted finite trace with strictly increasing timestamps, finite parameters satisfying $d>0$, $0\leq\tau<d$, $r\leq u$, and nonnegative tolerances, level triggering, and exact arithmetic. The invariant monitor returns precisely the violating indices of Equation~\eqref{eq:invariant-expanded}. The ordered FIFO response monitor returns precisely the recovered, expired, and pending sets in Equation~\eqref{eq:response-partition}, and hence the verdict in Equation~\eqref{eq:response-verdict}. This conclusion transfers to floating-point execution only when admission and all atomic, deadline, and dwell comparisons preserve their exact truth values.
+\end{proposition}
+
+The proof in Supplementary Section~\ref{supp:sec:finite-policy-proof} establishes the queue, recovery-start, and persistent-expiry invariants by induction over every observation. It proves the completed-segment policy, including positive dwell, rather than an equivalence with general STL. Each obligation enters and leaves the queue at most once, so total core work is linear. Numerical regression and differential tests provide separate implementation evidence.

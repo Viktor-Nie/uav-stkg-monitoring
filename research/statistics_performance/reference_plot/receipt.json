@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "resampling_runs": 0,
+  "source": "paired_differences.csv",
+  "interpretation": "conditional empirical intervals; not population confidence intervals"
+}

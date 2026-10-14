@@ -1,0 +1,8 @@
+{
+  "started_utc": "2026-10-11T08:28:17.799873+00:00",
+  "tracemalloc_timing": false,
+  "workload_id": "B02",
+  "samples": 1000,
+  "density": "sparse",
+  "trace_path": "inputs/B_1000_sparse.csv"
+}

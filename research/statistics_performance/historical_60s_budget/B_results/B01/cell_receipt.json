@@ -1,0 +1,20 @@
+{
+  "workload_id": "B01",
+  "samples": 1000,
+  "density": "quiescent",
+  "status": "completed",
+  "exit_code": 0,
+  "elapsed_seconds": 5.826683799998136,
+  "completed_warmup": 2,
+  "completed_measured": 5,
+  "timing_median_ms": 442.0881,
+  "monitor_median_ms": 439.283,
+  "throughput_samples_per_s": 2261.9925756879684,
+  "separate_memory_pass_completed": true,
+  "python_allocation_peak_bytes": 750383,
+  "observed_process_working_set_peak_bytes": 4366336,
+  "complete_cell": true,
+  "observed_trigger_count": 0,
+  "observed_expired_count": 0,
+  "observed_pending_count": 0
+}

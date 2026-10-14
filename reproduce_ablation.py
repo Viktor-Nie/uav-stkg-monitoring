@@ -15,6 +15,7 @@ def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def main():
  parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--output',type=Path,default=ROOT/'outputs/ablation_reproduction');args=parser.parse_args();output=args.output.resolve()
  if output==ROOT or any(output.is_relative_to(ROOT/d) for d in ('data','src','research')):parser.error('Output must not overwrite release source or evidence.')
+ if output.exists():parser.error('Use a new output directory; previous evidence is preserved.')
  before={str(p.relative_to(SOURCE)):digest(p) for p in SOURCE.rglob('*') if p.is_file()}
  with tempfile.TemporaryDirectory(prefix='uav_stkg_offline_ablation_') as temporary:
   run=Path(temporary)/'ablation';shutil.copytree(SOURCE,run)

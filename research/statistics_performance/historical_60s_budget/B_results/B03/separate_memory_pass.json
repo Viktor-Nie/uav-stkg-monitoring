@@ -1,0 +1,13 @@
+{
+  "finished_utc": "2026-10-11T08:28:37.817675+00:00",
+  "python_allocation_peak_bytes": 1345716,
+  "scope": "Python allocation peak only; no RSS claim; independent pass excluded from reported timing median",
+  "counts": {
+    "formula_count": 24,
+    "trigger_count": 12000,
+    "recovery_count": 0,
+    "expired_count": 11508,
+    "pending_count": 492,
+    "invariant_violation_count": 12000
+  }
+}

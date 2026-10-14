@@ -1,0 +1,37 @@
+[
+  {
+    "source_id": "run_v4_ablation.py",
+    "original_sha256": "97f418b8d354c3a36cc97a361b18df8c48fc3de50d6413e2794b1cdc056cb2ce",
+    "selected_definitions": [
+      "ANGULAR_RATE_CUES",
+      "CONTROLLED_SCREEN_NEGATIVE_PROBES",
+      "HEIGHT_CUES",
+      "INCLUSIVE_UPPER_CUES",
+      "MODALITY_CUES",
+      "PITCH_CUES",
+      "RECOVERY_ACTION_CUES",
+      "ROLL_CUES",
+      "STRICT_TRIGGER_CUES",
+      "controlled_conversion_audit",
+      "controlled_screen_negative_probe_audit",
+      "longest_present",
+      "screen_controlled_chinese"
+    ],
+    "scientific_bodies_unchanged": true
+  },
+  {
+    "source_id": "results/v4_controlled_conversion_audit.csv",
+    "file": "research/historical_audits/v4_controlled_conversion_audit.csv",
+    "sha256": "af090330c28fd33f6d03d10db68f59849fd84fdb2a01ede1ce566dfdbcda638b"
+  },
+  {
+    "source_id": "results/v4_controlled_screen_refusal_probes.csv",
+    "file": "research/historical_audits/v4_controlled_screen_refusal_probes.csv",
+    "sha256": "c3bf2c48d7a7dca51fc8ce7cfa3847568b363aa0f5772e384980dd9d8e49ecdb"
+  },
+  {
+    "source_id": "results/v4_complete_formula_catalog.csv",
+    "file": "research/historical_audits/v4_complete_formula_catalog.csv",
+    "sha256": "aa7846deb46e6882b9e48323213cc1b14e01a81d0d619b0872eae1f70fdd649f"
+  }
+]

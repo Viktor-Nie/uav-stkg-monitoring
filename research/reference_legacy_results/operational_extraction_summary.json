@@ -1,0 +1,296 @@
+{
+  "actual_backend_snapshot": "not_exposed_by_cli_events",
+  "actual_model_process_invocations": 4,
+  "application_retries": 0,
+  "batch_system_elapsed_seconds": 496.48311150004156,
+  "cli_version": "codex-cli 0.145.0",
+  "conditional_computational_agreement_rate": 1.0,
+  "corrected_from_existing_actual_events_only": true,
+  "created_utc": "2026-10-07T08:47:19.502768+00:00",
+  "eligible_formula_count": 1,
+  "eligible_formula_rate": 0.25,
+  "end_to_end_task_rate": 0.25,
+  "end_to_end_task_successes": 1,
+  "failure_reason_counts": {
+    "logged_out_or_account_changed_refresh_failure": 1,
+    "missing_authentication_http401": 1,
+    "usage_limit": 1
+  },
+  "frozen_reference_fifo_agreements": 12,
+  "generated_full_signature_agreements": 3,
+  "generated_trace_details": [
+    {
+      "frozen_reference": {
+        "expired": [],
+        "pending": [],
+        "recovered": [],
+        "triggers": [],
+        "verdict": "satisfied",
+        "violations": []
+      },
+      "full_signature_agreement": true,
+      "generated_audit": {
+        "input_audit": {
+          "eligible_for_event_time_observation_semantics": true,
+          "first_time_seconds": 0.0,
+          "gap_violation_count": 0,
+          "last_time_seconds": 3.8,
+          "maximum_interval_seconds": 0.40000000000000013,
+          "median_interval_seconds": 0.3999999999999999,
+          "minimum_interval_seconds": 0.20000000000000018,
+          "non_finite_signal_value_count": 0,
+          "non_finite_timestamp_count": 0,
+          "non_increasing_interval_count": 0,
+          "p95_interval_seconds": 0.4000000000000001,
+          "reasons": [],
+          "sample_count": 11,
+          "signal_columns": [
+            "synthetic_speed_mps"
+          ]
+        },
+        "raw_origin_seconds": "0.0",
+        "relative_time_events": []
+      },
+      "generated_fifo": {
+        "expired": [],
+        "pending": [],
+        "recovered": [],
+        "triggers": [],
+        "verdict": "satisfied",
+        "violations": []
+      },
+      "parameters_match_computational_specification": true,
+      "task_id": "C01",
+      "trace_id": "C01_01"
+    },
+    {
+      "frozen_reference": {
+        "expired": [],
+        "pending": [],
+        "recovered": [],
+        "triggers": [],
+        "verdict": "violated",
+        "violations": [
+          4
+        ]
+      },
+      "full_signature_agreement": true,
+      "generated_audit": {
+        "input_audit": {
+          "eligible_for_event_time_observation_semantics": true,
+          "first_time_seconds": 0.0,
+          "gap_violation_count": 0,
+          "last_time_seconds": 3.8,
+          "maximum_interval_seconds": 0.40000000000000013,
+          "median_interval_seconds": 0.3999999999999999,
+          "minimum_interval_seconds": 0.20000000000000018,
+          "non_finite_signal_value_count": 0,
+          "non_finite_timestamp_count": 0,
+          "non_increasing_interval_count": 0,
+          "p95_interval_seconds": 0.4000000000000001,
+          "reasons": [],
+          "sample_count": 11,
+          "signal_columns": [
+            "synthetic_speed_mps"
+          ]
+        },
+        "raw_origin_seconds": "0.0",
+        "relative_time_events": [
+          {
+            "deadline_time_seconds": null,
+            "event_type": "invariant_violation",
+            "obligation_id": null,
+            "observed_index": 4,
+            "observed_time_seconds": 1.6,
+            "observed_value": 6.6,
+            "recovery_segment_start_seconds": null,
+            "trigger_index": null,
+            "trigger_time_seconds": null
+          }
+        ]
+      },
+      "generated_fifo": {
+        "expired": [],
+        "pending": [],
+        "recovered": [],
+        "triggers": [],
+        "verdict": "violated",
+        "violations": [
+          4
+        ]
+      },
+      "parameters_match_computational_specification": true,
+      "task_id": "C01",
+      "trace_id": "C01_02"
+    },
+    {
+      "frozen_reference": {
+        "expired": [],
+        "pending": [],
+        "recovered": [],
+        "triggers": [],
+        "verdict": "satisfied",
+        "violations": []
+      },
+      "full_signature_agreement": true,
+      "generated_audit": {
+        "input_audit": {
+          "eligible_for_event_time_observation_semantics": true,
+          "first_time_seconds": 0.0,
+          "gap_violation_count": 0,
+          "last_time_seconds": 3.8,
+          "maximum_interval_seconds": 0.40000000000000013,
+          "median_interval_seconds": 0.3999999999999999,
+          "minimum_interval_seconds": 0.20000000000000018,
+          "non_finite_signal_value_count": 0,
+          "non_finite_timestamp_count": 0,
+          "non_increasing_interval_count": 0,
+          "p95_interval_seconds": 0.4000000000000001,
+          "reasons": [],
+          "sample_count": 11,
+          "signal_columns": [
+            "synthetic_speed_mps"
+          ]
+        },
+        "raw_origin_seconds": "0.0",
+        "relative_time_events": []
+      },
+      "generated_fifo": {
+        "expired": [],
+        "pending": [],
+        "recovered": [],
+        "triggers": [],
+        "verdict": "satisfied",
+        "violations": []
+      },
+      "parameters_match_computational_specification": true,
+      "task_id": "C01",
+      "trace_id": "C01_03"
+    }
+  ],
+  "generation_rate": 0.25,
+  "human_elapsed_seconds": null,
+  "human_workload_saving": null,
+  "inputs_sha256": {
+    "calls/C01/process.json": "5a8b81ba9f4f01186b8f39289c3830d126bf9016ffa4c8d35168aa2dd54c7d05",
+    "calls/C01/result.json": "9775c05dd182e228d74cedf4f3458e11cd863f3e807aeef6485a5224bcba76f6",
+    "calls/C01/started.json": "199ef6bbf63c8d2acb919f1fa2e8d8b16623bb41e4b839f2472796b2c735d9ef",
+    "calls/C01/stderr.log": "f252b85cfffcbe31a962f02bf8588ba03f8b7ed88e8afb8bfcfbee6b24c04d3d",
+    "calls/C01/stdout.jsonl": "32891a41d53ed466db5028d96fcf3bec369277a5f1d47c2f51b9de84aee7115d",
+    "calls/C02/process.json": "026b57955f3c4661dd6fb75dd10162a36f87b6ff6256dfb7f9a490899cda441e",
+    "calls/C02/result.json": "bb13f84e23c2225491adbd2ec70023a8fbfc386dce3368d1515dafecf2da2e66",
+    "calls/C02/started.json": "ba954fc9760dd5f41ebc3d721d04ffd50867aba32f721d4308661dafdd9d75a4",
+    "calls/C02/stderr.log": "44f3608e4adf8a3a962cd23e824f32a3c82869672fd379936a3dac76e6858da0",
+    "calls/C02/stdout.jsonl": "9b94f6d20c3fb917dfafbd8ff12b353994c8b670edda6592316dfdc89dd01c7b",
+    "calls/C03/process.json": "b7e040921fb1bdb05f07a8456f29112ced27b05231f23ea32822294153643a11",
+    "calls/C03/result.json": "ff9042a1bdb033c3aef8f57c28a2c2228aea9f56551abe24517bbb542a65b4ca",
+    "calls/C03/started.json": "ace81f5bac8b3886964b2b62fbc7b35afcee092bc5405eae99df3180fd33b5d9",
+    "calls/C03/stderr.log": "dfefd87436be97d8faa344970cb643bb4f040c487eb7c1f4e8f37fb4f5476cc3",
+    "calls/C03/stdout.jsonl": "1423097bc6157b8ef34c33fe7b755607e7a710d1fc6c0458b3a26574a9831e3e",
+    "calls/C04/process.json": "6595951af6c354fae0a2f0b66a86560483deaaf98dc5a54082d07302c91a090c",
+    "calls/C04/result.json": "f8fb0cfcc5bb849b66c9b29208f19f58fd98889118c298c74390bfa5b4ca6425",
+    "calls/C04/started.json": "83fb020b3233c60ecf532523dcf0b0a709d9929dce40af474b5c7281cdf3435b",
+    "calls/C04/stderr.log": "41711d256a2a5d883411d895f003d5dc9dd9ade589af03ab8773710b43c4c39f",
+    "calls/C04/stdout.jsonl": "4b71788d7b7a23b7ca7294efee25da543246f1fee4eb71d90d81011bcab2b0ff",
+    "flow_summary.json": "2f60939a5fda626627ef8f34bbadc6203c684688e30481c685056654ecea6f81",
+    "protocol_before_calls.json": "c7feb6a13fb13a46d2993e5b54a3484a05d2d99cb3b0c03e9e7e7b3a1fc6f342",
+    "trace_math_results.json": "b2fbe7b3132102f4cff2dc27f1b9974dcdef24dcf05c59c0b8e3aeff8e2bda5b"
+  },
+  "local_validation_and_math_seconds": 0.27979600010439754,
+  "new_model_requests": 0,
+  "numeric_or_human_success_inferred_from_transport": false,
+  "original_receipts_preserved": true,
+  "original_summary_preserved": true,
+  "planned_tasks": 4,
+  "prefix_comparisons": 120,
+  "prefix_failures": 0,
+  "raw_capture_limit": "Initial transport captured text with UTF-8 errors=replace, not lossless subprocess bytes. The saved C01 UTF-8 artifact contains zero U+FFFD characters, exact Unicode source spans validate, and no text restoration was applied. Display mojibake is not a source failure. Future transport now preserves stdout/stderr bytes before decoding.",
+  "reference_verdict_counts": {
+    "inconclusive_end_of_trace": 2,
+    "satisfied": 6,
+    "violated": 4
+  },
+  "requested_model": "gpt-5.6-sol",
+  "schema": "e5_actual_receipt_reconciliation_v1",
+  "schema_pass_count": 1,
+  "schema_rate": 0.25,
+  "semantic_accuracy": null,
+  "source_structure_pass_count": 1,
+  "source_structure_rate": 0.25,
+  "tasks": [
+    {
+      "actual_terminal_turn_completed": true,
+      "actual_terminal_turn_failed": false,
+      "error_event_count": 4,
+      "failure_reason": null,
+      "failure_stage": null,
+      "formula_eligible": true,
+      "generation": true,
+      "model_subprocess_seconds": 145.12671409989707,
+      "original_failure_code": "model_event_reported_failure",
+      "schema_pass": true,
+      "source_structure_pass": true,
+      "task_id": "C01",
+      "unicode_replacement_characters_in_saved_stdout": 0,
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 12123,
+        "output_tokens": 1577,
+        "reasoning_output_tokens": 1200
+      }
+    },
+    {
+      "actual_terminal_turn_completed": false,
+      "actual_terminal_turn_failed": true,
+      "error_event_count": 5,
+      "failure_reason": "usage_limit",
+      "failure_stage": "actual_model_transport",
+      "formula_eligible": false,
+      "generation": false,
+      "model_subprocess_seconds": 112.80510070011951,
+      "original_failure_code": "model_process_failed",
+      "schema_pass": false,
+      "source_structure_pass": false,
+      "task_id": "C02",
+      "unicode_replacement_characters_in_saved_stdout": 0,
+      "usage": {}
+    },
+    {
+      "actual_terminal_turn_completed": false,
+      "actual_terminal_turn_failed": true,
+      "error_event_count": 5,
+      "failure_reason": "logged_out_or_account_changed_refresh_failure",
+      "failure_stage": "actual_model_transport",
+      "formula_eligible": false,
+      "generation": false,
+      "model_subprocess_seconds": 113.63920950004831,
+      "original_failure_code": "model_process_failed",
+      "schema_pass": false,
+      "source_structure_pass": false,
+      "task_id": "C03",
+      "unicode_replacement_characters_in_saved_stdout": 0,
+      "usage": {}
+    },
+    {
+      "actual_terminal_turn_completed": false,
+      "actual_terminal_turn_failed": true,
+      "error_event_count": 10,
+      "failure_reason": "missing_authentication_http401",
+      "failure_stage": "actual_model_transport",
+      "formula_eligible": false,
+      "generation": false,
+      "model_subprocess_seconds": 123.10586760006845,
+      "original_failure_code": "model_process_failed",
+      "schema_pass": false,
+      "source_structure_pass": false,
+      "task_id": "C04",
+      "unicode_replacement_characters_in_saved_stdout": 0,
+      "usage": {}
+    }
+  ],
+  "total_model_subprocess_seconds": 494.67689190013334,
+  "trace_executed_using_generated_formula": 3,
+  "valid_json_generations": 1,
+  "why": "Old parser treated recoverable reconnection error notifications as terminal failure despite a completed final JSON message. C01 returned valid source-bound JSON and is evaluated using only original unmodified text."
+}

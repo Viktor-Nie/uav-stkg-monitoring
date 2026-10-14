@@ -8,9 +8,11 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from numeric_text_guard import bind_if_text_consistent
 
-HERE=Path(__file__).resolve().parent;ROOT=next((p for p in HERE.parents if (p/'specification').is_dir()),None)
-V33=ROOT/'docs/最终论文/latex_kbs_v33_sixth_revision' if ROOT else None
-OLD=ROOT/'docs/最终论文/latex_kbs_v6' if ROOT else None
+HERE=Path(__file__).resolve().parent
+# The release reads its supplied frozen inputs regardless of its parent folder.
+ROOT=None
+V33=None
+OLD=None
 INPUTS=HERE/'inputs'
 plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10,'pdf.fonttype':42,'ps.fonttype':42,'axes.spines.top':False,'axes.spines.right':False})
 MODULES=['topology_and_cardinality','exact_binding_identity','semantic_typing_and_policy','monitor_compatibility_and_profiles','provenance_context','formula_signal_alignment']

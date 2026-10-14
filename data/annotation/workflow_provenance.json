@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-14",
+  "source": "Direct author clarification in the project conversation; no independent recovery emails/chats provided",
+  "human_origin_author_reported": true,
+  "A_and_B_distinct_students_author_reported": true,
+  "A_and_B_no_access_to_each_others_results_before_completion_author_reported": true,
+  "C_separate_student_adjudicator_author_reported": true,
+  "original_submissions_retained": true,
+  "names_not_required_or_inferred": true,
+  "new_source_reviewed_19_reference_human_reverification": "not yet completed, explicitly reported by author",
+  "independence_evidence_boundary": "Author-reported workflow plus the submitted decision tables; file hashes establish content integrity rather than proving the reported workflow.",
+  "table_files": [
+    {
+      "original_filename": "annotation_A_submitted.csv",
+      "sha256": "ba31d7b79dfbe8a35678195ac2b32ff9110b2de34d4f4266c904553d7f41b8bb"
+    },
+    {
+      "original_filename": "annotation_B_submitted.csv",
+      "sha256": "06cd7067fc328c24d8a8376e145ce9012534f189d964bd58e1d32321cf5cf1ef"
+    },
+    {
+      "original_filename": "annotation_C_adjudication_completed.csv",
+      "sha256": "b203ef4900cdbb6a4a0aa999d560dd330c6ce4f215b90b3e3cfd77679ee3dc56"
+    },
+    {
+      "original_filename": "independent_requirement_annotation_annotator_A_v3_215_filled.xlsx",
+      "sha256": "4b64a5c1ea87152a378878dc3748f434b73ae833b53b5ac491464a9378c55357"
+    },
+    {
+      "original_filename": "independent_requirement_annotation_annotator_B_v3_215_filled.xlsx",
+      "sha256": "b92fa6525a48ca625d3b1e15d325c584df289bd0ba162dd4b2512a4dff9cd0b1"
+    },
+    {
+      "original_filename": "independent_requirement_expanded_adjudicated_v2.csv",
+      "sha256": "9e9a403a5a2283cb65f07c52e5876f3b42fe2ea0d736299e398eeb9922169bc3"
+    }
+  ]
+}

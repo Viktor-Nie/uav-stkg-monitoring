@@ -1,0 +1,29 @@
+{
+  "schema": "uav_stkg_source_binding_audit_v1",
+  "status": "passed",
+  "binding_count": 84,
+  "source_type_counts": {
+    "derived_statistical_reference": 36,
+    "prototype_runtime_configuration": 12,
+    "semantic_default": 36
+  },
+  "role_counts": {
+    "deadline_seconds": 12,
+    "dwell_seconds": 12,
+    "recovery_upper": 12,
+    "trigger_upper": 12,
+    "upper_bound": 12,
+    "value_epsilon": 24
+  },
+  "input_sha256": {
+    "specification\\v2\\results\\traceability_graph\\formula_parameter_bindings.csv": "e34304d8b7dcf434308ab97a6d0d27e96684ed6bc0e995154d490a9c3408de45",
+    "specification\\results\\research_monitor_thresholds.csv": "8661624492ac29bc7f1ddcd86fe13165eaed488b5e745fac5e320c5d7216380f",
+    "specification\\v2\\data\\monitor_runtime_parameters_v2.csv": "0ebb4d75ef8cfdd1c39cd924547ea5a830ab0f06bdc027abc2b8ee8954f28ded",
+    "specification\\v2\\data\\signal_context_v2.csv": "b7992466499a06012a67e2725977d0af0d0231d28ff136758d5beb5b4a706c75",
+    "specification\\v2\\build_traceability_graph.py": "8b4cfe677a7b334a54e1e5932a4f75e0b21fc38410dadc5cc13c2ed2b271ad56",
+    "docs\\重构工作台\\01_采样数据STL语义与监测契约.md": "dd392748209e5cf6356629a38fc4fd277040801f2333a4e67d63694f09478d99",
+    "specification\\run_all.py": "a6c39239dc2d2d2def786caab4ff9500a7d6dc4810e50bbf993bf199673126a0"
+  },
+  "errors": [],
+  "interpretation": "This audit checks local source-pointer completeness and exact frozen-value consistency. It does not evaluate automated extraction from original documents, requirement semantics, physical threshold validity, reduced human effort, or general ICPS transfer."
+}

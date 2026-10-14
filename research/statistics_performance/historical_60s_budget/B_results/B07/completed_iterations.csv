@@ -1,0 +1,3 @@
+﻿phase,iteration,parse_ms,monitor_ms,summary_serialization_ms,total_ms,summary_output_bytes,trace_samples,formula_count,trigger_count,recovery_count,expired_count,pending_count,invariant_violation_count
+warmup,1,67.7817,25852.052,2.158,25921.9917,2648,100000,24,0,0,0,0,0
+warmup,2,83.6897,25695.8821,1.0014,25780.5732,2648,100000,24,0,0,0,0,0

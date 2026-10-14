@@ -1,0 +1,20 @@
+source_item_id,source_family_id,annotator_slot,scope,signal_id,template_id,parameter_slots,formula_or_reason
+PX4_GEOFENCE_ALT_01,PX4_SAFETY_V116,A,in_scope,height_m,invariant_upper,upper_bound = 地理围栏最大垂直距离配置值 (GF_MAX_VER_DIST)；高度参考系上下文待确认,"G[0,T] (height_m ≤ GF_MAX_VER_DIST)，高度参考系与配置值上下文待确认"
+ARDUPILOT_FENCE_ALT_MAX_01,ARDUPILOT_COPTER_DOCS,A,in_scope,height_m,invariant_upper,upper_bound = 围栏最大高度配置值 (FENCE_ALT_MAX)；围栏启用上下文、高度参考系待确认,"G[0,T] (height_m ≤ FENCE_ALT_MAX)，围栏启用与高度参考系上下文待确认"
+ARDUPILOT_BATT_VOLT_01,ARDUPILOT_BATTERY_FAILSAFE,A,out_of_scope,none,none,无可用参数槽,当前可观测信号集不含电池电压信号，且需求为下限触发条件，现有模板仅支持上限约束，无法形式化
+ARDUPILOT_GCS_TIMEOUT_01,ARDUPILOT_COPTER_DOCS,A,out_of_scope,none,none,无可用参数槽,当前可观测信号集不含 MAVLink 心跳状态与飞行模式信号，无法观测链路丢失事件与后续响应
+ICAROUS_ALT_01,ICAROUS_MONITORING_2020,A,in_scope,height_m,invariant_upper,upper_bound = 任务指定高度上限值；高度参考系上下文待确认,"G[0,T] (height_m ≤ mission_altitude_ceiling)，任务配置与高度参考系上下文待确认"
+PX4_LINK_LOSS_01,PX4_SAFETY_V116,A,out_of_scope,none,none,无可用参数槽,当前可观测信号集不含地面站数据链路状态信号，无法观测链路丢失事件
+ECFR_107_YIELD_01,ECFR_14_CFR_107_51,A,out_of_scope,none,none,无可用参数槽,当前可观测信号集不含其他航空器位置、相对距离与让路状态信号，无法观测让路行为是否执行
+PX4_FAILURE_ROLL_01,PX4_SAFETY_V116,A,in_scope,abs_roll_rad,bounded_response,trigger_upper = 最大允许横滚角 (FD_FAIL_R)；deadline_seconds = 超限容忍时长 (FD_FAIL_R_TTRI)；recovery_upper = 恢复阈值 (FD_FAIL_R)；故障检测器启用上下文待确认,"G[0,T] ((abs_roll_rad > FD_FAIL_R) → F[0,FD_FAIL_R_TTRI] (abs_roll_rad ≤ FD_FAIL_R))，故障检测器启用上下文待确认"
+ARDUPILOT_BATT_ACTION_01,ARDUPILOT_BATTERY_FAILSAFE,A,out_of_scope,none,none,无可用参数槽,当前可观测信号集不含电池状态与飞行模式信号，无法观测二级电池故障触发的动作切换
+ICAROUS_SEPARATION_01,ICAROUS_MONITORING_2020,A,out_of_scope,none,none,无可用参数槽,当前可观测信号集不含入侵航空器的水平 / 垂直距离信号，无法形式化间隔约束
+ARDUPILOT_BATT_CAPACITY_01,ARDUPILOT_BATTERY_FAILSAFE,A,out_of_scope,none,none,无可用参数槽,当前可观测信号集不含电池剩余容量信号，且需求为下限触发条件，现有模板仅支持上限约束
+ECFR_107_ALT_01,ECFR_14_CFR_107_51,A,in_scope,height_m,invariant_upper,upper_bound=400 英尺高度限值；AGL 高度参考系、运行例外场景上下文待确认,"G[0,T] (height_m ≤ 400ft_AGL)，高度参考系与适用例外场景上下文待确认"
+UKCAA_HEIGHT_01,UK_CAA_DRONE_CODE,A,in_scope,height_m,invariant_upper,upper_bound=120m 地表高度限值；地表高度参考系、运行类别适用性上下文待确认,"G[0,T] (height_m ≤ 120m_above_closest_surface)，高度参考系与运行类别上下文待确认"
+PX4_FAILURE_PITCH_01,PX4_SAFETY_V116,A,in_scope,abs_pitch_rad,bounded_response,trigger_upper = 最大允许俯仰角 (FD_FAIL_P)；deadline_seconds = 超限容忍时长 (FD_FAIL_P_TTRI)；recovery_upper = 恢复阈值 (FD_FAIL_P)；故障检测器启用上下文待确认,"G[0,T] ((abs_pitch_rad > FD_FAIL_P) → F[0,FD_FAIL_P_TTRI] (abs_pitch_rad ≤ FD_FAIL_P))，故障检测器启用上下文待确认"
+ECFR_107_VISUAL_01,ECFR_14_CFR_107_51,A,out_of_scope,none,none,无可用参数槽,当前可观测信号集不含飞行员视觉观测状态信号，无法验证目视视距保持
+ECFR_107_SPEED_01,ECFR_14_CFR_107_51,A,in_scope,speed_3d_mps,invariant_upper,upper_bound = 最大地速限值；地速参考系、单位转换关系、适用运行场景上下文待确认,"G[0,T] (speed_3d_mps ≤ max_groundspeed)，速度参考系与适用运行场景上下文待确认"
+ARDUPILOT_FENCE_ALT_MIN_01,ARDUPILOT_COPTER_DOCS,A,out_of_scope,none,none,无可用参数槽,当前 STL 模板仅支持上限不变式约束，不支持最小高度这类下限约束，无法匹配现有模板
+UKCAA_PEOPLE_01,UK_CAA_DRONE_CODE,A,out_of_scope,none,none,无可用参数槽,当前可观测信号集不含人员位置与相对距离信号，无法形式化人员安全距离约束
+ARDUPILOT_ALTITUDE_REF_01,ARDUPILOT_COPTER_DOCS,A,out_of_scope,none,none,无可用参数槽,该条目为高度参考系语义说明，非可观测信号的时序约束，无法匹配现有 STL 模板

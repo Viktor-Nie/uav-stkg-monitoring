@@ -1,931 +1,515 @@
 {
-  "status": "versioned_research_artifacts",
-  "version": "v33",
-  "files": [
-    {
-      "path": ".gitignore",
-      "sha256": "5de5a0fd86082dd7a4f191cf382b1ddadc0ea5cdf3e0286e3f01694e32ae92f6",
-      "bytes": 64
-    },
-    {
-      "path": "CITATION.cff",
-      "sha256": "118b96b641013ecdde9b8fcfbe39328d9cffcd020845cbd235c2719e23f39d84",
-      "bytes": 621
-    },
-    {
-      "path": "data/graph/bindings.csv",
-      "sha256": "e34304d8b7dcf434308ab97a6d0d27e96684ed6bc0e995154d490a9c3408de45",
-      "bytes": 34248
-    },
-    {
-      "path": "data/graph/internal_requirement_pairs.csv",
-      "sha256": "da1d0ff0d0aff036f1f5d8b31366aa09d8068ca40c5b0584d0a5ffd75bd7a925",
-      "bytes": 4399
-    },
-    {
-      "path": "data/graph/nodes.csv",
-      "sha256": "78b7d4348a49e0f3ccd94c24b6e5221d43e4a21e5000bae2b811e8b962f4845c",
-      "bytes": 55887
-    },
-    {
-      "path": "data/graph/relationships.csv",
-      "sha256": "cb263a607ddbf21e6d99e663f25c4014a71656232333a0ddc431b6a66b887f73",
-      "bytes": 25943
-    },
-    {
-      "path": "data/language/chinese_historical_metrics.csv",
-      "sha256": "c4ecc6b8f50fcae8afa702c93360d25c146680fb7d52c1c711b5e3cc9cd1a463",
-      "bytes": 1123
-    },
-    {
-      "path": "data/language/chinese_historical_predictions.csv",
-      "sha256": "ee0b9d32769f650a4d36e613bcb46de95825afc1bf9703f77be4341810641c7e",
-      "bytes": 31825
-    },
-    {
-      "path": "data/language/english_expected_families.csv",
-      "sha256": "c412e5e39691abb7626e2f32eccaf12b10bdc2e953be763fe78913c9aa3a8b7f",
-      "bytes": 5983
-    },
-    {
-      "path": "data/language/english_expected_summary.csv",
-      "sha256": "fab424160ed805c361d585dc06c9f0f74bb0889ce5a3e2f2ec1ad05b24fd7dad",
-      "bytes": 719
-    },
-    {
-      "path": "data/language/english_items.csv",
-      "sha256": "ab8929ade4c4e3f9293646263753a2a3954666a79de90a3800ba71ef18f75395",
-      "bytes": 74322
-    },
-    {
-      "path": "data/language/english_predictions.csv",
-      "sha256": "6aebd91a6fd5829f3a15879479bb1d441bb06c29bad1a4e1885fd2de9d82484e",
-      "bytes": 94612
-    },
-    {
-      "path": "data/language/historical_source_registry.csv",
-      "sha256": "8ea7088676f0770763e966c3ef65945a5fae139c7b0a620ce352a6b7e6383cb6",
-      "bytes": 10638
-    },
-    {
-      "path": "data/monitor/boundary_12_contract_controls.json",
-      "sha256": "34f4efba6c3bc07e1c96952d77ed6bfa9e3badd72a2ddfdb40a612056401f8d0",
-      "bytes": 4653
-    },
-    {
-      "path": "data/monitor/boundary_648_cases.json",
-      "sha256": "2598efaacf05fe4aae57d8cb6d8b125d6539bc223cbf482d2e9aff4f11aa5a82",
-      "bytes": 1434590
-    },
-    {
-      "path": "data/monitor/boundary_contract.json",
-      "sha256": "85fac429a76a3ad9d0d4f1e2b8e13741c9fc151cfd7a3233a7127ea5b2fd1043",
-      "bytes": 70
-    },
-    {
-      "path": "data/monitor/boundary_decimal_oracle.py",
-      "sha256": "a3564a23035ddc597572f5a00ddc9da2f98c59559cfe1aee393d4447b627cff4",
-      "bytes": 2173
-    },
-    {
-      "path": "data/monitor/e5_102_protocol.json",
-      "sha256": "924102b5828d106550151f8c61f0a792c12e22ee69a7d65f6eaf4d5d5c949ea3",
-      "bytes": 118265
-    },
-    {
-      "path": "data/monitor/e5_decimal_oracle.py",
-      "sha256": "6d83e371a9b56ce91d06ca0ae9b76927b045ec82ff2c2b21d7d333481ba0934f",
-      "bytes": 1971
-    },
-    {
-      "path": "data/monitor/independent_reference_semantics.py",
-      "sha256": "ff099d3a7b82700d81cb68259041cd0a6e255dfd06f1312c37556042b5b94257",
-      "bytes": 3998
-    },
-    {
-      "path": "data/monitor/input_manifest.json",
-      "sha256": "a064762f378f94a5d626746081599e4462ed9f3828570140eb62e256fdc13d60",
-      "bytes": 2756
-    },
-    {
-      "path": "data/monitor/legacy_test_metamorphic_monitor.py",
-      "sha256": "8f5835c1226c8fbfd23d40cdd1895e5d7978668c8fc0597257769437d1c64640",
-      "bytes": 5461
-    },
-    {
-      "path": "data/monitor/legacy_test_sampled_data_contract.py",
-      "sha256": "84252aa2d472b532a1157eda39ddb32f0a77d42dab9c804179e798ca0a0f1b52",
-      "bytes": 3892
-    },
-    {
-      "path": "data/monitor/legacy_test_sampled_monitor.py",
-      "sha256": "a839613ffcbc60cbddd0f6544b83ae94f52158372b0630c2020f20358bd1e487",
-      "bytes": 5420
-    },
-    {
-      "path": "data/monitor/optional_real_replay_sources.json",
-      "sha256": "872ea7845ac29ac43fb2159e2b0e7794e3aa29b0e8cb9a78cb3e9cfb21749ff1",
-      "bytes": 5428
-    },
-    {
-      "path": "data/monitor/original_12/C01_01.json",
-      "sha256": "007b542fdd364189e3493c51c966c0e60f3ae6cb7f959007c14a85ee4530819e",
-      "bytes": 1442
-    },
-    {
-      "path": "data/monitor/original_12/C01_02.json",
-      "sha256": "0cff605c27b785c67d8c46e210eed945346dde4b4a5900b4b9925e938318a2ee",
-      "bytes": 1442
-    },
-    {
-      "path": "data/monitor/original_12/C01_03.json",
-      "sha256": "025fff4ad8d4e1412d4fd9bad116ed6029be0e18c55ab068e6b272e3c6d2f7c7",
-      "bytes": 1442
-    },
-    {
-      "path": "data/monitor/original_12/C02_01.json",
-      "sha256": "ae27b89f727bd7e5a5b33c6be6d64ef5a657768d8996a1bbafc434421f4e32fe",
-      "bytes": 1442
-    },
-    {
-      "path": "data/monitor/original_12/C02_02.json",
-      "sha256": "27b516058a0f7e4e76cfc32defd888992f063c6bf75b3fcb29cc521b47a3d9f2",
-      "bytes": 1442
-    },
-    {
-      "path": "data/monitor/original_12/C02_03.json",
-      "sha256": "54b3c0dfda40602281acdbe286e535ead76886c93ba93740c5210c7a14412791",
-      "bytes": 1442
-    },
-    {
-      "path": "data/monitor/original_12/C03_01.json",
-      "sha256": "8f84f1ed34e683f1985552602ef46a00dafd07dc7453ee09c22418f652d482b2",
-      "bytes": 1442
-    },
-    {
-      "path": "data/monitor/original_12/C03_02.json",
-      "sha256": "640976eee841ead4cdad8ad4e90f648ef3e71bcc63b37df037781a93e50d26ec",
-      "bytes": 1442
-    },
-    {
-      "path": "data/monitor/original_12/C03_03.json",
-      "sha256": "53fbfa63750791c559394985a5ac418638ea6003a397a73d9043ecfc77a554ed",
-      "bytes": 1442
-    },
-    {
-      "path": "data/monitor/original_12/C04_01.json",
-      "sha256": "2ef70470fd6b218f2a44f96f842e9384be42f898ed0b08d7c0e51a36ee40d7a9",
-      "bytes": 1442
-    },
-    {
-      "path": "data/monitor/original_12/C04_02.json",
-      "sha256": "45980e5d6b9b3d5be3f739c968bcb9ecc1515a7ed1afdb3be0c4ccc6f120528d",
-      "bytes": 1442
-    },
-    {
-      "path": "data/monitor/original_12/C04_03.json",
-      "sha256": "5e7b1f42d86778c58ca57e2c3bc74d34d52ab1d5e3bd1f8a98caa4ebff36489f",
-      "bytes": 1442
-    },
-    {
-      "path": "data/monitor/README.md",
-      "sha256": "0cd484d6b1bb091d2fd10698413beb2c4e2e00c26c930f40abe35c2a2ef674c1",
-      "bytes": 3224
-    },
-    {
-      "path": "data/monitor/semantic_differential_600.csv",
-      "sha256": "faafe8322be48468105e3707f58d3cfbe592b572865e91cbeee2904c6201a51d",
-      "bytes": 314429
-    },
-    {
-      "path": "data/provenance/research_monitor_thresholds.csv",
-      "sha256": "8661624492ac29bc7f1ddcd86fe13165eaed488b5e745fac5e320c5d7216380f",
-      "bytes": 1484
-    },
-    {
-      "path": "data/provenance/source_identifier_index.csv",
-      "sha256": "4b0b95aa92d1dd2c017f7339b6a82aed0b1be7389cd17500b11737a418b90a45",
-      "bytes": 1103
-    },
-    {
-      "path": "data/provenance/upstream_document_sources.json",
-      "sha256": "c9a3b6d57a1608e6832294781444f0d10e46105fc89bf20384f3202edfba4777",
-      "bytes": 9055
-    },
-    {
-      "path": "data/structural_ablation/binding_ambiguity.csv",
-      "sha256": "74b21db6d5d7639f474419568371d7f9eb0600d783e7ed7eaf3c427044b91224",
-      "bytes": 1252
-    },
-    {
-      "path": "data/structural_ablation/by_type.csv",
-      "sha256": "b303e8ca156e524182b9551304ca2cd4b4f550c5c85ea2259003ee8d0db1030f",
-      "bytes": 9463
-    },
-    {
-      "path": "data/structural_ablation/details.csv",
-      "sha256": "2782d839cd12be40722535293f99f4f35b79434702286e7dbf30bf8908b6889f",
-      "bytes": 522135
-    },
-    {
-      "path": "data/structural_ablation/summary.csv",
-      "sha256": "f148b335f712426cc2a53884a4f48f8408be07d10849d1393174f431402260dd",
-      "bytes": 842
-    },
-    {
-      "path": "README.md",
-      "sha256": "9604185a7fd8206d383aa6586b004a6e86bf19a271c98f8d5b36f789869915ff",
-      "bytes": 6356
-    },
-    {
-      "path": "release_status.json",
-      "sha256": "a1c472c4c028b008eb42f2f8cc3b9e6ef6c2a27e9d114c0cf125053cbf2e4435",
-      "bytes": 3161
-    },
-    {
-      "path": "reproduce.py",
-      "sha256": "dac8d52c98d6b9f37585888e2fd554864bbc5656681b63731946b6c5cf883ec5",
-      "bytes": 5620
-    },
-    {
-      "path": "reproduce_ablation.py",
-      "sha256": "36b3d4f0a856982a74a397a194c414d8878e068d5636655cecd77bd9a13eddd6",
-      "bytes": 3668
-    },
-    {
-      "path": "reproduce_graph_extension.py",
-      "sha256": "79cec172552e2fa6466132a678ee185ade2d21c6685c6632e82781da21b6a86d",
-      "bytes": 3654
-    },
-    {
-      "path": "reproduce_monitor.py",
-      "sha256": "293cecc62d6b62cbcf5ecde3270d989bb192fbae3ce9235cfb77da9ecc6e8d3c",
-      "bytes": 2014
-    },
-    {
-      "path": "requirements-ablation.txt",
-      "sha256": "52a6e3e5cb87b70a3fb32f1decfc728d81af33f2c4199a2bd69404ffff922f2f",
-      "bytes": 46
-    },
-    {
-      "path": "requirements-neo4j.txt",
-      "sha256": "20496b9ced7b63c34091434a013f0c9b50c11a5613496401ce05cac8ec6a6289",
-      "bytes": 35
-    },
-    {
-      "path": "requirements.txt",
-      "sha256": "6e3aaa16510a7c4de8ade144ebfcc2b270f7b2e8777c970b15373dcb310bbc32",
-      "bytes": 49
-    },
-    {
-      "path": "research/ablation/ablation_artifacts_receipt.json",
-      "sha256": "79cda0d55d8dfd614f6fa9923661e23d018e43fce793fc6d90ea84d7d3864e23",
-      "bytes": 3173
-    },
-    {
-      "path": "research/ablation/ablation_scoring.py",
-      "sha256": "8589bcbf0b34ce699d6c2c6c8750a776b4da08536a60c71faf85e85c58082899",
-      "bytes": 1864
-    },
-    {
-      "path": "research/ablation/availability_schema.json",
-      "sha256": "a551b866d98001048dca74979effec99135737af911ad5cd3c62b1c651e5393a",
-      "bytes": 163
-    },
-    {
-      "path": "research/ablation/build_ablation_artifacts.py",
-      "sha256": "abf59c34a6a9f0fe6006a9c6b8f1441f5a5c6daef920f68bf997d53430201d4e",
-      "bytes": 29853
-    },
-    {
-      "path": "research/ablation/fair_language_condition_summary.csv",
-      "sha256": "9243ac9853b5fc44ef3728c3b2bf14ffe96080e5cdf3f32d964b22f4ebbb0302",
-      "bytes": 591
-    },
-    {
-      "path": "research/ablation/fair_language_mean_min_max.json",
-      "sha256": "b103437f6fa4a6238ea43a786713b8812be5a6c49c375308b4cf9add740fd41b",
-      "bytes": 3247
-    },
-    {
-      "path": "research/ablation/fair_language_predictions_v33_reference.csv",
-      "sha256": "fa8ac5ca8d7d9150f3f308d193a02974ed9bcfff4ab2c555bcd3d2c33fdd8ca4",
-      "bytes": 51511
-    },
-    {
-      "path": "research/ablation/fair_language_run_metrics.csv",
-      "sha256": "f6a0ec864b79268c82e97305934c56a5e7277b76372808d852be765591ed2ac3",
-      "bytes": 2804
-    },
-    {
-      "path": "research/ablation/fair_language_scientific_receipt.json",
-      "sha256": "a786a34f2a555aedecec1aba660d62ea2936ed50c64d6eacc1297fbe071c2030",
-      "bytes": 2992
-    },
-    {
-      "path": "research/ablation/figure_inserts.tex",
-      "sha256": "f3476ef4a0900e4ba5e56431e2cd5d3bcc25a802c316d90a87a89b41a3be50c5",
-      "bytes": 2035
-    },
-    {
-      "path": "research/ablation/figure_readability_receipt.json",
-      "sha256": "153ee76a3cc2707effdfb920753b51fc491703cd8f8cd65390706bdea68bb8c8",
-      "bytes": 1127
-    },
-    {
-      "path": "research/ablation/historical_five_method_source_reviewed_rows.tex",
-      "sha256": "ad9f2b388115f26f4b3a667caca488314093f3300453ab982ca355f51af79235",
-      "bytes": 402
-    },
-    {
-      "path": "research/ablation/historical_methods_on_v33_reference.csv",
-      "sha256": "59d4bb4c56a8879415ae3ec12271b60ad05394d5354b0dcf73ba7bd49316b5c4",
-      "bytes": 2086
-    },
-    {
-      "path": "research/ablation/historical_metrics_original_reference.csv",
-      "sha256": "c4ecc6b8f50fcae8afa702c93360d25c146680fb7d52c1c711b5e3cc9cd1a463",
-      "bytes": 1123
-    },
-    {
-      "path": "research/ablation/historical_predictions_on_v33_reference.csv",
-      "sha256": "4d20a948536c8a7c28558ad1133d05652001f21c6903355767acb1f5b38f1e23",
-      "bytes": 36731
-    },
-    {
-      "path": "research/ablation/inputs/historical_baseline_predictions.csv",
-      "sha256": "f204487721f495ea8e6327051450c1d2e00c432802ee61278058155da11a1a45",
-      "bytes": 5434
-    },
-    {
-      "path": "research/ablation/inputs/historical_language_predictions.csv",
-      "sha256": "67730a80961fd4b39c33ede4a0fb4c26def1be3eb68b89db04a5344fdc7fe43a",
-      "bytes": 8528
-    },
-    {
-      "path": "research/ablation/inputs/historical_metrics_original_reference.csv",
-      "sha256": "c4ecc6b8f50fcae8afa702c93360d25c146680fb7d52c1c711b5e3cc9cd1a463",
-      "bytes": 1123
-    },
-    {
-      "path": "research/ablation/inputs/v4_binding_ambiguity_ablation.csv",
-      "sha256": "74b21db6d5d7639f474419568371d7f9eb0600d783e7ed7eaf3c427044b91224",
-      "bytes": 1252
-    },
-    {
-      "path": "research/ablation/inputs/v4_complete_formula_catalog.csv",
-      "sha256": "aa7846deb46e6882b9e48323213cc1b14e01a81d0d619b0872eae1f70fdd649f",
-      "bytes": 55238
-    },
-    {
-      "path": "research/ablation/inputs/v4_graph_mutation_ablation_by_type.csv",
-      "sha256": "b303e8ca156e524182b9551304ca2cd4b4f550c5c85ea2259003ee8d0db1030f",
-      "bytes": 9463
-    },
-    {
-      "path": "research/ablation/inputs/v4_graph_mutation_ablation_details.csv",
-      "sha256": "2782d839cd12be40722535293f99f4f35b79434702286e7dbf30bf8908b6889f",
-      "bytes": 522135
-    },
-    {
-      "path": "research/ablation/inputs/v4_graph_mutation_ablation_summary.csv",
-      "sha256": "f148b335f712426cc2a53884a4f48f8408be07d10849d1393174f431402260dd",
-      "bytes": 842
-    },
-    {
-      "path": "research/ablation/language_call_summary.json",
-      "sha256": "69350055ec5036d86fd83fe70f95735538d19bdcb2f6c4e1d02f0f746eeea843",
-      "bytes": 19894
-    },
-    {
-      "path": "research/ablation/language_isolation_audit.json",
-      "sha256": "10c7e3fbfdca4be4297f1320c552bc6d9e43df34db759b6af8193376d639f14d",
-      "bytes": 1305
-    },
-    {
-      "path": "research/ablation/language_protocol_frozen.json",
-      "sha256": "54d72f16b9f6af0c059b2f456f996c51e8f7047b531e64bd985588fc7488ba7d",
-      "bytes": 822
-    },
-    {
-      "path": "research/ablation/legal_catalog_semantic_challenge.csv",
-      "sha256": "5916d41211225a1dd37edfd859b9c2568aebeec45555451245c77cfa73212b97",
-      "bytes": 7485
-    },
-    {
-      "path": "research/ablation/legal_catalog_semantic_challenge_receipt.json",
-      "sha256": "90ce6a59345fca2b5b75c5cb15cc9634c41c6482c413a215043396b7868df7bf",
-      "bytes": 449
-    },
-    {
-      "path": "research/ablation/main_methods_insert.tex",
-      "sha256": "f93b30f4a1b12199fe4802eaea5d5d65e8e1ff5c1c005783a52e352a257153de",
-      "bytes": 2961
-    },
-    {
-      "path": "research/ablation/main_results_insert.tex",
-      "sha256": "09be76492e3df05b62fe2f16af2db68e96cb8f0aa89cc1b04561c13d2f886d0d",
-      "bytes": 2047
-    },
-    {
-      "path": "research/ablation/numeric_example_conflict.json",
-      "sha256": "914bd23c92c6b825cafd17e7a36cec81855d66360deb6e3339a1a52906e32768",
-      "bytes": 511
-    },
-    {
-      "path": "research/ablation/numeric_guard_original_24.csv",
-      "sha256": "dc60f1a4836d9913265fdc02dfe4c1eac2c5d0a7ed5524b969f5afe448f5760d",
-      "bytes": 1029
-    },
-    {
-      "path": "research/ablation/numeric_guard_receipt.json",
-      "sha256": "b36f4aba7ce440fa5964c3e4de4c7eb7898a5c801a7e606d7d46da26450e9831",
-      "bytes": 445
-    },
-    {
-      "path": "research/ablation/numeric_text_guard.py",
-      "sha256": "3658ca900b101310c017983cfcd852810e5ceb8b9f6407a45a5d78af9cdae924",
-      "bytes": 4064
-    },
-    {
-      "path": "research/ablation/public_calls/availability.json",
-      "sha256": "1260258d0fbf9ced6ccb59475d59eaa6a7b68c3bc7391c0c1f02abe22ca53b9d",
-      "bytes": 867
-    },
-    {
-      "path": "research/ablation/public_calls/availability_01.json",
-      "sha256": "aca25dfa26351c3e041789c38ffc3d6105739857a25a82389a62662a90ce1905",
-      "bytes": 869
-    },
-    {
-      "path": "research/ablation/public_calls/availability_02.json",
-      "sha256": "610ba084acd76222fc1d32cf86a2280cab00c567a0d5550a90296aa96c1fab59",
-      "bytes": 1065
-    },
-    {
-      "path": "research/ablation/public_calls/full_r1.json",
-      "sha256": "7d80057722fb1c2b1571be3b6c8fb00106bc3b2d5345374b39e69c5fbcf1d81d",
-      "bytes": 11738
-    },
-    {
-      "path": "research/ablation/public_calls/full_r2.json",
-      "sha256": "a7cda232ce6004d39283f3566aa907ef7aafc00a2a66331ed96f9d0290c94e44",
-      "bytes": 11452
-    },
-    {
-      "path": "research/ablation/public_calls/full_r3.json",
-      "sha256": "d25bf6c9ce04b60e8c08f6440ebb975900e6aa430c1810e4875e376585ed790e",
-      "bytes": 11476
-    },
-    {
-      "path": "research/ablation/public_calls/full_r4.json",
-      "sha256": "30b9941431d4d142831cae22ee166bc02125095edc60dfb67bf690f0ab2629da",
-      "bytes": 11278
-    },
-    {
-      "path": "research/ablation/public_calls/full_r5.json",
-      "sha256": "7c8caf49f83734ef2a753acc1bb9e1441d880e070a147ca40c64cf56f7f2e962",
-      "bytes": 11483
-    },
-    {
-      "path": "research/ablation/public_calls/without_both_r1.json",
-      "sha256": "71f4688c0cc4092b6066aae0d6e5ab3397571a8a35eec42af3a47a8d8f91abd7",
-      "bytes": 10932
-    },
-    {
-      "path": "research/ablation/public_calls/without_both_r2.json",
-      "sha256": "0a84b7241aeecd3e817b2618f826fb4307b6b35309002690f4d743caecd1c242",
-      "bytes": 11470
-    },
-    {
-      "path": "research/ablation/public_calls/without_both_r3.json",
-      "sha256": "ae2453c354d0764a391c15ab600e893b29e3eff6f65effac16e1f18285146712",
-      "bytes": 11073
-    },
-    {
-      "path": "research/ablation/public_calls/without_both_r4.json",
-      "sha256": "48c23c2610b8534023153ab9978386dad87f78a681987ef836787edabf865a29",
-      "bytes": 10812
-    },
-    {
-      "path": "research/ablation/public_calls/without_both_r5.json",
-      "sha256": "5ed0a9378df84ea60073fd189d8ebda35f61bc85cbd8433a7f52dddd34145441",
-      "bytes": 10954
-    },
-    {
-      "path": "research/ablation/public_calls/without_role_mapping_r1.json",
-      "sha256": "1e9e6f432beda4773d0a7998941049551e3eb0c61ebaaf557fbf01773ea8889b",
-      "bytes": 11082
-    },
-    {
-      "path": "research/ablation/public_calls/without_role_mapping_r2.json",
-      "sha256": "8e07a12455a07015ca844d1ae66356d8f9345e1cf7ae4183aea3bc539a04e559",
-      "bytes": 11372
-    },
-    {
-      "path": "research/ablation/public_calls/without_role_mapping_r3.json",
-      "sha256": "1d698c92c91298551a48a677fa2a909ff4a1bc832e8e3a14a4b4fa52250a4ea1",
-      "bytes": 11422
-    },
-    {
-      "path": "research/ablation/public_calls/without_role_mapping_r4.json",
-      "sha256": "26ee37bd5a935ab906c6fc70352ab954fb9f22869c4342e8972136d19d4e72e3",
-      "bytes": 11117
-    },
-    {
-      "path": "research/ablation/public_calls/without_role_mapping_r5.json",
-      "sha256": "97be2a04ef1b2265a115b8e1daa57e1037b10f2471fc79431f70404c0efa41a2",
-      "bytes": 11246
-    },
-    {
-      "path": "research/ablation/public_calls/without_skeleton_r1.json",
-      "sha256": "0863a0fc733bb933f3aac84a144d099969aab29880dc45be3e363726263e4811",
-      "bytes": 11018
-    },
-    {
-      "path": "research/ablation/public_calls/without_skeleton_r2.json",
-      "sha256": "445c37c3cc5a9c68f1976d47ad1fa1cbdf3fc54e0142f3e595926ae4aa67f457",
-      "bytes": 11041
-    },
-    {
-      "path": "research/ablation/public_calls/without_skeleton_r3.json",
-      "sha256": "92d23b4457ac5ca8cf11c8df91d2e522008b92b0750571ddc670906c5b3d04eb",
-      "bytes": 11173
-    },
-    {
-      "path": "research/ablation/public_calls/without_skeleton_r4.json",
-      "sha256": "f41f2429944b39a4b4327b58edf9eb83308b736f903e8da795772ff8d0c5752a",
-      "bytes": 11336
-    },
-    {
-      "path": "research/ablation/public_calls/without_skeleton_r5.json",
-      "sha256": "dba09e92bda1b98c6860bfd0ee72abf4c5d30fb4a5198b7243d2790d514cc064",
-      "bytes": 11298
-    },
-    {
-      "path": "research/ablation/public_input_records.json",
-      "sha256": "503221d3bce555efb3def1bfe616a12e1d77623abaa1a9cbc6ab577b43dced81",
-      "bytes": 2220
-    },
-    {
-      "path": "research/ablation/README.md",
-      "sha256": "6660aa309da29a72c768ad4c90a75da8e33e2ac6a3b55312f3ce12b8e3af6e99",
-      "bytes": 3893
-    },
-    {
-      "path": "research/ablation/reference_19_v33_source_reviewed.csv",
-      "sha256": "ed54a3840b9c34ce8579f3da0f8daaaf6e7765f06f8223d9c9e0b839a4b43c2c",
-      "bytes": 4620
-    },
-    {
-      "path": "research/ablation/run_fair_language_ablation.py",
-      "sha256": "31386dabdf0fd8bc9e943a4a0e30b0a60fabdb00105e271cf3a24d614dbb9a2e",
-      "bytes": 9491
-    },
-    {
-      "path": "research/ablation/scoring_id_mapping.json",
-      "sha256": "7745220d88e68e49a00d290ca34e02198c1011ab96840a024c2110163116c74d",
-      "bytes": 1638
-    },
-    {
-      "path": "research/ablation/shared_output_schema.json",
-      "sha256": "4ff3e4f412c71cc01066952978bd7e8112a774f4aaf4ee22fbee30bf26c65987",
-      "bytes": 1180
-    },
-    {
-      "path": "research/ablation/source_review_19.csv",
-      "sha256": "ee5d479bfc2de74ba16556a0d952055339147147d2cc99398f7c0fb989258b6e",
-      "bytes": 14937
-    },
-    {
-      "path": "research/ablation/source_review_receipt.json",
-      "sha256": "472c7638be9da0ba32ae96f79e66b60dba45830682a00452951f294fe55b8b4e",
-      "bytes": 816
-    },
-    {
-      "path": "research/ablation/structural_module_rates.csv",
-      "sha256": "c0b163a4d431acd3379b0adf6d9380d4980e1f2eec06f66206f656538eecb787",
-      "bytes": 286
-    },
-    {
-      "path": "research/ablation/structural_mutation_heatmap.csv",
-      "sha256": "67c2b1b1f5abfda7bef8398f77fd5b93dbba9b545ea361d5830ab01d5c3040f6",
-      "bytes": 6683
-    },
-    {
-      "path": "research/ablation/test_numeric_text_guard.py",
-      "sha256": "b053447186a754cc5d59556e267b4cdd966c2c1cdfc07c466f041376ae1dd447",
-      "bytes": 4265
-    },
-    {
-      "path": "research/ablation/v33_binding_ambiguity.pdf",
-      "sha256": "c50e2f3940ecb019f10d64d1e0ef3f7ca8cb838dda2759c2e0c1605bf7d4a096",
-      "bytes": 14638
-    },
-    {
-      "path": "research/ablation/v33_binding_ambiguity.png",
-      "sha256": "9370e488f7176be6d35e64084b26c20391ce3a75493cce4ed3c8496e44d1757d",
-      "bytes": 82342
-    },
-    {
-      "path": "research/ablation/v33_fair_language_ablation.pdf",
-      "sha256": "3fa2068fadc449484f2cdf50705abadff97f7fe8bf9b2c84dabe8084b06ecb1d",
-      "bytes": 19313
-    },
-    {
-      "path": "research/ablation/v33_fair_language_ablation.png",
-      "sha256": "d854d7e34e542555ed1a377f32e699ff4e5e225dfd797b3294b2f17df80ab09e",
-      "bytes": 176473
-    },
-    {
-      "path": "research/ablation/v33_structural_ablation.pdf",
-      "sha256": "3751cd2e8b48cd8d249132d37fb5fb015f5a89a04cb8d22006054910be7defc2",
-      "bytes": 19224
-    },
-    {
-      "path": "research/ablation/v33_structural_ablation.png",
-      "sha256": "c4ef4501f6c434d42d203ce70bd5313fe7f753fae355e7524654eab37c687d7e",
-      "bytes": 241737
-    },
-    {
-      "path": "research/ablation/v4_binding_ambiguity_ablation.csv",
-      "sha256": "74b21db6d5d7639f474419568371d7f9eb0600d783e7ed7eaf3c427044b91224",
-      "bytes": 1252
-    },
-    {
-      "path": "research/ablation/v4_graph_mutation_ablation_by_type.csv",
-      "sha256": "b303e8ca156e524182b9551304ca2cd4b4f550c5c85ea2259003ee8d0db1030f",
-      "bytes": 9463
-    },
-    {
-      "path": "research/ablation/v4_graph_mutation_ablation_details.csv",
-      "sha256": "2782d839cd12be40722535293f99f4f35b79434702286e7dbf30bf8908b6889f",
-      "bytes": 522135
-    },
-    {
-      "path": "research/ablation/v4_graph_mutation_ablation_summary.csv",
-      "sha256": "f148b335f712426cc2a53884a4f48f8408be07d10849d1393174f431402260dd",
-      "bytes": 842
-    },
-    {
-      "path": "research/ablation/validate_candidate.py",
-      "sha256": "402eba690046fc0c7fdb1114c598864e2912de030ec4163b3baaf2ea513e0c43",
-      "bytes": 1766
-    },
-    {
-      "path": "research/historical_language/export_receipt.json",
-      "sha256": "65b22e2e9e328db80ce579051cfcaa075b525aa78376423a274d31d653924244",
-      "bytes": 2084
-    },
-    {
-      "path": "research/historical_language/formula_direct_formula.json",
-      "sha256": "78f302c4518c1d5763859396c8b209502b243102ac022364854e366ea7ef1a8c",
-      "bytes": 12280
-    },
-    {
-      "path": "research/historical_language/formula_direct_formula_output_schema.json",
-      "sha256": "5fd0a4db600158a1480e0dfda1ed0b94f7093bac6aeef2f63e39307e02145a20",
-      "bytes": 1180
-    },
-    {
-      "path": "research/historical_language/formula_full_typed.json",
-      "sha256": "b177e536cd32e7ac9b2f3f4df85bb9e5e4c2cf27b2e4c002922b79e465e26fb7",
-      "bytes": 11164
-    },
-    {
-      "path": "research/historical_language/formula_full_typed_output_schema.json",
-      "sha256": "5fd0a4db600158a1480e0dfda1ed0b94f7093bac6aeef2f63e39307e02145a20",
-      "bytes": 1180
-    },
-    {
-      "path": "research/historical_language/formula_no_graph_catalog.json",
-      "sha256": "6f1d24c4af48f98bbf3b52ad4c8efd52833c39f0ec749145b773caf26eb0a276",
-      "bytes": 11816
-    },
-    {
-      "path": "research/historical_language/formula_no_graph_catalog_output_schema.json",
-      "sha256": "5fd0a4db600158a1480e0dfda1ed0b94f7093bac6aeef2f63e39307e02145a20",
-      "bytes": 1180
-    },
-    {
-      "path": "research/historical_language/internal_chain_full_typed.json",
-      "sha256": "a616c71a601f10732710409022862298240c536af5585c5ebc126c115837fb4e",
-      "bytes": 14171
-    },
-    {
-      "path": "research/historical_language/internal_chain_full_typed_output_schema.json",
-      "sha256": "5fd0a4db600158a1480e0dfda1ed0b94f7093bac6aeef2f63e39307e02145a20",
-      "bytes": 1180
-    },
-    {
-      "path": "research/historical_language/scope_01.json",
-      "sha256": "ec0c8575f203ce0cf753180fe04e41979117eefa4b2b25e0ab1bdbb5f6693ba8",
-      "bytes": 72486
-    },
-    {
-      "path": "research/historical_language/scope_01_output_schema.json",
-      "sha256": "2691643ecb601783598ab0c74d77cdd58b7f880e3e5684b2f3c8fb48f74d5c75",
-      "bytes": 725
-    },
-    {
-      "path": "research/neo4j/arrange_native_view.js",
-      "sha256": "2a110631478d08a5d0b4b74d6d8ddc2f2d5e6d622a0882860157376ada74d493",
-      "bytes": 1354
-    },
-    {
-      "path": "research/neo4j/browser_style.json",
-      "sha256": "f61cb3b0498da9150888df2ffad1c57e03fa14a076d4567f5af7410da0fa7205",
-      "bytes": 1444
-    },
-    {
-      "path": "research/neo4j/database_inventory.json",
-      "sha256": "535cd750c62b8a5e3f66676c0e6ede49a59bedebf6073d5aacf32b61523ff9cf",
-      "bytes": 1374
-    },
-    {
-      "path": "research/neo4j/frozen_reference_provenance.json",
-      "sha256": "864c3b1804ef73ad0b9a49951086df348aa8b7df22a0e6928b5ce88903ef51c4",
-      "bytes": 813
-    },
-    {
-      "path": "research/neo4j/frozen_validator_reference.py",
-      "sha256": "55f557753a2974950b69c43982bb6552fa6c9ef1ec10ddb56a8dec0db7da3ba4",
-      "bytes": 12962
-    },
-    {
-      "path": "research/neo4j/full_graph.cypher",
-      "sha256": "086300762aa6e9bbff1ba69b5c2edb9af4f128dec5979bfbb38e05a9b532a4d7",
-      "bytes": 217
-    },
-    {
-      "path": "research/neo4j/historical_pre_legibility_receipt.json",
-      "sha256": "ebbf1e1192f42520301714e9df40e55b46288c68714a360f1a3eeaa0c7cb7241",
-      "bytes": 2962
-    },
-    {
-      "path": "research/neo4j/import_neo4j_snapshot.py",
-      "sha256": "960c5257ee224ee5fd3278ae73e6b9580f97dda17f69f76657f49f1d5e758193",
-      "bytes": 13833
-    },
-    {
-      "path": "research/neo4j/n06_binding_query_result.json",
-      "sha256": "5ca80b1347990b964e44d22b31343d5d8c5b23cfe4b4da56f345bcee192d0ec8",
-      "bytes": 2133
-    },
-    {
-      "path": "research/neo4j/n06_graph.cypher",
-      "sha256": "73a463eb3814064093c2c5bb42c247261441513aeb137db7f9cb1aa9dac04394",
-      "bytes": 495
-    },
-    {
-      "path": "research/neo4j/n06_native_style.json",
-      "sha256": "278ee16d32abf643cae29a99939f38e29f0061c846106cba7dfad0145010ce60",
-      "bytes": 1627
-    },
-    {
-      "path": "research/neo4j/native_display_caption_mapping.json",
-      "sha256": "74cb251935676562b02d2b3cbb86936d4956f732bf9bccf249d7c4cd11a966e6",
-      "bytes": 6671
-    },
-    {
-      "path": "research/neo4j/native_figure_container_receipt.json",
-      "sha256": "9cd118d43493b00ae576088f4dea4fdf0c287c395fe0bbbe6e1d71e130fe4ed4",
-      "bytes": 1069
-    },
-    {
-      "path": "research/neo4j/native_figures/fig04_neo4j_n06.pdf",
-      "sha256": "3aade31382b48adb11b78d1cd2be38a5395da5a75bb2b47060b09a76ea97605c",
-      "bytes": 563675
-    },
-    {
-      "path": "research/neo4j/native_figures/fig04_neo4j_n06.png",
-      "sha256": "00cee6ed13e7abf6d2d30e336d581e77e93a7be92d609403966b817b3ffaa188",
-      "bytes": 1175127
-    },
-    {
-      "path": "research/neo4j/native_figures/fig_neo4j_full.pdf",
-      "sha256": "bd14e2a8187b803cd3ec04660ca207f833293d08b432feca94834e587c8a823e",
-      "bytes": 839101
-    },
-    {
-      "path": "research/neo4j/native_figures/fig_neo4j_full.png",
-      "sha256": "0d7dcfddbd20b0e3841baab2741d2aff3645c3610af1f9f84f5d021993a8edd2",
-      "bytes": 1161016
-    },
-    {
-      "path": "research/neo4j/neo4j_final_after_export_receipt.json",
-      "sha256": "d0eab0108c4d723f893bf484c1680a131ff96ae7ae0a9546b993cf6980022481",
-      "bytes": 2432
-    },
-    {
-      "path": "research/neo4j/portable_importer_verification_receipt.json",
-      "sha256": "729a963e165605ce7d3024ae178f8e8805c3ab90f974397932b0dd79ac93c897",
-      "bytes": 1711
-    },
-    {
-      "path": "research/neo4j/README.md",
-      "sha256": "f1c1ce22adc5d71ca914cd7bfa2bfa4993eb55d5269950afdc6fa96813191bed",
-      "bytes": 4899
-    },
-    {
-      "path": "research/neo4j/reference_extension/v33_constraint_extension_by_family.csv",
-      "sha256": "6c1d4dc5c716a9cbfbb45fa5885f0b5799c2acc173dffd30f85b015a44ed3e8f",
-      "bytes": 567
-    },
-    {
-      "path": "research/neo4j/reference_extension/v33_constraint_extension_details.csv",
-      "sha256": "1a66b61cd8f8f57fd54dffd453934950b3fcb7fd52c47f8579f1458b6a5a010b",
-      "bytes": 619954
-    },
-    {
-      "path": "research/neo4j/reference_extension/v33_constraint_extension_positive_controls.csv",
-      "sha256": "7ddcd68d2370cf791d74379128910fd4cc61a8f38f4dbaf1b56f5ab1771bdef2",
-      "bytes": 5371
-    },
-    {
-      "path": "research/neo4j/reference_extension/v33_constraint_extension_receipt.json",
-      "sha256": "b7a2f4120ac8c75692e32b1450b61ccd46c9a5fe75392ba5093f6ccc9d5a8515",
-      "bytes": 4525
-    },
-    {
-      "path": "research/neo4j/reference_numeric_domains/numeric_domain_controls.csv",
-      "sha256": "f716ca40071576f1a115e3d5754d0842cb205f05bfcfedba5d54dc23fc6044db",
-      "bytes": 3728
-    },
-    {
-      "path": "research/neo4j/reference_numeric_domains/numeric_domain_controls_receipt.json",
-      "sha256": "1aa52de5e06a1e329e3f33d2c8fabd38c09315c43dbf75b5b0107a16f016e7c0",
-      "bytes": 936
-    },
-    {
-      "path": "research/neo4j/run_constraint_extension.py",
-      "sha256": "1bf9c562e84e8ce06aa1bab79fdca8d305890462614de50c216ea3e52ccc2897",
-      "bytes": 13205
-    },
-    {
-      "path": "research/neo4j/run_numeric_domain_controls.py",
-      "sha256": "f0b9d2cfde7cce11a39255d17119688f537a8520590ac73694a0d9e17f124a38",
-      "bytes": 5047
-    },
-    {
-      "path": "research/neo4j/validation_extension.py",
-      "sha256": "6920ecb1b5854df52bb3370f740e206e4996f67287219ee4244adcc3c8938d6b",
-      "bytes": 9333
-    },
-    {
-      "path": "src/uav_stkg/__init__.py",
-      "sha256": "76c699ecd227d4c9d42388347df849cc7503f8e768a68a71744c2308c60b45a1",
-      "bytes": 65
-    },
-    {
-      "path": "src/uav_stkg/graph_constraints.py",
-      "sha256": "7fd7d37d5806e4c8dff202b8981790f95ecb69f972a628e875c10115c4aec88a",
-      "bytes": 24840
-    },
-    {
-      "path": "src/uav_stkg/monitor/__init__.py",
-      "sha256": "f1f6e63e6e929ca913fb4e1461b8dead87f1ed5f07da318cb3cbc4e275860cf0",
-      "bytes": 74
-    },
-    {
-      "path": "src/uav_stkg/monitor/_legacy_sampled_monitor.py",
-      "sha256": "842892ce417181c1e179ec07259361aff977ff948a6503d2077800c2268ffb7c",
-      "bytes": 11547
-    },
-    {
-      "path": "src/uav_stkg/monitor/monitor_from_traceability_graph.py",
-      "sha256": "fea777050426cb784678694c9d3ffcd145a86fa5910502b547db1ce1f66dd76d",
-      "bytes": 7129
-    },
-    {
-      "path": "src/uav_stkg/monitor/run_precision_regression.py",
-      "sha256": "132b75b92ff7c5f4e6792f15e8c6b8c1fa195a32835e5850dfb6324ddd0b8d90",
-      "bytes": 31042
-    },
-    {
-      "path": "src/uav_stkg/monitor/sampled_data_contract.py",
-      "sha256": "b54d13739a79152aa231d9d5285607c1ffdc9aaf5a0c73c5c38c602695f34c17",
-      "bytes": 14005
-    },
-    {
-      "path": "src/uav_stkg/monitor/sampled_monitor.py",
-      "sha256": "b30c37e39393fed15832baac4b89e19836ffeee05734c504c28341fb2e97305d",
-      "bytes": 7994
-    },
-    {
-      "path": "src/uav_stkg/monitor/test_legacy_api_compatibility.py",
-      "sha256": "7549c6cc61124e54c4ad432d12f1cd3e31b21e7c53da2c443609dfadade3251b",
-      "bytes": 1329
-    },
-    {
-      "path": "src/uav_stkg/monitor/test_timestamp_precision.py",
-      "sha256": "506a4b40e17876c278ba9b3cc4cd9dc06de993bbbb0fa056452c27902cbd95d6",
-      "bytes": 9021
-    },
-    {
-      "path": "src/uav_stkg/monitor/timestamp_precision.py",
-      "sha256": "4b30b2ac384f3d9616b6ebc116b465d02171dd638ebb3d448b789163cf1012a0",
-      "bytes": 5262
-    }
-  ]
+  "version": "v34",
+  "sha256": {
+    ".gitignore": "5de5a0fd86082dd7a4f191cf382b1ddadc0ea5cdf3e0286e3f01694e32ae92f6",
+    "CITATION.cff": "53806f5319692d712d9dbd423d8d59927dde24611727d98976b9a2972d7f35e2",
+    "data/annotation/historical_A_19.csv": "60ef63c50422b6a9189049956ee6db917007c3105f8b28cbcb23a1201343c55d",
+    "data/annotation/historical_A_215.csv": "baf93bda370e2253da3608f1ff8ca53b9cc6f078a4e0a54f5cc22c242fea1ff0",
+    "data/annotation/historical_B_19.csv": "426f03b238b05131ebbdd4c12615a8b025a937a3f66eec43d2fb857a01264a1c",
+    "data/annotation/historical_B_215.csv": "e2d87ea8020c70eb1d6a7d662f30f4f17e8b7c04248030c3bed5ae1021d81d24",
+    "data/annotation/historical_C_19.csv": "050b300b44a4b2d1595169dd3444581fa1a44f2a92ad6fbc4c6434875ed07c44",
+    "data/annotation/historical_C_215.csv": "3c33419d6be5c8e20bde6a79d21a92ca513516dd1dc0bab4a10ec52b26b1c0f3",
+    "data/annotation/README.md": "b38874247de4bdc04aec0d59db7e597c319191d649d48e4068f16252238009bc",
+    "data/annotation/workflow_provenance.json": "f4bb07bac039e7e676264e3a259143d103a9e069fcb2b2ca0b8ce232b82114bc",
+    "data/external/idf_ds_lap120_verified_v34/ATTRIBUTION.md": "1669a1cc47d36fcfe167db3162fe649720343749218ad2f5b44c3aada0ee2dc4",
+    "data/external/idf_ds_lap120_verified_v34/source_acquisition_manifest.json": "2f2e82c3b35c8ba7274264b51799330dcbad3dbb810b7d0632be7ad61281cd67",
+    "data/external/idf_ds_lap120_verified_v34/vehicle_angular_velocity_0.csv": "596d5f6db55828b8a0054dafc04a027f6c8587f907b3701fcf761e314b47469f",
+    "data/external/idf_ds_lap120_verified_v34/vehicle_attitude_0.csv": "76001fbf0b72ac67a17f847593e05a0f1941450eb0da799d147c0e6efdf0a7b4",
+    "data/external/idf_ds_lap120_verified_v34/vehicle_local_position_0.csv": "5d1c69ef87b475506b35fae8797674e2c84f6074377d741660f4b7573b1ae24d",
+    "data/graph/bindings.csv": "e34304d8b7dcf434308ab97a6d0d27e96684ed6bc0e995154d490a9c3408de45",
+    "data/graph/internal_requirement_pairs.csv": "da1d0ff0d0aff036f1f5d8b31366aa09d8068ca40c5b0584d0a5ffd75bd7a925",
+    "data/graph/nodes.csv": "78b7d4348a49e0f3ccd94c24b6e5221d43e4a21e5000bae2b811e8b962f4845c",
+    "data/graph/relationships.csv": "cb263a607ddbf21e6d99e663f25c4014a71656232333a0ddc431b6a66b887f73",
+    "data/language/chinese_historical_metrics.csv": "c4ecc6b8f50fcae8afa702c93360d25c146680fb7d52c1c711b5e3cc9cd1a463",
+    "data/language/chinese_historical_predictions.csv": "ee0b9d32769f650a4d36e613bcb46de95825afc1bf9703f77be4341810641c7e",
+    "data/language/english_expected_families.csv": "c412e5e39691abb7626e2f32eccaf12b10bdc2e953be763fe78913c9aa3a8b7f",
+    "data/language/english_expected_summary.csv": "fab424160ed805c361d585dc06c9f0f74bb0889ce5a3e2f2ec1ad05b24fd7dad",
+    "data/language/english_items.csv": "ab8929ade4c4e3f9293646263753a2a3954666a79de90a3800ba71ef18f75395",
+    "data/language/english_predictions.csv": "6aebd91a6fd5829f3a15879479bb1d441bb06c29bad1a4e1885fd2de9d82484e",
+    "data/language/historical_source_registry.csv": "8ea7088676f0770763e966c3ef65945a5fae139c7b0a620ce352a6b7e6383cb6",
+    "data/monitor/boundary_12_contract_controls.json": "34f4efba6c3bc07e1c96952d77ed6bfa9e3badd72a2ddfdb40a612056401f8d0",
+    "data/monitor/boundary_648_cases.json": "2598efaacf05fe4aae57d8cb6d8b125d6539bc223cbf482d2e9aff4f11aa5a82",
+    "data/monitor/boundary_contract.json": "85fac429a76a3ad9d0d4f1e2b8e13741c9fc151cfd7a3233a7127ea5b2fd1043",
+    "data/monitor/boundary_decimal_oracle.py": "a3564a23035ddc597572f5a00ddc9da2f98c59559cfe1aee393d4447b627cff4",
+    "data/monitor/e5_102_protocol.json": "924102b5828d106550151f8c61f0a792c12e22ee69a7d65f6eaf4d5d5c949ea3",
+    "data/monitor/e5_decimal_oracle.py": "6d83e371a9b56ce91d06ca0ae9b76927b045ec82ff2c2b21d7d333481ba0934f",
+    "data/monitor/independent_reference_semantics.py": "ff099d3a7b82700d81cb68259041cd0a6e255dfd06f1312c37556042b5b94257",
+    "data/monitor/input_manifest.json": "a064762f378f94a5d626746081599e4462ed9f3828570140eb62e256fdc13d60",
+    "data/monitor/legacy_test_metamorphic_monitor.py": "8f5835c1226c8fbfd23d40cdd1895e5d7978668c8fc0597257769437d1c64640",
+    "data/monitor/legacy_test_sampled_data_contract.py": "84252aa2d472b532a1157eda39ddb32f0a77d42dab9c804179e798ca0a0f1b52",
+    "data/monitor/legacy_test_sampled_monitor.py": "a839613ffcbc60cbddd0f6544b83ae94f52158372b0630c2020f20358bd1e487",
+    "data/monitor/optional_real_replay_sources.json": "872ea7845ac29ac43fb2159e2b0e7794e3aa29b0e8cb9a78cb3e9cfb21749ff1",
+    "data/monitor/original_12/C01_01.json": "007b542fdd364189e3493c51c966c0e60f3ae6cb7f959007c14a85ee4530819e",
+    "data/monitor/original_12/C01_02.json": "0cff605c27b785c67d8c46e210eed945346dde4b4a5900b4b9925e938318a2ee",
+    "data/monitor/original_12/C01_03.json": "025fff4ad8d4e1412d4fd9bad116ed6029be0e18c55ab068e6b272e3c6d2f7c7",
+    "data/monitor/original_12/C02_01.json": "ae27b89f727bd7e5a5b33c6be6d64ef5a657768d8996a1bbafc434421f4e32fe",
+    "data/monitor/original_12/C02_02.json": "27b516058a0f7e4e76cfc32defd888992f063c6bf75b3fcb29cc521b47a3d9f2",
+    "data/monitor/original_12/C02_03.json": "54b3c0dfda40602281acdbe286e535ead76886c93ba93740c5210c7a14412791",
+    "data/monitor/original_12/C03_01.json": "8f84f1ed34e683f1985552602ef46a00dafd07dc7453ee09c22418f652d482b2",
+    "data/monitor/original_12/C03_02.json": "640976eee841ead4cdad8ad4e90f648ef3e71bcc63b37df037781a93e50d26ec",
+    "data/monitor/original_12/C03_03.json": "53fbfa63750791c559394985a5ac418638ea6003a397a73d9043ecfc77a554ed",
+    "data/monitor/original_12/C04_01.json": "2ef70470fd6b218f2a44f96f842e9384be42f898ed0b08d7c0e51a36ee40d7a9",
+    "data/monitor/original_12/C04_02.json": "45980e5d6b9b3d5be3f739c968bcb9ecc1515a7ed1afdb3be0c4ccc6f120528d",
+    "data/monitor/original_12/C04_03.json": "5e7b1f42d86778c58ca57e2c3bc74d34d52ab1d5e3bd1f8a98caa4ebff36489f",
+    "data/monitor/README.md": "0cd484d6b1bb091d2fd10698413beb2c4e2e00c26c930f40abe35c2a2ef674c1",
+    "data/monitor/semantic_differential_600.csv": "faafe8322be48468105e3707f58d3cfbe592b572865e91cbeee2904c6201a51d",
+    "data/provenance/manuscript_artifact_map.csv": "c9aa84eae9c88c64a77b3dc218a3253bbeb50fadc566371e1960b0a2c612cc63",
+    "data/provenance/README_artifact_map.md": "42edfdd514926c6cf2487bd86b842817678d0ed99017fe5dbaf324e550e862a1",
+    "data/provenance/research_monitor_thresholds.csv": "8661624492ac29bc7f1ddcd86fe13165eaed488b5e745fac5e320c5d7216380f",
+    "data/provenance/source_identifier_index.csv": "4b0b95aa92d1dd2c017f7339b6a82aed0b1be7389cd17500b11737a418b90a45",
+    "data/provenance/upstream_document_sources.json": "c9a3b6d57a1608e6832294781444f0d10e46105fc89bf20384f3202edfba4777",
+    "data/structural_ablation/binding_ambiguity.csv": "74b21db6d5d7639f474419568371d7f9eb0600d783e7ed7eaf3c427044b91224",
+    "data/structural_ablation/by_type.csv": "b303e8ca156e524182b9551304ca2cd4b4f550c5c85ea2259003ee8d0db1030f",
+    "data/structural_ablation/details.csv": "2782d839cd12be40722535293f99f4f35b79434702286e7dbf30bf8908b6889f",
+    "data/structural_ablation/summary.csv": "f148b335f712426cc2a53884a4f48f8408be07d10849d1393174f431402260dd",
+    "README.md": "3353dcb0bf224212c807c90e346e9e324c48b6cbd8c2df69dd4d429ce8ba5339",
+    "release_status.json": "610fb82d4ad80af7f8b54736c2ce808354dc01ae5dc2ad351f11f3d2a80f9327",
+    "reproduce.py": "af0b57a7463b4d64e99f02ee1b060f3002e07f0cecc05a168674ac40ce12a77f",
+    "reproduce_ablation.py": "3c8f1096534b5c65f4592d17d3cddd2d9c21069289843a7c225388d61e2c9674",
+    "reproduce_catalog_screen.py": "87b01631f864e2926527615f499eb0231032b461839cf38a4923758a7fa9250c",
+    "reproduce_graph_extension.py": "79cec172552e2fa6466132a678ee185ade2d21c6685c6632e82781da21b6a86d",
+    "reproduce_historical_audits.py": "5f409d59f39a4ff494faa9f9781b7c41e7cbb5e6e4720e4d8f2a44be9919c57b",
+    "reproduce_idf_verified.py": "b66ca4e1bcf0d1085c537294307d7075834cb7e37803a6c9f7d06418332c4c9e",
+    "reproduce_monitor.py": "293cecc62d6b62cbcf5ecde3270d989bb192fbae3ce9235cfb77da9ecc6e8d3c",
+    "reproduce_semantics.py": "57c7f0d07515822c061895bcd15e5105f5f888613007b5da0fbf2f5230524447",
+    "requirements-ablation.txt": "52a6e3e5cb87b70a3fb32f1decfc728d81af33f2c4199a2bd69404ffff922f2f",
+    "requirements-neo4j.txt": "20496b9ced7b63c34091434a013f0c9b50c11a5613496401ce05cac8ec6a6289",
+    "requirements-replay.txt": "0491163a8b276f7ba5c098827b179b2f345827abf8205101e1166376550ca827",
+    "requirements.txt": "6e3aaa16510a7c4de8ade144ebfcc2b270f7b2e8777c970b15373dcb310bbc32",
+    "research/ablation/ablation_artifacts_receipt.json": "79cda0d55d8dfd614f6fa9923661e23d018e43fce793fc6d90ea84d7d3864e23",
+    "research/ablation/ablation_scoring.py": "8589bcbf0b34ce699d6c2c6c8750a776b4da08536a60c71faf85e85c58082899",
+    "research/ablation/availability_schema.json": "a551b866d98001048dca74979effec99135737af911ad5cd3c62b1c651e5393a",
+    "research/ablation/build_ablation_artifacts.py": "66c7a83c628506efff843401004c12ce833acbd3853ace0f6ca8bb98563a1f55",
+    "research/ablation/fair_language_condition_summary.csv": "9243ac9853b5fc44ef3728c3b2bf14ffe96080e5cdf3f32d964b22f4ebbb0302",
+    "research/ablation/fair_language_mean_min_max.json": "b103437f6fa4a6238ea43a786713b8812be5a6c49c375308b4cf9add740fd41b",
+    "research/ablation/fair_language_predictions_v33_reference.csv": "fa8ac5ca8d7d9150f3f308d193a02974ed9bcfff4ab2c555bcd3d2c33fdd8ca4",
+    "research/ablation/fair_language_run_metrics.csv": "f6a0ec864b79268c82e97305934c56a5e7277b76372808d852be765591ed2ac3",
+    "research/ablation/fair_language_scientific_receipt.json": "a786a34f2a555aedecec1aba660d62ea2936ed50c64d6eacc1297fbe071c2030",
+    "research/ablation/figure_inserts.tex": "f3476ef4a0900e4ba5e56431e2cd5d3bcc25a802c316d90a87a89b41a3be50c5",
+    "research/ablation/figure_readability_receipt.json": "153ee76a3cc2707effdfb920753b51fc491703cd8f8cd65390706bdea68bb8c8",
+    "research/ablation/historical_five_method_source_reviewed_rows.tex": "ad9f2b388115f26f4b3a667caca488314093f3300453ab982ca355f51af79235",
+    "research/ablation/historical_methods_on_v33_reference.csv": "59d4bb4c56a8879415ae3ec12271b60ad05394d5354b0dcf73ba7bd49316b5c4",
+    "research/ablation/historical_metrics_original_reference.csv": "c4ecc6b8f50fcae8afa702c93360d25c146680fb7d52c1c711b5e3cc9cd1a463",
+    "research/ablation/historical_predictions_on_v33_reference.csv": "4d20a948536c8a7c28558ad1133d05652001f21c6903355767acb1f5b38f1e23",
+    "research/ablation/inputs/historical_baseline_predictions.csv": "f204487721f495ea8e6327051450c1d2e00c432802ee61278058155da11a1a45",
+    "research/ablation/inputs/historical_language_predictions.csv": "67730a80961fd4b39c33ede4a0fb4c26def1be3eb68b89db04a5344fdc7fe43a",
+    "research/ablation/inputs/historical_metrics_original_reference.csv": "c4ecc6b8f50fcae8afa702c93360d25c146680fb7d52c1c711b5e3cc9cd1a463",
+    "research/ablation/inputs/v4_binding_ambiguity_ablation.csv": "74b21db6d5d7639f474419568371d7f9eb0600d783e7ed7eaf3c427044b91224",
+    "research/ablation/inputs/v4_complete_formula_catalog.csv": "aa7846deb46e6882b9e48323213cc1b14e01a81d0d619b0872eae1f70fdd649f",
+    "research/ablation/inputs/v4_graph_mutation_ablation_by_type.csv": "b303e8ca156e524182b9551304ca2cd4b4f550c5c85ea2259003ee8d0db1030f",
+    "research/ablation/inputs/v4_graph_mutation_ablation_details.csv": "2782d839cd12be40722535293f99f4f35b79434702286e7dbf30bf8908b6889f",
+    "research/ablation/inputs/v4_graph_mutation_ablation_summary.csv": "f148b335f712426cc2a53884a4f48f8408be07d10849d1393174f431402260dd",
+    "research/ablation/language_call_summary.json": "69350055ec5036d86fd83fe70f95735538d19bdcb2f6c4e1d02f0f746eeea843",
+    "research/ablation/language_isolation_audit.json": "10c7e3fbfdca4be4297f1320c552bc6d9e43df34db759b6af8193376d639f14d",
+    "research/ablation/language_protocol_frozen.json": "54d72f16b9f6af0c059b2f456f996c51e8f7047b531e64bd985588fc7488ba7d",
+    "research/ablation/legal_catalog_semantic_challenge.csv": "5916d41211225a1dd37edfd859b9c2568aebeec45555451245c77cfa73212b97",
+    "research/ablation/legal_catalog_semantic_challenge_receipt.json": "90ce6a59345fca2b5b75c5cb15cc9634c41c6482c413a215043396b7868df7bf",
+    "research/ablation/main_methods_insert.tex": "f93b30f4a1b12199fe4802eaea5d5d65e8e1ff5c1c005783a52e352a257153de",
+    "research/ablation/main_results_insert.tex": "09be76492e3df05b62fe2f16af2db68e96cb8f0aa89cc1b04561c13d2f886d0d",
+    "research/ablation/numeric_example_conflict.json": "914bd23c92c6b825cafd17e7a36cec81855d66360deb6e3339a1a52906e32768",
+    "research/ablation/numeric_guard_original_24.csv": "dc60f1a4836d9913265fdc02dfe4c1eac2c5d0a7ed5524b969f5afe448f5760d",
+    "research/ablation/numeric_guard_receipt.json": "b36f4aba7ce440fa5964c3e4de4c7eb7898a5c801a7e606d7d46da26450e9831",
+    "research/ablation/numeric_text_guard.py": "3658ca900b101310c017983cfcd852810e5ceb8b9f6407a45a5d78af9cdae924",
+    "research/ablation/public_calls/availability.json": "1260258d0fbf9ced6ccb59475d59eaa6a7b68c3bc7391c0c1f02abe22ca53b9d",
+    "research/ablation/public_calls/availability_01.json": "aca25dfa26351c3e041789c38ffc3d6105739857a25a82389a62662a90ce1905",
+    "research/ablation/public_calls/availability_02.json": "610ba084acd76222fc1d32cf86a2280cab00c567a0d5550a90296aa96c1fab59",
+    "research/ablation/public_calls/full_r1.json": "7d80057722fb1c2b1571be3b6c8fb00106bc3b2d5345374b39e69c5fbcf1d81d",
+    "research/ablation/public_calls/full_r2.json": "a7cda232ce6004d39283f3566aa907ef7aafc00a2a66331ed96f9d0290c94e44",
+    "research/ablation/public_calls/full_r3.json": "d25bf6c9ce04b60e8c08f6440ebb975900e6aa430c1810e4875e376585ed790e",
+    "research/ablation/public_calls/full_r4.json": "30b9941431d4d142831cae22ee166bc02125095edc60dfb67bf690f0ab2629da",
+    "research/ablation/public_calls/full_r5.json": "7c8caf49f83734ef2a753acc1bb9e1441d880e070a147ca40c64cf56f7f2e962",
+    "research/ablation/public_calls/without_both_r1.json": "71f4688c0cc4092b6066aae0d6e5ab3397571a8a35eec42af3a47a8d8f91abd7",
+    "research/ablation/public_calls/without_both_r2.json": "0a84b7241aeecd3e817b2618f826fb4307b6b35309002690f4d743caecd1c242",
+    "research/ablation/public_calls/without_both_r3.json": "ae2453c354d0764a391c15ab600e893b29e3eff6f65effac16e1f18285146712",
+    "research/ablation/public_calls/without_both_r4.json": "48c23c2610b8534023153ab9978386dad87f78a681987ef836787edabf865a29",
+    "research/ablation/public_calls/without_both_r5.json": "5ed0a9378df84ea60073fd189d8ebda35f61bc85cbd8433a7f52dddd34145441",
+    "research/ablation/public_calls/without_role_mapping_r1.json": "1e9e6f432beda4773d0a7998941049551e3eb0c61ebaaf557fbf01773ea8889b",
+    "research/ablation/public_calls/without_role_mapping_r2.json": "8e07a12455a07015ca844d1ae66356d8f9345e1cf7ae4183aea3bc539a04e559",
+    "research/ablation/public_calls/without_role_mapping_r3.json": "1d698c92c91298551a48a677fa2a909ff4a1bc832e8e3a14a4b4fa52250a4ea1",
+    "research/ablation/public_calls/without_role_mapping_r4.json": "26ee37bd5a935ab906c6fc70352ab954fb9f22869c4342e8972136d19d4e72e3",
+    "research/ablation/public_calls/without_role_mapping_r5.json": "97be2a04ef1b2265a115b8e1daa57e1037b10f2471fc79431f70404c0efa41a2",
+    "research/ablation/public_calls/without_skeleton_r1.json": "0863a0fc733bb933f3aac84a144d099969aab29880dc45be3e363726263e4811",
+    "research/ablation/public_calls/without_skeleton_r2.json": "445c37c3cc5a9c68f1976d47ad1fa1cbdf3fc54e0142f3e595926ae4aa67f457",
+    "research/ablation/public_calls/without_skeleton_r3.json": "92d23b4457ac5ca8cf11c8df91d2e522008b92b0750571ddc670906c5b3d04eb",
+    "research/ablation/public_calls/without_skeleton_r4.json": "f41f2429944b39a4b4327b58edf9eb83308b736f903e8da795772ff8d0c5752a",
+    "research/ablation/public_calls/without_skeleton_r5.json": "dba09e92bda1b98c6860bfd0ee72abf4c5d30fb4a5198b7243d2790d514cc064",
+    "research/ablation/public_input_records.json": "503221d3bce555efb3def1bfe616a12e1d77623abaa1a9cbc6ab577b43dced81",
+    "research/ablation/README.md": "71f1f48a4fece7b8a1989aec7bee330641d9fe8cdd49a24599826a0d1949ba2f",
+    "research/ablation/reference_19_v33_source_reviewed.csv": "ed54a3840b9c34ce8579f3da0f8daaaf6e7765f06f8223d9c9e0b839a4b43c2c",
+    "research/ablation/run_fair_language_ablation.py": "31386dabdf0fd8bc9e943a4a0e30b0a60fabdb00105e271cf3a24d614dbb9a2e",
+    "research/ablation/scoring_id_mapping.json": "7745220d88e68e49a00d290ca34e02198c1011ab96840a024c2110163116c74d",
+    "research/ablation/shared_output_schema.json": "4ff3e4f412c71cc01066952978bd7e8112a774f4aaf4ee22fbee30bf26c65987",
+    "research/ablation/source_review_19.csv": "ee5d479bfc2de74ba16556a0d952055339147147d2cc99398f7c0fb989258b6e",
+    "research/ablation/source_review_receipt.json": "472c7638be9da0ba32ae96f79e66b60dba45830682a00452951f294fe55b8b4e",
+    "research/ablation/structural_module_rates.csv": "c0b163a4d431acd3379b0adf6d9380d4980e1f2eec06f66206f656538eecb787",
+    "research/ablation/structural_mutation_heatmap.csv": "67c2b1b1f5abfda7bef8398f77fd5b93dbba9b545ea361d5830ab01d5c3040f6",
+    "research/ablation/test_numeric_text_guard.py": "b053447186a754cc5d59556e267b4cdd966c2c1cdfc07c466f041376ae1dd447",
+    "research/ablation/v33_binding_ambiguity.pdf": "c50e2f3940ecb019f10d64d1e0ef3f7ca8cb838dda2759c2e0c1605bf7d4a096",
+    "research/ablation/v33_binding_ambiguity.png": "9370e488f7176be6d35e64084b26c20391ce3a75493cce4ed3c8496e44d1757d",
+    "research/ablation/v33_fair_language_ablation.pdf": "3fa2068fadc449484f2cdf50705abadff97f7fe8bf9b2c84dabe8084b06ecb1d",
+    "research/ablation/v33_fair_language_ablation.png": "d854d7e34e542555ed1a377f32e699ff4e5e225dfd797b3294b2f17df80ab09e",
+    "research/ablation/v33_structural_ablation.pdf": "3751cd2e8b48cd8d249132d37fb5fb015f5a89a04cb8d22006054910be7defc2",
+    "research/ablation/v33_structural_ablation.png": "c4ef4501f6c434d42d203ce70bd5313fe7f753fae355e7524654eab37c687d7e",
+    "research/ablation/v4_binding_ambiguity_ablation.csv": "74b21db6d5d7639f474419568371d7f9eb0600d783e7ed7eaf3c427044b91224",
+    "research/ablation/v4_graph_mutation_ablation_by_type.csv": "b303e8ca156e524182b9551304ca2cd4b4f550c5c85ea2259003ee8d0db1030f",
+    "research/ablation/v4_graph_mutation_ablation_details.csv": "2782d839cd12be40722535293f99f4f35b79434702286e7dbf30bf8908b6889f",
+    "research/ablation/v4_graph_mutation_ablation_summary.csv": "f148b335f712426cc2a53884a4f48f8408be07d10849d1393174f431402260dd",
+    "research/ablation/validate_candidate.py": "402eba690046fc0c7fdb1114c598864e2912de030ec4163b3baaf2ea513e0c43",
+    "research/annotation/reproduce_annotation.py": "95d7a432b6c139ea314ce5602ba7d73c98916962b3e4b8e11b051c425f758c94",
+    "research/historical_audits/controlled_screen.py": "dabd9d40a2570a2ea8ab592816758a2ab5792462f8336f08b268396e3205e60b",
+    "research/historical_audits/controlled_screen_provenance.json": "d29294e7167852764a4b4933a69f1ee1ee586d2abad69a3aa03ad5e0c9eb9575",
+    "research/historical_audits/expected_relational_parity_details.csv": "9e45c6162387c1638d5f8e7a239c012f01b98ec927ff3ffaf245f58aa5ff38b7",
+    "research/historical_audits/portability_provenance.json": "abcb5f3ca1643ec8c2db4f47c052bb9b527fee7ba7ddc8ea78d217cf5ca8d42c",
+    "research/historical_audits/README.md": "fd9738c22dd5b6c034cf307de6e2332c0b4d1049f635f01be38d6f235133217b",
+    "research/historical_audits/relational_verifier.py": "34fa7ce0ecc313492336cdf6e76571b5a17f17db19f36eb23950fe6d8b4719d6",
+    "research/historical_audits/source_binding_verifier.py": "be596ebcaac53af59094a16995ffce4b1c9ae3994aabcccb7a77811d2955d70a",
+    "research/historical_audits/source_inputs/docs/\u91cd\u6784\u5de5\u4f5c\u53f0/01_\u91c7\u6837\u6570\u636eSTL\u8bed\u4e49\u4e0e\u76d1\u6d4b\u5951\u7ea6.md": "dd392748209e5cf6356629a38fc4fd277040801f2333a4e67d63694f09478d99",
+    "research/historical_audits/source_inputs/specification/results/research_monitor_thresholds.csv": "8661624492ac29bc7f1ddcd86fe13165eaed488b5e745fac5e320c5d7216380f",
+    "research/historical_audits/source_inputs/specification/run_all.py": "a6c39239dc2d2d2def786caab4ff9500a7d6dc4810e50bbf993bf199673126a0",
+    "research/historical_audits/source_inputs/specification/v2/build_traceability_graph.py": "8b4cfe677a7b334a54e1e5932a4f75e0b21fc38410dadc5cc13c2ed2b271ad56",
+    "research/historical_audits/source_inputs/specification/v2/data/monitor_runtime_parameters_v2.csv": "0ebb4d75ef8cfdd1c39cd924547ea5a830ab0f06bdc027abc2b8ee8954f28ded",
+    "research/historical_audits/source_inputs/specification/v2/data/signal_context_v2.csv": "b7992466499a06012a67e2725977d0af0d0231d28ff136758d5beb5b4a706c75",
+    "research/historical_audits/v4_complete_formula_catalog.csv": "aa7846deb46e6882b9e48323213cc1b14e01a81d0d619b0872eae1f70fdd649f",
+    "research/historical_audits/v4_controlled_conversion_audit.csv": "af090330c28fd33f6d03d10db68f59849fd84fdb2a01ede1ce566dfdbcda638b",
+    "research/historical_audits/v4_controlled_screen_refusal_probes.csv": "c3bf2c48d7a7dca51fc8ce7cfa3847568b363aa0f5772e384980dd9d8e49ecdb",
+    "research/historical_language/export_receipt.json": "65b22e2e9e328db80ce579051cfcaa075b525aa78376423a274d31d653924244",
+    "research/historical_language/formula_direct_formula.json": "78f302c4518c1d5763859396c8b209502b243102ac022364854e366ea7ef1a8c",
+    "research/historical_language/formula_direct_formula_output_schema.json": "5fd0a4db600158a1480e0dfda1ed0b94f7093bac6aeef2f63e39307e02145a20",
+    "research/historical_language/formula_full_typed.json": "b177e536cd32e7ac9b2f3f4df85bb9e5e4c2cf27b2e4c002922b79e465e26fb7",
+    "research/historical_language/formula_full_typed_output_schema.json": "5fd0a4db600158a1480e0dfda1ed0b94f7093bac6aeef2f63e39307e02145a20",
+    "research/historical_language/formula_no_graph_catalog.json": "6f1d24c4af48f98bbf3b52ad4c8efd52833c39f0ec749145b773caf26eb0a276",
+    "research/historical_language/formula_no_graph_catalog_output_schema.json": "5fd0a4db600158a1480e0dfda1ed0b94f7093bac6aeef2f63e39307e02145a20",
+    "research/historical_language/internal_chain_full_typed.json": "a616c71a601f10732710409022862298240c536af5585c5ebc126c115837fb4e",
+    "research/historical_language/internal_chain_full_typed_output_schema.json": "5fd0a4db600158a1480e0dfda1ed0b94f7093bac6aeef2f63e39307e02145a20",
+    "research/historical_language/scope_01.json": "ec0c8575f203ce0cf753180fe04e41979117eefa4b2b25e0ab1bdbb5f6693ba8",
+    "research/historical_language/scope_01_output_schema.json": "2691643ecb601783598ab0c74d77cdd58b7f880e3e5684b2f3c8fb48f74d5c75",
+    "research/neo4j/arrange_native_view.js": "2a110631478d08a5d0b4b74d6d8ddc2f2d5e6d622a0882860157376ada74d493",
+    "research/neo4j/browser_style.json": "f61cb3b0498da9150888df2ffad1c57e03fa14a076d4567f5af7410da0fa7205",
+    "research/neo4j/database_inventory.json": "535cd750c62b8a5e3f66676c0e6ede49a59bedebf6073d5aacf32b61523ff9cf",
+    "research/neo4j/frozen_reference_provenance.json": "864c3b1804ef73ad0b9a49951086df348aa8b7df22a0e6928b5ce88903ef51c4",
+    "research/neo4j/frozen_validator_reference.py": "55f557753a2974950b69c43982bb6552fa6c9ef1ec10ddb56a8dec0db7da3ba4",
+    "research/neo4j/full_graph.cypher": "086300762aa6e9bbff1ba69b5c2edb9af4f128dec5979bfbb38e05a9b532a4d7",
+    "research/neo4j/historical_pre_legibility_receipt.json": "ebbf1e1192f42520301714e9df40e55b46288c68714a360f1a3eeaa0c7cb7241",
+    "research/neo4j/import_neo4j_snapshot.py": "960c5257ee224ee5fd3278ae73e6b9580f97dda17f69f76657f49f1d5e758193",
+    "research/neo4j/n06_binding_query_result.json": "5ca80b1347990b964e44d22b31343d5d8c5b23cfe4b4da56f345bcee192d0ec8",
+    "research/neo4j/n06_graph.cypher": "73a463eb3814064093c2c5bb42c247261441513aeb137db7f9cb1aa9dac04394",
+    "research/neo4j/n06_native_style.json": "278ee16d32abf643cae29a99939f38e29f0061c846106cba7dfad0145010ce60",
+    "research/neo4j/native_display_caption_mapping.json": "74cb251935676562b02d2b3cbb86936d4956f732bf9bccf249d7c4cd11a966e6",
+    "research/neo4j/native_figure_container_receipt.json": "9cd118d43493b00ae576088f4dea4fdf0c287c395fe0bbbe6e1d71e130fe4ed4",
+    "research/neo4j/native_figures/fig04_neo4j_n06.pdf": "3aade31382b48adb11b78d1cd2be38a5395da5a75bb2b47060b09a76ea97605c",
+    "research/neo4j/native_figures/fig04_neo4j_n06.png": "00cee6ed13e7abf6d2d30e336d581e77e93a7be92d609403966b817b3ffaa188",
+    "research/neo4j/native_figures/fig_neo4j_full.pdf": "bd14e2a8187b803cd3ec04660ca207f833293d08b432feca94834e587c8a823e",
+    "research/neo4j/native_figures/fig_neo4j_full.png": "0d7dcfddbd20b0e3841baab2741d2aff3645c3610af1f9f84f5d021993a8edd2",
+    "research/neo4j/neo4j_final_after_export_receipt.json": "d0eab0108c4d723f893bf484c1680a131ff96ae7ae0a9546b993cf6980022481",
+    "research/neo4j/portable_importer_verification_receipt.json": "729a963e165605ce7d3024ae178f8e8805c3ab90f974397932b0dd79ac93c897",
+    "research/neo4j/README.md": "f1c1ce22adc5d71ca914cd7bfa2bfa4993eb55d5269950afdc6fa96813191bed",
+    "research/neo4j/reference_extension/v33_constraint_extension_by_family.csv": "6c1d4dc5c716a9cbfbb45fa5885f0b5799c2acc173dffd30f85b015a44ed3e8f",
+    "research/neo4j/reference_extension/v33_constraint_extension_details.csv": "1a66b61cd8f8f57fd54dffd453934950b3fcb7fd52c47f8579f1458b6a5a010b",
+    "research/neo4j/reference_extension/v33_constraint_extension_positive_controls.csv": "7ddcd68d2370cf791d74379128910fd4cc61a8f38f4dbaf1b56f5ab1771bdef2",
+    "research/neo4j/reference_extension/v33_constraint_extension_receipt.json": "b7a2f4120ac8c75692e32b1450b61ccd46c9a5fe75392ba5093f6ccc9d5a8515",
+    "research/neo4j/reference_numeric_domains/numeric_domain_controls.csv": "f716ca40071576f1a115e3d5754d0842cb205f05bfcfedba5d54dc23fc6044db",
+    "research/neo4j/reference_numeric_domains/numeric_domain_controls_receipt.json": "1aa52de5e06a1e329e3f33d2c8fabd38c09315c43dbf75b5b0107a16f016e7c0",
+    "research/neo4j/run_constraint_extension.py": "1bf9c562e84e8ce06aa1bab79fdca8d305890462614de50c216ea3e52ccc2897",
+    "research/neo4j/run_numeric_domain_controls.py": "f0b9d2cfde7cce11a39255d17119688f537a8520590ac73694a0d9e17f124a38",
+    "research/neo4j/validation_extension.py": "6920ecb1b5854df52bb3370f740e206e4996f67287219ee4244adcc3c8938d6b",
+    "research/real_replay/adapter_source_mapping.json": "7783c29032f1fe932289509e2164362a290bfbb11a74436259c05b2ab5c54daa",
+    "research/real_replay/flight_attitude.py": "968169f6f81db03d8fe722ecf744f1328239186c1fdcd0ee8ac29cf4b6c7673a",
+    "research/real_replay/flight_review.py": "2c8db53f957c0deaa28eb27c001fec30409e44719fd9a483430899fe22281b3d",
+    "research/real_replay/frozen_replay_fingerprints.json": "4c583eda9cfff22dda9c137297bac8871bb50524081130ffe466b07c6d6e7d51",
+    "research/real_replay/idf_ds.py": "dcbc03a262cf5200b357ed467c1c473ae9afd5c249a30be0e178219e23938675",
+    "research/real_replay/idf_retained_manifest_addendum.json": "998c991a5707674cc91850768345ffbcb1bad3c47dee85bbb31210b70dc24530",
+    "research/real_replay/insane.py": "11ab75f1bffda6d9ee3a8dbde899c215d74ce6798ea5a89f3f14b7114cef2fde",
+    "research/real_replay/prepare_external_inputs.py": "91241cd6b1f18bac7d7f34181c652375264f59a59b66fd811095f72b53057075",
+    "research/real_replay/reproduce_real_replays.py": "ac87569a4ce69aca5adb12df5ff86ae3862d106a9c2142ae04bc0be180cb02e9",
+    "research/real_replay/SOURCE_INPUTS.md": "9e59de06d83d377f072b998cf21ab8ccce1fb1bc8f26101e95f1b069e0c47781",
+    "research/real_replay/verified_four_source_reference.json": "d515aacb1258d2fba1d6428b8fe4de1e3009dc3b024db0d33075c73a2f20907e",
+    "research/real_replay/verified_idf_reference.json": "0e613d9b2e5542b10d409d4dbcc44db06c9d70f444a5536be5d8d712075ec245",
+    "research/reference_legacy_results/direction_learning_curves.csv": "aa045a82184e3d1b9f82713a3667df466c99e90957d2f70a5e54fa1836a61cd9",
+    "research/reference_legacy_results/direction_selection_before_new_final.json": "dc1c50a6b23edba2b151cdd6311910e4bdfcf7a9b0ded4aa81c20b202ec235c3",
+    "research/reference_legacy_results/direction_validation_decisions.csv": "270a6622dc79301d99c86d313e15c24a1b82a36b207324b54c4741d75b97eca6",
+    "research/reference_legacy_results/dronepropa_final_bootstrap_replicates.csv": "78e5a80cced890a7225abfb1601d2386af2421b42f53bf2a8241d5ed76b86e8b",
+    "research/reference_legacy_results/dronepropa_final_decisions.csv": "028fb056fe540f8a067c6b78190a425a853fa407e2b8be1c0d08ab592984485b",
+    "research/reference_legacy_results/dronepropa_final_group_metrics.csv": "77a43ca4d2f95825ac868f448328ac5380721a72fc4fe3f8e4c6b4e34f78dce8",
+    "research/reference_legacy_results/dronepropa_final_per_file_metrics.csv": "9f1bcd12031cc53ad9cf684b38671ccb9183ed7c704f875de64ecc56c637435b",
+    "research/reference_legacy_results/dronepropa_final_summary.json": "59810040f9cda80cabf69dc0153885927a6b16fb431d1ed4466f0660f6faebac",
+    "research/reference_legacy_results/dronepropa_selection_before_final.json": "3ca1d14304e98f31e0d24e21db35a238bb2ad21875fb923483ffe5ec6709b88e",
+    "research/reference_legacy_results/dronepropa_training_summary.json": "0bb91f0344be307497925b9b650f67fe13cddf214cbc2ed8a7a8a586272a2c7c",
+    "research/reference_legacy_results/export_provenance.json": "a21dbafa2ea4dcb2161fe1863e69a369e7e86567c4bbd2ed581b3cd6b32315a5",
+    "research/reference_legacy_results/historical_fair_retrieval_metrics.csv": "83207717b0ae920c32b8310eba219424b189a9ea747136d591dd4b7e5fef0321",
+    "research/reference_legacy_results/historical_fair_retrieval_predictions.csv": "64694bb2b1b6d010a2a26cff2889114d10b183646a075403126006bfd74d3646",
+    "research/reference_legacy_results/historical_ground_benchmark_summary.json": "267db572242837fd1a5da0be1551960d0f82b2bd6f14e4ec492ab0d60b66f3a7",
+    "research/reference_legacy_results/historical_ground_benchmark_timings.csv": "68f49918e85db7644b629e1028993eddb9f9cb5dcde6b9c789403a8b2c4b6dcd",
+    "research/reference_legacy_results/historical_hil_timestamp_rejections.json": "18bf17217f60f2d2322e1e5fae1b97b046531cafe508da784fb2a357153bc667",
+    "research/reference_legacy_results/historical_posthoc_keyword_metrics.csv": "635cd47a25a04f5c5ea623b94a0a05472bbf152a4dea20fb098c895d236925da",
+    "research/reference_legacy_results/historical_posthoc_keyword_predictions.csv": "f50ba242130bdc1f47feb98533016c879c89c351b7c3afa181cc287a21b8b978",
+    "research/reference_legacy_results/operational_extraction_summary.json": "082e70e6cd037f7e5af6ee65b7a5c78bb89e7d73738cbc383d8a3bf7a5c2cbf1",
+    "research/reference_legacy_results/plot_legacy_summaries.py": "98cd822f5446cb7f52341bb42c93226fc3790181efb6a0122e4adcdcbac317af",
+    "research/reference_legacy_results/rate_check_reference/receipt.json": "38f815e3698d1126c973a332f66b7a4d2c52ec90e193da17e722471e2e9dec36",
+    "research/reference_legacy_results/rate_check_with_benchmark_reference/receipt.json": "8c41ca44daa7b95a47784cbe306e412f180866abe9a6422323a07374d45e0ece",
+    "research/reference_legacy_results/README.md": "42edfdd514926c6cf2487bd86b842817678d0ed99017fe5dbaf324e550e862a1",
+    "research/reference_legacy_results/redraw_reference/rflymad_obligations_summary.pdf": "5513471e30829d8c44624bd2e943f7d01a0fbaad0caf18868a37c00674e25d45",
+    "research/reference_legacy_results/redraw_reference/rflymad_obligations_summary.png": "47477958766b7724ea29ef72b811e3fadd420e963f069e64bd1d9c230f54ecd8",
+    "research/reference_legacy_results/redraw_reference/sampling_visibility_summary.pdf": "3ca78f233b22ae5361870b047b0bca0a14a388a6c78b2816aad9de6196af02e0",
+    "research/reference_legacy_results/redraw_reference/sampling_visibility_summary.png": "de8687f882c26265c0d9e104345c4d619992d7e1e1d35f8c2bf54a1462025103",
+    "research/reference_legacy_results/redraw_reference/superseded_baseline_summary.pdf": "56026b62fd7ad630ab1e389f9bd7fc8fcfc61f63ac251d71da8a2126943c93d3",
+    "research/reference_legacy_results/redraw_reference/superseded_baseline_summary.png": "9d79d8c0ae8be681d793e9b779a0de4e7ab8dfd83d3f21a9aa7509c3265f55c0",
+    "research/reference_legacy_results/reproduce_auxiliary_rates.py": "7051ad1e7739c4c389cbfc0c0fd5a594c93543859b7d820250d383c1879cc2a0",
+    "research/reference_legacy_results/rflymad_log_level_summary.csv": "0e17a39e0bb806e6ab96784111ccf4b489c80cb53938a11b2e294e4df038c61c",
+    "research/reference_legacy_results/sampling_jitter_controls.csv": "c4553f2a1f8a8647d7da815e590220f829c23054a81b939008c111a62b7678f8",
+    "research/reference_legacy_results/sampling_missingness_controls.csv": "6d746ed48c4dba8b141af650817119cb34c1b8d2f3f94f5724291f43b456e94e",
+    "research/reference_legacy_results/sampling_noise_controls.csv": "98295512a38ea61466a087c71510a470e0bcb01c2397b8ad57ab7a0b9afaec8f",
+    "research/reference_legacy_results/sampling_phase_detection.csv": "16a9a61c628a49664e4f58de90aa4089ce57cee698d8bc9c643bd7ac874fd46b",
+    "research/reference_legacy_results/superseded_baseline_metrics.csv": "1488987da6435d6f16a0e3166309ced2efeb03d1c47983f5c8f4ed290c591701",
+    "research/reference_legacy_results/superseded_english_union_label_metrics.csv": "63c503ef4ac3b554ecd097c6c16d5e5eb76d50f55bb4db0282fb1231c67c7bfd",
+    "research/reference_legacy_results/uavfd_conservative_development_metrics.csv": "ee9a5172abdf239160b82eb391df0b9246167c6785a8e97435f90766afbfd606",
+    "research/reference_legacy_results/uavfd_conservative_selected_decisions.csv": "2df748e98f6cc185626618ee2fdea1b9be875e0ead0fed76a274f07405da16fd",
+    "research/reference_legacy_results/uavfd_locked_decisions.csv": "8feece8529113059522c3238120915355d2a121eb2f3c3c193b14614f1d4ceb8",
+    "research/reference_legacy_results/uavfd_locked_per_file_metrics.csv": "8184186b20ab7c008949a93abb561907ac555659249c2f63f21c9425a2773e8b",
+    "research/reference_legacy_results/uavfd_locked_summary.json": "3d67111ba6e92a33cc87c1c78207650b1fd16d7e2277d49b3f3d7f3a51c40a03",
+    "research/reference_legacy_results/uavfd_residual_file_summary.csv": "88ed9875f4579b2ca90b02d5983ab1a6d9e2f893809fff489cc50ef16b16391f",
+    "research/reference_legacy_results/uavfd_vibration_development_metrics.csv": "11bd8b5c81e384eb2716cfcee18371d8eded45812c9a6fea192df3bcf2d219dc",
+    "research/reference_legacy_results/uavfd_vibration_selected_decisions.csv": "a6fe9e0cb2346d8eefffa7b13d05ba49b32b0654f570228fafcce11411e0a79c",
+    "research/reference_legacy_results/v4_semantic_differential_summary.json": "d42ed17c1b5b6c48c2556a3796b607f426aec93c7ecf04b1451c7848b7762e73",
+    "research/reference_legacy_results/v6_event_traceability_audit.json": "cbcf3a401291c528266539adb2f069cafe552b0a23131dce8823ec84beea9e97",
+    "research/reference_legacy_results/v6_relational_parity_audit.json": "b4b9ef4d1993142a6c686b8eb23185f1eee0b9780c63c208e8ec22d24977bc3c",
+    "research/reference_legacy_results/v6_relational_parity_details.csv": "9e45c6162387c1638d5f8e7a239c012f01b98ec927ff3ffaf245f58aa5ff38b7",
+    "research/reference_legacy_results/v6_rtamt_differential_evidence.json": "48fef58dd8acd4133a360194063d0027ddad67d39731840022f850bf540265d7",
+    "research/reference_legacy_results/v6_source_binding_audit.json": "a1b7fceee46b0ef095e4fdad4e363985900eab1f1c699ffb551c4675bd28bc42",
+    "research/semantics/frozen_v2/sampled_data_contract.py": "4081619d8b3bdf6295ab09bdd0db2831ed0a996c02dd872e0b36dbde46c4d981",
+    "research/semantics/frozen_v2/sampled_monitor.py": "24b35ae63793f0bb848a7dbffa8ab8ddbca5f8b4c747322bf619c6f622298eef",
+    "research/semantics/main_correctness_proposition.tex": "fb0e2b9c0591c396240e0cc9e4a86b99b95e3a5247fdcc9f8a51d961680027a4",
+    "research/semantics/main_semantics_definition.tex": "0d62f34a058d47ea9b5d47c8edfa95cc35d98c40d6fb24981403c4e92de6a05b",
+    "research/semantics/README.md": "74338a462e36af3ed3915f4e8a3f36473d72f1bfde67f63f5fbee3e78caa37c7",
+    "research/semantics/source_manifest.json": "d4156ae8acf02c8d61f26438c58932c903eb3b73a0a60a3a148abc9f960a6143",
+    "research/semantics/supplementary_full_proof.tex": "bd4747f323b739c76c63c7f94758c5953e8020f9053ee81a694947d481b46029",
+    "research/semantics/supplementary_semantics_definition.tex": "3accd214546896cf950e566ac9a3443b92ccc6db2ca2badf4b4aa07874f6cfb4",
+    "research/semantics/verify_semantics.py": "80987892f4887bbc99639cbfd1dab2bf4d0b456e208288db3d63ad0aa23dec19",
+    "research/statistics_performance/conditional_statistics.py": "be0cfbc883335109c47b707d262be92d02faab167a2a2da66e0ebd2f6104fc54",
+    "research/statistics_performance/frozen_configuration.json": "5a81e0dc1949eeeaeff128edbbc0c9acf28a93987494bb4607dfba5d948517d5",
+    "research/statistics_performance/frozen_core/uav_stkg/__init__.py": "76c699ecd227d4c9d42388347df849cc7503f8e768a68a71744c2308c60b45a1",
+    "research/statistics_performance/frozen_core/uav_stkg/monitor/__init__.py": "f1f6e63e6e929ca913fb4e1461b8dead87f1ed5f07da318cb3cbc4e275860cf0",
+    "research/statistics_performance/frozen_core/uav_stkg/monitor/_legacy_sampled_monitor.py": "842892ce417181c1e179ec07259361aff977ff948a6503d2077800c2268ffb7c",
+    "research/statistics_performance/frozen_core/uav_stkg/monitor/monitor_from_traceability_graph.py": "fea777050426cb784678694c9d3ffcd145a86fa5910502b547db1ce1f66dd76d",
+    "research/statistics_performance/frozen_core/uav_stkg/monitor/run_precision_regression.py": "132b75b92ff7c5f4e6792f15e8c6b8c1fa195a32835e5850dfb6324ddd0b8d90",
+    "research/statistics_performance/frozen_core/uav_stkg/monitor/sampled_data_contract.py": "b54d13739a79152aa231d9d5285607c1ffdc9aaf5a0c73c5c38c602695f34c17",
+    "research/statistics_performance/frozen_core/uav_stkg/monitor/sampled_monitor.py": "b30c37e39393fed15832baac4b89e19836ffeee05734c504c28341fb2e97305d",
+    "research/statistics_performance/frozen_core/uav_stkg/monitor/test_legacy_api_compatibility.py": "7549c6cc61124e54c4ad432d12f1cd3e31b21e7c53da2c443609dfadade3251b",
+    "research/statistics_performance/frozen_core/uav_stkg/monitor/test_timestamp_precision.py": "506a4b40e17876c278ba9b3cc4cd9dc06de993bbbb0fa056452c27902cbd95d6",
+    "research/statistics_performance/frozen_core/uav_stkg/monitor/timestamp_precision.py": "4b30b2ac384f3d9616b6ebc116b465d02171dd638ebb3d448b789163cf1012a0",
+    "research/statistics_performance/historical_60s_budget/B_results/B01/cell_receipt.json": "173e4f69103ea03b90b7e64293c511516a21a8cc09f0a9d99f35bcd34ad7f621",
+    "research/statistics_performance/historical_60s_budget/B_results/B01/completed_iterations.csv": "1118d646f4fd09ab4f678a3b72f67a96ec73852cd75228cb008cb4d0e7576320",
+    "research/statistics_performance/historical_60s_budget/B_results/B01/first_replay_summary.csv": "96817cba21284b65815b7c03cb746f3128afe16cd8b167fa957b389fd0d89b99",
+    "research/statistics_performance/historical_60s_budget/B_results/B01/separate_memory_pass.json": "94c31e2bb8c8437377a3380fbcb50581ac6f41130455b842ca527416614061a9",
+    "research/statistics_performance/historical_60s_budget/B_results/B01/timings_completed.json": "ac6d9e2791b7a6799670c15c51b606f2f7dba2ef61a049c62a865f015ce0d050",
+    "research/statistics_performance/historical_60s_budget/B_results/B01/worker_started.json": "3ec402554ae84b1797b67e65d1b66b4ad8feb5219409588afd2dcc45c1586534",
+    "research/statistics_performance/historical_60s_budget/B_results/B01/worker_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/historical_60s_budget/B_results/B01/worker_stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/historical_60s_budget/B_results/B02/cell_receipt.json": "d11231005c96f3e290e1fd6142ca940ddd3759b261913e7e5f7719e40dc14e99",
+    "research/statistics_performance/historical_60s_budget/B_results/B02/completed_iterations.csv": "d798db361febd61e6667bfd8dec71475234d72f74f2529f8ab5462ce3596f4fd",
+    "research/statistics_performance/historical_60s_budget/B_results/B02/first_replay_summary.csv": "6b0d1157d22146ebc222777eb23dd15d6c1f37e1c99e123f0cdffe95359b698d",
+    "research/statistics_performance/historical_60s_budget/B_results/B02/separate_memory_pass.json": "8cca19ad1e61990b339b6f9144b6ad9d9bf1e5fc82db95302865ab6e6a34756d",
+    "research/statistics_performance/historical_60s_budget/B_results/B02/timings_completed.json": "173785898038e2a3c9ecc8b3047fc4826ebe28ef36821818df29eec7d6c16e33",
+    "research/statistics_performance/historical_60s_budget/B_results/B02/worker_started.json": "d152e398b643ce3b8c170fb42ab90452d382f737faf133392e92f8e009ebff53",
+    "research/statistics_performance/historical_60s_budget/B_results/B02/worker_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/historical_60s_budget/B_results/B02/worker_stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/historical_60s_budget/B_results/B03/cell_receipt.json": "4d19ffa3da2fda6c29217fc07a817fe6dabe2f233a22eec245947d6d08f5bc0e",
+    "research/statistics_performance/historical_60s_budget/B_results/B03/completed_iterations.csv": "92bd5418f5b1e4311cb98567cdb6fb1dcadc6dacd7f96643be31e16533d3a50d",
+    "research/statistics_performance/historical_60s_budget/B_results/B03/first_replay_summary.csv": "c619405c6226436641ef5275d3cc60c26644f6a51a2ee168b78a73fa5ba5fe27",
+    "research/statistics_performance/historical_60s_budget/B_results/B03/separate_memory_pass.json": "486c8c773659de12f9dd3c0fd64aeecce35b13460ef66021d4986272e2118974",
+    "research/statistics_performance/historical_60s_budget/B_results/B03/timings_completed.json": "0f4e083e25cd80d17bb6977b2f05c6c3771e5791a1a14e80fd61dd7261b89d88",
+    "research/statistics_performance/historical_60s_budget/B_results/B03/worker_started.json": "621ce201cd5fba27f9b6f81c01d61b1ca1e025f2274e6c7732fdabf4699f43a0",
+    "research/statistics_performance/historical_60s_budget/B_results/B03/worker_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/historical_60s_budget/B_results/B03/worker_stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/historical_60s_budget/B_results/B04/cell_receipt.json": "5a4d8d9e0dbb46ef79028f292edf80a53179a4c57ee0a562b85f95d8d36b0e0b",
+    "research/statistics_performance/historical_60s_budget/B_results/B04/completed_iterations.csv": "cc035635ae8c24aab7a1b5a0197a55951c1413d973648f552165bdaa4fc6786d",
+    "research/statistics_performance/historical_60s_budget/B_results/B04/first_replay_summary.csv": "8bb99dff6f639e2b9388553de2903a1d1b4a038d4b765bbe071c8a5fb5f45378",
+    "research/statistics_performance/historical_60s_budget/B_results/B04/separate_memory_pass.json": "bdeb75b8108062b8659291082d6153f3561fb896de88f5f255d325bab167de09",
+    "research/statistics_performance/historical_60s_budget/B_results/B04/timings_completed.json": "b0b420e7df8afbf3e3815a854bed69252f0b4d3974f9227a8f4108344ff421d2",
+    "research/statistics_performance/historical_60s_budget/B_results/B04/worker_started.json": "ea6d119597e63e1c1ff81b343fee465f53c1f2bbd55a968928acdd87ea16dcf0",
+    "research/statistics_performance/historical_60s_budget/B_results/B04/worker_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/historical_60s_budget/B_results/B04/worker_stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/historical_60s_budget/B_results/B05/completed_iterations.csv": "86762fb3f473c7f53ed25a3e4e85baabe450784b6c70a16c6882d504c4756714",
+    "research/statistics_performance/historical_60s_budget/B_results/B05/first_replay_summary.csv": "85468d2d346455855b280c9b80755b59f1b0d33e219013f28a95a21946519068",
+    "research/statistics_performance/historical_60s_budget/B_results/B05/interruption_receipt.json": "4ad6bfd64e0980da3ef48d3ba457aa874fc205340d199aa21c1fc33fac07bd86",
+    "research/statistics_performance/historical_60s_budget/B_results/B05/timings_completed.json": "e7cb65ea461deb49513b0c1e93079cf8d9f82504d2d64044b1a70c03ad4a3b37",
+    "research/statistics_performance/historical_60s_budget/B_results/B05/worker_started.json": "e17c59e9371dafd2429d457257683363567db70d82b9ac9b77529f30976c7646",
+    "research/statistics_performance/historical_60s_budget/B_results/B05/worker_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/historical_60s_budget/B_results/B05/worker_stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/historical_60s_budget/B_results/B06/cell_receipt.json": "271d8bd1dd2137851237995c0ec9c1d7b5ec5cdb4acd83d66a82d94fcc130583",
+    "research/statistics_performance/historical_60s_budget/B_results/B06/completed_iterations.csv": "421d0bfa690587ef04232689bf76a87da61b8a005d33ffb4fbb486cc40d9b19a",
+    "research/statistics_performance/historical_60s_budget/B_results/B06/first_replay_summary.csv": "403cce91a8fc736bed690d26b29262b221af96c720a91c1a794841ec80e1617c",
+    "research/statistics_performance/historical_60s_budget/B_results/B06/guard_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/historical_60s_budget/B_results/B06/guard_stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/historical_60s_budget/B_results/B06/process_tree_guard_receipt.json": "5a85a5a9ac67acc19e5ae8aff9bca95b7e2ecdf6221f327d9dbd076279bc0843",
+    "research/statistics_performance/historical_60s_budget/B_results/B06/worker_started.json": "fbdea8419c427f25f4d8c7c8348d9ba963899953ff4f565b2304d8c11d3a0ee3",
+    "research/statistics_performance/historical_60s_budget/B_results/B07/cell_receipt.json": "abfd46329df2df62aa9b34497fc2822d313af55bd47ee5a99061d0af0ab7d716",
+    "research/statistics_performance/historical_60s_budget/B_results/B07/completed_iterations.csv": "893bf73726cf4e2e081da15b5c56efa342cbaea6bdafe4b9496fdac13b5d5e2b",
+    "research/statistics_performance/historical_60s_budget/B_results/B07/first_replay_summary.csv": "c7c67c0991cae806e63846d35f82d165df8b999d61489f72bdbddaec26372b12",
+    "research/statistics_performance/historical_60s_budget/B_results/B07/guard_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/historical_60s_budget/B_results/B07/guard_stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/historical_60s_budget/B_results/B07/process_tree_guard_receipt.json": "e3cf1f48084544d262688418d8ce419f299bd9d9a1a50a47182868f2118e0b5e",
+    "research/statistics_performance/historical_60s_budget/B_results/B07/worker_started.json": "85ba60018130af8944d645e845c73a7b42176e35fc1030e878b382087a88f3d0",
+    "research/statistics_performance/historical_60s_budget/B_results/B08/cell_receipt.json": "80d4e2369d518aee70c094d72285d406a36f09eeec1683e0a9b9a12d57540281",
+    "research/statistics_performance/historical_60s_budget/B_results/B08/completed_iterations.csv": "b0989ebd56b248f3ea389eb63d4da2ae1cc5be84d9b86cd1711ff7e304ba8569",
+    "research/statistics_performance/historical_60s_budget/B_results/B08/first_replay_summary.csv": "48a40bc2fbc5eccb6140646d5b06d61e947a6c2fa24aaf014191d641ea2608f8",
+    "research/statistics_performance/historical_60s_budget/B_results/B08/guard_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/historical_60s_budget/B_results/B08/guard_stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/historical_60s_budget/B_results/B08/process_tree_guard_receipt.json": "26ff11ac120cba17deeb61adb462ac2a10ee49ddca664027a3d9140c19b2e0f1",
+    "research/statistics_performance/historical_60s_budget/B_results/B08/worker_started.json": "9285f71189a658b95d4a33b3cd4ef44e0dce4f94a3d16115ae7c2f2d5daa33c6",
+    "research/statistics_performance/historical_60s_budget/B_results/B09/cell_receipt.json": "d011bccd3686a5ee66c4bfc998868ae29ddb829071746d1a54d9163131fd774d",
+    "research/statistics_performance/historical_60s_budget/B_results/B09/completed_iterations.csv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/historical_60s_budget/B_results/B09/guard_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/historical_60s_budget/B_results/B09/guard_stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/historical_60s_budget/B_results/B09/process_tree_guard_receipt.json": "3b0cc760174decca5034b83795f04375bef929e80b9f3571ff708e1f69446bd0",
+    "research/statistics_performance/historical_60s_budget/B_results/B09/worker_started.json": "a17791bcdbe61235798573d0819f029cbd0e5aef6ab30048c2460040d500bf49",
+    "research/statistics_performance/historical_60s_budget/B_results/summary.json": "678842960fd5c80c3d4af07eaa663bb08bc9c7122e0f0845fc217c520dedccab",
+    "research/statistics_performance/historical_60s_budget/B_results/workload_summary.csv": "0a7189e2872c2c4d5cea7fef51470b6290a0268ab89177ceee6b6fe64ff40e2d",
+    "research/statistics_performance/historical_60s_budget/environment_before_runs.json": "9cd7ffc9d984a1f2b6507bd6960f44206b3bc434da132fd81bd981092677f08b",
+    "research/statistics_performance/historical_60s_budget/portable_redaction.json": "658341e3a8db88b0eda227f1240a6274860eaca950ab7022e4c3f25edf07829c",
+    "research/statistics_performance/historical_60s_budget/protocol_before_runs.json": "c4983ead4bc4169a081de2d876c980acfd7970b2d7acd935bff485849fd00bd3",
+    "research/statistics_performance/historical_60s_budget/statistics.json": "5d811dad894bfa1695f4aa78523b76a954415fb0f2cc7c544d6710c185d57332",
+    "research/statistics_performance/historical_60s_budget/validation_receipt.json": "bd8f2b233265b35c4c693d4d390fedc982f0d0e304b45fba5c68732e67df872c",
+    "research/statistics_performance/inputs/B_100000_dense.csv": "b5e4a46bf328b605bf02c96070727b8f11f8408df93d811fdddb3b18ed3865a0",
+    "research/statistics_performance/inputs/B_100000_quiescent.csv": "3aa3007ad24d41492e23a73110df3fca55183f3292fbb9464b6f255ecf3c4fee",
+    "research/statistics_performance/inputs/B_100000_sparse.csv": "f3521a92ad57a6f9fb707c36a90a63ca0c7e6bd215e5178c83ab6086276a74a2",
+    "research/statistics_performance/inputs/B_10000_dense.csv": "e0c967d1880959b5867b903b01a0b7720b329cc0b0f4d43aac56a6df172ec275",
+    "research/statistics_performance/inputs/B_10000_quiescent.csv": "3ba8a49ebdce8bf5ce66850d664a331e98b01475f142336a4bbc48055fe520a6",
+    "research/statistics_performance/inputs/B_10000_sparse.csv": "f7fa20f3c238ecda23d2062d67a7e2b2dc45eb58eaeb555e148d5c4e2345b8d7",
+    "research/statistics_performance/inputs/B_1000_dense.csv": "873bd72a994057f0672e9b7ad8fbb7b72868f2c3fef63527fe36c89afdb97907",
+    "research/statistics_performance/inputs/B_1000_quiescent.csv": "d81a08e0f3718439714a1fd5c171a7bd9b0d4b3e316dacc9087ddc6320eb2ac0",
+    "research/statistics_performance/inputs/B_1000_sparse.csv": "19672e34a9b71508159bdd952811782f8300897b13ff22c1d635cc4776c3bea7",
+    "research/statistics_performance/inputs/graph/bindings.csv": "e34304d8b7dcf434308ab97a6d0d27e96684ed6bc0e995154d490a9c3408de45",
+    "research/statistics_performance/inputs/graph/internal_requirement_pairs.csv": "da1d0ff0d0aff036f1f5d8b31366aa09d8068ca40c5b0584d0a5ffd75bd7a925",
+    "research/statistics_performance/inputs/graph/nodes.csv": "78b7d4348a49e0f3ccd94c24b6e5221d43e4a21e5000bae2b811e8b962f4845c",
+    "research/statistics_performance/inputs/graph/relationships.csv": "cb263a607ddbf21e6d99e663f25c4014a71656232333a0ddc431b6a66b887f73",
+    "research/statistics_performance/inputs/original_bound_specifications.json": "2ec3291da818baedf1f60770abf62620e843b064162c09cc6b8b31767e4d1261",
+    "research/statistics_performance/inputs/workloads.json": "0705f3d32bf4685d2896c6fc8c547625ef6557fb90b6b5aa423b7fb695f18111",
+    "research/statistics_performance/main_statistics_insert.tex": "96c976c568d2017bc62ccba1772a3784e9b1799edc4e14d381f05e9e24796c1c",
+    "research/statistics_performance/performance.py": "2b9dfa4521dbb2f08bea402c63c103faf0ed4940c21139837065b50966a1849c",
+    "research/statistics_performance/plot_intervals.py": "a4b741204a4d46ea9987e04dad14475d23d665fcebd61fe0537af75bcc48b120",
+    "research/statistics_performance/README.md": "5ac8bdbe6bbfc92044ace10bcf132e863b949906cac80b9879b6517c405a97af",
+    "research/statistics_performance/reference_performance/B01/allocation.json": "bc6d806483d5efa8f3d76e822c27e6e1fc312aa4479efac30ced423655ba3f98",
+    "research/statistics_performance/reference_performance/B01/background_load.csv": "73d1696c37ec3a78551f38a57996e80b18b4274aabb29f012ed6f2cc4b05dac5",
+    "research/statistics_performance/reference_performance/B01/completed.json": "a993bef99a408e3395446886df57dd0a7fa5b19432916d93abb16f3c144fe875",
+    "research/statistics_performance/reference_performance/B01/first_summary.csv": "9fd2c78bee315af01f552b73b85ce1212a35bebd029318566b2778c74c41a902",
+    "research/statistics_performance/reference_performance/B01/iterations.csv": "6ded43444ac4d73dac44ca34fb7b5316e770931a8b1d40ca1b21afc2cb570379",
+    "research/statistics_performance/reference_performance/B01/started.json": "a308d9e1d203444999489606939b7ca6fc562dbd771151fce64607b02524b590",
+    "research/statistics_performance/reference_performance/B01.receipt.json": "fceb7981a7e714502976cc7033dcb31be2fcfc250a3fd8abc0d7c8f3909559ea",
+    "research/statistics_performance/reference_performance/B01.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/reference_performance/B01.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/reference_performance/B02/allocation.json": "8bb13a1881d73b8f84c225b705b5d8c0980de8d99b754375ac89590fc1129fef",
+    "research/statistics_performance/reference_performance/B02/background_load.csv": "82c7fec7a50374d23465b613841406bd6dab1bd79bafa3fa93c29844f79a8f5b",
+    "research/statistics_performance/reference_performance/B02/completed.json": "bc7798cce7e9e06d49d489ccc2fed8c1aaba38f4d0f461fabca0b2ce7cb75843",
+    "research/statistics_performance/reference_performance/B02/first_summary.csv": "2b30f0f7cc3dee1cb51c3c94cb4c8086d4c0d6e7637c2a131a51c3377e19c2f2",
+    "research/statistics_performance/reference_performance/B02/iterations.csv": "0a1fd0c87c1aeb1ea3e137484fe8430e21a8d0dcab036513f62b5b9993c2dc15",
+    "research/statistics_performance/reference_performance/B02/started.json": "c350faed2483312bce56e7b99e30fd71a9bf29306abb2c71b0ef6dcbfae89635",
+    "research/statistics_performance/reference_performance/B02.receipt.json": "e84819d7306862893d45c411333880239aeb79dbe3a1e69b34dc1bca76cc2231",
+    "research/statistics_performance/reference_performance/B02.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/reference_performance/B02.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/reference_performance/B03/allocation.json": "a7bba7c558482065f043896b22d98ccfe6c2d3baf02567a884f799a6f743a415",
+    "research/statistics_performance/reference_performance/B03/background_load.csv": "46479ef77778a4f07a3fba2e78d63f9d157a2dfc023b002be50b412f03a1e3a3",
+    "research/statistics_performance/reference_performance/B03/completed.json": "fae54319ef8b0eb7a0d2cc5365eff6a702a6df94395d7429f36700f40292a174",
+    "research/statistics_performance/reference_performance/B03/first_summary.csv": "16f6fc07ff6f3815f7fee02dec542828d78405828b9f3202f86fa69329a66393",
+    "research/statistics_performance/reference_performance/B03/iterations.csv": "2ef4569ea07651d6e6713e5fb1ce25a122f6f47a5c6df555687c947f460e2ebb",
+    "research/statistics_performance/reference_performance/B03/started.json": "26628904cb8114b0a6cd8d398f2c67c366031605b9cdd60e7bc2001fec9b6a41",
+    "research/statistics_performance/reference_performance/B03.receipt.json": "e3df90ee6dfb829b3c56a2a333dcaf8ec992c82400448babc10daaa3f021d812",
+    "research/statistics_performance/reference_performance/B03.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/reference_performance/B03.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/reference_performance/B04/allocation.json": "95654e4eb970d6c25798525fe5cd4c9d963a2b6a650cc5430c656831cd9675a1",
+    "research/statistics_performance/reference_performance/B04/background_load.csv": "af595feac6d57a9808ef598f63f1c7740922506c8d562eba12647a4ba0da86a2",
+    "research/statistics_performance/reference_performance/B04/completed.json": "67ea97e9ea68e8f038997aee330993cdeeb8bc9fe8aac5a4883944b980c11f45",
+    "research/statistics_performance/reference_performance/B04/first_summary.csv": "5140068d07fcb99be768d6ba17f835efa2670262a5deecee16670952ff65ef37",
+    "research/statistics_performance/reference_performance/B04/iterations.csv": "19ca0e8813e019d050fe4ab2cbde9fa605d9e8ed504c0b1c72750abb1a601363",
+    "research/statistics_performance/reference_performance/B04/started.json": "8dc561d8ff6f5b97cbfa8bc94a4042caa3789329b6b9d8cafee6657935aa156d",
+    "research/statistics_performance/reference_performance/B04.receipt.json": "987d7485901aa1a90e364fc1d57a0853f6956684a719e67144e172492f8aeab8",
+    "research/statistics_performance/reference_performance/B04.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/reference_performance/B04.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/reference_performance/B05/allocation.json": "790be9d2bc75db7d9a2d5facb6261eb863910677dfd7a636e9787eb9e96bec4d",
+    "research/statistics_performance/reference_performance/B05/background_load.csv": "626f76cde2a09ea840e20166f952c2bd1741dd4279a732d27e08196fdf129742",
+    "research/statistics_performance/reference_performance/B05/completed.json": "94fbd729fd0703d79e7ef1de0cf2019f8c94396d212468ef7d6738072d623192",
+    "research/statistics_performance/reference_performance/B05/first_summary.csv": "8cca320cb053300a8fad4cc6bb3358e23e5185ab8ac472c4421ed09af487cf68",
+    "research/statistics_performance/reference_performance/B05/iterations.csv": "662eb00b87a19b58a53bd523f07a81041400b93d0f1ec0aa21968b346c36be2a",
+    "research/statistics_performance/reference_performance/B05/started.json": "af4f77bef508fe549663226411dbb085eb6eed7a51cec010274bf6103ac01665",
+    "research/statistics_performance/reference_performance/B05.receipt.json": "f4bea9cbf11abd476ff9a1c2cf02c494c680e5b97c0f9c4f5b37cf551695ca6f",
+    "research/statistics_performance/reference_performance/B05.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/reference_performance/B05.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/reference_performance/B06/allocation.json": "5a808a43bb83fdb10c91e0a30efe222225c32bd3dc5f0f385d340bab5294758a",
+    "research/statistics_performance/reference_performance/B06/background_load.csv": "a875307a68c80c5968465da2b2133091f1dc150e131b87bf9c8fd1f8a788f7ad",
+    "research/statistics_performance/reference_performance/B06/completed.json": "c2bed45a32a9b6a4568ade0c215124e3d51467365be2f32ead3b890a49ef2034",
+    "research/statistics_performance/reference_performance/B06/first_summary.csv": "5eb489f29b4888e061b41b3a77b56b96034ef8f4f640c6907ce967e2d57af85a",
+    "research/statistics_performance/reference_performance/B06/iterations.csv": "9a98ce43e9a729bc9ee8fc9b7e86ebc2ee7f49bcd270b3ae35a2d7eb3932c9aa",
+    "research/statistics_performance/reference_performance/B06/started.json": "b815230139752e05be324565cd77c80d46312aa0eb0e95a79877f0992761b555",
+    "research/statistics_performance/reference_performance/B06.receipt.json": "bb21c87ffcc12972916f34e9937be908dc827d226be2ca66f9e9b855eed88349",
+    "research/statistics_performance/reference_performance/B06.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/reference_performance/B06.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/reference_performance/B07/allocation.json": "02e1afa6401df2332d927dc98ff9b769b2c2c8fd5d55bf7bb3128e35b6b74f2a",
+    "research/statistics_performance/reference_performance/B07/background_load.csv": "f8a32d2a1d95be04b61d29304df0b843dac42a2e26c4d78463f492a08ce8c651",
+    "research/statistics_performance/reference_performance/B07/completed.json": "cf901920b50a11ef4de91b31e83d5514a392b0929ed5de9b7d8b2bd95c6f99ce",
+    "research/statistics_performance/reference_performance/B07/first_summary.csv": "a91a1644594322e47039e48f3871338fffa988e8621b57007394d542eb86ec74",
+    "research/statistics_performance/reference_performance/B07/iterations.csv": "fab8d9effdb6f56fbf42296856d3a9702813173d26e19df66faafb48d2e4d90f",
+    "research/statistics_performance/reference_performance/B07/started.json": "5ccdf11fd2ee0a67a7bbf43032d0faf63cb2c093a089575e9d2e9405fbe150f3",
+    "research/statistics_performance/reference_performance/B07.receipt.json": "92ba1c73e77400d13eb05042a450fd154e5a2bad78f57b9c0549e0debc0729c5",
+    "research/statistics_performance/reference_performance/B07.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/reference_performance/B07.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/reference_performance/B08/allocation.json": "b4192d0321e0ae12f5c2389ebf1b36a0b4e3dd8d56e792f07c4ed0e48e4bf98c",
+    "research/statistics_performance/reference_performance/B08/background_load.csv": "b6bed831e7dc7c2b48874a6fd757b432d5b9f97694c666d6a359135c6518f532",
+    "research/statistics_performance/reference_performance/B08/completed.json": "c289d82585ffd47439d9a90793914c02576245d9f3881bc5236ff06eea6e6760",
+    "research/statistics_performance/reference_performance/B08/first_summary.csv": "cbb9ad5da232d4cf57bd1cfeba90d57542afa93038448e98bfd884ff7113dc8f",
+    "research/statistics_performance/reference_performance/B08/iterations.csv": "d80f7a513832d2745fdf7d60ebc3faa3fe06f200350c164b53a87a0328fbad3d",
+    "research/statistics_performance/reference_performance/B08/started.json": "4754a43b00f740b65082246098bbc2f400797eb6ad024c33c114682bbd0ee032",
+    "research/statistics_performance/reference_performance/B08.receipt.json": "6f79620aa30c252d8a77d8831910d5458f1bbeca28cea4616aad34b494e10d74",
+    "research/statistics_performance/reference_performance/B08.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/reference_performance/B08.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/reference_performance/B09/allocation.json": "81f633528bca5c587a528f6b49025a36ca17f1d494fc139a1df0f7e97913b535",
+    "research/statistics_performance/reference_performance/B09/background_load.csv": "495cc275498da0b04d4059d39abd73ea09ce5a274544ab2613e2a4ab3b92739c",
+    "research/statistics_performance/reference_performance/B09/completed.json": "b699d665263716e46b58955f53af27ac8e620f06089ba29c97fad745636a17ca",
+    "research/statistics_performance/reference_performance/B09/first_summary.csv": "b0a6c1e2f51bb15982d59dd607ef2f711c66bce20a6816979071b9b938dd5f73",
+    "research/statistics_performance/reference_performance/B09/iterations.csv": "a0101fcc6294b28ea0fbff13af87637bcd8f1d0e7b147a57a89f53c133afb277",
+    "research/statistics_performance/reference_performance/B09/started.json": "8baa13cf8789250055b7e9225a69fbe8b260485693c59e549a1fbd45c6606d96",
+    "research/statistics_performance/reference_performance/B09.receipt.json": "523cc988e65fb08774bd702cc2a3d38fcd1d790b6da2ca6755d7f8c29cfc61e6",
+    "research/statistics_performance/reference_performance/B09.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/reference_performance/B09.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/statistics_performance/reference_performance/continuation_protocol.json": "5bb066a0a942f6801bee36fbce159e3dcf48d93e59aa35290379e95cbb7e879d",
+    "research/statistics_performance/reference_performance/environment.json": "ac9df821c80d3a0a065a78b94f50ad72e88f5576eaa86168f89c5b1bb97acda8",
+    "research/statistics_performance/reference_performance/environment_path_redaction.json": "7330ff00c5d14976f7d0490ce1dc0858d1c325d1fb5f71df3b88b024028f3a24",
+    "research/statistics_performance/reference_performance/protocol_before_runs.json": "5b53da0f2d2af6def45c8976012e0a91a2261df6877c023f3d01effd8a22c940",
+    "research/statistics_performance/reference_performance/receipt.json": "b845a5bd1678d75fc9259a59eff7770677d641ca33908586315cea98ca61f51b",
+    "research/statistics_performance/reference_performance/workload_summary.csv": "fd78d7cbe1a669aaf9a7ed05b81f40d0af2b130b55bbadd2b9a333ff37c11ff7",
+    "research/statistics_performance/reference_plot/conditional_language_contrasts.pdf": "d6ac0b7eea002de1d189288661fadde11dce338f3fb189b8cbdf6ae2a9d9e21b",
+    "research/statistics_performance/reference_plot/conditional_language_contrasts.png": "b7e5419791f1baaba83fb0ed27f2d00a086035b520c3f75aa2966e2990e3c45c",
+    "research/statistics_performance/reference_plot/receipt.json": "de9cd90c542e4339b8654de17faac203f7cca95b7f497d0d9179a186a4628b0d",
+    "research/statistics_performance/reference_statistics/chinese_historical_per_family.csv": "e315b610a9019d2003e5f30131d2d63fda451070b9d2577139f40e8cf5db7fe7",
+    "research/statistics_performance/reference_statistics/chinese_interval_rows.tex": "14686828cabb0c623231bba9e6b6fc724bf2bdcb4b502fb769457c21f79f2e38",
+    "research/statistics_performance/reference_statistics/chinese_per_family_per_context.csv": "9ff6346e9ecc8b467ae9345e43e3fe07b8ff182fd44d2d8f95d1448b389f1919",
+    "research/statistics_performance/reference_statistics/conditional_intervals.csv": "3c790eb46ede85bb842b2edc6522037474617f2850b1f1a69134390f6974aa9c",
+    "research/statistics_performance/reference_statistics/context_draws_chinese.csv": "2a2c57f8a2b5275f20870f4cdaef140086c0277fe6447d02d2573e995d90b043",
+    "research/statistics_performance/reference_statistics/english_interval_rows.tex": "d81b71d1f8d11141ddc755b5195b363c455ef3e797382cc46de4fdc664c368c5",
+    "research/statistics_performance/reference_statistics/english_per_family.csv": "c5ca573477292aaa3f6f6d1a78ab36b47d49cd9638dcb9221469575c06193f28",
+    "research/statistics_performance/reference_statistics/family_draws_chinese.csv": "f4bb1461a99ccac621a2a195015fc22395c67f61e2c25e9eca127440a0ed766b",
+    "research/statistics_performance/reference_statistics/family_draws_english.csv": "728f3b9aa12ad579dc8903fcd255f3f1be65d9e1f0de765d60fae7b4b2cf51f2",
+    "research/statistics_performance/reference_statistics/paired_differences.csv": "ce30ebfc38b4e43656059c037433700e9b307a23c27b0eec42ce91effb59a7d8",
+    "research/statistics_performance/reference_statistics/protocol.json": "41d7d63a233492d4c08d23d6acdbbf73940c399182616b353bd0291080affa2a",
+    "research/statistics_performance/reference_statistics/receipt.json": "699dabfba1fea8f59a9e2346a545ff163b722beb548306af7c2764a87172066f",
+    "research/statistics_performance/supplementary_statistics_insert.tex": "a1a05eb194d3cf7c355f8c6bceea71b5092e846e41a5f1f25569a66580c2c4c1",
+    "research/statistics_performance/verify_performance.py": "53a79f285392875b939a215d5c232fff0f54dcf9860594fe2f840f0496e4d0a3",
+    "research/threshold_reproduction/case_metadata.py": "db72b1dda49e8a7e28489ac2eaaf0e0eb51f2803618a22eaf0fbfbbe1c326f1c",
+    "research/threshold_reproduction/composition.csv": "2a8c4dbfc077674f5dcba4583eb228ab1183d8a02440253c2a18b68f39fdf6d7",
+    "research/threshold_reproduction/frozen_case_split.csv": "9d14606df805a371addd0a6f2c88ab9537a35098d2c27b5dbde4b3f5806e664d",
+    "research/threshold_reproduction/raw_reproduction_receipt.json": "dad2a35d0a075a98535d8a8d2b1dca2845fd0213298dc7eaa25a387718a9ea32",
+    "research/threshold_reproduction/reproduce_thresholds.py": "1ac7f4259f6c4a0117e632b64785c5100d4a3686ff20f6f1a822f13add9b6491",
+    "research/threshold_reproduction/split_allocation.py": "2be10a146a11f463e278851b6a42bd0effec74e75ee492116bedc341d5cc88f8",
+    "research/threshold_reproduction/test_raw_endpoints.py": "38a592e0dbe81e437f029d5c20b2efcab10897b99763dae2a8905a559c6be20d",
+    "research/threshold_reproduction/verify_threshold_provenance.py": "7a81ff65709e764818c6369add8dbcd8481911a84276ba07e643d10b250b29a8",
+    "src/uav_stkg/__init__.py": "76c699ecd227d4c9d42388347df849cc7503f8e768a68a71744c2308c60b45a1",
+    "src/uav_stkg/graph_constraints.py": "7fd7d37d5806e4c8dff202b8981790f95ecb69f972a628e875c10115c4aec88a",
+    "src/uav_stkg/monitor/__init__.py": "f1f6e63e6e929ca913fb4e1461b8dead87f1ed5f07da318cb3cbc4e275860cf0",
+    "src/uav_stkg/monitor/_legacy_sampled_monitor.py": "842892ce417181c1e179ec07259361aff977ff948a6503d2077800c2268ffb7c",
+    "src/uav_stkg/monitor/monitor_from_traceability_graph.py": "fea777050426cb784678694c9d3ffcd145a86fa5910502b547db1ce1f66dd76d",
+    "src/uav_stkg/monitor/run_precision_regression.py": "132b75b92ff7c5f4e6792f15e8c6b8c1fa195a32835e5850dfb6324ddd0b8d90",
+    "src/uav_stkg/monitor/sampled_data_contract.py": "b54d13739a79152aa231d9d5285607c1ffdc9aaf5a0c73c5c38c602695f34c17",
+    "src/uav_stkg/monitor/sampled_monitor.py": "b30c37e39393fed15832baac4b89e19836ffeee05734c504c28341fb2e97305d",
+    "src/uav_stkg/monitor/test_legacy_api_compatibility.py": "7549c6cc61124e54c4ad432d12f1cd3e31b21e7c53da2c443609dfadade3251b",
+    "src/uav_stkg/monitor/test_timestamp_precision.py": "506a4b40e17876c278ba9b3cc4cd9dc06de993bbbb0fa056452c27902cbd95d6",
+    "src/uav_stkg/monitor/timestamp_precision.py": "4b30b2ac384f3d9616b6ebc116b465d02171dd638ebb3d448b789163cf1012a0"
+  }
 }

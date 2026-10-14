@@ -1,0 +1,64 @@
+{
+  "schema": "idf-ds-official-members-verified-v34",
+  "source": {
+    "record_doi": "10.5281/zenodo.16992976",
+    "record_url": "https://zenodo.org/records/16992976",
+    "record_version": "v1.0",
+    "license": "CC-BY-4.0",
+    "archive_name": "Holybro Pixhawk.zip",
+    "archive_size_bytes": 2121943653,
+    "archive_md5": "8b990cc4c7ec1225a16e9a28225e5162",
+    "accessed_utc": "2026-09-04T10:00:00Z",
+    "verification_date": "2026-10-14",
+    "verified_official_license_id": "cc-by-4.0"
+  },
+  "selection": {
+    "platform": "Pixhawk 6X with Jetson Orin NX companion computer",
+    "flight_directory": "processed/UnGrouped flights/lap_120",
+    "reason": "The three native PX4 topic exports retain integer microsecond timestamps and supply the position/velocity, attitude quaternion, and angular-rate observations needed for a read-only event-time adapter.",
+    "non_selection": "The grouped CSV representation was inspected but its timestamp field is ISO-formatted from a microsecond source with a nanosecond interpretation. It is not used as an event-time source. The complete 2.1 GB archive is not retained."
+  },
+  "members": [
+    {
+      "archive_member": "Holybro Pixhawk/processed/UnGrouped flights/lap_120/log_1_2025-7-3-08-59-46_10vueltas_vehicle_local_position_0.csv",
+      "local_file": "vehicle_local_position_0.csv",
+      "zip_crc32": "6e2f0666",
+      "zip_compressed_bytes": 292507,
+      "zip_uncompressed_bytes": 1118244,
+      "sha256": "5d1c69ef87b475506b35fae8797674e2c84f6074377d741660f4b7573b1ae24d",
+      "historical_retained_sha256": "5d1c69ef87b475506b35fae8797674e2c84f6074377d741660f4b7573b1ae24d",
+      "historical_retained_bytes": 1118244,
+      "historical_retained_is_exact_byte_prefix": true,
+      "historical_tail_was_incomplete": false
+    },
+    {
+      "archive_member": "Holybro Pixhawk/processed/UnGrouped flights/lap_120/log_1_2025-7-3-08-59-46_10vueltas_vehicle_angular_velocity_0.csv",
+      "local_file": "vehicle_angular_velocity_0.csv",
+      "zip_crc32": "f7652cbc",
+      "zip_compressed_bytes": 476825,
+      "zip_uncompressed_bytes": 1175329,
+      "sha256": "596d5f6db55828b8a0054dafc04a027f6c8587f907b3701fcf761e314b47469f",
+      "historical_retained_sha256": "2fa31d61ec72b51510927f7479db07eb20100ac41a9ae476d1fc66eb68b64cc0",
+      "historical_retained_bytes": 1175131,
+      "historical_retained_is_exact_byte_prefix": true,
+      "historical_tail_was_incomplete": true
+    },
+    {
+      "archive_member": "Holybro Pixhawk/processed/UnGrouped flights/lap_120/log_1_2025-7-3-08-59-46_10vueltas_vehicle_attitude_0.csv",
+      "local_file": "vehicle_attitude_0.csv",
+      "zip_crc32": "cbb029c0",
+      "zip_compressed_bytes": 141619,
+      "zip_uncompressed_bytes": 621843,
+      "sha256": "76001fbf0b72ac67a17f847593e05a0f1941450eb0da799d147c0e6efdf0a7b4",
+      "historical_retained_sha256": "1f10468104464677c4b2acde957ff96be63aca4bc6702a462986229aa1088645",
+      "historical_retained_bytes": 621402,
+      "historical_retained_is_exact_byte_prefix": true,
+      "historical_tail_was_incomplete": true
+    }
+  ],
+  "permitted_use": "CC BY 4.0 source-backed, read-only external fixed-wing PX4 event-time replay. It is not an onboard monitor-latency measurement, a multicopter calibration source, a RflyMAD case-identity source, or an engineering safety validation.",
+  "correction": "Two retained historical CSV files were truncated byte prefixes of the official ZIP members. v34 uses the complete CRC/SHA-verified members; historical v33 inputs and results remain unchanged.",
+  "attribution": "Cesar Garcia Gascon, Javier Bas Bolufer, Pablo Castello Pedrero, Juan A. Garcia-Manrique. Fixed-Wing UAS Telemetry Benchmark (IDF_DS), v1.0, https://doi.org/10.5281/zenodo.16992976.",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "full_archive_redistributed": false
+}

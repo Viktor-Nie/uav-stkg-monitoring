@@ -1,0 +1,30 @@
+[
+  {
+    "file": "verify_semantics.py",
+    "sha256": "80987892f4887bbc99639cbfd1dab2bf4d0b456e208288db3d63ad0aa23dec19"
+  },
+  {
+    "file": "main_semantics_definition.tex",
+    "sha256": "0d62f34a058d47ea9b5d47c8edfa95cc35d98c40d6fb24981403c4e92de6a05b"
+  },
+  {
+    "file": "main_correctness_proposition.tex",
+    "sha256": "fb0e2b9c0591c396240e0cc9e4a86b99b95e3a5247fdcc9f8a51d961680027a4"
+  },
+  {
+    "file": "supplementary_semantics_definition.tex",
+    "sha256": "3accd214546896cf950e566ac9a3443b92ccc6db2ca2badf4b4aa07874f6cfb4"
+  },
+  {
+    "file": "supplementary_full_proof.tex",
+    "sha256": "bd4747f323b739c76c63c7f94758c5953e8020f9053ee81a694947d481b46029"
+  },
+  {
+    "file": "frozen_v2/sampled_data_contract.py",
+    "sha256": "4081619d8b3bdf6295ab09bdd0db2831ed0a996c02dd872e0b36dbde46c4d981"
+  },
+  {
+    "file": "frozen_v2/sampled_monitor.py",
+    "sha256": "24b35ae63793f0bb848a7dbffa8ab8ddbca5f8b4c747322bf619c6f622298eef"
+  }
+]

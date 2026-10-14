@@ -1,0 +1,16 @@
+{
+  "schema": "uav_stkg_information_equivalent_relational_parity_v1",
+  "status": "passed",
+  "clean_graph_accepted": true,
+  "clean_relational_projection_accepted": true,
+  "mutant_count": 354,
+  "graph_rejected_count": 354,
+  "relational_rejected_count": 354,
+  "decision_disagreements": [],
+  "input_sha256": {
+    "enriched_nodes": "78b7d4348a49e0f3ccd94c24b6e5221d43e4a21e5000bae2b811e8b962f4845c",
+    "relationships": "cb263a607ddbf21e6d99e663f25c4014a71656232333a0ddc431b6a66b887f73"
+  },
+  "detail_sha256": "9e45c6162387c1638d5f8e7a239c012f01b98ec927ff3ffaf245f58aa5ff38b7",
+  "interpretation": "Same frozen information and declared predicates in two representations. This checks decision parity, not graph superiority, independent extraction, maintainability, runtime speed, or human effort."
+}

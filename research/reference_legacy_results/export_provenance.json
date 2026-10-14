@@ -1,0 +1,327 @@
+{
+  "status": "exported_from_retained_results_without_inference",
+  "scientific_boundary": "Historical outcomes and saved score projections; no raw third-party telemetry, model refit, new inference or new human labels.",
+  "exports": [
+    {
+      "source_identifier": "specification/v2/results/independent_corpus/baseline_metrics.csv",
+      "original_sha256": "1488987da6435d6f16a0e3166309ced2efeb03d1c47983f5c8f4ed290c591701",
+      "release_path": "research/reference_legacy_results/superseded_baseline_metrics.csv",
+      "release_sha256": "1488987da6435d6f16a0e3166309ced2efeb03d1c47983f5c8f4ed290c591701",
+      "transformation": "unchanged research result bytes"
+    },
+    {
+      "source_identifier": "specification/v2/results/independent_corpus/expanded_scope_baseline_metrics.csv",
+      "original_sha256": "63c503ef4ac3b554ecd097c6c16d5e5eb76d50f55bb4db0282fb1231c67c7bfd",
+      "release_path": "research/reference_legacy_results/superseded_english_union_label_metrics.csv",
+      "release_sha256": "63c503ef4ac3b554ecd097c6c16d5e5eb76d50f55bb4db0282fb1231c67c7bfd",
+      "transformation": "unchanged research result bytes"
+    },
+    {
+      "source_identifier": "specification/v2/results/multi_real_motor_replay/log_level_summary.csv",
+      "original_sha256": "0e17a39e0bb806e6ab96784111ccf4b489c80cb53938a11b2e294e4df038c61c",
+      "release_path": "research/reference_legacy_results/rflymad_log_level_summary.csv",
+      "release_sha256": "0e17a39e0bb806e6ab96784111ccf4b489c80cb53938a11b2e294e4df038c61c",
+      "transformation": "unchanged research result bytes"
+    },
+    {
+      "source_identifier": "docs/最终论文/latex_aerospace_v3/results/fair_text_evaluation/formula_level_fair_predictions.csv",
+      "original_sha256": "64694bb2b1b6d010a2a26cff2889114d10b183646a075403126006bfd74d3646",
+      "release_path": "research/reference_legacy_results/historical_fair_retrieval_predictions.csv",
+      "release_sha256": "64694bb2b1b6d010a2a26cff2889114d10b183646a075403126006bfd74d3646",
+      "transformation": "unchanged research result bytes"
+    },
+    {
+      "source_identifier": "docs/最终论文/latex_aerospace_v3/results/fair_text_evaluation/formula_level_fair_metrics.csv",
+      "original_sha256": "83207717b0ae920c32b8310eba219424b189a9ea747136d591dd4b7e5fef0321",
+      "release_path": "research/reference_legacy_results/historical_fair_retrieval_metrics.csv",
+      "release_sha256": "83207717b0ae920c32b8310eba219424b189a9ea747136d591dd4b7e5fef0321",
+      "transformation": "unchanged research result bytes"
+    },
+    {
+      "source_identifier": "docs/最终论文/latex_aerospace_v3/results/fair_text_evaluation/formula_level_posthoc_keyword_diagnostic_predictions.csv",
+      "original_sha256": "f50ba242130bdc1f47feb98533016c879c89c351b7c3afa181cc287a21b8b978",
+      "release_path": "research/reference_legacy_results/historical_posthoc_keyword_predictions.csv",
+      "release_sha256": "f50ba242130bdc1f47feb98533016c879c89c351b7c3afa181cc287a21b8b978",
+      "transformation": "unchanged research result bytes"
+    },
+    {
+      "source_identifier": "docs/最终论文/latex_aerospace_v3/results/fair_text_evaluation/formula_level_posthoc_keyword_diagnostic_metrics.csv",
+      "original_sha256": "635cd47a25a04f5c5ea623b94a0a05472bbf152a4dea20fb098c895d236925da",
+      "release_path": "research/reference_legacy_results/historical_posthoc_keyword_metrics.csv",
+      "release_sha256": "635cd47a25a04f5c5ea623b94a0a05472bbf152a4dea20fb098c895d236925da",
+      "transformation": "unchanged research result bytes"
+    },
+    {
+      "source_identifier": "docs/最终论文/latex_kbs_v6/results/v4_semantic_differential_summary.json",
+      "original_sha256": "d42ed17c1b5b6c48c2556a3796b607f426aec93c7ecf04b1451c7848b7762e73",
+      "release_path": "research/reference_legacy_results/v4_semantic_differential_summary.json",
+      "release_sha256": "d42ed17c1b5b6c48c2556a3796b607f426aec93c7ecf04b1451c7848b7762e73",
+      "transformation": "unchanged research result bytes"
+    },
+    {
+      "source_identifier": "docs/最终论文/latex_kbs_v6/results/v6_event_traceability_audit.json",
+      "original_sha256": "cbcf3a401291c528266539adb2f069cafe552b0a23131dce8823ec84beea9e97",
+      "release_path": "research/reference_legacy_results/v6_event_traceability_audit.json",
+      "release_sha256": "cbcf3a401291c528266539adb2f069cafe552b0a23131dce8823ec84beea9e97",
+      "transformation": "unchanged research result bytes"
+    },
+    {
+      "source_identifier": "docs/最终论文/latex_kbs_v6/results/v6_relational_parity_audit.json",
+      "original_sha256": "b4b9ef4d1993142a6c686b8eb23185f1eee0b9780c63c208e8ec22d24977bc3c",
+      "release_path": "research/reference_legacy_results/v6_relational_parity_audit.json",
+      "release_sha256": "b4b9ef4d1993142a6c686b8eb23185f1eee0b9780c63c208e8ec22d24977bc3c",
+      "transformation": "unchanged research result bytes"
+    },
+    {
+      "source_identifier": "docs/最终论文/latex_kbs_v6/results/v6_relational_parity_details.csv",
+      "original_sha256": "9e45c6162387c1638d5f8e7a239c012f01b98ec927ff3ffaf245f58aa5ff38b7",
+      "release_path": "research/reference_legacy_results/v6_relational_parity_details.csv",
+      "release_sha256": "9e45c6162387c1638d5f8e7a239c012f01b98ec927ff3ffaf245f58aa5ff38b7",
+      "transformation": "unchanged research result bytes"
+    },
+    {
+      "source_identifier": "docs/最终论文/latex_kbs_v6/results/v6_source_binding_audit.json",
+      "original_sha256": "a1b7fceee46b0ef095e4fdad4e363985900eab1f1c699ffb551c4675bd28bc42",
+      "release_path": "research/reference_legacy_results/v6_source_binding_audit.json",
+      "release_sha256": "a1b7fceee46b0ef095e4fdad4e363985900eab1f1c699ffb551c4675bd28bc42",
+      "transformation": "unchanged research result bytes"
+    },
+    {
+      "source_identifier": "docs/最终论文/latex_kbs_v6/results/v6_rtamt_differential_evidence.json",
+      "original_sha256": "48fef58dd8acd4133a360194063d0027ddad67d39731840022f850bf540265d7",
+      "release_path": "research/reference_legacy_results/v6_rtamt_differential_evidence.json",
+      "release_sha256": "48fef58dd8acd4133a360194063d0027ddad67d39731840022f850bf540265d7",
+      "transformation": "unchanged research result bytes"
+    },
+    {
+      "source_identifier": "analysis/results/49_e5_computational_flow_20261007/flow_summary_reviewed.json",
+      "original_sha256": "082e70e6cd037f7e5af6ee65b7a5c78bb89e7d73738cbc383d8a3bf7a5c2cbf1",
+      "release_path": "research/reference_legacy_results/operational_extraction_summary.json",
+      "release_sha256": "082e70e6cd037f7e5af6ee65b7a5c78bb89e7d73738cbc383d8a3bf7a5c2cbf1",
+      "transformation": "unchanged research result bytes"
+    },
+    {
+      "source_identifier": "analysis/results/42_uav_fd_external_validation_20261007/evaluation_summary.json",
+      "original_sha256": "3d67111ba6e92a33cc87c1c78207650b1fd16d7e2277d49b3f3d7f3a51c40a03",
+      "release_path": "research/reference_legacy_results/uavfd_locked_summary.json",
+      "release_sha256": "3d67111ba6e92a33cc87c1c78207650b1fd16d7e2277d49b3f3d7f3a51c40a03",
+      "transformation": "unchanged research result bytes"
+    },
+    {
+      "source_identifier": "analysis/results/42_uav_fd_external_validation_20261007/per_flight_metrics.csv",
+      "original_sha256": "8184186b20ab7c008949a93abb561907ac555659249c2f63f21c9425a2773e8b",
+      "release_path": "research/reference_legacy_results/uavfd_locked_per_file_metrics.csv",
+      "release_sha256": "8184186b20ab7c008949a93abb561907ac555659249c2f63f21c9425a2773e8b",
+      "transformation": "unchanged research result bytes"
+    },
+    {
+      "source_identifier": "analysis/results/43_vibration_development_20261007/aggregate_comparison.csv",
+      "original_sha256": "11bd8b5c81e384eb2716cfcee18371d8eded45812c9a6fea192df3bcf2d219dc",
+      "release_path": "research/reference_legacy_results/uavfd_vibration_development_metrics.csv",
+      "release_sha256": "11bd8b5c81e384eb2716cfcee18371d8eded45812c9a6fea192df3bcf2d219dc",
+      "transformation": "unchanged research result bytes"
+    },
+    {
+      "source_identifier": "analysis/results/44_vibration_threshold_calibration_20261007/aggregate_comparison.csv",
+      "original_sha256": "ee9a5172abdf239160b82eb391df0b9246167c6785a8e97435f90766afbfd606",
+      "release_path": "research/reference_legacy_results/uavfd_conservative_development_metrics.csv",
+      "release_sha256": "ee9a5172abdf239160b82eb391df0b9246167c6785a8e97435f90766afbfd606",
+      "transformation": "unchanged research result bytes"
+    },
+    {
+      "source_identifier": "analysis/results/47_residual_fault_diagnosis_20261007/file_summary.csv",
+      "original_sha256": "88ed9875f4579b2ca90b02d5983ab1a6d9e2f893809fff489cc50ef16b16391f",
+      "release_path": "research/reference_legacy_results/uavfd_residual_file_summary.csv",
+      "release_sha256": "88ed9875f4579b2ca90b02d5983ab1a6d9e2f893809fff489cc50ef16b16391f",
+      "transformation": "unchanged research result bytes"
+    },
+    {
+      "source_identifier": "analysis/results/51_dronepropa_bounded_development_20261007/training_summary.json",
+      "original_sha256": "0bb91f0344be307497925b9b650f67fe13cddf214cbc2ed8a7a8a586272a2c7c",
+      "release_path": "research/reference_legacy_results/dronepropa_training_summary.json",
+      "release_sha256": "0bb91f0344be307497925b9b650f67fe13cddf214cbc2ed8a7a8a586272a2c7c",
+      "transformation": "unchanged research result bytes"
+    },
+    {
+      "source_identifier": "analysis/results/51_dronepropa_bounded_development_20261007/selection_before_final.json",
+      "original_sha256": "3ca1d14304e98f31e0d24e21db35a238bb2ad21875fb923483ffe5ec6709b88e",
+      "release_path": "research/reference_legacy_results/dronepropa_selection_before_final.json",
+      "release_sha256": "3ca1d14304e98f31e0d24e21db35a238bb2ad21875fb923483ffe5ec6709b88e",
+      "transformation": "unchanged research result bytes"
+    },
+    {
+      "source_identifier": "analysis/results/53_dronepropa_final_confirmation_20261007/final_summary.json",
+      "original_sha256": "59810040f9cda80cabf69dc0153885927a6b16fb431d1ed4466f0660f6faebac",
+      "release_path": "research/reference_legacy_results/dronepropa_final_summary.json",
+      "release_sha256": "59810040f9cda80cabf69dc0153885927a6b16fb431d1ed4466f0660f6faebac",
+      "transformation": "unchanged research result bytes"
+    },
+    {
+      "source_identifier": "analysis/results/53_dronepropa_final_confirmation_20261007/per_file_metrics.csv",
+      "original_sha256": "9f1bcd12031cc53ad9cf684b38671ccb9183ed7c704f875de64ecc56c637435b",
+      "release_path": "research/reference_legacy_results/dronepropa_final_per_file_metrics.csv",
+      "release_sha256": "9f1bcd12031cc53ad9cf684b38671ccb9183ed7c704f875de64ecc56c637435b",
+      "transformation": "unchanged research result bytes"
+    },
+    {
+      "source_identifier": "analysis/results/53_dronepropa_final_confirmation_20261007/group_metrics.csv",
+      "original_sha256": "77a43ca4d2f95825ac868f448328ac5380721a72fc4fe3f8e4c6b4e34f78dce8",
+      "release_path": "research/reference_legacy_results/dronepropa_final_group_metrics.csv",
+      "release_sha256": "77a43ca4d2f95825ac868f448328ac5380721a72fc4fe3f8e4c6b4e34f78dce8",
+      "transformation": "unchanged research result bytes"
+    },
+    {
+      "source_identifier": "analysis/results/53_dronepropa_final_confirmation_20261007/bootstrap_replicates.csv",
+      "original_sha256": "78e5a80cced890a7225abfb1601d2386af2421b42f53bf2a8241d5ed76b86e8b",
+      "release_path": "research/reference_legacy_results/dronepropa_final_bootstrap_replicates.csv",
+      "release_sha256": "78e5a80cced890a7225abfb1601d2386af2421b42f53bf2a8241d5ed76b86e8b",
+      "transformation": "unchanged research result bytes"
+    },
+    {
+      "source_identifier": "analysis/results/58_direction_feature_revision_20261007/selection_before_new_final.json",
+      "original_sha256": "dc1c50a6b23edba2b151cdd6311910e4bdfcf7a9b0ded4aa81c20b202ec235c3",
+      "release_path": "research/reference_legacy_results/direction_selection_before_new_final.json",
+      "release_sha256": "dc1c50a6b23edba2b151cdd6311910e4bdfcf7a9b0ded4aa81c20b202ec235c3",
+      "transformation": "unchanged research result bytes"
+    },
+    {
+      "source_identifier": "analysis/results/58_direction_feature_revision_20261007/learning_curves.csv",
+      "original_sha256": "aa045a82184e3d1b9f82713a3667df466c99e90957d2f70a5e54fa1836a61cd9",
+      "release_path": "research/reference_legacy_results/direction_learning_curves.csv",
+      "release_sha256": "aa045a82184e3d1b9f82713a3667df466c99e90957d2f70a5e54fa1836a61cd9",
+      "transformation": "unchanged research result bytes"
+    },
+    {
+      "source_identifier": "analysis/results/42_uav_fd_external_validation_20261007/predictions.csv",
+      "original_sha256": "ece80be503173d7c1b898452867b7e3e2811e8b89f91fa39c7953924bd01afef",
+      "release_path": "research/reference_legacy_results/uavfd_locked_decisions.csv",
+      "release_sha256": "8feece8529113059522c3238120915355d2a121eb2f3c3c193b14614f1d4ceb8",
+      "rows": 1376,
+      "retained_columns": [
+        "case_id",
+        "installed_fault",
+        "interval_index",
+        "state_control_mlp108_seed20261006__score",
+        "state_control_mlp108_seed20261006__alarm",
+        "round23_fixed84_reference__score",
+        "round23_fixed84_reference__alarm"
+      ],
+      "transformation": "column projection only; raw feature/telemetry fields omitted; saved decision values unchanged"
+    },
+    {
+      "source_identifier": "analysis/results/43_vibration_development_20261007/selected_outer_predictions.csv",
+      "original_sha256": "d09e47954456d111392c5fd9ed1c6146f6d95ced6dde877aba4c7833c7c44293",
+      "release_path": "research/reference_legacy_results/uavfd_vibration_selected_decisions.csv",
+      "release_sha256": "a6fe9e0cb2346d8eefffa7b13d05ba49b32b0654f570228fafcce11411e0a79c",
+      "rows": 1345,
+      "retained_columns": [
+        "outer_fold",
+        "candidate",
+        "case_id",
+        "installed_fault",
+        "score",
+        "cutoff",
+        "alarm"
+      ],
+      "transformation": "column projection only; raw feature/telemetry fields omitted; saved decision values unchanged"
+    },
+    {
+      "source_identifier": "analysis/results/44_vibration_threshold_calibration_20261007/selected_outer_predictions.csv",
+      "original_sha256": "5cbcc6a91ae4ca6d3bb85b16ce6184aec1c6590464d32161011372773f878c33",
+      "release_path": "research/reference_legacy_results/uavfd_conservative_selected_decisions.csv",
+      "release_sha256": "2df748e98f6cc185626618ee2fdea1b9be875e0ead0fed76a274f07405da16fd",
+      "rows": 1345,
+      "retained_columns": [
+        "outer_fold",
+        "candidate",
+        "case_id",
+        "installed_fault",
+        "score",
+        "cutoff",
+        "alarm"
+      ],
+      "transformation": "column projection only; raw feature/telemetry fields omitted; saved decision values unchanged"
+    },
+    {
+      "source_identifier": "analysis/results/53_dronepropa_final_confirmation_20261007/two_fixed_predictor_predictions.csv",
+      "original_sha256": "6dd5cf1e65f0e1cea9ca4a551b2dbc93767a4e911eb1da9e7bc87ef8cf56801a",
+      "release_path": "research/reference_legacy_results/dronepropa_final_decisions.csv",
+      "release_sha256": "028fb056fe540f8a067c6b78190a425a853fa407e2b8be1c0d08ab592984485b",
+      "rows": 1408,
+      "retained_columns": [
+        "case_id",
+        "installed_fault",
+        "old_vote_alarm",
+        "selected_score",
+        "selected_cutoff",
+        "selected_alarm"
+      ],
+      "transformation": "column projection only; raw feature/telemetry fields omitted; saved decision values unchanged"
+    },
+    {
+      "source_identifier": "analysis/results/58_direction_feature_revision_20261007/all_candidate_validation_predictions.csv",
+      "original_sha256": "6739dee55f3c3d79a7bc745a9dca5cedf00a35858802950eb9417585f7dd6f85",
+      "release_path": "research/reference_legacy_results/direction_validation_decisions.csv",
+      "release_sha256": "270a6622dc79301d99c86d313e15c24a1b82a36b207324b54c4741d75b97eca6",
+      "rows": 3768,
+      "retained_columns": [
+        "case_id",
+        "installed_fault",
+        "candidate",
+        "score",
+        "cutoff",
+        "alarm"
+      ],
+      "transformation": "column projection only; raw feature/telemetry fields omitted; saved decision values unchanged"
+    },
+    {
+      "source_identifier": "specification/v2/results/performance/lenovo_83dg_ground_edge_20260816_raw.csv",
+      "original_sha256": "68f49918e85db7644b629e1028993eddb9f9cb5dcde6b9c789403a8b2c4b6dcd",
+      "release_path": "research/reference_legacy_results/historical_ground_benchmark_timings.csv",
+      "release_sha256": "68f49918e85db7644b629e1028993eddb9f9cb5dcde6b9c789403a8b2c4b6dcd",
+      "transformation": "unchanged derived research result bytes; no raw telemetry"
+    },
+    {
+      "source_identifier": "specification/v2/results/hil_multiscenario_timestamp_audit.json",
+      "original_sha256": "18bf17217f60f2d2322e1e5fae1b97b046531cafe508da784fb2a357153bc667",
+      "release_path": "research/reference_legacy_results/historical_hil_timestamp_rejections.json",
+      "release_sha256": "18bf17217f60f2d2322e1e5fae1b97b046531cafe508da784fb2a357153bc667",
+      "transformation": "unchanged derived research result bytes; no raw telemetry"
+    },
+    {
+      "source_identifier": "specification/v2/results/sampling_robustness/multirate_pulse_phase_detection.csv",
+      "original_sha256": "16a9a61c628a49664e4f58de90aa4089ce57cee698d8bc9c643bd7ac874fd46b",
+      "release_path": "research/reference_legacy_results/sampling_phase_detection.csv",
+      "release_sha256": "16a9a61c628a49664e4f58de90aa4089ce57cee698d8bc9c643bd7ac874fd46b",
+      "transformation": "unchanged derived research result bytes; no raw telemetry"
+    },
+    {
+      "source_identifier": "specification/v2/results/sampling_robustness/jitter_contract_and_detection.csv",
+      "original_sha256": "c4553f2a1f8a8647d7da815e590220f829c23054a81b939008c111a62b7678f8",
+      "release_path": "research/reference_legacy_results/sampling_jitter_controls.csv",
+      "release_sha256": "c4553f2a1f8a8647d7da815e590220f829c23054a81b939008c111a62b7678f8",
+      "transformation": "unchanged derived research result bytes; no raw telemetry"
+    },
+    {
+      "source_identifier": "specification/v2/results/sampling_robustness/noise_false_alarm_sensitivity.csv",
+      "original_sha256": "98295512a38ea61466a087c71510a470e0bcb01c2397b8ad57ab7a0b9afaec8f",
+      "release_path": "research/reference_legacy_results/sampling_noise_controls.csv",
+      "release_sha256": "98295512a38ea61466a087c71510a470e0bcb01c2397b8ad57ab7a0b9afaec8f",
+      "transformation": "unchanged derived research result bytes; no raw telemetry"
+    },
+    {
+      "source_identifier": "specification/v2/results/sampling_robustness/missingness_contract_rejection.csv",
+      "original_sha256": "6d746ed48c4dba8b141af650817119cb34c1b8d2f3f94f5724291f43b456e94e",
+      "release_path": "research/reference_legacy_results/sampling_missingness_controls.csv",
+      "release_sha256": "6d746ed48c4dba8b141af650817119cb34c1b8d2f3f94f5724291f43b456e94e",
+      "transformation": "unchanged derived research result bytes; no raw telemetry"
+    },
+    {
+      "source_identifier": "specification/v2/results/performance/lenovo_83dg_ground_edge_20260816_summary.json",
+      "original_sha256": "cccc32535aacb22b37ab6658ebeba5c938aae9c5c549e4625fe07370b60bfd73",
+      "release_path": "research/reference_legacy_results/historical_ground_benchmark_summary.json",
+      "release_sha256": "267db572242837fd1a5da0be1551960d0f82b2bd6f14e4ec492ab0d60b66f3a7",
+      "transformation": "removed hostname, local executable and absolute trace path only; timings and source trace hash unchanged"
+    }
+  ]
+}

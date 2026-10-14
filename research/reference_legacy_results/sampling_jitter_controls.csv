@@ -1,0 +1,17 @@
+﻿frequency_hz,nominal_period_seconds,relative_jitter_amplitude,declared_relative_jitter_tolerance,pulse_width_factor_of_period,phase_count,accepted_phase_count,rejected_phase_count,accepted_input_rate,detection_rate_over_all_phases,interpretation
+10.0,0.1,0.0,0.05,0.5,50,50,0,1.0,0.5,10% alternating jitter is intentionally outside the declared 5% contract and must be rejected
+10.0,0.1,0.01,0.05,0.5,50,50,0,1.0,0.5,10% alternating jitter is intentionally outside the declared 5% contract and must be rejected
+10.0,0.1,0.05,0.05,0.5,50,50,0,1.0,0.54,10% alternating jitter is intentionally outside the declared 5% contract and must be rejected
+10.0,0.1,0.1,0.05,0.5,50,0,50,0.0,0.0,10% alternating jitter is intentionally outside the declared 5% contract and must be rejected
+20.0,0.05,0.0,0.05,0.5,50,50,0,1.0,0.5,10% alternating jitter is intentionally outside the declared 5% contract and must be rejected
+20.0,0.05,0.01,0.05,0.5,50,50,0,1.0,0.5,10% alternating jitter is intentionally outside the declared 5% contract and must be rejected
+20.0,0.05,0.05,0.05,0.5,50,50,0,1.0,0.54,10% alternating jitter is intentionally outside the declared 5% contract and must be rejected
+20.0,0.05,0.1,0.05,0.5,50,0,50,0.0,0.0,10% alternating jitter is intentionally outside the declared 5% contract and must be rejected
+50.0,0.02,0.0,0.05,0.5,50,50,0,1.0,0.5,10% alternating jitter is intentionally outside the declared 5% contract and must be rejected
+50.0,0.02,0.01,0.05,0.5,50,50,0,1.0,0.5,10% alternating jitter is intentionally outside the declared 5% contract and must be rejected
+50.0,0.02,0.05,0.05,0.5,50,50,0,1.0,0.54,10% alternating jitter is intentionally outside the declared 5% contract and must be rejected
+50.0,0.02,0.1,0.05,0.5,50,0,50,0.0,0.0,10% alternating jitter is intentionally outside the declared 5% contract and must be rejected
+100.0,0.01,0.0,0.05,0.5,50,50,0,1.0,0.5,10% alternating jitter is intentionally outside the declared 5% contract and must be rejected
+100.0,0.01,0.01,0.05,0.5,50,50,0,1.0,0.5,10% alternating jitter is intentionally outside the declared 5% contract and must be rejected
+100.0,0.01,0.05,0.05,0.5,50,50,0,1.0,0.54,10% alternating jitter is intentionally outside the declared 5% contract and must be rejected
+100.0,0.01,0.1,0.05,0.5,50,0,50,0.0,0.0,10% alternating jitter is intentionally outside the declared 5% contract and must be rejected

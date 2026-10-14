@@ -1,0 +1,10 @@
+{
+  "workload_id": "B04",
+  "samples": 10000,
+  "density": "quiescent",
+  "trace_path": "inputs/B_10000_quiescent.csv",
+  "started_utc": "2026-10-14T05:45:15.588449+00:00",
+  "finished_utc": "2026-10-14T05:45:56.397768+00:00",
+  "exit_code": 0,
+  "status": "passed"
+}

@@ -1,0 +1,146 @@
+{
+  "schema": "single_source_candidate_selected_before_final_v1",
+  "created_utc": "2026-10-07T13:27:32.619596+00:00",
+  "implementation_protocol_sha256": "4a065f905bd393e6de63ea41cc34fdda0c91703df1df430d4e5e045a1b8f7f94",
+  "training_input_protocol_sha256": "1c5db7beb12cc6d4a18998ac044162d8bb17b403ff170e0f61ab243bfb349af5",
+  "root_protocol_sha256": "274c03d970a20234ba1594f31a72ad77ca1d92a75bdd1b1047d1a7cad78ce29b",
+  "selected_candidate": "mlp_seed202610080",
+  "selected": {
+    "candidate": "mlp_seed202610080",
+    "model_path": "models/mlp_seed202610080.pt",
+    "epoch": 80,
+    "cutoff": 0.8661932945251466,
+    "validation": {
+      "pooled_tn_fp_fn_tp": [
+        199,
+        2,
+        398,
+        29
+      ],
+      "file_weighted_tn_fp_fn_tp": [
+        6.929280397022333,
+        0.0707196029776675,
+        13.953461908461907,
+        1.0465380915380913
+      ],
+      "fpr": 0.010102800425381071,
+      "fnr": 0.9302307938974606,
+      "balanced_accuracy": 0.5298332028385793,
+      "case_balanced_binary_cross_entropy": 0.6587490405396145
+    },
+    "checkpoint_sha256": "88c96227b88c4d8c8210a066a88ac5485fa46c958aa103df1900e04530871750",
+    "selected": true
+  },
+  "candidate_decisions": [
+    {
+      "candidate": "logistic_C1",
+      "model_path": "models/logistic_C1.npz",
+      "epoch": 0,
+      "cutoff": 0.6573834038026372,
+      "validation": {
+        "pooled_tn_fp_fn_tp": [
+          200,
+          1,
+          414,
+          13
+        ],
+        "file_weighted_tn_fp_fn_tp": [
+          6.961538461538462,
+          0.038461538461538464,
+          14.512706552706554,
+          0.4872934472934472
+        ],
+        "fpr": 0.005494505494505495,
+        "fnr": 0.9675137701804368,
+        "balanced_accuracy": 0.5134958621625288,
+        "case_balanced_binary_cross_entropy": 0.6686389200522973
+      },
+      "converged_before_iteration_limit": true,
+      "optimizer_iterations": 96,
+      "checkpoint_sha256": "ed2fd2ba5a03cfc31f7ac66f40c09cee97066e4a7950956104d7e0088ec4c28b",
+      "selected": false
+    },
+    {
+      "candidate": "mlp_seed202610080",
+      "model_path": "models/mlp_seed202610080.pt",
+      "epoch": 80,
+      "cutoff": 0.8661932945251466,
+      "validation": {
+        "pooled_tn_fp_fn_tp": [
+          199,
+          2,
+          398,
+          29
+        ],
+        "file_weighted_tn_fp_fn_tp": [
+          6.929280397022333,
+          0.0707196029776675,
+          13.953461908461907,
+          1.0465380915380913
+        ],
+        "fpr": 0.010102800425381071,
+        "fnr": 0.9302307938974606,
+        "balanced_accuracy": 0.5298332028385793,
+        "case_balanced_binary_cross_entropy": 0.6587490405396145
+      },
+      "checkpoint_sha256": "88c96227b88c4d8c8210a066a88ac5485fa46c958aa103df1900e04530871750",
+      "selected": true
+    },
+    {
+      "candidate": "mlp_seed202610081",
+      "model_path": "models/mlp_seed202610081.pt",
+      "epoch": 62,
+      "cutoff": 0.8148855566978456,
+      "validation": {
+        "pooled_tn_fp_fn_tp": [
+          199,
+          2,
+          402,
+          25
+        ],
+        "file_weighted_tn_fp_fn_tp": [
+          6.927055702917772,
+          0.07294429708222812,
+          14.082255688117757,
+          0.917744311882243
+        ],
+        "fpr": 0.010420613868889731,
+        "fnr": 0.9388170458745171,
+        "balanced_accuracy": 0.5253811701282967,
+        "case_balanced_binary_cross_entropy": 0.6580769441938914
+      },
+      "checkpoint_sha256": "1629932bef7a3160db07e2ba69d4cfcf9c282467689f52bbe68caef0460fb99c",
+      "selected": false
+    },
+    {
+      "candidate": "mlp_seed202610082",
+      "model_path": "models/mlp_seed202610082.pt",
+      "epoch": 80,
+      "cutoff": 0.8685272336006166,
+      "validation": {
+        "pooled_tn_fp_fn_tp": [
+          200,
+          1,
+          402,
+          25
+        ],
+        "file_weighted_tn_fp_fn_tp": [
+          6.961538461538462,
+          0.038461538461538464,
+          14.089467226579295,
+          0.9105327734207045
+        ],
+        "fpr": 0.005494505494505495,
+        "fnr": 0.9392978151052863,
+        "balanced_accuracy": 0.5276038397001042,
+        "case_balanced_binary_cross_entropy": 0.6482987336030119
+      },
+      "checkpoint_sha256": "7becb297fc05afec8e7f9c5b0632bbeac6b585ed5374b3282cc5e1b6a59f2c78",
+      "selected": false
+    }
+  ],
+  "final_or_pilot_scores_read": false,
+  "final_scored": false,
+  "selection_only_from_t4_validation": true,
+  "final_scoring_authority": "Separate root-controlled final stage after this selection is sealed; no final search here."
+}
