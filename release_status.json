@@ -55,8 +55,8 @@
     }
   ],
   "default_reproduction": "Offline frozen primary checks, bounded semantics, conditional statistics, complete timing-record verification and verified IDF replay; full HIL/four-source raw reconstruction is an explicit optional path.",
-  "public_url": "https://github.com/Viktor-Nie/uav-stkg-monitoring/tree/v34",
-  "publication_status": "fixed_tag_target_v34",
+  "public_url": "https://github.com/Viktor-Nie/uav-stkg-monitoring/tree/v34.1",
+  "publication_status": "fixed_tag_target_v34.1",
   "license_status": "not_assigned",
   "v33_reviewed_reference": {
     "items": 19,
@@ -65,7 +65,7 @@
     "independent_human_authentication": "not established"
   },
   "original_flight_data_redistributed": "Only three complete verified IDF members under CC BY 4.0 with attribution; no full archives.",
-  "version": "v34",
+  "version": "v34.1",
   "reference_status": "Provisional computational source review; no new independently adjudicated reference claimed.",
   "human_revision_review": "pending; no new independent human gold reference is claimed"
 }

@@ -1,7 +1,7 @@
 # Traceable UAV specification and offline monitoring
 
 Research artifacts for *Traceable UAV requirement formalization and offline
-monitoring with a knowledge graph*. This v34 research version adds the finite-policy
+monitoring with a knowledge graph*. This v34.1 research version adds the finite-policy
 proof, conditional language statistics, complete repeated workload records,
 raw-source adapters, and a verified IDF acquisition correction. Renewed human
 review of the nineteen source-corrected labels remains pending. Reproducing their
@@ -111,7 +111,7 @@ excluded. A project-wide code license has not been assigned; the separately
 identified IDF source files retain their CC BY 4.0 terms.
 
 The prior sealed research release remains [v33](https://github.com/Viktor-Nie/uav-stkg-monitoring/tree/v33).
-The fixed research version is [v34](https://github.com/Viktor-Nie/uav-stkg-monitoring/tree/v34).
+The fixed research version is [v34.1](https://github.com/Viktor-Nie/uav-stkg-monitoring/tree/v34.1).
 `data/provenance/manuscript_artifact_map.csv` maps manuscript identifiers to
 supplied artifacts, current reproduction commands, or explicitly private historical
 process records. This research version preserves the pending nineteen-label human
