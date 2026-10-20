@@ -137,12 +137,12 @@ def historical_scores(m,ref):
    roles=[s.strip(" '()") for s in str(p.raw_roles).split(',') if s.strip(" '()")]
    pred={'scope':p.raw_scope,'signal_id':p.raw_signal_id,'template_id':p.raw_template_id,'parameter_roles':roles,'formula_structure':p.raw_formula_text}
    rows.append(score_row(m,p.source_item_id,pred,ref,'historical_'+condition))
-  metric.append({'method':'historical_'+condition,'reference_version':'v33_source_reviewed',**metrics(rows)});allrows+=rows
+  metric.append({'method':'historical_'+condition,'reference_version':'human_review_20261019',**metrics(rows)});allrows+=rows
   gated=[]
   for row in rows:
    pred={'scope':'in_scope' if row['graph_accepted'] else 'out_of_scope','signal_id':row['signal_id'] if row['graph_accepted'] else '','template_id':row['template_id'] if row['graph_accepted'] else '','parameter_roles':row['roles'].split(';') if row['graph_accepted'] else [],'formula_structure':row['formula_structure'] if row['graph_accepted'] else ''}
    gated.append(score_row(m,row['source_item_id'],pred,ref,row['condition']+'_plus_gate'))
-  metric.append({'method':'historical_'+condition+'_plus_gate','reference_version':'v33_source_reviewed',**metrics(gated)});allrows+=gated
+  metric.append({'method':'historical_'+condition+'_plus_gate','reference_version':'human_review_20261019',**metrics(gated)});allrows+=gated
  baseline=pd.read_csv(INPUTS/'historical_baseline_predictions.csv').fillna('')
  for method,x in baseline.groupby('method'):
   rows=[]
@@ -150,7 +150,7 @@ def historical_scores(m,ref):
    scope=p.predicted_scope;signal=p.predicted_signal_id if scope=='in_scope' else '';template=p.predicted_template_id if scope=='in_scope' else ''
    pred={'scope':scope,'signal_id':signal,'template_id':template,'parameter_roles':list(m.TEMPLATE_ROLES.get(template,())),'formula_structure':m.canonical_formula(scope,signal,template) if scope=='in_scope' else ''}
    rows.append(score_row(m,p.source_item_id,pred,ref,'historical_'+method))
-  metric.append({'method':'historical_'+method,'reference_version':'v33_source_reviewed',**metrics(rows)});allrows+=rows
+  metric.append({'method':'historical_'+method,'reference_version':'human_review_20261019',**metrics(rows)});allrows+=rows
  outcsv('historical_methods_on_v33_reference.csv',metric);outcsv('historical_predictions_on_v33_reference.csv',allrows)
  shutil.copy2(INPUTS/'historical_metrics_original_reference.csv',HERE/'historical_metrics_original_reference.csv')
  return metric
@@ -188,7 +188,7 @@ def language_scores(m,ref):
  coverage.bar(x,correct,color='#167b87',width=.55);coverage.set_xticks(x,labels,rotation=30,ha='right');coverage.set_ylim(0,28);coverage.set_ylabel('Admitted positive descriptors\n(25 positive opportunities)');coverage.set_title('(c) Positive gate coverage',loc='left',fontsize=10.5);coverage.grid(axis='y',alpha=.2);coverage.set_axisbelow(True)
  for i,n in enumerate(correct):coverage.text(i,n+.4,f'{n}/25',ha='center',fontsize=9)
  fig.subplots_adjust(left=.14,right=.97,bottom=.13,top=.95,hspace=.5,wspace=.55);figure(fig,'v33_fair_language_ablation')
- save('fair_language_scientific_receipt.json',{'planned_calls':20,'completed_calls':sum(r['call_status']=='completed' for r in results),'unique_items':19,'record_opportunities':380,'source_reviewed_in_scope_per_run':5,'source_reviewed_out_of_scope_per_run':14,'positive_templates':{'invariant_upper':5,'bounded_response':0},'model':'gpt-5.5 requested','serving_snapshot':'not returned by CLI','reasoning_effort':'low','output_schema_same_sha256':sha(HERE/'shared_output_schema.json'),'limits':['Repeated contexts do not create new independent source items.','No positive bounded-response item remains after correcting source semantics; response-role/skeleton effectiveness is not measured.','The task definition is more explicit than the historical experiment; new and historical scores do not isolate a model change.','Role names also occur in supplied skeletons, so removing the explicit role map leaves recoverable redundant information.','Five height positives concern abstract text structure; executable coordinate compatibility remains unresolved.'],'conditions':aggregate})
+ save('fair_language_scientific_receipt.json',{'reference_version':'human_review_20261019','reference_path':'reference_19_v33_source_reviewed.csv','reference_sha256':sha(HERE/'reference_19_v33_source_reviewed.csv'),'planned_calls':20,'completed_calls':sum(r['call_status']=='completed' for r in results),'unique_items':19,'record_opportunities':380,'source_reviewed_in_scope_per_run':5,'source_reviewed_out_of_scope_per_run':14,'positive_templates':{'invariant_upper':5,'bounded_response':0},'model':'gpt-5.5 requested','serving_snapshot':'not returned by CLI','reasoning_effort':'low','output_schema_same_sha256':sha(HERE/'shared_output_schema.json'),'limits':['Repeated contexts do not create new independent source items.','No positive bounded-response item remains after correcting source semantics; response-role/skeleton effectiveness is not measured.','The task definition is more explicit than the historical experiment; new and historical scores do not isolate a model change.','Role names also occur in supplied skeletons, so removing the explicit role map leaves recoverable redundant information.','Five height positives concern abstract text structure; executable coordinate compatibility remains unresolved.'],'conditions':aggregate})
  return aggregate
 
 def semantic_challenge(m,ref):
@@ -248,5 +248,5 @@ def main():
  if a.bootstrap_project:bootstrap_inputs()
  ref=pd.read_csv(HERE/'reference_19_v33_source_reviewed.csv').fillna('').set_index('source_item_id')
  graph_figures();m=load_scorer();historic=historical_scores(m,ref);new=language_scores(m,ref);semantic_challenge(m,ref);numeric_checks()
- save('ablation_artifacts_receipt.json',{'saved_inputs_sha256':{str(p.relative_to(HERE)):sha(p) for p in INPUTS.iterdir() if p.is_file()},'historical_methods_rescored':len(historic),'new_conditions':new,'plots':['v33_structural_ablation','v33_fair_language_ablation','v33_binding_ambiguity'],'default_mode':'offline_saved_output_recomputation_without_model_calls','no_old_source_or_results_changed':True});copy_research();print(json.dumps(new,ensure_ascii=False))
+ save('ablation_artifacts_receipt.json',{'saved_inputs_sha256':{str(p.relative_to(HERE)):sha(p) for p in INPUTS.iterdir() if p.is_file()},'reference_version':'human_review_20261019','reference_path':'reference_19_v33_source_reviewed.csv','reference_sha256':sha(HERE/'reference_19_v33_source_reviewed.csv'),'legacy_filename_policy':'v33 names are compatibility filenames; active reference is human_review_20261019','historical_methods_rescored':len(historic),'new_conditions':new,'plots':['v33_structural_ablation','v33_fair_language_ablation','v33_binding_ambiguity'],'default_mode':'offline_saved_output_recomputation_without_model_calls','no_old_source_or_results_changed':True});copy_research();print(json.dumps(new,ensure_ascii=False))
 if __name__=='__main__':main()

@@ -1,0 +1,24 @@
+{
+  "input_items": 19,
+  "reviewed_items": 19,
+  "old_in_scope": 8,
+  "new_text_in_scope": 5,
+  "scope_changes": [
+    "PX4_FAILURE_PITCH_01",
+    "PX4_FAILURE_ROLL_01",
+    "ECFR_107_SPEED_01"
+  ],
+  "coordinate_unresolved_height_items": 5,
+  "historical_labels_unchanged": true,
+  "review_kind": "AI source review with retained submitted annotation tables only; original recovery records and independent human workflow are unverified",
+  "pointer_corrections": [
+    "ECFR_107_VISUAL_01",
+    "ECFR_107_YIELD_01",
+    "ICAROUS_ALT_01",
+    "ICAROUS_SEPARATION_01"
+  ],
+  "official_pointer_verification": [
+    "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-107/subpart-B/section-107.31",
+    "https://www.govinfo.gov/link/cfr/14/107?link-type=pdf&year=mostrecent"
+  ]
+}

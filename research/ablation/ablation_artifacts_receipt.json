@@ -9,6 +9,10 @@
     "inputs\\v4_graph_mutation_ablation_details.csv": "2782d839cd12be40722535293f99f4f35b79434702286e7dbf30bf8908b6889f",
     "inputs\\v4_graph_mutation_ablation_summary.csv": "f148b335f712426cc2a53884a4f48f8408be07d10849d1393174f431402260dd"
   },
+  "reference_version": "human_review_20261019",
+  "reference_path": "reference_19_v33_source_reviewed.csv",
+  "reference_sha256": "f3b691b80a08cda1b8a5f3ad682897390d50b62e9b449a753138276ecf38dee5",
+  "legacy_filename_policy": "v33 names are compatibility filenames; active reference is human_review_20261019",
   "historical_methods_rescored": 10,
   "new_conditions": [
     {

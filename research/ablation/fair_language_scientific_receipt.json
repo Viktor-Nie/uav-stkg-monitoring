@@ -1,4 +1,7 @@
 {
+  "reference_version": "human_review_20261019",
+  "reference_path": "reference_19_v33_source_reviewed.csv",
+  "reference_sha256": "f3b691b80a08cda1b8a5f3ad682897390d50b62e9b449a753138276ecf38dee5",
   "planned_calls": 20,
   "completed_calls": 20,
   "unique_items": 19,

@@ -1,11 +1,23 @@
+# v35 research release
+
+This v35 research release uses reference `human_review_20261019`. The author confirms that A and B completed all nineteen core reviews independently and C confirmed the final core judgments, completed on 2026-10-19 (day precision). Only the merged workbook was recovered in this intake; original independent files were not separately recovered. Hashes establish content integrity, not independent workflow authentication.
+
+The 19 frozen Chinese model inputs, all raw model calls and historical predictions are unchanged. The current reference has five abstract in-scope descriptors and fourteen rejections, exactly matching the previous computational reference on all core fields. Eight Chinese renderings require source-fidelity revision; their proposed replacements remain a separate audit and are not substituted into the model inputs.
+
+All original C physical-context cells P8:P26 remain empty. No C physical applicability or field validation is claimed. Editor technical reference material, if provided separately, is not C judgment. The physical frame compatibility of the five height descriptors remains unresolved.
+
+`research/ablation/gold_reference_19_human_reviewed.csv` is the canonical current reference. Existing `v33` filenames remain compatibility names and do not identify the current reference version. Original historical annotation tables and v34 experiment inputs remain preserved.
+
+The current provenance is in `data/provenance/human_review_20261019_receipt.json`; all-19 and eight-revision source-fidelity tables are in `data/annotation/`. `research/ablation/source_review_19.csv` retains legacy computational explanations separately from human core decisions and corrects the ICAROUS altitude locator to PDF page 5 (printed 27), Section 3.1.
+
+Offline rescoring and statistics outputs are recorded under `outputs/human_review_20261019/`; no new model call, download, training, flight or timing experiment is part of this release. All copied prior `reference_statistics` and historical receipts remain versioned historical evidence.
+
+## Retained v34 documentation (historical status below is superseded by the current receipt)
+
 # Traceable UAV specification and offline monitoring
 
 Research artifacts for *Traceable UAV requirement formalization and offline
-monitoring with a knowledge graph*. This v34.1 research version adds the finite-policy
-proof, conditional language statistics, complete repeated workload records,
-raw-source adapters, and a verified IDF acquisition correction. Renewed human
-review of the nineteen source-corrected labels remains pending. Reproducing their
-provisional scores does not turn them into a new human-adjudicated gold standard.
+monitoring with a knowledge graph*. The parent v34.1 release added the finite-policy proof, conditional language statistics, repeated workload records, raw-source adapters and verified IDF acquisition correction. In this current version, the author has confirmed completed independent A/B core review and C adjudication for the nineteen-item reference, with completion recorded at day precision. The separate source-fidelity audit retains eight required revisions, and original C physical-context cells remain empty.
 
 ## Default offline reproduction
 
@@ -111,8 +123,11 @@ excluded. A project-wide code license has not been assigned; the separately
 identified IDF source files retain their CC BY 4.0 terms.
 
 The prior sealed research release remains [v33](https://github.com/Viktor-Nie/uav-stkg-monitoring/tree/v33).
-The fixed research version is [v34.1](https://github.com/Viktor-Nie/uav-stkg-monitoring/tree/v34.1).
+The parent fixed research version is [v34.1](https://github.com/Viktor-Nie/uav-stkg-monitoring/tree/v34.1).
 `data/provenance/manuscript_artifact_map.csv` maps manuscript identifiers to
 supplied artifacts, current reproduction commands, or explicitly private historical
-process records. This research version preserves the pending nineteen-label human
-review; it is not a claim that all manuscript acceptance conditions are complete.
+process records. This release records completed nineteen-item core human review as author-confirmed; source-fidelity revisions and physical applicability remain separate. It does not claim that all manuscript acceptance conditions are complete.
+
+The default annotation driver also validates the current 19-item anonymous A/B/C core exports, canonical four-tuples, source-fidelity counts (11 consistent and 8 requiring revision), and all 19 empty original C physical-context fields. The separate editor notes are in `data/annotation/EDITOR_TECHNICAL_NOTES.md`. Completion at real day precision is accepted; no hour or minute is fabricated.
+
+The v35 default offline reproduction has completed all eleven extensions, including the current nineteen-item human core review validation. Initial direct scoring/statistics validation and subsequent full reproduction are recorded separately in `outputs/human_review_20261019/validation_receipt.json`; `default_full_reproduction_summary.json` records the full result without local machine paths. No model call, download, training, flight or new timing experiment was performed. The validation summaries record the pre-publication testing state. The fixed research version is https://github.com/Viktor-Nie/uav-stkg-monitoring/tree/v35; older release tags remain unchanged.

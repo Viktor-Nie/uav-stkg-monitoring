@@ -1,0 +1,81 @@
+{
+  "status": "passed",
+  "research_release_version": "v35",
+  "publication_status": "prepared_not_published",
+  "reference_version": "human_review_20261019",
+  "mode": "default_full",
+  "extensions_passed": [
+    "ablation",
+    "annotation",
+    "catalog_screen",
+    "conditional_statistics",
+    "graph_extension",
+    "historical_audits",
+    "monitor",
+    "performance_records",
+    "semantics",
+    "threshold_provenance",
+    "verified_idf"
+  ],
+  "extension_count": 11,
+  "graph": {
+    "nodes": 158,
+    "relationships": 350,
+    "bindings": 84
+  },
+  "structural_decisions": 2832,
+  "current_human_review": {
+    "status": "passed",
+    "reference_version": "human_review_20261019",
+    "items": 19,
+    "core_four_tuple_agreement_with_canonical": {
+      "A": 19,
+      "B": 19,
+      "C": 19
+    },
+    "in_scope": 5,
+    "out_of_scope": 14,
+    "source_consistent": 11,
+    "source_requires_rewrite": 8,
+    "C_original_physical_context_nonempty": 0,
+    "completion_date_author_reported": "2026-10-19",
+    "completion_date_precision": "day",
+    "human_origin_evidence": "Author confirmation; only merged workbook recovered in this intake. Separate independent original files were not recovered.",
+    "independence_interpretation": "Equal answers and file hashes do not establish independence; independence is reported and confirmed by the author.",
+    "editor_physical_context_items": 19,
+    "editor_source_correction_items": 3,
+    "editor_material_is_original_C_judgment": false,
+    "field_physical_validation_claimed": false,
+    "human_decisions_created": 0
+  },
+  "historical_annotation_results_preserved": true,
+  "current_annotation_validation_rows": 19,
+  "scoring_and_statistics_equal_to_previous_candidate_run": true,
+  "statistics_CSV_TeX_files_compared": [
+    "chinese_historical_per_family.csv",
+    "chinese_interval_rows.tex",
+    "chinese_per_family_per_context.csv",
+    "conditional_intervals.csv",
+    "context_draws_chinese.csv",
+    "english_interval_rows.tex",
+    "english_per_family.csv",
+    "family_draws_chinese.csv",
+    "family_draws_english.csv",
+    "paired_differences.csv"
+  ],
+  "candidate_sources_unchanged_by_default_run": true,
+  "frozen_prediction_input_files_unchanged": 49,
+  "v34_baseline_files_unchanged": 511,
+  "original_C_export_unchanged": true,
+  "model_calls": 0,
+  "training_runs": 0,
+  "downloads": 0,
+  "new_flight_or_timing_experiments": 0,
+  "execution_scopes": {
+    "initial_direct_saved_output_validation": 1,
+    "subsequent_default_full_reproduction": 1,
+    "successful_build_ablation_invocations_total": 2,
+    "successful_conditional_statistics_invocations_total": 2
+  },
+  "logs_policy": "Complete logs, command, executable location and full default receipt are retained in a separate internal acceptance directory; local machine paths are excluded from the public candidate."
+}

@@ -1,0 +1,67 @@
+{
+  "reference_version": "human_review_20261019",
+  "input_items": 19,
+  "reviewed_core_items": 19,
+  "in_scope": 5,
+  "out_of_scope": 14,
+  "core_fields_equal_to_v34_reference": 19,
+  "source_consistent": 11,
+  "source_requires_rewrite": 8,
+  "rewrite_in_scope": 3,
+  "rewrite_out_of_scope": 5,
+  "rewrite_ids": [
+    "ARDUPILOT_BATT_ACTION_01",
+    "ARDUPILOT_FENCE_ALT_MAX_01",
+    "ECFR_107_ALT_01",
+    "ECFR_107_SPEED_01",
+    "ECFR_107_VISUAL_01",
+    "ICAROUS_SEPARATION_01",
+    "PX4_GEOFENCE_ALT_01",
+    "UKCAA_PEOPLE_01"
+  ],
+  "original_historical_in_scope": 8,
+  "original_historical_out_of_scope": 11,
+  "historical_to_source_review_scope_changes": [
+    "PX4_FAILURE_PITCH_01",
+    "PX4_FAILURE_ROLL_01",
+    "ECFR_107_SPEED_01"
+  ],
+  "new_human_to_previous_computational_scope_changes": [],
+  "human_origin": "Author-confirmed independent A/B core review and C adjudication; merged workbook received; separate original independent submissions not recovered.",
+  "completion_date_author_reported": "2026-10-19",
+  "completion_date_precision": "day",
+  "confirmation_recorded": "2026-10-20",
+  "original_C_physical_context_nonempty": 0,
+  "source_ledger_locator_correction": {
+    "source_item_id": "ICAROUS_ALT_01",
+    "old": "PDF page 5, Section 4, altitude-ceiling example",
+    "current": "PDF page 5 (printed page 27), Section 3.1 ICAROUS interface to FRET, altitude-ceiling and max-altitude examples"
+  },
+  "frozen_model_inputs_changed": false,
+  "raw_predictions_changed": false,
+  "source_fidelity_distinct_from_fragment_expressibility": true,
+  "legacy_filename_policy": "reference_19_v33_source_reviewed.csv is a compatibility alias of gold_reference_19_human_reviewed.csv; the filename does not identify the active reference version.",
+  "physical_context_policy": "No C P cell is filled or inferred. Editor technical context, if supplied elsewhere, is not human C judgment.",
+  "limits": [
+    "Human completion and independent workflow are reported and confirmed by the author, not independently authenticated by file hashes.",
+    "Completion date is 2026-10-19 with day precision only; no time of day is inferred.",
+    "Only the merged workbook was received in this intake; original independent A and B files were not separately recovered.",
+    "All 19 original C physical-context cells P8:P26 are empty. No human C physical-applicability review or field validation is claimed.",
+    "Eight source-fidelity revision proposals are retained separately; the frozen 19 Chinese model inputs and all raw predictions remain unchanged.",
+    "Five accepted height structures are abstract descriptors; physical reference-frame compatibility and deployment calibration remain unresolved."
+  ],
+  "merged_workbook_sha256": "bbd0a41c72c74b63acf2dbf1821dd5541d6bf87b7d2ce39241c8ac898d826547",
+  "selected_sheets": {
+    "A": "A独立复核_修订副本",
+    "B": "B独立复核",
+    "C": "C汇总裁决"
+  },
+  "legacy_template_notes": "Draft/awaiting-confirmation wording and empty metadata cells remain in the received workbook. Current acceptance uses the author's later explicit confirmation; no blank original cell is fabricated.",
+  "AB_scope_agreement_count": 19,
+  "AB_scope_agreement_rate": 1.0,
+  "AB_scope_cohen_kappa": 1.0,
+  "historical_annotations_overwritten": false,
+  "actual_offline_validation": "outputs/human_review_20261019/validation_receipt.json",
+  "actual_validation_status": "passed",
+  "research_release_version": "v35"
+}

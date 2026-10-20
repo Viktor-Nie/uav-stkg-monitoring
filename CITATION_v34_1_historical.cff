@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Research artifacts for the accompanying manuscript. Please cite the research artifact version used."
+type: software
+title: "Traceable UAV requirement formalization and offline monitoring with a knowledge graph"
+version: "v34.1"
+authors:
+  - family-names: Ni
+    given-names: Weikai
+  - family-names: Li
+    given-names: Zhen
+  - family-names: Ma
+    given-names: Yunan
+  - family-names: Xing
+    given-names: Chao
+repository-code: "https://github.com/Viktor-Nie/uav-stkg-monitoring"
+url: "https://github.com/Viktor-Nie/uav-stkg-monitoring/tree/v34.1"

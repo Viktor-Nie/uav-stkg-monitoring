@@ -1,5 +1,4 @@
 {
-  "date": "2026-10-14",
   "source": "Direct author clarification in the project conversation; no independent recovery emails/chats provided",
   "human_origin_author_reported": true,
   "A_and_B_distinct_students_author_reported": true,
@@ -7,7 +6,7 @@
   "C_separate_student_adjudicator_author_reported": true,
   "original_submissions_retained": true,
   "names_not_required_or_inferred": true,
-  "new_source_reviewed_19_reference_human_reverification": "not yet completed, explicitly reported by author",
+  "new_source_reviewed_19_reference_human_reverification": "core_A_B_C_completed_author_confirmed_on_2026-10-20; completion_date_2026-10-19_day_precision",
   "independence_evidence_boundary": "Author-reported workflow plus the submitted decision tables; file hashes establish content integrity rather than proving the reported workflow.",
   "table_files": [
     {
@@ -34,5 +33,10 @@
       "original_filename": "independent_requirement_expanded_adjudicated_v2.csv",
       "sha256": "9e9a403a5a2283cb65f07c52e5876f3b42fe2ea0d736299e398eeb9922169bc3"
     }
-  ]
+  ],
+  "historical_workflow_record_date": "2026-10-14",
+  "current_reference_version": "human_review_20261019",
+  "new_review_input_form": "Only merged workbook recovered; separate original independent files not recovered in this intake.",
+  "new_review_original_C_physical_context_nonempty": 0,
+  "current_receipt": "data/provenance/human_review_20261019_receipt.json"
 }

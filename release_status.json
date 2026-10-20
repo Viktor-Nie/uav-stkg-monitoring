@@ -1,6 +1,6 @@
 {
-  "release_status": "research_artifact_with_provisional_reference",
-  "annotation_status": "Author-reported independent historical A/B and separate C; revised nineteen-label review pending.",
+  "release_status": "v35_research_release_candidate",
+  "annotation_status": "Author-confirmed independent A/B core review and C adjudication; merged workbook received; separate original independent submissions not recovered.",
   "llm_status": "Historical predictions and new controlled runs are separate. Model identity, prompt, schema and structured outputs are retained; no claim of AI-free research is made.",
   "upstream_data": "Three unchanged complete IDF_DS v1.0 CSV members are supplied under CC BY 4.0 with attribution. Full archives and other third-party snapshots remain upstream.",
   "default_execution": "Offline validation and rescoring from frozen inputs; no model call, training or download.",
@@ -55,17 +55,31 @@
     }
   ],
   "default_reproduction": "Offline frozen primary checks, bounded semantics, conditional statistics, complete timing-record verification and verified IDF replay; full HIL/four-source raw reconstruction is an explicit optional path.",
-  "public_url": "https://github.com/Viktor-Nie/uav-stkg-monitoring/tree/v34.1",
-  "publication_status": "fixed_tag_target_v34.1",
+  "publication_status": "fixed_tag_release_tree",
   "license_status": "not_assigned",
   "v33_reviewed_reference": {
     "items": 19,
     "in_scope": 5,
     "out_of_scope": 14,
-    "independent_human_authentication": "not established"
+    "independent_human_authentication": "not established",
+    "status": "Historical computational reference; current same-label human reference is separate."
   },
   "original_flight_data_redistributed": "Only three complete verified IDF members under CC BY 4.0 with attribution; no full archives.",
-  "version": "v34.1",
-  "reference_status": "Provisional computational source review; no new independently adjudicated reference claimed.",
-  "human_revision_review": "pending; no new independent human gold reference is claimed"
+  "version": "v35",
+  "reference_status": "Core human review complete as author-confirmed; original C physical context empty; physical applicability unresolved.",
+  "human_revision_review": "completed core decisions; author confirmation recorded 2026-10-20; completion 2026-10-19 with day precision",
+  "parent_release_version": "v34.1",
+  "historical_parent_public_url": "https://github.com/Viktor-Nie/uav-stkg-monitoring/tree/v34.1",
+  "current_reference_version": "human_review_20261019",
+  "current_reference": {
+    "items": 19,
+    "in_scope": 5,
+    "out_of_scope": 14,
+    "source_requires_rewrite": 8,
+    "human_origin": "author_confirmed",
+    "original_C_physical_context_nonempty": 0
+  },
+  "fixed_tag": "v35",
+  "fixed_version_url": "https://github.com/Viktor-Nie/uav-stkg-monitoring/tree/v35",
+  "validation_receipt_timing": "Validation summaries retain the state observed during pre-publication testing; remote publication is separately verified."
 }

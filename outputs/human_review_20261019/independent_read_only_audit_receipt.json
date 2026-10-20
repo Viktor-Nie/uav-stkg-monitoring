@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "review_kind": "Independent read-only verification by a separate collaborating agent; no model inference or scientific experiment was run by the auditor.",
+  "reference_version": "human_review_20261019",
+  "independently_rebuilt_scoring_rows_from_frozen_raw_inputs": 570,
+  "historical_rows": 190,
+  "fair_rows": 380,
+  "checked_original_prediction_fields": [
+    "scope",
+    "signal",
+    "template",
+    "roles",
+    "formula"
+  ],
+  "checked_scoring_fields": [
+    "tuple_correct",
+    "formula_correct",
+    "signal_correct",
+    "template_correct",
+    "role_correct",
+    "graph_accepted",
+    "graph_reason"
+  ],
+  "original_C_export_items": 19,
+  "original_C_export_fields_per_item": 11,
+  "C_G_to_P_and_original_chinese_equal_to_workbook": true,
+  "C_original_physical_context_nonempty": 0,
+  "source_requires_rewrite": 8,
+  "historical_to_computational_scope_changes": 3,
+  "retained_input_hashes_equal": 49,
+  "conditional_statistics_and_draws_equal_to_v34": true,
+  "identity_findings_resolved_without_rescoring": [
+    "Current CITATION.cff now identifies unpublished local candidate; historical citation retained separately.",
+    "Current scientific language receipt and its generator include reference_version and reference_sha256."
+  ],
+  "no_human_decisions_created_by_agents": true
+}

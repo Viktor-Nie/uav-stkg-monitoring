@@ -1,8 +1,8 @@
 cff-version: 1.2.0
-message: "Research artifacts for the accompanying manuscript. Please cite the research artifact version used."
+message: "v35 research release using reference human_review_20261019. Fixed version: https://github.com/Viktor-Nie/uav-stkg-monitoring/tree/v35. The parent v34.1 citation is retained in CITATION_v34_1_historical.cff."
 type: software
 title: "Traceable UAV requirement formalization and offline monitoring with a knowledge graph"
-version: "v34.1"
+version: "v35"
 authors:
   - family-names: Ni
     given-names: Weikai
@@ -13,4 +13,3 @@ authors:
   - family-names: Xing
     given-names: Chao
 repository-code: "https://github.com/Viktor-Nie/uav-stkg-monitoring"
-url: "https://github.com/Viktor-Nie/uav-stkg-monitoring/tree/v34.1"

@@ -1,3 +1,19 @@
+# v35 research release
+
+This v35 research release uses reference `human_review_20261019`. The author confirms that A and B completed all nineteen core reviews independently and C confirmed the final core judgments, completed on 2026-10-19 (day precision). Only the merged workbook was recovered in this intake; original independent files were not separately recovered. Hashes establish content integrity, not independent workflow authentication.
+
+The 19 frozen Chinese model inputs, all raw model calls and historical predictions are unchanged. The current reference has five abstract in-scope descriptors and fourteen rejections, exactly matching the previous computational reference on all core fields. Eight Chinese renderings require source-fidelity revision; their proposed replacements remain a separate audit and are not substituted into the model inputs.
+
+All original C physical-context cells P8:P26 remain empty. No C physical applicability or field validation is claimed. Editor technical reference material, if provided separately, is not C judgment. The physical frame compatibility of the five height descriptors remains unresolved.
+
+`research/ablation/gold_reference_19_human_reviewed.csv` is the canonical current reference. Existing `v33` filenames remain compatibility names and do not identify the current reference version. Original historical annotation tables and v34 experiment inputs remain preserved.
+
+The current provenance is in `data/provenance/human_review_20261019_receipt.json`; all-19 and eight-revision source-fidelity tables are in `data/annotation/`. `research/ablation/source_review_19.csv` retains legacy computational explanations separately from human core decisions and corrects the ICAROUS altitude locator to PDF page 5 (printed 27), Section 3.1.
+
+Offline rescoring and statistics outputs are recorded under `outputs/human_review_20261019/`; no new model call, download, training, flight or timing experiment is part of this release. All copied prior `reference_statistics` and historical receipts remain versioned historical evidence.
+
+## Retained v34 documentation (historical status below is superseded by the current receipt)
+
 # Ablation evidence for manuscript v33
 
 Default reproduction is offline: run `python -B build_ablation_artifacts.py` in this directory. It reads frozen CSV inputs and 20 retained structured model outputs, recomputes 380 item results and historical rescoring, redraws the three figures, and performs no network or model call. Run `python -B -m unittest discover -s . -p test_numeric_text_guard.py -v` for the numeric conflict checks, including all 24 original configurations.
@@ -12,4 +28,4 @@ The experiment contains 19 distinct source-derived text items, four prompt condi
 
 Removing the explicit role map leaves role names within the skeleton when that skeleton is supplied; this is an intentional test of redundant information, not a claim that all role information vanished. Removing skeletons causes canonical serialization failures while tuple selection remains high. The gate tests compatibility of descriptors, not equivalence to the text. The 29 manually constructed semantic challenges are separate from the 380 model outputs and do not increase the language-corpus denominator.
 
-`public_calls` retains only requests, structured outputs and relevant receipts. Original complete CLI streams and session identifiers remain in the local private experiment directory and are not part of this public preparation. The source review is computational. The author reports two different classmates independently completing A and B before seeing each other's results and a third classmate adjudicating C. Anonymous historical decisions are supplied in data/annotation; the revised nineteen-item reference has not yet been reviewed by those classmates. File hashes do not independently authenticate the reported process. Original public snapshots are identified by URL and hash in the review ledger and are not duplicated here.
+`public_calls` retains only requests, structured outputs and relevant receipts. Original complete CLI streams and session identifiers remain in the local private experiment directory and are not part of this public preparation. The original source reassessment was computational. The current same-label reference human_review_20261019 now has author-confirmed completed A/B core review and C adjudication. Anonymous current and historical decisions are supplied separately in data/annotation. Only the merged workbook was recovered in this intake; neither equal answers nor file hashes authenticate the reported independent process. Original C physical-context fields remain empty. Original public snapshots are identified by URL and hash in the review ledger and are not duplicated here.

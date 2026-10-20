@@ -1,0 +1,313 @@
+{
+  "status": "passed",
+  "reference_version": "human_review_20261019",
+  "candidate_publication_status": "unpublished_local_candidate",
+  "reference_items": 19,
+  "in_scope": 5,
+  "out_of_scope": 14,
+  "reference_core_fields_equal_to_v34": 19,
+  "historical_rows_rescored": 190,
+  "historical_methods_compared": 10,
+  "fair_rows_rescored": 380,
+  "fair_conditions": 4,
+  "retained_calls": 20,
+  "all_570_tuple_flags_recomputed": true,
+  "all_method_metrics_equal_to_v34_except_reference_version": true,
+  "rescoring_comparisons": {
+    "historical_methods_on_v33_reference.csv": {
+      "rows": 10,
+      "unique_keys": 10,
+      "all_compared_fields_equal": true,
+      "ignored_identity_columns": [
+        "reference_version"
+      ],
+      "byte_equal": false
+    },
+    "historical_predictions_on_v33_reference.csv": {
+      "rows": 190,
+      "unique_keys": 190,
+      "all_compared_fields_equal": true,
+      "ignored_identity_columns": [],
+      "byte_equal": true
+    },
+    "fair_language_predictions_v33_reference.csv": {
+      "rows": 380,
+      "unique_keys": 380,
+      "all_compared_fields_equal": true,
+      "ignored_identity_columns": [],
+      "byte_equal": true
+    },
+    "fair_language_run_metrics.csv": {
+      "rows": 20,
+      "unique_keys": 20,
+      "all_compared_fields_equal": true,
+      "ignored_identity_columns": [],
+      "byte_equal": true
+    },
+    "fair_language_condition_summary.csv": {
+      "rows": 4,
+      "unique_keys": 4,
+      "all_compared_fields_equal": true,
+      "ignored_identity_columns": [],
+      "byte_equal": true
+    },
+    "legal_catalog_semantic_challenge.csv": {
+      "rows": 29,
+      "unique_keys": 29,
+      "all_compared_fields_equal": true,
+      "ignored_identity_columns": [],
+      "byte_equal": true
+    },
+    "numeric_guard_original_24.csv": {
+      "rows": 24,
+      "unique_keys": 24,
+      "all_compared_fields_equal": true,
+      "ignored_identity_columns": [],
+      "byte_equal": true
+    },
+    "structural_module_rates.csv": {
+      "rows": 6,
+      "unique_keys": 6,
+      "all_compared_fields_equal": true,
+      "ignored_identity_columns": [],
+      "byte_equal": true
+    },
+    "structural_mutation_heatmap.csv": {
+      "rows": 104,
+      "unique_keys": 104,
+      "all_compared_fields_equal": true,
+      "ignored_identity_columns": [],
+      "byte_equal": true
+    }
+  },
+  "conditional_statistics_comparisons": {
+    "conditional_intervals.csv": {
+      "rows": 120,
+      "unique_keys": 120,
+      "all_compared_fields_equal": true,
+      "ignored_identity_columns": [],
+      "byte_equal": true
+    },
+    "paired_differences.csv": {
+      "rows": 44,
+      "unique_keys": 44,
+      "all_compared_fields_equal": true,
+      "ignored_identity_columns": [],
+      "byte_equal": true
+    },
+    "english_per_family.csv": {
+      "rows": 40,
+      "unique_keys": 40,
+      "all_compared_fields_equal": true,
+      "ignored_identity_columns": [],
+      "byte_equal": true
+    },
+    "chinese_per_family_per_context.csv": {
+      "rows": 120,
+      "unique_keys": 120,
+      "all_compared_fields_equal": true,
+      "ignored_identity_columns": [],
+      "byte_equal": true
+    },
+    "chinese_historical_per_family.csv": {
+      "rows": 60,
+      "unique_keys": 60,
+      "all_compared_fields_equal": true,
+      "ignored_identity_columns": [],
+      "byte_equal": true
+    },
+    "family_draws_english.csv": {
+      "rows": 20000,
+      "unique_keys": 20000,
+      "all_compared_fields_equal": true,
+      "ignored_identity_columns": [],
+      "byte_equal": true
+    },
+    "family_draws_chinese.csv": {
+      "rows": 20000,
+      "unique_keys": 20000,
+      "all_compared_fields_equal": true,
+      "ignored_identity_columns": [],
+      "byte_equal": true
+    },
+    "context_draws_chinese.csv": {
+      "rows": 80000,
+      "unique_keys": 80000,
+      "all_compared_fields_equal": true,
+      "ignored_identity_columns": [],
+      "byte_equal": true
+    }
+  },
+  "conditional_interval_rows": 120,
+  "paired_difference_rows": 44,
+  "both_TeX_interval_tables_byte_equal_to_v34": true,
+  "seed": 2026101404,
+  "resamples": 20000,
+  "original_C_physical_context_nonempty": 0,
+  "source_requires_rewrite": 8,
+  "retained_input_files_hash_equal_to_v34": {
+    "research/ablation/ablation_scoring.py": "8589bcbf0b34ce699d6c2c6c8750a776b4da08536a60c71faf85e85c58082899",
+    "research/ablation/language_protocol_frozen.json": "54d72f16b9f6af0c059b2f456f996c51e8f7047b531e64bd985588fc7488ba7d",
+    "research/ablation/public_input_records.json": "503221d3bce555efb3def1bfe616a12e1d77623abaa1a9cbc6ab577b43dced81",
+    "research/ablation/scoring_id_mapping.json": "7745220d88e68e49a00d290ca34e02198c1011ab96840a024c2110163116c74d",
+    "research/ablation/shared_output_schema.json": "4ff3e4f412c71cc01066952978bd7e8112a774f4aaf4ee22fbee30bf26c65987",
+    "research/ablation/inputs/historical_baseline_predictions.csv": "f204487721f495ea8e6327051450c1d2e00c432802ee61278058155da11a1a45",
+    "research/ablation/inputs/historical_language_predictions.csv": "67730a80961fd4b39c33ede4a0fb4c26def1be3eb68b89db04a5344fdc7fe43a",
+    "research/ablation/inputs/historical_metrics_original_reference.csv": "c4ecc6b8f50fcae8afa702c93360d25c146680fb7d52c1c711b5e3cc9cd1a463",
+    "research/ablation/inputs/v4_binding_ambiguity_ablation.csv": "74b21db6d5d7639f474419568371d7f9eb0600d783e7ed7eaf3c427044b91224",
+    "research/ablation/inputs/v4_complete_formula_catalog.csv": "aa7846deb46e6882b9e48323213cc1b14e01a81d0d619b0872eae1f70fdd649f",
+    "research/ablation/inputs/v4_graph_mutation_ablation_by_type.csv": "b303e8ca156e524182b9551304ca2cd4b4f550c5c85ea2259003ee8d0db1030f",
+    "research/ablation/inputs/v4_graph_mutation_ablation_details.csv": "2782d839cd12be40722535293f99f4f35b79434702286e7dbf30bf8908b6889f",
+    "research/ablation/inputs/v4_graph_mutation_ablation_summary.csv": "f148b335f712426cc2a53884a4f48f8408be07d10849d1393174f431402260dd",
+    "research/ablation/public_calls/availability.json": "1260258d0fbf9ced6ccb59475d59eaa6a7b68c3bc7391c0c1f02abe22ca53b9d",
+    "research/ablation/public_calls/availability_01.json": "aca25dfa26351c3e041789c38ffc3d6105739857a25a82389a62662a90ce1905",
+    "research/ablation/public_calls/availability_02.json": "610ba084acd76222fc1d32cf86a2280cab00c567a0d5550a90296aa96c1fab59",
+    "research/ablation/public_calls/full_r1.json": "7d80057722fb1c2b1571be3b6c8fb00106bc3b2d5345374b39e69c5fbcf1d81d",
+    "research/ablation/public_calls/full_r2.json": "a7cda232ce6004d39283f3566aa907ef7aafc00a2a66331ed96f9d0290c94e44",
+    "research/ablation/public_calls/full_r3.json": "d25bf6c9ce04b60e8c08f6440ebb975900e6aa430c1810e4875e376585ed790e",
+    "research/ablation/public_calls/full_r4.json": "30b9941431d4d142831cae22ee166bc02125095edc60dfb67bf690f0ab2629da",
+    "research/ablation/public_calls/full_r5.json": "7c8caf49f83734ef2a753acc1bb9e1441d880e070a147ca40c64cf56f7f2e962",
+    "research/ablation/public_calls/without_both_r1.json": "71f4688c0cc4092b6066aae0d6e5ab3397571a8a35eec42af3a47a8d8f91abd7",
+    "research/ablation/public_calls/without_both_r2.json": "0a84b7241aeecd3e817b2618f826fb4307b6b35309002690f4d743caecd1c242",
+    "research/ablation/public_calls/without_both_r3.json": "ae2453c354d0764a391c15ab600e893b29e3eff6f65effac16e1f18285146712",
+    "research/ablation/public_calls/without_both_r4.json": "48c23c2610b8534023153ab9978386dad87f78a681987ef836787edabf865a29",
+    "research/ablation/public_calls/without_both_r5.json": "5ed0a9378df84ea60073fd189d8ebda35f61bc85cbd8433a7f52dddd34145441",
+    "research/ablation/public_calls/without_role_mapping_r1.json": "1e9e6f432beda4773d0a7998941049551e3eb0c61ebaaf557fbf01773ea8889b",
+    "research/ablation/public_calls/without_role_mapping_r2.json": "8e07a12455a07015ca844d1ae66356d8f9345e1cf7ae4183aea3bc539a04e559",
+    "research/ablation/public_calls/without_role_mapping_r3.json": "1d698c92c91298551a48a677fa2a909ff4a1bc832e8e3a14a4b4fa52250a4ea1",
+    "research/ablation/public_calls/without_role_mapping_r4.json": "26ee37bd5a935ab906c6fc70352ab954fb9f22869c4342e8972136d19d4e72e3",
+    "research/ablation/public_calls/without_role_mapping_r5.json": "97be2a04ef1b2265a115b8e1daa57e1037b10f2471fc79431f70404c0efa41a2",
+    "research/ablation/public_calls/without_skeleton_r1.json": "0863a0fc733bb933f3aac84a144d099969aab29880dc45be3e363726263e4811",
+    "research/ablation/public_calls/without_skeleton_r2.json": "445c37c3cc5a9c68f1976d47ad1fa1cbdf3fc54e0142f3e595926ae4aa67f457",
+    "research/ablation/public_calls/without_skeleton_r3.json": "92d23b4457ac5ca8cf11c8df91d2e522008b92b0750571ddc670906c5b3d04eb",
+    "research/ablation/public_calls/without_skeleton_r4.json": "f41f2429944b39a4b4327b58edf9eb83308b736f903e8da795772ff8d0c5752a",
+    "research/ablation/public_calls/without_skeleton_r5.json": "dba09e92bda1b98c6860bfd0ee72abf4c5d30fb4a5198b7243d2790d514cc064",
+    "data/annotation/historical_A_19.csv": "60ef63c50422b6a9189049956ee6db917007c3105f8b28cbcb23a1201343c55d",
+    "data/annotation/historical_A_215.csv": "baf93bda370e2253da3608f1ff8ca53b9cc6f078a4e0a54f5cc22c242fea1ff0",
+    "data/annotation/historical_B_19.csv": "426f03b238b05131ebbdd4c12615a8b025a937a3f66eec43d2fb857a01264a1c",
+    "data/annotation/historical_B_215.csv": "e2d87ea8020c70eb1d6a7d662f30f4f17e8b7c04248030c3bed5ae1021d81d24",
+    "data/annotation/historical_C_19.csv": "050b300b44a4b2d1595169dd3444581fa1a44f2a92ad6fbc4c6434875ed07c44",
+    "data/annotation/historical_C_215.csv": "3c33419d6be5c8e20bde6a79d21a92ca513516dd1dc0bab4a10ec52b26b1c0f3",
+    "data/language/chinese_historical_metrics.csv": "c4ecc6b8f50fcae8afa702c93360d25c146680fb7d52c1c711b5e3cc9cd1a463",
+    "data/language/chinese_historical_predictions.csv": "ee0b9d32769f650a4d36e613bcb46de95825afc1bf9703f77be4341810641c7e",
+    "data/language/english_expected_families.csv": "c412e5e39691abb7626e2f32eccaf12b10bdc2e953be763fe78913c9aa3a8b7f",
+    "data/language/english_expected_summary.csv": "fab424160ed805c361d585dc06c9f0f74bb0889ce5a3e2f2ec1ad05b24fd7dad",
+    "data/language/english_items.csv": "ab8929ade4c4e3f9293646263753a2a3954666a79de90a3800ba71ef18f75395",
+    "data/language/english_predictions.csv": "6aebd91a6fd5829f3a15879479bb1d441bb06c29bad1a4e1885fd2de9d82484e",
+    "data/language/historical_source_registry.csv": "8ea7088676f0770763e966c3ef65945a5fae139c7b0a620ce352a6b7e6383cb6"
+  },
+  "v34_baseline_files_hash_equal": 511,
+  "original_merged_workbook_unchanged": true,
+  "model_calls": 0,
+  "downloads": 0,
+  "training_runs": 0,
+  "new_flight_experiments": 0,
+  "new_timing_experiments": 0,
+  "actual_runtime": {
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
+    "numpy": "2.5.1",
+    "pandas": "3.0.3",
+    "matplotlib": "3.11.0",
+    "environment": "Existing local project Python environment; no dependency was installed for this validation. Exact executable location retained only in internal acceptance records."
+  },
+  "execution_count": {
+    "initial_direct_validation_successful": 1,
+    "default_full_reproduction_successful": 1,
+    "build_ablation_artifacts_successful_total": 2,
+    "conditional_statistics_successful_total": 2
+  },
+  "scope": "New reference identity and honest source-fidelity audit; original model inputs and predictions are unchanged. Conditional intervals remain empirical sensitivity intervals, not population confidence intervals.",
+  "physical_applicability": "Unresolved; no C P cell is filled, no field validation and no deployment calibration is claimed.",
+  "legacy_filename_policy": "v33 filenames retained for API compatibility; current reference identity is human_review_20261019, including metric metadata and current protocol/receipts.",
+  "independent_raw_output_verification": "outputs/human_review_20261019/independent_read_only_audit_receipt.json",
+  "identity_only_finalization": "Identity-only fields were aligned after the initial direct validation. A subsequent full default run revalidated saved-output scoring and conditional statistics; two successful invocations of each driver have now occurred, without a model call.",
+  "research_release_version": "v35",
+  "default_full_reproduction": {
+    "status": "passed",
+    "research_release_version": "v35",
+    "publication_status": "prepared_not_published",
+    "reference_version": "human_review_20261019",
+    "mode": "default_full",
+    "extensions_passed": [
+      "ablation",
+      "annotation",
+      "catalog_screen",
+      "conditional_statistics",
+      "graph_extension",
+      "historical_audits",
+      "monitor",
+      "performance_records",
+      "semantics",
+      "threshold_provenance",
+      "verified_idf"
+    ],
+    "extension_count": 11,
+    "graph": {
+      "nodes": 158,
+      "relationships": 350,
+      "bindings": 84
+    },
+    "structural_decisions": 2832,
+    "current_human_review": {
+      "status": "passed",
+      "reference_version": "human_review_20261019",
+      "items": 19,
+      "core_four_tuple_agreement_with_canonical": {
+        "A": 19,
+        "B": 19,
+        "C": 19
+      },
+      "in_scope": 5,
+      "out_of_scope": 14,
+      "source_consistent": 11,
+      "source_requires_rewrite": 8,
+      "C_original_physical_context_nonempty": 0,
+      "completion_date_author_reported": "2026-10-19",
+      "completion_date_precision": "day",
+      "human_origin_evidence": "Author confirmation; only merged workbook recovered in this intake. Separate independent original files were not recovered.",
+      "independence_interpretation": "Equal answers and file hashes do not establish independence; independence is reported and confirmed by the author.",
+      "editor_physical_context_items": 19,
+      "editor_source_correction_items": 3,
+      "editor_material_is_original_C_judgment": false,
+      "field_physical_validation_claimed": false,
+      "human_decisions_created": 0
+    },
+    "historical_annotation_results_preserved": true,
+    "current_annotation_validation_rows": 19,
+    "scoring_and_statistics_equal_to_previous_candidate_run": true,
+    "statistics_CSV_TeX_files_compared": [
+      "chinese_historical_per_family.csv",
+      "chinese_interval_rows.tex",
+      "chinese_per_family_per_context.csv",
+      "conditional_intervals.csv",
+      "context_draws_chinese.csv",
+      "english_interval_rows.tex",
+      "english_per_family.csv",
+      "family_draws_chinese.csv",
+      "family_draws_english.csv",
+      "paired_differences.csv"
+    ],
+    "candidate_sources_unchanged_by_default_run": true,
+    "frozen_prediction_input_files_unchanged": 49,
+    "v34_baseline_files_unchanged": 511,
+    "original_C_export_unchanged": true,
+    "model_calls": 0,
+    "training_runs": 0,
+    "downloads": 0,
+    "new_flight_or_timing_experiments": 0,
+    "execution_scopes": {
+      "initial_direct_saved_output_validation": 1,
+      "subsequent_default_full_reproduction": 1,
+      "successful_build_ablation_invocations_total": 2,
+      "successful_conditional_statistics_invocations_total": 2
+    },
+    "logs_policy": "Complete logs, command, executable location and full default receipt are retained in a separate internal acceptance directory; local machine paths are excluded from the public candidate."
+  },
+  "editor_technical_materials": {
+    "data/annotation/editor_physical_context_19_20261020.csv": 19,
+    "data/annotation/editor_source_corrections_20261020.csv": 3,
+    "counts_as_original_C_judgment": false,
+    "physical_applicability_verified": false
+  },
+  "public_privacy_scan_matches": 0
+}

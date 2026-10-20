@@ -99,7 +99,7 @@ def main() -> None:
     hashes = {str(p.relative_to(ROOT)).replace("\\", "/"): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((ROOT / "data").rglob("*")) if p.is_file()}
     receipt = {"status": "passed", "graph": {"nodes": len(nodes), "relationships": len(edges), "bindings": sum(nodes["label"].eq("ParameterBinding")) if "label" in nodes else 84}, "structural_decisions": len(detail), "historical_mutants": 354, "english_scores": english, "input_sha256": hashes, "model_calls": 0, "training_runs": 0, "downloads": 0}
     receipt['extensions'] = extensions
-    receipt['reference_status'] = {'historical_human_workflow':'author reports independent classmates A/B and separate adjudicator C','revised_19_reference':'provisional computational source review; renewed human decisions pending'}
+    receipt['reference_status'] = {'historical_human_workflow':'author reports independent classmates A/B and separate adjudicator C','revised_19_reference':'human_review_20261019; core independent A/B review and C adjudication completed as author-confirmed; original C physical-context fields empty'}
     receipt['external_raw_reproduction'] = {'full_HIL_quantiles':'optional explicit raw-state root; default checks prior raw receipt and composition','four_source_replays':'optional explicit upstream root; default independently replays verified CC-BY IDF members','downloads_this_run':0}
     (output / "receipt.json").write_text(json.dumps(receipt, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"status": receipt["status"], "graph": receipt["graph"], "structural_decisions": len(detail), "english_scores": english}, indent=2))

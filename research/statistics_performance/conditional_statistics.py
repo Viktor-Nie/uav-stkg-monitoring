@@ -115,14 +115,14 @@ def main():
     input_paths += [ROOT/'research/ablation/scoring_id_mapping.json', ROOT/'research/ablation/ablation_scoring.py']
     input_paths += sorted((ROOT/'research/ablation/public_calls').glob('*_r[1-5].json'))
     before={p.relative_to(ROOT).as_posix():sha(p) for p in input_paths}
-    protocol={'seed':SEED,'replicates':REPLICATES,'percentiles':[2.5,97.5],
+    protocol={'reference_version':'human_review_20261019','legacy_reference_filename':'reference_19_v33_source_reviewed.csv','legacy_filename_does_not_identify_active_version':True,'seed':SEED,'replicates':REPLICATES,'percentiles':[2.5,97.5],
       'frozen_before_resampling':True,'english_unit':'eight curated document families; equal family weight; same draws paired across methods',
       'chinese_source_unit':'six observed families; all items in each family retained; metrics recomputed at each reweighting',
       'chinese_context_unit':'five saved independent contexts per condition, resampled independently across conditions; repetition numbers are not paired random seeds',
       'chinese_paired_comparison':'same sampled families in each condition; contexts independent across conditions',
       'estimand':'English equal-family average; Chinese mean of five item-weighted run metrics, or historical item-weighted metric',
       'interpretation':'conditional empirical sensitivity intervals, not population confidence intervals; no iid text or flight assumption; no population superiority test',
-      'limits':['only 8/6 curated families','publisher overlap and LOFO training overlap can induce further dependence','only 5 contexts, with unknown serving snapshot','reference uncertainty is not included','Chinese reviewed reference is provisional pending independent human review'],
+      'limits':['only 8/6 curated families','publisher overlap and LOFO training overlap can induce further dependence','only 5 contexts, with unknown serving snapshot','reference uncertainty is not included','Chinese core reference human_review_20261019 is author-confirmed reviewed by A/B/C; original C physical-context fields are empty'],
       'input_sha256':before}
     (out/'protocol.json').write_text(json.dumps(protocol,indent=2)+'\n',encoding='utf-8')
     rng=np.random.default_rng(SEED)
@@ -217,7 +217,7 @@ def main():
     after={p.relative_to(ROOT).as_posix():sha(p) for p in input_paths};assert before==after
     receipt={'status':'passed','seed':SEED,'replicates':REPLICATES,'english_items':215,'english_families':8,
       'chinese_unique_items':19,'chinese_families':6,'conditions':4,'contexts_per_condition':5,'opportunities':380,
-      'rescored_public_output_rows':matched,'provisional_reference_positive':5,'provisional_reference_negative':14,
+      'rescored_public_output_rows':matched,'reference_version':'human_review_20261019','reference_positive':5,'reference_negative':14,'human_core_review_status':'completed_author_confirmed','original_C_physical_context_nonempty':0,
       'input_sha256':before,'source_unchanged':True,'population_inference':False,'reference_uncertainty_included':False,
       'model_calls':0,'training_runs':0,'network_requests':0,'numpy_version':np.__version__,'python':sys.version,
       'script_sha256':sha(Path(__file__))}

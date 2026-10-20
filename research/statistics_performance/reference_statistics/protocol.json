@@ -47,5 +47,9 @@
     "research/ablation/public_calls/without_skeleton_r3.json": "92d23b4457ac5ca8cf11c8df91d2e522008b92b0750571ddc670906c5b3d04eb",
     "research/ablation/public_calls/without_skeleton_r4.json": "f41f2429944b39a4b4327b58edf9eb83308b736f903e8da795772ff8d0c5752a",
     "research/ablation/public_calls/without_skeleton_r5.json": "dba09e92bda1b98c6860bfd0ee72abf4c5d30fb4a5198b7243d2790d514cc064"
-  }
+  },
+  "historical_record_only": true,
+  "historical_reference_version": "v33_source_reviewed",
+  "current_reference_version": "human_review_20261019",
+  "historical_status_note": "The pending-review wording below records the sealed parent v34.1 status, not the current candidate; current core review is author-confirmed complete. Current statistics protocol is outputs/human_review_20261019/conditional_statistics/protocol.json."
 }
